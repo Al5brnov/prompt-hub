@@ -473,7 +473,8 @@ input[type=text]{height:48px;padding:0 12px}
     $("rInfo").textContent = "Lade …"; $("rList").textContent = "";
     loadRadar().then(function (d) {
       var items = d.items || [];
-      $("rInfo").textContent = d.generatedAt
+      $("rInfo").textContent = d.error ? "Letzter Suchlauf (" + chD(d.generatedAt) + ") fehlgeschlagen: " + d.error
+        : d.generatedAt
         ? items.length + " relevante" + (d.candidates ? " von " + d.candidates + " Kandidaten" : "") + " seit " + chD(d.since) + " · Stand " + chD(d.generatedAt) + " " + d.generatedAt.slice(11, 16) + " UTC · " + (d.keywords || []).length + " Stichworte"
         : "Noch kein Suchlauf. Die Suche läuft werktags am Morgen automatisch.";
       items.forEach(function (it, i) {

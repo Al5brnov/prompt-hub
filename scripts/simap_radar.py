@@ -31,27 +31,45 @@ _jar = http.cookiejar.CookieJar()
 _opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(_jar))
 
 
+DIAG = []
+
+
+def note(msg):
+    """Diagnose: als GitHub-Annotation sichtbar und in latest.json."""
+    DIAG.append(msg)
+    print("::warning::" + msg.replace("\n", " "))
+
+
 def get(path, params=None):
     """GET auf die simap-API. params: Liste von (key, value), Wiederholungen erlaubt."""
     if FIXTURES:
         return _fixture(path, params)
     url = BASE + path + ("?" + urllib.parse.urlencode(params) if params else "")
-    req = urllib.request.Request(url, headers={"Accept": "application/json", "User-Agent": UA})
+    req = urllib.request.Request(url, headers={"Accept": "application/json", "User-Agent": UA, "Accept-Language": "de-CH,de;q=0.9"})
+    last = ""
     for attempt in range(3):
         try:
             with _opener.open(req, timeout=30) as r:
-                body = r.read().decode("utf-8")
+                status, final, ctype = r.status, r.geturl(), r.headers.get("Content-Type", "")
+                body = r.read().decode("utf-8", "replace")
             time.sleep(0.3)
-            return json.loads(body)
-        except json.JSONDecodeError:
-            # cookie-check: erste Antwort ist eine HTML-Seite, danach ist das Cookie gesetzt
-            time.sleep(1)
+            try:
+                return json.loads(body)
+            except json.JSONDecodeError:
+                # cookie-check: erste Antwort ist evtl. eine HTML-Seite, danach ist das Cookie gesetzt
+                last = "keine JSON-Antwort (HTTP %s, %s, Ziel %s): %s" % (status, ctype, final, re.sub(r"\s+", " ", body[:200]))
+                time.sleep(1.5)
         except urllib.error.HTTPError as e:
+            snippet = re.sub(r"\s+", " ", e.read().decode("utf-8", "replace")[:200]) if hasattr(e, "read") else ""
+            last = "HTTP %s bei %s: %s" % (e.code, path, snippet)
             if e.code in (429, 500, 502, 503, 504) and attempt < 2:
                 time.sleep(2 * (attempt + 1))
                 continue
-            raise
-    raise RuntimeError("Keine JSON-Antwort von " + url)
+            break
+        except Exception as e:  # noqa: BLE001
+            last = "%s bei %s: %s" % (type(e).__name__, path, e)
+            time.sleep(1.5)
+    raise RuntimeError(last or ("Keine Antwort von " + url))
 
 
 def _fixture(path, params):
@@ -213,17 +231,25 @@ def main():
         try:
             get("/cantons/v1", [("lang", "de")])  # setzt das Session-Cookie
         except Exception as e:  # noqa: BLE001
-            print("Cookie-Seed fehlgeschlagen:", e, file=sys.stderr)
+            note("Cookie-Seed: %s" % e)
+        note("Cookies nach Seed: %s" % (", ".join(c.name for c in _jar) or "keine"))
 
     # 1) Kandidaten aus der simap-Volltextsuche
-    found = {}
+    found, errors = {}, 0
     for w in words:
         cursor, pages = None, 0
         while pages < 5:
             params = [("lang", "de"), ("search", w), ("newestPublicationFrom", since)] + [("newestPubTypes", t) for t in types]
             if cursor:
                 params.append(("lastItem", cursor))
-            r = get("/publications/v2/project/project-search", params)
+            try:
+                r = get("/publications/v2/project/project-search", params)
+            except Exception as e:  # noqa: BLE001
+                note("Suche «%s»: %s" % (w, e))
+                errors += 1
+                if errors >= 3 and not found:
+                    raise RuntimeError("simap-Suche wiederholt fehlgeschlagen: %s" % e)
+                break
             projects = r.get("projects") or []
             for p in projects:
                 pid = p.get("id")
@@ -294,6 +320,7 @@ def main():
         "candidates": len(found),
         "dropped": dropped,
         "count": len(items),
+        "diagnostics": DIAG[-20:],
         "items": items,
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
@@ -303,5 +330,22 @@ def main():
           % (len(items), len(found), since, ", ".join("%s %d" % kv for kv in dropped.items())))
 
 
+def write_error(e):
+    try:
+        cfg = json.load(open(CONFIG, encoding="utf-8"))
+        words = flat_words(cfg.get("core") or cfg.get("keywords")) + flat_words(cfg.get("context"))
+    except Exception:  # noqa: BLE001
+        words = []
+    out = {"generatedAt": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "since": None,
+           "keywords": words, "count": 0, "error": str(e), "diagnostics": DIAG[-20:], "items": []}
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:  # noqa: BLE001
+        print("::error::simap-Radar fehlgeschlagen: %s" % str(e).replace("\n", " "))
+        write_error(e)
+        sys.exit(1)
