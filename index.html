@@ -167,7 +167,7 @@ input[type=text]{height:48px;padding:0 12px}
     <div id="rList" class="rlist"></div>
     <div style="padding:10px 4px 0;display:flex;flex-direction:column;gap:8px">
       <button class="btn" id="rGo" disabled>Ausgewählte bewerten</button>
-      <p class="note" style="margin:0">Suche läuft werktags am Morgen automatisch. Stichworte in <span style="font-family:ui-monospace,monospace">radar/config.json</span> im Repository anpassen.</p>
+      <p class="note" style="margin:0">Suche läuft werktags am Morgen automatisch. Gefiltert nach Wortgrenzen, CPV-Code und Relevanz. Stichworte in <span style="font-family:ui-monospace,monospace">radar/config.json</span> im Repository anpassen.</p>
     </div>
   </div>
 </div>
@@ -474,7 +474,7 @@ input[type=text]{height:48px;padding:0 12px}
     loadRadar().then(function (d) {
       var items = d.items || [];
       $("rInfo").textContent = d.generatedAt
-        ? items.length + " offene Treffer seit " + chD(d.since) + " · Stand " + chD(d.generatedAt) + " " + d.generatedAt.slice(11, 16) + " UTC · " + (d.keywords || []).length + " Stichworte"
+        ? items.length + " relevante" + (d.candidates ? " von " + d.candidates + " Kandidaten" : "") + " seit " + chD(d.since) + " · Stand " + chD(d.generatedAt) + " " + d.generatedAt.slice(11, 16) + " UTC · " + (d.keywords || []).length + " Stichworte"
         : "Noch kein Suchlauf. Die Suche läuft werktags am Morgen automatisch.";
       items.forEach(function (it, i) {
         var isNew = seen().indexOf(it.id) < 0;
@@ -485,7 +485,7 @@ input[type=text]{height:48px;padding:0 12px}
         if (isNew) { var nw = document.createElement("span"); nw.className = "nw"; nw.textContent = "neu"; b.appendChild(nw); }
         b.appendChild(document.createTextNode(it.title || it.nr));
         var sm = document.createElement("small");
-        sm.textContent = it.office + " · " + (PT[it.type] || it.type || "") + " · publiziert " + chD(it.date) + (it.deadline ? " · Frist " + chD(it.deadline) : "") + " · " + (it.hits || []).join(", ");
+        sm.textContent = it.office + " · " + (PT[it.type] || it.type || "") + " · publiziert " + chD(it.date) + (it.deadline ? " · Frist " + chD(it.deadline) : "") + (it.score != null ? " · Relevanz " + it.score : "") + " · " + (it.hits || []).join(", ");
         tx.appendChild(b); tx.appendChild(sm); lab.appendChild(cb); lab.appendChild(tx);
         $("rList").appendChild(lab);
       });
@@ -508,6 +508,7 @@ input[type=text]{height:48px;padding:0 12px}
     selT("triage"); sheet("radarScrim", false); window.scrollTo(0, 0);
   };
   loadRadar().catch(function () {});
+  if (location.hash === "#radar") { history.replaceState(null, "", location.pathname); openRadar(); }
 
   ["menuScrim", "setScrim", "radarScrim"].forEach(function (id) { $(id).addEventListener("click", function (e) { if (e.target === e.currentTarget) sheet(id, false); }); });
   document.addEventListener("keydown", function (e) {

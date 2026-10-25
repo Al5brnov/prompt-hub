@@ -45,8 +45,13 @@ Ausschreibungsunterlagen (PDF) erfordern ein Login und werden nicht geladen.
 **simap-Radar:** Die GitHub Action `.github/workflows/simap-radar.yml` sucht werktags am Morgen
 nach neuen Publikationen (Ausschreibung, Präqualifikation, Vorankündigung) zu den Stichworten in
 `radar/config.json` und schreibt die Treffer mit Details nach `radar/latest.json`.
-Die Stichworte sind dort in Gruppen abgelegt. Gruppen dienen nur der Übersicht, jedes Stichwort ist eine eigene Suche.
-Allgemeine Begriffe wie «Beschaffung» oder «Portal» allein liefern fast jede Ausschreibung, besser fachlich eindeutige Begriffe verwenden.
+Die simap-Volltextsuche liefert viel Ausschuss (z.B. «SAP» in «sapeurs-pompiers»). Das Skript filtert deshalb in drei Stufen:
+1. **Wortgrenzen:** Akronyme wie SAP, ERP, CRM, AMS zählen nur exakt und in Grossbuchstaben.
+2. **CPV-Code:** Publikationen nur mit Bau-, Fahrzeug-, Reinigungs- oder ähnlichen CPV-Codes (`excludeCpvPrefixes`) fallen weg. Begriffe unter `context` zählen nur, wenn ein IT- oder Beratungs-CPV (`itCpvPrefixes`) vorliegt.
+3. **Relevanz-Score:** Kernbegriff im Titel 5, in der Beschreibung 3, Kontextbegriffe bis 4, IT-CPV 2, Ausschreibung/Präqualifikation 1. Unter `minScore` fällt ein Treffer weg, höchstens `maxItems` Treffer.
+
+Feinsteuerung in `radar/config.json`: `core` (treffen allein), `context` (nur mit IT-CPV), `excludeWords` (im Titel), `minScore`, `maxItems`.
+
 In der App zeigt das Radar-Symbol oben rechts die Zahl neuer Treffer. Auswählen und «Ausgewählte bewerten»
 füllt den Inhalt und wählt die Vorlage «Ausschreibungen Triage». Manuell starten: Actions → simap-Radar → Run workflow.
 

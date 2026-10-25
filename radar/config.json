@@ -1,26 +1,40 @@
 {
-  "keywords": {
+  "_hinweis": "core = treffen allein. context = zählen nur, wenn der CPV-Code IT oder Beratung ist. Akronyme wie SAP, ERP, CRM, AMS treffen nur exakt und in Grossbuchstaben.",
+  "core": {
     "ERP und SAP": [
       "SAP", "S/4HANA", "SAP BTP", "Ariba",
-      "ERP", "ERP-System", "Warenwirtschaft", "Materialwirtschaft", "Vertrieb",
-      "progiciel de gestion", "gestionale"
+      "ERP", "ERP-System", "Warenwirtschaft", "Materialwirtschaft", "progiciel de gestion"
     ],
     "Beschaffungslösungen": [
       "E-Procurement", "Beschaffungslösung", "Beschaffungsplattform", "Beschaffungssoftware",
       "Einkaufslösung", "Source-to-Pay", "Lieferantenportal"
     ],
-    "Vertrieb und Auftragsabwicklung": [
-      "CRM", "Vertriebslösung", "Auftragsabwicklung", "Order-to-Cash",
-      "Fakturierung", "Abrechnungslösung", "Webshop", "E-Commerce"
+    "Vertriebslösungen": [
+      "CRM", "Vertriebslösung", "Order-to-Cash"
     ],
     "Portale": [
-      "Kundenportal", "Self-Service-Portal", "Portallösung", "Onlineschalter", "E-Government"
+      "Kundenportal", "Self-Service-Portal", "Portallösung"
     ],
-    "Beratung und Workshops": [
-      "Workshop", "Anforderungsanalyse", "Prozessanalyse", "Softwareevaluation",
-      "Application Management", "AMS"
+    "Beratung": [
+      "Softwareevaluation", "Application Management"
     ]
   },
+  "context": {
+    "Vertrieb und Abrechnung": [
+      "Vertrieb", "Auftragsabwicklung", "Fakturierung", "Abrechnungslösung", "Webshop", "E-Commerce", "gestionale"
+    ],
+    "Verwaltung": [
+      "Onlineschalter", "E-Government"
+    ],
+    "Beratung und Workshops": [
+      "Workshop", "Anforderungsanalyse", "Prozessanalyse", "AMS"
+    ]
+  },
+  "itCpvPrefixes": ["48", "72", "794", "80533"],
+  "excludeCpvPrefixes": ["03", "09", "14", "15", "16", "18", "19", "24", "31", "33", "34", "35", "37", "39", "41", "42", "43", "44", "45", "60", "63", "70", "71", "77", "85", "90", "92"],
+  "excludeWords": ["Reinigung", "Hochbau", "Tiefbau", "Bauarbeiten", "Neubau", "Umbau", "Sanierung", "Fahrzeug", "Mobiliar", "Catering", "nettoyage"],
+  "minScore": 4,
+  "maxItems": 40,
   "pubTypes": ["tender", "participant_selection", "advance_notice"],
   "daysBack": 21
 }
