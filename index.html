@@ -103,6 +103,7 @@ input[type=text]{height:48px;padding:0 12px}
       <div class="row"><h2>Inhalt</h2><span class="meta" id="meta"></span></div>
       <textarea class="raw" id="raw" aria-label="Inhalt" placeholder="Text über «Teilen» an Prompt Hub senden oder hier einfügen …"></textarea>
       <div class="lk">
+        <button class="chip" id="bSimap" hidden>simap-Daten laden</button>
         <button class="chip" id="bPaste"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6v3H9z"/><path d="M15 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/></svg>Einfügen</button>
         <button class="chip" id="bClear">Leeren</button>
       </div>
@@ -194,8 +195,68 @@ input[type=text]{height:48px;padding:0 12px}
       p: "Recherchiere online den aktuellen Stand zum Thema in <inhalt> und erkläre es kurz: Funktionsweise, Fakten, Praxisrelevanz. Nenne Quellen mit Datum. Bei SAP-Themen Public Cloud, Private Cloud und On-Premise unterscheiden." },
     { id: "produkt", g: "Recherchieren", l: "Produkt & Preise CH", d: "Tests, drei Alternativen, aktuelle CHF-Preise bei Schweizer Shops.",
       p: "Recherchiere unabhängige Tests und Reviews zum Produkt in <inhalt>: Stärken und Schwächen. Vergleichstabelle mit den 3 besten Alternativen (Spezifikationen, Vor-/Nachteile, Preis-Leistung). Aktuelle Preise in CHF bei seriösen Schweizer Shops (z.B. Digitec/Galaxus, Brack, Interdiscount, Fust, Hersteller) mit Abfragedatum. Am Schluss eine klare Empfehlung." },
+    { id: "gonogo", g: "Recherchieren", l: "Ausschreibung Go/No-Go", d: "Steckbrief, Kriterien, Risiken, Fragen fürs Forum und Empfehlung. simap-Link teilen lädt die Daten direkt.",
+      p: "Analysiere die öffentliche Ausschreibung in <inhalt> für eine Go/No-Go-Entscheidung aus Sicht eines Beratungsunternehmens. Gliederung:\n" +
+        "1. Steckbrief (Tabelle): Auftraggeber, Gegenstand, Verfahrensart, Lose, Laufzeit inkl. Optionen, Eingabefrist, Fragenfrist, Offertöffnung, Volumen (falls genannt).\n" +
+        "2. Eignungskriterien (Tabelle): Kriterium | Nachweis/Referenz | Muss/Kann | erfüllbar? (ja/nein/unklar).\n" +
+        "3. Zuschlagskriterien mit Gewichtung, Preisgewichtung und Bewertungsmethode.\n" +
+        "4. Anforderungen an Schlüsselpersonen (Rolle, Zertifikate, Erfahrung, Sprachen) und Referenzprojekte.\n" +
+        "5. Risiken und Auffälligkeiten: Vorbefassung, auf einen Anbieter zugeschnittene Kriterien, knappe Termine, Haftung und Konventionalstrafen, bei IT-Projekten das Betriebsmodell.\n" +
+        "6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert.\n" +
+        "7. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen und grober Schätzung des Offertaufwands in Personentagen.\n" +
+        "Nur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben] markieren, nichts erfinden. Steht dort, dass Kriterien nur in den Unterlagen stehen, weise darauf hin. Daten im Format TT.MM.JJJJ." },
     { id: "frei", g: "Eigene", l: "Freie Anweisung", d: "Das Feld «Anweisung» wird zur Aufgabe.", p: "" }
   ];
+
+  /* simap.ch: öffentliche API (Projektkopf und Publikationsdetails, ohne Login) */
+  var SIMAP = "https://www.simap.ch/api/publications/";
+  function simapPid(u) { var m = /^https?:\/\/(www\.)?simap\.ch\/.*project-detail\/([^\/?#]+)/.exec(u || ""); return m ? m[2] : null; }
+  function langPick(o) {
+    if (o && typeof o === "object" && !Array.isArray(o)) {
+      var ks = Object.keys(o);
+      if (ks.length && ks.every(function (k) { return /^(de|fr|it|en|rm)$/.test(k); })) return o.de || o.en || o.fr || o.it || o.rm || "";
+    }
+    return null;
+  }
+  function stripHtml(s) {
+    return String(s).replace(/<br\s*\/?>/gi, "\n").replace(/<\/(p|li|div|h\d)>/gi, "\n").replace(/<li[^>]*>/gi, "- ").replace(/<[^>]+>/g, "")
+      .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/\n{3,}/g, "\n\n").trim();
+  }
+  function jsonToText(v, ind) {
+    ind = ind || "";
+    var lp = langPick(v);
+    if (lp !== null) return lp ? stripHtml(lp) : "";
+    if (v === null || v === undefined || v === "" || v === false) return "";
+    if (typeof v !== "object") return stripHtml(v);
+    var out = [];
+    if (Array.isArray(v)) {
+      v.forEach(function (x) { var t = jsonToText(x, ind + "  "); if (t) out.push(ind + "- " + t.replace(/^\s+/, "")); });
+      return out.length ? "\n" + out.join("\n") : "";
+    }
+    Object.keys(v).forEach(function (k) {
+      if (/^(id|.*Id|.*Ids|actions|links?|_links|vendorStatus|latestVendorDigitalSubmission)$/.test(k)) return;
+      var t = jsonToText(v[k], ind + "  ");
+      if (t) out.push(ind + k + ":" + (t.charAt(0) === "\n" ? t : " " + t.replace(/\n/g, "\n" + ind + "  ")));
+    });
+    return out.length ? "\n" + out.join("\n") : "";
+  }
+  function simapLoad(pid, srcUrl) {
+    function get(u) { return fetch(u, { headers: { Accept: "application/json" } }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }); }
+    return get(SIMAP + "v2/project/" + encodeURIComponent(pid) + "/project-header").then(function (h) {
+      var pubs = [];
+      if (h.latestPublication && h.latestPublication.id) pubs.push(h.latestPublication.id);
+      (h.lots || []).forEach(function (l) { var id = l.latestPublication && l.latestPublication.id; if (id && pubs.indexOf(id) < 0) pubs.push(id); });
+      return Promise.all(pubs.slice(0, 4).map(function (id) { return get(SIMAP + "v1/project/" + encodeURIComponent(pid) + "/publication-details/" + encodeURIComponent(id)); }))
+        .then(function (det) {
+          var txt = "Quelle: simap.ch, Projekt " + (h.projectNumber || pid) + " (" + srcUrl + ")\nProjektkopf:" +
+            jsonToText({ projectNumber: h.projectNumber, processType: h.processType, orderType: h.orderType, lotsType: h.lotsType,
+              lots: (h.lots || []).map(function (l) { return { lotNumber: l.lotNumber, title: l.title }; }) }, "  ");
+          det.forEach(function (d, i) { txt += "\n\nPublikation" + (det.length > 1 ? " " + (i + 1) : "") + ":" + jsonToText(d, "  "); });
+          if (det.some(function (d) { return d.hasProjectDocuments; })) txt += "\n\nHinweis: Es gibt Ausschreibungsunterlagen (Login nötig). Sie sind hier nicht enthalten.";
+          return txt.length > 20000 ? txt.slice(0, 20000) + "\n[… gekürzt]" : txt;
+        });
+    });
+  }
   var GROUPS = ["Schreiben", "Verdichten", "Analysieren", "Recherchieren", "Eigene"];
 
   var TG = [
@@ -227,6 +288,7 @@ input[type=text]{height:48px;padding:0 12px}
   if (!shUrl) { var m = shText.match(/https?:\/\/\S+$/); if (m && shText.length > m[0].length) { shUrl = m[0]; shText = shText.slice(0, -m[0].length).trim(); } else if (m) { shUrl = m[0]; } }
   if (location.search) history.replaceState(null, "", location.pathname);
   var shared = !!(shText || shTitle || shUrl);
+  var srcKind = "";
 
   var raw = $("raw"), hint = $("hint"), pv = $("pv"), cbSrc = $("cbSrc");
   raw.value = shText && shText !== shUrl ? shText : "";
@@ -276,7 +338,7 @@ input[type=text]{height:48px;padding:0 12px}
     if (t.a) out += "\nAnrede: " + (st.a === "sie" ? "Sie-Form, höflich-formell." : "Du-Form, kollegial.");
     if (t.p && h) out += "\nZusätzliche Vorgabe (hat Vorrang): " + h;
     pv.value = out;
-    $("meta").textContent = r ? (shared && r === shText ? "geteilt" : "Inhalt") + " · " + fmt(r.length) + " Zeichen" : "leer";
+    $("meta").textContent = r ? (srcKind === "simap" ? "simap-API" : shared && r === shText ? "geteilt" : "Inhalt") + " · " + fmt(r.length) + " Zeichen" : "leer";
     $("discN").textContent = fmt(out.length) + " Zeichen";
     $("warn").hidden = true;
   }
@@ -340,7 +402,16 @@ input[type=text]{height:48px;padding:0 12px}
   }
 
   /* Ereignisse */
-  raw.oninput = upd; hint.oninput = upd; cbSrc.onchange = upd;
+  raw.oninput = function () { srcKind = ""; upd(); }; hint.oninput = upd; cbSrc.onchange = upd;
+  var spid = simapPid(shUrl);
+  if (spid) {
+    $("bSimap").hidden = false;
+    $("bSimap").onclick = function () {
+      var b = this; b.disabled = true; $("meta").textContent = "lade simap-Daten …";
+      simapLoad(spid, shUrl).then(function (t) { raw.value = t; srcKind = "simap"; cbSrc.checked = false; selT("gonogo"); b.disabled = false; },
+        function () { b.disabled = false; upd(); setHint("simap lässt den Direktabruf aus der App nicht zu. Seite in Chrome öffnen, Text markieren und teilen.", false); });
+    };
+  }
   $("bClear").onclick = function () { raw.value = ""; upd(); raw.focus(); };
   $("bPaste").onclick = function () {
     if (!navigator.clipboard || !navigator.clipboard.readText) { raw.focus(); setHint("Einfügen hier nicht erlaubt: ins Feld tippen → Einfügen.", false); return; }
@@ -364,7 +435,8 @@ input[type=text]{height:48px;padding:0 12px}
   setA(st.a === "sie" ? "sie" : "du");
   setG(st.g);
   selT(st.t);
-  if (!raw.value) setHint("Tipp: In einer App Text markieren → Teilen → Prompt Hub.", false);
+  if (!raw.value && !spid) setHint("Tipp: In einer App Text markieren → Teilen → Prompt Hub.", false);
+  if (spid) $("bSimap").click();
 
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function () {});
 })();

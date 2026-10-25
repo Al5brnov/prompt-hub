@@ -35,6 +35,19 @@ Sehr lange Prompts (über ca. 8'000 Zeichen) werden nur kopiert.
 - Gespeichert werden lokal nur die letzte Aufgabe, das letzte Ziel, die Anrede und der optionale eigene Kontext.
 - Text verlässt das Gerät nur, wenn Sie ihn aktiv an einen KI-Dienst senden. Dort gelten dessen Bedingungen.
 
+## Ausschreibungen (simap.ch)
+
+Die Vorlage «Ausschreibung Go/No-Go» bewertet eine öffentliche Ausschreibung.
+Wird ein Link auf ein simap-Projekt geteilt, versucht die App, Projektkopf und Publikationsdetails über die öffentliche simap-API zu laden.
+Lässt simap den Abruf aus der App nicht zu, die Seite in Chrome öffnen, den Text markieren und teilen.
+Ausschreibungsunterlagen (PDF) erfordern ein Login und werden nicht geladen.
+
+## Zeitjournal
+
+Zweite App im Unterordner [`zeitjournal/`](zeitjournal/): Arbeitszeit per Tipp auf Favoriten erfassen
+und wöchentlich als Matrix (PSP-Element × Tag, auf 0.25 h gerundet) für die Zeiterfassung exportieren.
+Installation wie oben, Daten bleiben auf dem Gerät. Backup als Datei unter «Favoriten».
+
 ## Anpassen
 
 Die Vorlagen stehen in `index.html` in der Liste `T`, die Ziele in `TG`.
