@@ -67,7 +67,7 @@ def get(path, params=None):
             with _opener.open(req, timeout=30) as r:
                 status, final, ctype = r.status, r.geturl(), r.headers.get("Content-Type", "")
                 body = r.read().decode("utf-8", "replace")
-            time.sleep(0.3)
+            time.sleep(0.4)
             try:
                 return json.loads(body)
             except json.JSONDecodeError:
@@ -83,7 +83,7 @@ def get(path, params=None):
             break
         except Exception as e:  # noqa: BLE001
             last = "%s bei %s: %s" % (type(e).__name__, path, e)
-            time.sleep(3 * (attempt + 1))
+            time.sleep(5 * (attempt + 1))
     raise RuntimeError(last or ("Keine Antwort von " + url))
 
 
@@ -349,7 +349,7 @@ def main():
     #    «progiciel de gestion» träfe sonst jedes «de»). Mehrwort-Begriffe zählen nur beim Bewerten.
     t0 = time.time()
     budget = int(cfg.get("timeBudgetSec", 600))
-    search_words = [w for w in words if " " not in w.strip()]
+    search_words = [w for w in words if " " not in w.strip() and len(w.strip()) >= 3]
     market = cfg.get("marketTypes", [])
     all_types = types + [t for t in market if t not in types]
     ok_types = set(all_types) | ({"award"} if any(t.startswith("award") for t in all_types) else set())
@@ -378,6 +378,7 @@ def main():
                     continue
                 if pid in found:
                     found[pid]["foundBy"].append(w)
+                    found[pid]["viaCpv"] = found[pid]["viaCpv"] or w.startswith("cpv:")
                     continue
                 pubs = [p.get("publicationId")] if p.get("publicationId") else []
                 for lot in p.get("lots") or []:
@@ -394,6 +395,7 @@ def main():
                     "process": p.get("processType"),
                     "titleAll": " ".join(str(x) for x in (p.get("title") or {}).values() if x),
                     "foundBy": [w],
+                    "viaCpv": w.startswith("cpv:"),
                 }
             cursor = (r.get("pagination") or {}).get("lastItem")
             pages += 1
@@ -407,16 +409,27 @@ def main():
         core_in_title = sum(1 for _, rx in core_rx if rx.search(t))
         bid = 1 if it.get("type") in ("tender", "participant_selection", "advance_notice") else 0
         return (bid, core_in_title, len(set(it["foundBy"])), it.get("date") or "")
-    cands = []
+    bid_types = ("tender", "participant_selection", "advance_notice")
+    cands, pre_skipped = [], 0
     for it in found.values():
         if any(rx.search(it["titleAll"]) for _, rx in excl_rx):
+            continue
+        core_title = any(rx.search(it["titleAll"]) for _, rx in core_rx)
+        if it["viaCpv"]:
+            # IT-/Beratungs-CPV bekannt: Ausschreibungen immer prüfen, Zuschläge nur mit Kernbegriff im Titel
+            if it.get("type") not in bid_types and not core_title:
+                pre_skipped += 1
+                continue
+        elif not core_title:
+            # nur über Stichwort gefunden, CPV nicht IT: nur mit Kernbegriff im Titel weiterverfolgen
+            pre_skipped += 1
             continue
         cands.append(it)
     cands.sort(key=prio, reverse=True)
     max_details = int(cfg.get("maxDetails", 150))
     skipped = max(0, len(cands) - max_details)
     cands = cands[:max_details]
-    print("Details für %d Kandidaten laden (%d wegen Limit übersprungen)" % (len(cands), skipped), flush=True)
+    print("Details für %d Kandidaten laden (%d vorab aussortiert, %d wegen Limit übersprungen)" % (len(cands), pre_skipped, skipped), flush=True)
 
     def load(it):
         if time.time() - t0 > budget:
@@ -429,15 +442,16 @@ def main():
                 note("Details %s: %s" % (it.get("nr") or it["id"], e))
         return it, ds
 
-    with ThreadPoolExecutor(max_workers=2) as ex:
+    with ThreadPoolExecutor(max_workers=3) as ex:
         loaded = list(ex.map(load, cands))
 
     # 2) bewerten und filtern
     rejected = []
-    items, dropped = [], {"cpv": 0, "score": 0, "frist": 0, "ausschluss": 0, "zeit": 0, "limit": skipped}
+    items, dropped = [], {"vorab": pre_skipped, "cpv": 0, "score": 0, "frist": 0, "ausschluss": 0, "zeit": 0, "limit": skipped}
     for it, details in loaded:
         it.pop("pubs", None)
         it.pop("foundBy", None)
+        it.pop("viaCpv", None)
         if details is None:
             dropped["zeit"] += 1
             continue
