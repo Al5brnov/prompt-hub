@@ -114,7 +114,14 @@ def to_text(v, ind=""):
 
 def main():
     cfg = json.load(open(CONFIG, encoding="utf-8"))
-    words = [w.strip() for w in cfg.get("keywords", []) if w.strip()]
+    kw = cfg.get("keywords", [])
+    if isinstance(kw, dict):  # gruppiert: {"Gruppe": ["Stichwort", ...]}
+        kw = [w for group in kw.values() for w in group]
+    words = []
+    for w in kw:
+        w = w.strip()
+        if w and w.lower() not in [x.lower() for x in words]:
+            words.append(w)
     types = cfg.get("pubTypes", ["tender", "participant_selection", "advance_notice"])
     days = int(cfg.get("daysBack", 21))
     today = dt.date.today()

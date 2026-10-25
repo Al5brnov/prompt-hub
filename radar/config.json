@@ -1,5 +1,26 @@
 {
-  "keywords": ["SAP", "S/4HANA", "ERP", "SAP BTP"],
+  "keywords": {
+    "ERP und SAP": [
+      "SAP", "S/4HANA", "SAP BTP", "Ariba",
+      "ERP", "ERP-System", "Warenwirtschaft", "Materialwirtschaft",
+      "progiciel de gestion", "gestionale"
+    ],
+    "Beschaffungslösungen": [
+      "E-Procurement", "Beschaffungslösung", "Beschaffungsplattform", "Beschaffungssoftware",
+      "Einkaufslösung", "Source-to-Pay", "Lieferantenportal"
+    ],
+    "Vertrieb und Auftragsabwicklung": [
+      "CRM", "Vertriebslösung", "Auftragsabwicklung", "Order-to-Cash",
+      "Fakturierung", "Abrechnungslösung", "Webshop", "E-Commerce"
+    ],
+    "Portale": [
+      "Kundenportal", "Self-Service-Portal", "Portallösung", "Onlineschalter", "E-Government"
+    ],
+    "Beratung und Workshops": [
+      "Workshop", "Anforderungsanalyse", "Prozessanalyse", "Softwareevaluation",
+      "Application Management", "AMS"
+    ]
+  },
   "pubTypes": ["tender", "participant_selection", "advance_notice"],
   "daysBack": 21
 }

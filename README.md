@@ -45,6 +45,8 @@ Ausschreibungsunterlagen (PDF) erfordern ein Login und werden nicht geladen.
 **simap-Radar:** Die GitHub Action `.github/workflows/simap-radar.yml` sucht werktags am Morgen
 nach neuen Publikationen (Ausschreibung, Präqualifikation, Vorankündigung) zu den Stichworten in
 `radar/config.json` und schreibt die Treffer mit Details nach `radar/latest.json`.
+Die Stichworte sind dort in Gruppen abgelegt. Gruppen dienen nur der Übersicht, jedes Stichwort ist eine eigene Suche.
+Allgemeine Begriffe wie «Beschaffung» oder «Portal» allein liefern fast jede Ausschreibung, besser fachlich eindeutige Begriffe verwenden.
 In der App zeigt das Radar-Symbol oben rechts die Zahl neuer Treffer. Auswählen und «Ausgewählte bewerten»
 füllt den Inhalt und wählt die Vorlage «Ausschreibungen Triage». Manuell starten: Actions → simap-Radar → Run workflow.
 
