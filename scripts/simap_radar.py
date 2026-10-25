@@ -156,7 +156,7 @@ def flat_words(v):
     return out
 
 
-PUBTYPE_DE = {"tender": "Ausschreibung", "participant_selection": "Präqualifikation", "advance_notice": "Vorankündigung",
+PUBTYPE_DE = {"award": "Zuschlag", "direct_award": "Freihändige Vergabe", "tender": "Ausschreibung", "participant_selection": "Präqualifikation", "advance_notice": "Vorankündigung",
               "competition": "Wettbewerb", "study_contract": "Studienauftrag", "request_for_information": "Informationsanfrage"}
 PROCESS_DE = {"open": "offen", "selective": "selektiv", "invitation": "Einladung", "direct": "freihändig", "no_process": "ohne Verfahren"}
 
@@ -350,12 +350,17 @@ def main():
     t0 = time.time()
     budget = int(cfg.get("timeBudgetSec", 600))
     search_words = [w for w in words if " " not in w.strip()]
+    market = cfg.get("marketTypes", [])
+    all_types = types + [t for t in market if t not in types]
+    ok_types = set(all_types) | ({"award"} if any(t.startswith("award") for t in all_types) else set())
+    # Kandidatenquellen: alle Publikationen mit IT-/Beratungs-CPV, plus Stichwortsuche (findet auch Fälle mit anderem CPV)
+    queries = [("cpv:" + c, [("cpvCodes", c)], int(cfg.get("cpvPages", 10))) for c in cfg.get("cpvSearch", [])]
+    queries += [(w, [("search", w)], 3 if w in core else 2) for w in search_words]
     found, errors = {}, 0
-    for w in search_words:
-        max_pages = 3 if w in core else 2
+    for w, q, max_pages in queries:
         cursor, pages = None, 0
         while pages < max_pages:
-            params = [("lang", "de"), ("search", w), ("newestPublicationFrom", since)] + [("newestPubTypes", t) for t in types]
+            params = [("lang", "de")] + q + [("newestPublicationFrom", since)] + [("newestPubTypes", t) for t in all_types]
             if cursor:
                 params.append(("lastItem", cursor))
             try:
@@ -369,7 +374,7 @@ def main():
             projects = r.get("projects") or []
             for p in projects:
                 pid = p.get("id")
-                if not pid or (p.get("pubType") and p.get("pubType") not in types):
+                if not pid or (p.get("pubType") and p.get("pubType") not in ok_types):
                     continue
                 if pid in found:
                     found[pid]["foundBy"].append(w)
@@ -400,7 +405,8 @@ def main():
     def prio(it):
         t = it["titleAll"]
         core_in_title = sum(1 for _, rx in core_rx if rx.search(t))
-        return (core_in_title, len(set(it["foundBy"])), it.get("date") or "")
+        bid = 1 if it.get("type") in ("tender", "participant_selection", "advance_notice") else 0
+        return (bid, core_in_title, len(set(it["foundBy"])), it.get("date") or "")
     cands = []
     for it in found.values():
         if any(rx.search(it["titleAll"]) for _, rx in excl_rx):
