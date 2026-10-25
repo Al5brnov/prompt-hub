@@ -1,0 +1,5 @@
+{
+  "keywords": ["SAP", "S/4HANA", "ERP", "SAP BTP"],
+  "pubTypes": ["tender", "participant_selection", "advance_notice"],
+  "daysBack": 21
+}

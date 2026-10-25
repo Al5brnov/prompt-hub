@@ -87,6 +87,16 @@ input[type=text]{height:48px;padding:0 12px}
 .set{display:flex;flex-direction:column;gap:12px;padding:0 4px}
 .set textarea{min-height:120px;padding:10px 12px;resize:vertical}
 .note{font-size:13px;color:var(--mut);margin:0}
+.rb{position:relative}
+.badge{position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--ac);color:var(--acT);font-size:11px;font-weight:700;line-height:18px;text-align:center}
+.rlist{display:flex;flex-direction:column;gap:2px}
+.ritem{display:flex;gap:10px;align-items:flex-start;padding:10px 6px;border-radius:10px;cursor:pointer}
+.ritem:active{background:var(--hv)}
+.ritem input{width:20px;height:20px;margin:2px 0 0;flex:none;accent-color:#E30613}
+.ritem b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.ritem small{display:block;font-size:12px;color:var(--mut);margin-top:2px}
+.ritem .nw{display:inline-block;font-size:11px;font-weight:700;color:var(--selK);background:var(--selBg);border-radius:8px;padding:0 6px;margin-right:6px;vertical-align:1px}
+.btn:disabled{opacity:.45}
 .btn{height:48px;border:0;border-radius:10px;background:var(--ac);color:var(--acT);font-weight:600;font-size:15px}
 </style>
 </head>
@@ -95,6 +105,7 @@ input[type=text]{height:48px;padding:0 12px}
   <header class="hd">
     <div class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
     <div class="ttl"><b>Prompt Hub</b><div class="src" id="src">Text teilen oder einfügen</div></div>
+    <button class="ib rb" id="bRadar" aria-label="simap-Radar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12 18 6"/><circle cx="12" cy="12" r="1"/></svg><span class="badge" id="rBadge" hidden></span></button>
     <button class="ib" id="bSet" aria-label="Einstellungen"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg></button>
   </header>
 
@@ -145,6 +156,19 @@ input[type=text]{height:48px;padding:0 12px}
     <div class="grab"></div>
     <h3>Ziel wählen</h3>
     <div id="menu"></div>
+  </div>
+</div>
+
+<div class="scrim" id="radarScrim" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="simap-Radar">
+    <div class="grab"></div>
+    <div class="row" style="justify-content:space-between;margin:4px 4px 0"><h3 style="margin:0">simap-Radar</h3><button class="chip" id="rAll" style="height:36px">Alle/keine</button></div>
+    <p class="note" id="rInfo" style="margin:4px 4px 10px"></p>
+    <div id="rList" class="rlist"></div>
+    <div style="padding:10px 4px 0;display:flex;flex-direction:column;gap:8px">
+      <button class="btn" id="rGo" disabled>Ausgewählte bewerten</button>
+      <p class="note" style="margin:0">Suche läuft werktags am Morgen automatisch. Stichworte in <span style="font-family:ui-monospace,monospace">radar/config.json</span> im Repository anpassen.</p>
+    </div>
   </div>
 </div>
 
@@ -205,6 +229,12 @@ input[type=text]{height:48px;padding:0 12px}
         "6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert.\n" +
         "7. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen und grober Schätzung des Offertaufwands in Personentagen.\n" +
         "Nur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben] markieren, nichts erfinden. Steht dort, dass Kriterien nur in den Unterlagen stehen, weise darauf hin. Daten im Format TT.MM.JJJJ." },
+    { id: "triage", g: "Recherchieren", l: "Ausschreibungen Triage", d: "Mehrere Ausschreibungen auf einmal: Rangliste nach Fit, Kurzbewertung der passenden. Quelle: simap-Radar oben rechts.",
+      p: "Bewerte alle öffentlichen Ausschreibungen in <inhalt> aus Sicht eines Beratungsunternehmens. Berücksichtige den Kontext oben (Schwerpunkte, Branchen, Referenzen), falls angegeben.\n" +
+        "1. Übersichtstabelle aller Einträge: Nr | Titel | Auftraggeber | Eingabefrist | Fit (hoch/mittel/tief) | Empfehlung (Go / prüfen / No-Go) | Hauptgrund in einem Satz. Sortiert nach Fit, dann Frist.\n" +
+        "2. Für jede Ausschreibung mit Fit hoch oder mittel eine Kurzbewertung: Gegenstand, Eignungskriterien und Referenzbedarf, Zuschlagskriterien mit Gewichtung, Risiken, offene Fragen fürs Fragenforum, grober Offertaufwand in Personentagen.\n" +
+        "3. Ausschreibungen ohne Bezug zu den Schwerpunkten nur in der Tabelle, mit Fit tief.\n" +
+        "Nur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben] markieren, nichts erfinden. Daten im Format TT.MM.JJJJ. Am Schluss: die 3 dringendsten nächsten Schritte mit Datum." },
     { id: "frei", g: "Eigene", l: "Freie Anweisung", d: "Das Feld «Anweisung» wird zur Aufgabe.", p: "" }
   ];
 
@@ -425,7 +455,61 @@ input[type=text]{height:48px;padding:0 12px}
   $("cp").onclick = function () { copy(pv.value).then(function (ok) { setHint(ok ? "✓ In die Zwischenablage kopiert." : "Kopieren blockiert: Prompt aufklappen und manuell kopieren.", ok); }); };
   $("bSet").onclick = function () { $("ctx").value = st.ctx || ""; sheet("setScrim", true); };
   $("setOk").onclick = function () { st.ctx = $("ctx").value; save(); upd(); sheet("setScrim", false); };
-  ["menuScrim", "setScrim"].forEach(function (id) { $(id).addEventListener("click", function (e) { if (e.target === e.currentTarget) sheet(id, false); }); });
+  /* simap-Radar: Ergebnisdatei der GitHub Action (gleiche Herkunft) */
+  var radar = null, PT = { tender: "Ausschreibung", participant_selection: "Präqualifikation", advance_notice: "Vorankündigung" };
+  function chD(s) { var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s || ""); return m ? m[3] + "." + m[2] + "." + m[1] : (s || "?"); }
+  function seen() { return st.seen || (st.seen = []); }
+  function loadRadar() {
+    return fetch("radar/latest.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (d) {
+      radar = d;
+      var n = (d.items || []).filter(function (it) { return seen().indexOf(it.id) < 0; }).length;
+      $("rBadge").hidden = !n; $("rBadge").textContent = n > 99 ? "99+" : n;
+      return d;
+    });
+  }
+  function rCount() { var n = $("rList").querySelectorAll("input:checked").length; $("rGo").disabled = !n; $("rGo").textContent = "Ausgewählte bewerten (" + n + ")"; }
+  function openRadar() {
+    sheet("radarScrim", true);
+    $("rInfo").textContent = "Lade …"; $("rList").textContent = "";
+    loadRadar().then(function (d) {
+      var items = d.items || [];
+      $("rInfo").textContent = d.generatedAt
+        ? items.length + " offene Treffer seit " + chD(d.since) + " · Stand " + chD(d.generatedAt) + " " + d.generatedAt.slice(11, 16) + " UTC · Stichworte: " + (d.keywords || []).join(", ")
+        : "Noch kein Suchlauf. Die Suche läuft werktags am Morgen automatisch.";
+      items.forEach(function (it, i) {
+        var isNew = seen().indexOf(it.id) < 0;
+        var lab = document.createElement("label"); lab.className = "ritem";
+        var cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = isNew; cb.dataset.i = i; cb.onchange = rCount;
+        var tx = document.createElement("span");
+        var b = document.createElement("b");
+        if (isNew) { var nw = document.createElement("span"); nw.className = "nw"; nw.textContent = "neu"; b.appendChild(nw); }
+        b.appendChild(document.createTextNode(it.title || it.nr));
+        var sm = document.createElement("small");
+        sm.textContent = it.office + " · " + (PT[it.type] || it.type || "") + " · publiziert " + chD(it.date) + (it.deadline ? " · Frist " + chD(it.deadline) : "") + " · " + (it.hits || []).join(", ");
+        tx.appendChild(b); tx.appendChild(sm); lab.appendChild(cb); lab.appendChild(tx);
+        $("rList").appendChild(lab);
+      });
+      rCount();
+    }, function () { $("rInfo").textContent = "Radar-Datei nicht erreichbar. Offline oder noch kein Suchlauf."; });
+  }
+  $("bRadar").onclick = openRadar;
+  $("rAll").onclick = function () { var cbs = $("rList").querySelectorAll("input"), any = [].some.call(cbs, function (c) { return !c.checked; }); [].forEach.call(cbs, function (c) { c.checked = any; }); rCount(); };
+  $("rGo").onclick = function () {
+    var sel = [].filter.call($("rList").querySelectorAll("input"), function (c) { return c.checked; }).map(function (c) { return radar.items[+c.dataset.i]; });
+    if (!sel.length) return;
+    raw.value = "simap-Radar, " + sel.length + " Publikationen seit " + chD(radar.since) + "\n\n" + sel.map(function (it, i) {
+      return "### " + (i + 1) + ". " + it.title + "\nProjekt " + (it.nr || it.id) + " · " + (PT[it.type] || it.type || "") + " · publiziert " + chD(it.date) +
+        (it.deadline ? " · Eingabefrist " + chD(it.deadline) : "") + "\nAuftraggeber: " + it.office + "\nLink: " + it.url + (it.text || "");
+    }).join("\n\n");
+    srcKind = "simap"; cbSrc.checked = false;
+    (radar.items || []).forEach(function (it) { if (seen().indexOf(it.id) < 0) seen().push(it.id); });
+    if (st.seen.length > 600) st.seen = st.seen.slice(-600);
+    save(); $("rBadge").hidden = true;
+    selT("triage"); sheet("radarScrim", false); window.scrollTo(0, 0);
+  };
+  loadRadar().catch(function () {});
+
+  ["menuScrim", "setScrim", "radarScrim"].forEach(function (id) { $(id).addEventListener("click", function (e) { if (e.target === e.currentTarget) sheet(id, false); }); });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { sheet("menuScrim", false); sheet("setScrim", false); }
     else if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); go(); }

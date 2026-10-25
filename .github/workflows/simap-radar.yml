@@ -1,0 +1,36 @@
+name: simap-Radar
+
+on:
+  schedule:
+    - cron: "15 4 * * 1-5"   # werktags 05:15 UTC (06:15 / 07:15 Schweizer Zeit)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: simap-radar
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: simap abfragen
+        run: python scripts/simap_radar.py
+      - name: Ergebnis speichern
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add radar/latest.json
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "simap-Radar: Treffer aktualisiert"
+            git push
+          fi

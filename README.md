@@ -42,6 +42,12 @@ Wird ein Link auf ein simap-Projekt geteilt, versucht die App, Projektkopf und P
 Lässt simap den Abruf aus der App nicht zu, die Seite in Chrome öffnen, den Text markieren und teilen.
 Ausschreibungsunterlagen (PDF) erfordern ein Login und werden nicht geladen.
 
+**simap-Radar:** Die GitHub Action `.github/workflows/simap-radar.yml` sucht werktags am Morgen
+nach neuen Publikationen (Ausschreibung, Präqualifikation, Vorankündigung) zu den Stichworten in
+`radar/config.json` und schreibt die Treffer mit Details nach `radar/latest.json`.
+In der App zeigt das Radar-Symbol oben rechts die Zahl neuer Treffer. Auswählen und «Ausgewählte bewerten»
+füllt den Inhalt und wählt die Vorlage «Ausschreibungen Triage». Manuell starten: Actions → simap-Radar → Run workflow.
+
 ## Zeitjournal
 
 Zweite App im Unterordner [`zeitjournal/`](zeitjournal/): Arbeitszeit per Tipp auf Favoriten erfassen
