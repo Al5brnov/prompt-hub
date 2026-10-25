@@ -303,9 +303,12 @@ def score_item(title, desc, cpvs, ptype, cfg, core_rx, ctx_rx, excl_rx):
         if rx.search(title):
             return 0, [], "Ausschlusswort im Titel: " + w
     score, why = 0, []
+    title_only = set(cfg.get("titleOnly", []))
     for w, rx in core_rx:
         if rx.search(title):
             score += 5; why.append(w + " (Titel)")
+        elif w in title_only:
+            continue
         elif rx.search(desc):
             score += 3 if it_cpv else 1; why.append(w)
     ctx = []
@@ -357,7 +360,10 @@ def main():
     queries = [("cpv:" + c, [("cpvCodes", c)], int(cfg.get("cpvPages", 10))) for c in cfg.get("cpvSearch", [])]
     queries += [(w, [("search", w)], 3 if w in core else 2) for w in search_words]
     found, errors = {}, 0
-    for w, q, max_pages in queries:
+
+    def run_query(w, q, max_pages):
+        """Eine Suche mit Folgeseiten. True = vollständig, False = abgebrochen (Netzwerk)."""
+        nonlocal errors
         cursor, pages = None, 0
         while pages < max_pages:
             params = [("lang", "de")] + q + [("newestPublicationFrom", since)] + [("newestPubTypes", t) for t in all_types]
@@ -370,7 +376,7 @@ def main():
                 errors += 1
                 if errors >= 3 and not found:
                     raise RuntimeError("simap-Suche wiederholt fehlgeschlagen: %s" % e)
-                break
+                return False
             projects = r.get("projects") or []
             for p in projects:
                 pid = p.get("id")
@@ -401,7 +407,17 @@ def main():
             pages += 1
             if not cursor or not projects:
                 break
+        return True
+
+    failed = []
+    for w, q, max_pages in queries:
+        if not run_query(w, q, max_pages):
+            failed.append((w, q, max_pages))
         print("Suche «%s»: %d Kandidaten gesamt (%.0fs)" % (w, len(found), time.time() - t0), flush=True)
+    if failed:
+        time.sleep(20)  # zweiter Versuch nach kurzer Pause
+        still = [f[0] for f in failed if not run_query(*f)]
+        note("Wiederholt: %d Suchen, weiterhin fehlgeschlagen: %s" % (len(failed), ", ".join(still) or "keine"))
 
     # Vorfilter ohne Details: Ausschlusswörter im Titel; Priorität für Kernbegriffe im Titel
     def prio(it):
