@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T10:22:26+00:00",
+ "generatedAt": "2026-10-25T10:32:33+00:00",
  "since": "2026-10-04",
  "keywords": [
   "SAP",
@@ -45,7 +45,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 102,
+ "candidates": 103,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -84,10 +84,10 @@
   "Prozessanalyse",
   "AMS"
  ],
- "durationSec": 531,
+ "durationSec": 552,
  "dropped": {
-  "cpv": 48,
-  "score": 28,
+  "cpv": 57,
+  "score": 20,
   "frist": 1,
   "ausschluss": 0,
   "zeit": 0,
@@ -96,22 +96,397 @@
  "count": 2,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 101] Network is unreachable>",
-  "Suche «Webshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 101] Network is unreachable>",
-  "Suche «E-Commerce»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 46331: URLError bei /publications/v1/project/6cf4f129-ad32-4306-9647-229393485b50/publication-details/041256ed-9d81-4da0-bffc-4d06ba19cc2a: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 45876: URLError bei /publications/v1/project/b62d3a3b-c707-40f7-b1fe-b050a903b7e4/publication-details/efb4ceff-e2fc-4c00-91bc-71565f7c8b63: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 44257: URLError bei /publications/v1/project/36d0a202-6a7f-4508-b6be-08da4b8c495e/publication-details/7c6173c3-95dc-41d5-81b0-1120e2625b83: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 46199: URLError bei /publications/v1/project/7e57eed2-bc1a-4cf2-8705-20f11a1cd75a/publication-details/2974bc2d-abe7-4739-895f-c11172114b35: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 45080: URLError bei /publications/v1/project/90565c59-853c-44dd-be49-e254f4fde41e/publication-details/d1387fe4-6c89-43ef-b77b-5d65412d392a: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 43611: URLError bei /publications/v1/project/2e8be5a3-12bc-4e5e-a20c-13a153a75251/publication-details/14e2f9cd-a096-47ca-911f-9ab841bfdd00: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 43612: URLError bei /publications/v1/project/9fa8e28a-c790-425a-910b-6da290a930ab/publication-details/f10ba692-e3b8-47a6-9eb1-67cb190fb3f5: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 43815: URLError bei /publications/v1/project/4b705e0a-5cbe-4675-95e7-a372a58fbdee/publication-details/7c7f4a31-af60-4e6c-a244-520c9ee3262e: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 46103: URLError bei /publications/v1/project/8288f08b-4a4e-4322-86af-9f79a7357583/publication-details/92929eaf-ff42-41af-8282-85655a7a60ca: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 43020: URLError bei /publications/v1/project/f66ef5bf-fe88-4c8b-ba8a-3cbc6542849d/publication-details/0234149b-42e4-4c92-8723-685ba7377928: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 45897: URLError bei /publications/v1/project/d700db96-f055-407f-9996-6e0d60fab6d4/publication-details/6362a05b-7976-45d9-b976-d9f1bfcc8c74: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 43907: URLError bei /publications/v1/project/c28ff4c4-b1fa-441b-a6c5-b90209fd4e86/publication-details/51086854-8c3a-4cfd-97bc-f7236c685037: <urlopen error [Errno 101] Network is unreachable>",
-  "Details 44954: URLError bei /publications/v1/project/6c376bab-929a-49ef-bbe1-c426144ea6f5/publication-details/b5ea7a1b-b27f-4c04-b9f6-381f9b0ac5a0: <urlopen error [Errno 101] Network is unreachable>"
+  "Suche «gestionale»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Details 45156: URLError bei /publications/v1/project/fb43cad9-3337-483f-badd-039a77227234/publication-details/d4ced249-3ccf-443b-9ac8-8c9c5e27d80c: <urlopen error timed out>",
+  "Details 43611: URLError bei /publications/v1/project/2e8be5a3-12bc-4e5e-a20c-13a153a75251/publication-details/14e2f9cd-a096-47ca-911f-9ab841bfdd00: <urlopen error timed out>",
+  "Details 45546: URLError bei /publications/v1/project/230816bf-95da-4b06-9920-2d018f835477/publication-details/7b80848f-b726-41f3-abbb-a0e8734536c1: <urlopen error timed out>"
+ ],
+ "rejected": [
+  {
+   "title": "Ersatzbeschaffung von ICT-Endgeräten der Primarschule Dübendorf",
+   "score": 3,
+   "why": " | CPV 48000000"
+  },
+  {
+   "title": "Mandat: Entwicklung, Umsetzung und Einführung der Versorgungsregion Brugg (Alters- und Lan",
+   "score": 3,
+   "why": " | CPV 75112100,75120000,79411000"
+  },
+  {
+   "title": "RV Server, Zubehör und Zusatzservices",
+   "score": 3,
+   "why": " | CPV 48820000"
+  },
+  {
+   "title": "Fachapplikation Arbeitsmarktvollzug",
+   "score": 3,
+   "why": " | CPV 48000000,72000000"
+  },
+  {
+   "title": "Erwerb von Microsoft-Lizenzen",
+   "score": 3,
+   "why": " | CPV 48000000"
+  },
+  {
+   "title": "ICT-Betrieb und ICT-Ausrüstung der Primarstufe Birsfelden",
+   "score": 3,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Aktualisierung und Weiterentwicklung der nationalen Risikoanalyse «Katastrophen und Notlag",
+   "score": 3,
+   "why": " | CPV 71300000,71313000,71317200"
+  },
+  {
+   "title": "Adobe ETLA 2027 - 2030",
+   "score": 3,
+   "why": " | CPV 48000000"
+  },
+  {
+   "title": "LC-MS mit on-/offline Probenanreicherung",
+   "score": 2,
+   "why": "Beschaffungsplattform | CPV 38430000"
+  },
+  {
+   "title": "Samsung Mobile Devices",
+   "score": 1,
+   "why": " | CPV 30210000,30213200,32252000"
+  },
+  {
+   "title": "HR-Dienstleistungen, Projekt 5171",
+   "score": 1,
+   "why": " | CPV 79633000"
+  },
+  {
+   "title": "Fischingen, H468.1, Ersatzneubau Hauptstrasse, Buhwilerstrasse - Stägwis",
+   "score": 1,
+   "why": ""
+  },
+  {
+   "title": "Stadt Chur - Planungs- und Umzugsleistungen für Büroarbeitswelten",
+   "score": 1,
+   "why": " | CPV 79932000,98392000"
+  },
+  {
+   "title": "Climate Resilience in the Water Sector of Kosovo: Seed Investment: Supply and Installation",
+   "score": 1,
+   "why": ""
+  },
+  {
+   "title": "Engineering Leistungen ECM",
+   "score": 1,
+   "why": " | CPV 71000000,71300000,75110000"
+  },
+  {
+   "title": "Ausschreibungsunterlagen \"Mittagessen für die Tagesstrukturen der Volksschule Emmen",
+   "score": 1,
+   "why": " | CPV 55524000"
+  },
+  {
+   "title": "Marketingagentur neue Shopping Destination am Flughafen Zürich",
+   "score": 1,
+   "why": " | CPV 79342000"
+  },
+  {
+   "title": "Gastronomie- und Verpflegungsdienstleistungen: Betrieb Mensas Schulstandorte und Personalr",
+   "score": 1,
+   "why": " | CPV 55500000"
+  },
+  {
+   "title": "AS_2026_013 Rahmenvertrag zur Beschaffung der FH-Card Medien",
+   "score": 1,
+   "why": ""
+  },
+  {
+   "title": "Wärmeprovisorium, Dammstrasse 25, Zug",
+   "score": 1,
+   "why": " | CPV 50721000,65400000"
+  },
+  {
+   "title": "Pumpspeicherwerk Grimsel 4, Los Panzerung Triebwasserweg und Los UW-Schützen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45248000, 45251120)"
+  },
+  {
+   "title": "Kaskade Barberine, Erhebliche Erneuerung - Ausschreibung Los 401 Generator G3 & Los 402 Pe",
+   "score": 0,
+   "why": "CPV ausserhalb IT (31000000, 31100000, 42110000)"
+  },
+  {
+   "title": "Rahmenvertrag als Assistent des Bauherrn, Region West",
+   "score": 0,
+   "why": "CPV ausserhalb IT (71241000, 71310000, 71500000, 71530000, 71541000)"
+  },
+  {
+   "title": "Pächterried Provisorium 2027 (Modulbau, Container), Regensdorf",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45210000, 45214000)"
+  },
+  {
+   "title": "Torsionsstab, Hebel",
+   "score": 0,
+   "why": "CPV ausserhalb IT (34600000)"
+  },
+  {
+   "title": "EBP-643_Fernwärme-Armaturen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (42131000)"
+  },
+  {
+   "title": "​​Perrondach BHF Bümpliz Nord​",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000, 45210000, 45213321, 45260000)"
+  },
+  {
+   "title": "BAV 22398 Wohnsiedlung Salzweg, Ersatzneubau - BKP 273.0 Stahlzargentüren aus Holz",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45210000)"
+  },
+  {
+   "title": "Wehrkraftwerke Weinfelden und Müllheim – Gesamtplanerleistungen (Selektives Verfahren)",
+   "score": 0,
+   "why": "CPV ausserhalb IT (71300000)"
+  },
+  {
+   "title": "Rénovation des Infrastructures du Théâtre Benno Besson - Machinerie et serrurerie scénogra",
+   "score": 0,
+   "why": "CPV ausserhalb IT (42418000, 45237000)"
+  },
+  {
+   "title": "Beleuchtungssanierung Stiftung zuwebe, Untere Rainstrasse 31, 6341 Baar",
+   "score": 0,
+   "why": "CPV ausserhalb IT (31000000, 31500000)"
+  },
+  {
+   "title": "Rénovation des Infrastructures du Théâtre Benno Besson - Travaux de l’entreprise de maçonn",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45111100, 45262311, 45262522)"
+  },
+  {
+   "title": "Erweiterung Kehrichtfahrzeugflotte",
+   "score": 0,
+   "why": "CPV ausserhalb IT (34144511)"
+  },
+  {
+   "title": "Sagendorfstrasse, Emmetten, Renovation best. Entwässerungssystem",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000)"
+  },
+  {
+   "title": "Ersatzbeschaffung Beatmungsgeräte Intensivstation ",
+   "score": 0,
+   "why": "CPV ausserhalb IT (33157400)"
+  },
+  {
+   "title": "Erweiterung Alterszentrum Bärenmatt: BKP 230 Elektroanlagen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000)"
+  },
+  {
+   "title": "Erweiterung Alterszentrum Bärenmatt: BKP 240 Heizungsanlagen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000)"
+  },
+  {
+   "title": "Erweiterung Alterszentrum Bärenmatt: BKP 244 Lüftungsanlagen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000)"
+  },
+  {
+   "title": "Erweiterung Alterszentrum Bärenmatt: BKP 250 Sanitäranlagen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000)"
+  },
+  {
+   "title": "24-kV-MS-Schaltanlagen UW Grynau und UW Linthal",
+   "score": 0,
+   "why": "CPV ausserhalb IT (31214000)"
+  },
+  {
+   "title": "Horizontal field magnet with ultra-wide beam access for intensity mapping neutron experime",
+   "score": 0,
+   "why": "CPV ausserhalb IT (31630000, 31643000)"
+  },
+  {
+   "title": "Rahmenvertrag Oberbauinstandsetzungsleistungen im Fachlos 1, in Gleisen und Weichen auf Sc",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000)"
+  },
+  {
+   "title": "Rahmenvertrag Oberbauinstandsetzungsleistungen im Fachlos 1, in Gleisen und Weichen auf Sc",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000, 45234130)"
+  },
+  {
+   "title": "Gepäcktransporte Oberengadin",
+   "score": 0,
+   "why": "CPV ausserhalb IT (18920000, 34961000, 63000000, 63112000)"
+  },
+  {
+   "title": "ETH Zürich, LCA, Photovoltaikanlage",
+   "score": 0,
+   "why": "CPV ausserhalb IT (09332000)"
+  },
+  {
+   "title": "N09.48 MP-160035 - Ant.Villars-Ste-Croix-Vennes - Lot 4 - Réfection des revêtements (ID 10",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45220000, 45233210)"
+  },
+  {
+   "title": "XUND Mieterausbau Standort Suurstoffi 45, Rotkreuz - BKP 277.1 Schiebe- und Faltwände",
+   "score": 0,
+   "why": "CPV ausserhalb IT (44112310, 45421152)"
+  },
+  {
+   "title": "Gemeinde Lyss (Ortsteil Busswil), Kanalisationsvergrösserung",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000, 45230000)"
+  },
+  {
+   "title": "St. Moritz – Tirano, Teilerneuerung Puntaltatunnel, km 33.786 – km 33.832, Baumeisterarbei",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45221242, 45221247)"
+  },
+  {
+   "title": "Rahmenvertrag Elektro-/ ICT-Dienstleistungen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45311000, 45314000)"
+  },
+  {
+   "title": "BAV 60878 Anlauf- und Beratungsstelle SEB, Bäckerstrasse 7, Instandsetzung, Generalplanung",
+   "score": 0,
+   "why": "CPV ausserhalb IT (71000000)"
+  },
+  {
+   "title": "BAV 22398 Wohnsiedlung Salzweg, Ersatzneubau - BKP 228.3 Markisen / Rafflamellenstoren",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45210000)"
+  },
+  {
+   "title": "Erneuerung Gas- und Wasserleitung Alte Landstrasse, Oberrieden",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45231300)"
+  },
+  {
+   "title": "Bau Nr. 08069 - Hornbach, Abschnitt Bellerivestrasse bis See",
+   "score": 0,
+   "why": "CPV ausserhalb IT (71300000)"
+  },
+  {
+   "title": "Herstellung, Lieferung, Montage und Prüfung 220 kV HS-Kabelanlage im UW Laufenburg",
+   "score": 0,
+   "why": "CPV ausserhalb IT (31300000, 31321000, 31321300, 31340000, 45310000)"
+  },
+  {
+   "title": "Oeschgen IO/AO, K292/K465",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000)"
+  },
+  {
+   "title": "USZ Campus MITTE 1|2  / BKP 283.13 Deckenbekleidungen aus Metall - Paket 3 (OV)",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45210000, 45215120, 45215130)"
+  },
+  {
+   "title": "963_283.4 Deckenbekleidungen in Holz, Erweiterung SH Loreto Zug",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45421146)"
+  },
+  {
+   "title": "Zukunft Bahnhof Bern, Bausteine 1,2,4, 3a, 3b, Umweltbaubegleitung: 3'000 h externe Projek",
+   "score": 0,
+   "why": "CPV ausserhalb IT (71356000, 90713000, 90714000)"
+  },
+  {
+   "title": "20-kV-Tauchkern-Erdschlusslöschspulen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (31171000)"
+  },
+  {
+   "title": "Climate Resilience in the Water Sector of Kosovo: Seed Investment: Installation of a PV Sy",
+   "score": 0,
+   "why": "CPV ausserhalb IT (09332000)"
+  },
+  {
+   "title": "Kirchgemeindehaus Enge, Instandsetzung Gebäude mit Bistrobetrieb BKP 230 Elektroinstallati",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45311200)"
+  },
+  {
+   "title": "Verkehrszukunft Region Thun, Arbeitspaket 3: stadträumliche, verkehrliche, bautechnische u",
+   "score": 0,
+   "why": "CPV ausserhalb IT (71000000)"
+  },
+  {
+   "title": "APFZ Kommunikations- und Rechnerplattform für Schienenfahrzeuge",
+   "score": 0,
+   "why": "CPV ausserhalb IT (34600000)"
+  },
+  {
+   "title": "Alterssiedlung Tannenbach Instandstellung",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45211100)"
+  },
+  {
+   "title": "Kirchgemeindehaus Enge, Instandsetzung Gebäude mit Bistrobetrieb BKP 242 Heizungsanlagen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45331000)"
+  },
+  {
+   "title": "Kirchgemeindehaus Enge, Instandsetzung Gebäude mit Bistrobetrieb BKP 244 Lüftungsanlagen",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45331000)"
+  },
+  {
+   "title": "Externe Projektleitungsteams für die Dienststelle Verkehr und Infrastruktur (vif) Kanton L",
+   "score": 0,
+   "why": "CPV ausserhalb IT (71300000)"
+  },
+  {
+   "title": "Projekt Mitholz: Räumung ehemaliges Munitionslager, Testanlage Materialbewirtschaftung",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000, 45200000, 45350000)"
+  },
+  {
+   "title": "Huberstrasse 18/20, Gesamtsanierung, BKP 226.2 verputzte Wäremdämmung",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45210000)"
+  },
+  {
+   "title": "Präqualifikation Planerleistungen Generalplanung Arealentwicklung Hüslimatt Etappe 1",
+   "score": 0,
+   "why": "CPV ausserhalb IT (71240000)"
+  },
+  {
+   "title": "Regionaler Rahmenvertrag Brandschutzbekleidung Werdenberg",
+   "score": 0,
+   "why": "CPV ausserhalb IT (35113400)"
+  },
+  {
+   "title": "13043.10 / 250-01 Sanitäranlagen, Instandsetzung & Erweiterung Betriebsgebäude Seepolizei ",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000)"
+  },
+  {
+   "title": "Erneuerung Infrastruktur Autoverlad Furka- Realp",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45000000, 45234100)"
+  },
+  {
+   "title": "Beschaffung von Kanal TV-Inspektionsfahrzeug",
+   "score": 0,
+   "why": "CPV ausserhalb IT (34144000)"
+  },
+  {
+   "title": "Ersatzbeschaffung Forst- und Kommunalschlepper",
+   "score": 0,
+   "why": "CPV ausserhalb IT (16000000, 34143000)"
+  },
+  {
+   "title": "Wärmeverbund Zumikon Ersatz Wärmeerzeugung",
+   "score": 0,
+   "why": "CPV ausserhalb IT (45331100)"
+  }
  ],
  "items": [
   {
@@ -139,23 +514,24 @@
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 5001\n      name: AEW\n      url: https://www.aew.ch\n      street: Industriestrasse 20\n      city: Aarau\n    procurementRecipientAddress:\n      postalCode: 5001\n      name: AEW Energie AG\n      url: https://www.aew.ch\n      street: Industriestrasse 20\n      city: Aarau\n    title: Optimierung der EDM Landschaft\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Gegenstand der Ausschreibung ist die Weiterentwicklung und Erneuerung der Systemlandschaft der AEW Energie AG im Bereich Messdatenmanagement (MDM) und Energiedatenmanagement (EDM). Das Beschaffungsvorhaben ist in zwei Lose unterteilt. Je Los wird ein Anbieter gesucht. Angebote können für ein einzelnes Los oder für beide Lose eingereicht werden.\n    processType: open\n    orderType: service\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    remediesNotice: 1. Gegen diese Ausschreibung kann innert einer nicht erstreckbaren Frist von 20 Tagen seit der Publikation beim Verwaltungsgericht des Kantons Aargau, Obere Vorstadt 40, 5000 Aarau, Beschwerde erhoben werden. Der Stillstand der Fristen gemäss Zivilprozessrecht gilt nicht.\n      \n      2. Die Beschwerde ist schriftlich einzureichen und muss einen Antrag sowie eine Begründung enthalten. Das heisst, es ist\n      a) anzugeben, wie das Verwaltungsgericht entscheiden soll, und\n      b) darzulegen, aus welchen Gründen diese andere Entscheidung verlangt wird.\n      \n      3. Auf eine Beschwerde, welche den Anforderungen gemäss den Ziffern 1. und 2. nicht entspricht, wird nicht eingetreten.\n      \n      4. Die angefochtene Ausschreibung ist anzugeben, allfällige Beweismittel sind zu bezeichnen und soweit möglich beizulegen. Die Eingabe ist zu unterzeichnen.\n      \n      5. Das Beschwerdeverfahren ist mit einem Kostenrisiko verbunden, das heisst die unterliegende Partei hat in der Regel die Verfahrenskosten sowie gegebenenfalls die gegnerischen Anwaltskosten zu bezahlen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-09\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-24\n    initialPublicationDate: 2026-09-17\n    offerDeadline: 2026-11-05T23:59:00+01:00\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  correction:\n    initialPublicationDate: 2026-09-17\n    remarks: Im Rahmen der Beantwortung der Anbieterfragen wurden die Ausschreibungsunterlagen berichtigt und ergänzt.\n      \t\n      Die Berichtigungen betreffen redaktionelle Fehler und Inkonsistenzen zwischen Dokument 04 «Technische und fachliche Anforderungen» und Dokument 05 «Antwortmatrix» für Los 2 MDM, punktuelle Anpassungen der Antwortmatrix sowie Klarstellungen zu den Exit- und Übergabeleistungen gemäss Anhang 5 der Betriebsverträge beider Lose und zu den zulässigen Vertragsvorbehalten gemäss Ziffer 4.1 der Ausschreibungsbedingungen.\n      \t\n      1. Zusätzliche Unterlagen nach Fragerunde\n      Folgende Dokumente werden ergänzend bereitgestellt:\n      \t\n      Ordner Zusätzliche Unterlagen nach Fragerunde:\n      \t\t• 3.10_Allgemeine-Einkaufsbedingungen-AEW\n      \t\t• 3.11_AEW_Bestellbedingungen_fuer_Dienstleistungen\n      \t\n      Ordner SAP Unterlagen\n      \t\t• SAP AMI Integration for Utilities, ZIP-Datei\n      \t\t• SAP AMI Utilities, PDF-Datei\n      \t\n      2. Korrigierte Unterlagen\n      Folgende korrigierte Dokumente werden bereitgestellt und ersetzen die bisherigen Fassungen:\n      \t\t• 01_Ausschreibungsbedingungen_v1.0_KORRIGIERT\n      \t\t• 04_Technische und fachliche Anforderungen_Los 2 MDM_v1.0_KORRIGIERT\n      \t\t• 05_Antwortmatrix technische und fachliche Anforderungen_Los 2 MDM_v1.0_KORRIGIERT\n      \t\t• 3.3_Anhang_Betrieb Los 1 EDM_KORRIGIERT\n      \t\t• 3.3_Anhang_Betrieb Los 2 MDM_version_v1.0_KORRIGIERT\n      \t\n      Für die Angebotserstellung sind die korrigierten Fassungen sowie die ergänzend bereitgestellten Unterlagen zu berücksichtigen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 44006-01\n    publicationDate: 2026-09-17\n  lots:\n    - additionalCpvCodes:\n        - code: 72261000\n          label: Software-Unterstützung\n        - code: 72263000\n          label: Software-Implementierung\n        - code: 72265000\n          label: Software-Konfiguration\n        - code: 72267000\n          label: Software-Wartung und -Reparatur\n      lotNumber: 1\n      title: Los 1 EDM\n      projectSubType: service\n      orderDescription: Los 1 umfasst die Konzeption, Implementierung, Migration, Integration und Einführung von SAP EDM sowie die anschliessende Erbringung von Wartungs- und Supportleistungen.\n      qualificationCriteriaInDocuments: no\n      qualificationCriteria:\n        - description: Hinreichende Fachkompetenz und Erfahrung zur Auftragserfüllung\n          title: EK 1\n          verification: Vollständig ausfülltes und rechtsgültig unterzeichnetes Dokument «Nachweis Los 1 EDM EK Referenzen Beilage 6.1», inkl. weiterer Nachweise gem. Vorgabe.\n        - description: Kontaktperson (SPOC, inkl. Stv.)\n          title: EK 2\n          verification: Vollständig ausfüllte und rechtsgültig unterzeichnete Beilage 6.2 «Nachweis EK SPOC», inkl. weiterer Nachweise gem. Vorgabe.\n        - description: Hinreichendes Qualitätsmanagementsystem\n          title: EK 3\n          verification: Vollständ\n  [… gekürzt]"
   },
   {
-   "id": "3e53115c-e00d-41c7-835d-e199e40cd645",
-   "nr": "29282",
-   "title": "LC-MS mit on-/offline Probenanreicherung",
-   "office": "Bundesamt für Rüstung armasuisse",
-   "date": "2026-10-14",
+   "id": "22d24e18-3119-4dab-96f0-040114f464f7",
+   "nr": "44883",
+   "title": "Schweizerische Brandschutzvorschriften – Webshop – Druck – Logistik",
+   "office": "Vereinigung Kantonaler Feuerversicherungen (VKF)",
+   "date": "2026-10-13",
    "type": "tender",
    "process": "open",
-   "deadline": "2026-11-24T23:59:00+01:00",
+   "deadline": "2026-11-02T12:00:00+01:00",
    "cpv": [
-    "38430000"
+    "22000000",
+    "48481000"
    ],
-   "score": 4,
+   "score": 5,
    "hits": [
-    "Beschaffungsplattform"
+    "Webshop"
    ],
-   "url": "https://www.simap.ch/de/project-detail/3e53115c-e00d-41c7-835d-e199e40cd645",
-   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 3003\n      name: Bundesamt für Rüstung armasuisse\n      contactPerson: Ressourcen und Support, CC WTO\n      street: Guisanplatz 1\n      city: Bern\n    procurementRecipientAddress:\n      name: Agroscope\n    title: LC-MS mit on-/offline Probenanreicherung\n    documentsLanguages:\n      - de\n      - en\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n      - fr\n      - it\n      - en\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: supply\n    documentsLanguagesNote: Die Ausschreibungsunterlagen werden in deutscher und englischer Sprache zur Verfügung gestellt. Bei Widersprüchen zwischen den Sprachversionen ist die deutsche Version massgebend.\n    offerSpecificNote: · Die Eingabe des Angebotes hat ausschliesslich in elektronischer Form über die Beschaffungsplattform simap.ch zu erfolgen.\n      · Bitte keine einzelnen Dokumente hochladen, sondern alle Angebotsbestandteile vor dem Hochladen in einem zip-Ordner zusammenfassen. Texte in pdf-Dokumenten müssen durchsuchbar und kopierbar sein.\n      · Wo gefordert, sind die Dokumente rechtsgültig zu unterzeichnen. Rechtsgültig unterzeichnen können Personen gemäss Eintrag im Schweizer Handelsregister (oder gleichwertig anerkannte Instanz im Ausland). Für den Fall, dass die unterzeichnende Person nicht im Handelsregister mit der entsprechenden Zeichnungsberechtigung eingetragen ist, muss dem Angebot eine entsprechende Vollmacht beigelegt werden. Das Angebot ist durch die zeichnungsberechtigte(n) Person(en) entweder mittels handschriftlicher Signatur (eingescannt) oder mittels elektronischer Signatur zu unterzeichnen.\n    publicationLanguagesComment: Das Verfahren wird grundsätzlich in deutscher Sprache abgewickelt. Die Beantwortung der schriftlichen Fragen im Forum und die Korrespondenz mit den Anbietern erfolgen in der jeweiligen Sprache der Eingabe (Deutsch, Französisch, Italienisch oder Englisch).\n  procurement:\n    orderDescription: Beschaffung eines LC-MS-Systems mit on-/offline Probenaufnahme, welches aus folgenden Komponenten besteht:\n      - Flüssigchromatographiesystem\n      - Triple Quadrupol Massenspektrometer\n      - Probenanreicherungssystem\n      Die Beschaffung beinhaltet die Lieferung, Montage, Inbetriebnahme, Schulung des Personals sowie Wartungs- und Serviceleistungen.\n    processType: open\n    orderType: supply\n    supplyType: buy\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 1725\n      city: Posieux\n    contractDeadlineType: not_specified\n    canContractBeExtended: no\n    options: yes\n    optionsNote: - Wartungs- und Serviceleistungen\n      - zusätzliche Schulungen\n      - MRM Datenbanken (falls verfügbar)\n    cpvCode:\n      code: 38430000\n      label: Erkennungs- und Analysegeräte\n  terms:\n    termsType: defined\n    termsCriteria:\n      - description: Der Anbieter hält die Arbeitsschutzbestimmungen und Arbeitsbedingungen, die Bestimmungen über die Gleichbehandlung von Frau und Mann in Bezug auf die Lohngleichheit, die Bestimmungen des schweizerischen Umweltrechts oder die vom Bundesrat bezeichneten internationalen Übereinkommen zum Schutz der Umwelt, die Bestimmungen betreffend der Melde- oder Bewilligungspflichten gemäss dem Bundesgesetz über Massnahmen zur Bekämpfung der Schwarzarbeit und die Regeln zur Vermeidung von Korruption ein.\n        verification: Selbstdeklaration der Beschaffungskonferenz des Bundes BKB\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: supply\n    termsNote: Die Teilnahmebedingung wird mit \"erfüllt\" oder \"nicht erfüllt\" beurteilt. Erfüllt ein Anbieter die Bedingung nicht, so wird er von der Teilnahme am weiteren Verfahren ausgeschlossen.\n      Der Nachweis ist mit dem Angebot einzureichen und muss zum Zeitpunkt der Angebotseinreichung erfüllt werden.\n    subContractorNote: Subunternehmer sind zugelassen. Die Verantwortung und Ansprechstelle gegenüber dem Auftraggeber liegen vollumfänglich beim Anbieter selber. Die Beteiligung an mehreren Angeboten ist zulässig.\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-09\n        note: Es werden keine mündlichen Auskünfte erteilt. Falls sich beim Erstellen des Angebots\n          Fragen ergeben, besteht die Möglichkeit diese anonym im Frageforum auf der Beschaffungsplattform simap.ch zu stellen. Die Antworten können von allen interessierten Unternehmen, welche die\n          Ausschreibungsunterlagen heruntergeladen haben, im Frageforum simap.ch eingesehen\n          werden.\n    processType: open\n    orderType: supply\n    publicationDate: 2026-10-14\n    offerDeadline: 2026-11-24T23:59:00+01:00\n    specificDeadlinesAndFormalRequirements: Die Frist für die Einreichung des Angebots endet am 24.11.2026, 23:59 Uhr (MEZ).\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocumen\n  [… gekürzt]"
+   "url": "https://www.simap.ch/de/project-detail/22d24e18-3119-4dab-96f0-040114f464f7",
+   "text": "\n  project-info:\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 3001\n      name: Vereinigung Kantonaler Feuerversicherungen (VKF)\n      contactPerson: Michael Binz\n      url: https://www.vkg.ch\n      street: Bundesgasse 20\n      city: Bern\n    procurementRecipientAddress:\n      postalCode: 3001\n      name: Vereinigung Kantonaler Feuerversicherungen (VKF)\n      contactPerson: Michael Binz\n      url: https://www.vkg.ch\n      street: Bundesgasse 20\n      city: Bern\n    title: Schweizerische Brandschutzvorschriften – Webshop – Druck – Logistik\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n      - offer_external\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: supply\n    offerAddress:\n      postalCode: 3001\n      name: Vereinigung Kantonaler Feuerversicherungen (VKF)\n      contactPerson: Michael Binz\n      reference: «Webshop – Druck – Logistik – BSV»\n      street: Bundesgasse 20\n      city: Bern\n  procurement:\n    orderDescription: Die Vereinigung Kantonaler Feuerversicherungen (VKF) beabsichtigt die zukünftigen Schweizerischen Brandschutzvorschriften (BSV) in gedruckter Form über einen Webshop zum Verkauf anzubieten. Sie möchte dazu eine einzige Ansprechpartnerin bzw. einen einzigen Ansprechpartner, die den Webshop betreibt, die Vorschriften druckt sowie die Lagerhaltung und die Auslieferung der Drucksachen übernimmt. \n      Die vorliegende Ausschreibung hat zum Ziel die geeignete Dienstleisterin bzw. den geeigneten Dienstleister mit dem vorteilhaftesten Angebot für die notwendigen Druck- und Auslieferungsaufträge, die Lagerhaltung sowie eine Webshoplösung für den Verkauf der Drucksachen zu finden.\n      \n      Beschafft wird eine Gesamtleistung aus einer Hand. Die Auftragnehmerin trägt die Gesamtverantwortung für den Webshop inklusive Hosting, Anbindung an Abacus, Payment-Integration, technischen Support und Change-Management sowie Druck, Lagerhaltung, \n      Kommissionierung, Versand und Retourenbearbeitung. Unterauftragnehmende sind, im Rahmen der Vorgaben der Ausschreibungsunterlagen, zulässig; gegenüber der VKF besteht jedoch eine zentrale, gesamthaft verantwortliche Vertragspartei.\n    processType: open\n    orderType: supply\n    additionalCpvCodes:\n      - code: 48481000\n        label: Vertriebs- und Marketingsoftwarepaket\n    supplyType: work_contract\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    executionNote: Termine gemäss Ausschreibungsunterlage Ziffer 3.4\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 3001\n      city: Bern\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Laufzeit der Vertrags bis 31.12.2032\n    options: no\n    cpvCode:\n      code: 22000000\n      label: Drucksachen und zugehörige Erzeugnisse\n  terms:\n    termsType: none\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: supply\n    remediesNotice: Diese Ausschreibung kann innert 20 Tagen seit ihrer Publikation auf www.simap.ch mit Beschwerde beim Regierungsstatthalteramt Bern-Mittelland, Poststrasse 25, 3072 Ostermundigen angefochten werden. Eine allfällige Beschwerde muss einen Antrag, die Angabe von Tatsachen und Beweismitteln, eine Begründung sowie eine Unterschrift enthalten. Die angefochtene Ausschreibung und greifbare Beweismittel sind beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    reductionMinimumOfferDeadline: ja\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-14\n    processType: open\n    orderType: supply\n    publicationDate: 2026-10-13\n    initialPublicationDate: 2026-09-26\n    offerDeadline: 2026-11-02T12:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-09-26\n        - 2026-10-30\n    expressionOfInterestUntil: 2026-10-30\n    offerValidityDeadlineDate: 2026-12-31\n    offerOpening:\n      dateTime: 2026-11-02T15:00:00+01:00\n    offerOpeningPostalCode: 3001\n    offerOpeningCity: Bern\n  type: tender\n  projectType: tender\n  correction:\n    initialPublicationDate: 2026-09-26\n    correctionDiffKeys:\n      - dates.expressionOfInterestUntil\n    remarks: Datum Interessenbekundung verlängert\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    corrected: ja\n    publicationNumber: 44883-02\n    publicationDate: 2026-10-10\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: supply\n  base:\n    corrected: ja\n    cpvCode:\n      code: 22000000\n      label: Drucksachen und zugehörige Erzeugnisse\n    orderType: supply\n    title: Schweizerische Brandschutzvorschriften – Webshop – Druck – Logistik\n    projectType: tender\n    processType: open\n    lotsType: without\n    type: tender\n    publicationNumber: 44883-03\n    publicationDate: 2026-10-13\n    creationLanguage: de\n    initialPublicationDate: 2026-09-26\n    projectNumber: 44883\n  hasProjectDocuments: ja"
   }
  ]
 }
