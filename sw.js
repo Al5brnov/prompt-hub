@@ -1,5 +1,5 @@
 /* Offline-Cache für die App-Hülle. Keine Daten verlassen das Gerät. */
-const CACHE = "prompt-hub-v5";
+const CACHE = "prompt-hub-v6";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png"];
 
 self.addEventListener("install", (e) => {

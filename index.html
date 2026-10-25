@@ -168,7 +168,7 @@ input[type=text]{height:48px;padding:0 12px}
     <div id="rList" class="rlist"></div>
     <div style="padding:10px 4px 0;display:flex;flex-direction:column;gap:8px">
       <button class="btn" id="rGo" disabled>Ausgewählte bewerten</button>
-      <p class="note" style="margin:0">Suche läuft werktags am Morgen automatisch. Gefiltert nach Wortgrenzen, CPV-Code und Relevanz. Stichworte in <span style="font-family:ui-monospace,monospace">radar/config.json</span> im Repository anpassen.</p>
+      <p class="note" style="margin:0">Suche läuft werktags am Morgen automatisch. Neueste Publikation zuerst. Gefiltert nach Wortgrenzen, CPV-Code und Relevanz. Stichworte in <span style="font-family:ui-monospace,monospace">radar/config.json</span> im Repository anpassen.</p>
     </div>
   </div>
 </div>
@@ -457,7 +457,7 @@ input[type=text]{height:48px;padding:0 12px}
   $("bSet").onclick = function () { $("ctx").value = st.ctx || ""; sheet("setScrim", true); };
   $("setOk").onclick = function () { st.ctx = $("ctx").value; save(); upd(); sheet("setScrim", false); };
   /* simap-Radar: Ergebnisdatei der GitHub Action (gleiche Herkunft) */
-  var radar = null, PT = { tender: "Ausschreibung", participant_selection: "Präqualifikation", advance_notice: "Vorankündigung" };
+  var radar = null, PT = { tender: "Ausschreibung", participant_selection: "Präqualifikation", advance_notice: "Vorankündigung", award: "Zuschlag", direct_award: "Freihändige Vergabe" };
   function chD(s) { var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s || ""); return m ? m[3] + "." + m[2] + "." + m[1] : (s || "?"); }
   function seen() { return st.seen || (st.seen = []); }
   function loadRadar() {
@@ -473,7 +473,11 @@ input[type=text]{height:48px;padding:0 12px}
     sheet("radarScrim", true);
     $("rInfo").textContent = "Lade …"; $("rList").textContent = "";
     loadRadar().then(function (d) {
-      var items = d.items || [];
+      /* neueste Publikation zuerst, bei gleichem Datum höhere Relevanz zuerst */
+      var items = (d.items || []).slice().sort(function (a, b) {
+        return (b.date || "").localeCompare(a.date || "") || ((b.score || 0) - (a.score || 0));
+      });
+      radar.items = items;
       $("rInfo").textContent = d.error ? "Letzter Suchlauf (" + chD(d.generatedAt) + ") fehlgeschlagen: " + d.error
         : d.generatedAt
         ? items.length + " relevante" + (d.candidates ? " von " + d.candidates + " Kandidaten" : "") + " seit " + chD(d.since) + " · Stand " + chD(d.generatedAt) + " " + d.generatedAt.slice(11, 16) + " UTC · " + (d.keywords || []).length + " Stichworte"
