@@ -130,7 +130,7 @@
   ],
   "minScore": 3,
   "maxDetails": 250,
-  "timeBudgetSec": 1000,
+  "timeBudgetSec": 1500,
   "maxItems": 100,
   "pubTypes": [
     "tender",

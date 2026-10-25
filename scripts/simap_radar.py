@@ -424,7 +424,7 @@ def main():
         t = it["titleAll"]
         core_in_title = sum(1 for _, rx in core_rx if rx.search(t))
         bid = 1 if it.get("type") in ("tender", "participant_selection", "advance_notice") else 0
-        return (bid, core_in_title, len(set(it["foundBy"])), it.get("date") or "")
+        return (1 if core_in_title else 0, bid, core_in_title, len(set(it["foundBy"])), it.get("date") or "")
     bid_types = ("tender", "participant_selection", "advance_notice")
     cands, pre_skipped = [], 0
     for it in found.values():
@@ -458,7 +458,7 @@ def main():
                 note("Details %s: %s" % (it.get("nr") or it["id"], e))
         return it, ds
 
-    with ThreadPoolExecutor(max_workers=3) as ex:
+    with ThreadPoolExecutor(max_workers=1) as ex:
         loaded = list(ex.map(load, cands))
 
     # 2) bewerten und filtern
