@@ -1,0 +1,15 @@
+{
+  "projectIds": ["6d4467e5-a7b0-4efd-8817-a472985ad6f0"],
+  "searches": [
+    {"label": "Nummer 43831", "params": [["search", "43831"]]},
+    {"label": "Nummer 41527", "params": [["search", "41527"]]},
+    {"label": "Opportunity", "params": [["search", "Opportunity"]]},
+    {"label": "ArcGIS", "params": [["search", "ArcGIS"]]},
+    {"label": "E-Shop", "params": [["search", "E-Shop"]]},
+    {"label": "CPV 72000000 seit 01.10.", "params": [["cpvCodes", "72000000"], ["newestPublicationFrom", "2026-10-01"]]},
+    {"label": "CPV 72 seit 01.10.", "params": [["cpvCodes", "72"], ["newestPublicationFrom", "2026-10-01"]]},
+    {"label": "CPV 48000000 seit 01.10.", "params": [["cpvCodes", "48000000"], ["newestPublicationFrom", "2026-10-01"]]},
+    {"label": "CPV 79411000 seit 01.10.", "params": [["cpvCodes", "79411000"], ["newestPublicationFrom", "2026-10-01"]]},
+    {"label": "nur Datum seit 20.10. (Seitengrösse)", "params": [["newestPublicationFrom", "2026-10-20"]]}
+  ]
+}
