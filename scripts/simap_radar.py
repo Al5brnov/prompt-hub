@@ -7,6 +7,7 @@ Die Web-App liest diese Datei von derselben Adresse (kein CORS-Problem).
 
 Nur Standardbibliothek. Testmodus ohne Netz: SIMAP_FIXTURES=<ordner>.
 """
+import csv
 import datetime as dt
 import http.cookiejar
 import json
@@ -21,6 +22,7 @@ from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(ROOT, "radar", "config.json")
 OUT = os.path.join(ROOT, "radar", "latest.json")
+HISTORY = os.path.join(ROOT, "radar", "history.csv")
 BASE = "https://www.simap.ch/api"
 UA = "prompt-hub-radar/1.0 (+https://github.com/)"
 MAX_TEXT = 6000
@@ -152,6 +154,101 @@ def flat_words(v):
         if w and w.lower() not in [x.lower() for x in out]:
             out.append(w)
     return out
+
+
+PUBTYPE_DE = {"tender": "Ausschreibung", "participant_selection": "Präqualifikation", "advance_notice": "Vorankündigung",
+              "competition": "Wettbewerb", "study_contract": "Studienauftrag", "request_for_information": "Informationsanfrage"}
+PROCESS_DE = {"open": "offen", "selective": "selektiv", "invitation": "Einladung", "direct": "freihändig", "no_process": "ohne Verfahren"}
+
+
+def one_line(s, n=None):
+    s = re.sub(r"\s+", " ", strip_html(s or "")).strip()
+    return (s[: n - 1] + "…") if n and len(s) > n else s
+
+
+def fields(details):
+    """Kerninhalte für Excel: Gegenstand, Kriterien, Lose, Verfahren."""
+    desc, qual, award, lots, proc = [], [], [], [], ""
+    for d in details:
+        pr = d.get("procurement") or {}
+        t = lang_pick(pr.get("orderDescription"))
+        if t and t not in desc:
+            desc.append(t)
+        proc = proc or pr.get("processType") or (d.get("project-info") or {}).get("processType") or ""
+        cr = d.get("criteria") or {}
+        for q in cr.get("qualificationCriteria") or []:
+            x = one_line(lang_pick(q.get("title")) or lang_pick(q.get("description")) or "", 120)
+            if x and x not in qual:
+                qual.append(x)
+        if not qual and cr.get("qualificationCriteriaInDocuments") in (True, "yes"):
+            qual.append("gemäss Ausschreibungsunterlagen")
+        for a in cr.get("awardCriteria") or []:
+            x = one_line(lang_pick(a.get("title")) or "", 80)
+            if x:
+                w = a.get("weighting")
+                x += " (Gewichtung %s)" % w if w not in (None, "") else ""
+                if x not in award:
+                    award.append(x)
+        if not award and "document" in str(cr.get("awardCriteriaSelection") or ""):
+            note_ = one_line(lang_pick(cr.get("awardCriteriaNote")) or "", 200)
+            award.append("gemäss Ausschreibungsunterlagen" + (" (" + note_ + ")" if note_ and "unterlagen" not in note_.lower() else ""))
+        for lot in d.get("lots") or []:
+            x = "Los %s: %s" % (lot.get("lotNumber", "?"), one_line(lang_pick(lot.get("title")) or "", 100))
+            if x not in lots:
+                lots.append(x)
+        if d.get("lot"):
+            lot = d["lot"]
+            x = "Los %s: %s" % (lot.get("lotNumber", "?"), one_line(lang_pick(lot.get("title")) or "", 100))
+            if x not in lots:
+                lots.append(x)
+    return {
+        "gegenstand": one_line(" / ".join(desc), 1200),
+        "eignung": "; ".join(qual)[:1500],
+        "zuschlag": "; ".join(award)[:800],
+        "lose": "; ".join(lots)[:800],
+        "verfahren": PROCESS_DE.get(proc, proc),
+    }
+
+
+HIST_COLS = ["Projekt-Nr", "Titel", "Auftraggeber", "Typ", "Verfahren", "publiziert", "Eingabefrist", "Relevanz",
+             "Treffergrund", "Gegenstand", "Eignungskriterien", "Zuschlagskriterien", "Lose", "CPV", "Link",
+             "zuerst gefunden", "zuletzt gesehen", "Status simap", "simap-ID"]
+
+
+def write_history(items, today):
+    """Fortlaufende Liste: nichts wird gelöscht, neue Treffer kommen ans Ende."""
+    rows = []
+    if os.path.exists(HISTORY):
+        with open(HISTORY, encoding="utf-8-sig", newline="") as f:
+            rows = list(csv.DictReader(f, delimiter=";"))
+    by_id = {r.get("simap-ID"): r for r in rows}
+    iso = today.isoformat()
+    for it in items:
+        f_ = it.get("fields") or {}
+        new = {
+            "Projekt-Nr": it.get("nr") or "", "Titel": one_line(it.get("title")), "Auftraggeber": one_line(it.get("office")),
+            "Typ": PUBTYPE_DE.get(it.get("type"), it.get("type") or ""), "Verfahren": f_.get("verfahren", ""),
+            "publiziert": (it.get("date") or "")[:10], "Eingabefrist": (it.get("deadline") or "")[:10],
+            "Relevanz": str(it.get("score", "")), "Treffergrund": ", ".join(it.get("hits") or []),
+            "Gegenstand": f_.get("gegenstand", ""), "Eignungskriterien": f_.get("eignung", ""),
+            "Zuschlagskriterien": f_.get("zuschlag", ""), "Lose": f_.get("lose", ""), "CPV": ", ".join(it.get("cpv") or []),
+            "Link": it.get("url", ""), "zuletzt gesehen": iso, "simap-ID": it["id"],
+        }
+        if it["id"] in by_id:
+            by_id[it["id"]].update(new)
+        else:
+            new["zuerst gefunden"] = iso
+            rows.append(new)
+            by_id[it["id"]] = new
+    for r in rows:
+        fr = (r.get("Eingabefrist") or "")[:10]
+        r["Status simap"] = "Frist abgelaufen" if fr and fr < iso else "offen"
+    with open(HISTORY, "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=HIST_COLS, delimiter=";", extrasaction="ignore", quoting=csv.QUOTE_MINIMAL, lineterminator="\r\n")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: one_line(r.get(k, "")) for k in HIST_COLS})
+    return len(rows)
 
 
 def word_rx(w):
@@ -361,7 +458,7 @@ def main():
         text = "\n".join(t for t in (to_text(d, "  ") for d in details) if t)
         if len(text) > MAX_TEXT:
             text = text[:MAX_TEXT] + "\n  [… gekürzt]"
-        it.update({"deadline": deadline, "cpv": cpvs, "score": sc, "hits": why,
+        it.update({"deadline": deadline, "cpv": cpvs, "score": sc, "hits": why, "fields": fields(details),
                    "url": "https://www.simap.ch/de/project-detail/" + it["id"], "text": text})
         items.append(it)
 
@@ -384,6 +481,8 @@ def main():
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
+    n_hist = write_history(items, today)
+    print("Trefferliste: %d Einträge in radar/history.csv" % n_hist)
     print("simap-Radar: %d relevante von %d Kandidaten seit %s (aussortiert: %s)"
           % (len(items), len(found), since, ", ".join("%s %d" % kv for kv in dropped.items())))
 
