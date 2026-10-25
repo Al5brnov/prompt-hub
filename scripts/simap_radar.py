@@ -28,6 +28,18 @@ SKIP_KEY = re.compile(r"^(id|.*Id|.*Ids|actions|links?|_links|phone|fax|email|ve
 LANG_KEYS = {"de", "fr", "it", "en", "rm"}
 
 FIXTURES = os.environ.get("SIMAP_FIXTURES")
+
+import socket  # noqa: E402
+_orig_gai = socket.getaddrinfo
+
+
+def _gai_v4(host, *a, **k):
+    res = _orig_gai(host, *a, **k)
+    v4 = [r for r in res if r[0] == socket.AF_INET]
+    return v4 or res
+
+
+socket.getaddrinfo = _gai_v4
 _jar = http.cookiejar.CookieJar()
 _opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(_jar))
 
@@ -69,7 +81,7 @@ def get(path, params=None):
             break
         except Exception as e:  # noqa: BLE001
             last = "%s bei %s: %s" % (type(e).__name__, path, e)
-            time.sleep(1.5)
+            time.sleep(3 * (attempt + 1))
     raise RuntimeError(last or ("Keine Antwort von " + url))
 
 
@@ -198,7 +210,7 @@ def score_item(title, desc, cpvs, ptype, cfg, core_rx, ctx_rx, excl_rx):
         if rx.search(title):
             score += 5; why.append(w + " (Titel)")
         elif rx.search(desc):
-            score += 3; why.append(w)
+            score += 3 if it_cpv else 1; why.append(w)
     ctx = []
     for w, rx in ctx_rx:
         if rx.search(title) or rx.search(desc):
@@ -314,10 +326,11 @@ def main():
                 note("Details %s: %s" % (it.get("nr") or it["id"], e))
         return it, ds
 
-    with ThreadPoolExecutor(max_workers=4) as ex:
+    with ThreadPoolExecutor(max_workers=2) as ex:
         loaded = list(ex.map(load, cands))
 
     # 2) bewerten und filtern
+    rejected = []
     items, dropped = [], {"cpv": 0, "score": 0, "frist": 0, "ausschluss": 0, "zeit": 0, "limit": skipped}
     for it, details in loaded:
         it.pop("pubs", None)
@@ -339,9 +352,11 @@ def main():
             continue
         if reason:
             dropped["cpv" if reason.startswith("CPV") else "ausschluss"] += 1
+            rejected.append({"title": it["title"][:90], "score": 0, "why": reason[:80]})
             continue
         if sc < min_score:
             dropped["score"] += 1
+            rejected.append({"title": it["title"][:90], "score": sc, "why": ", ".join(why)[:80] + (" | CPV " + ",".join(cpvs[:3]) if cpvs else "")})
             continue
         text = "\n".join(t for t in (to_text(d, "  ") for d in details) if t)
         if len(text) > MAX_TEXT:
@@ -363,6 +378,7 @@ def main():
         "dropped": dropped,
         "count": len(items),
         "diagnostics": DIAG[-20:],
+        "rejected": sorted(rejected, key=lambda r: -r["score"])[:80],
         "items": items,
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
