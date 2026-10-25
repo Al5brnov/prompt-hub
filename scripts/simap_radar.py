@@ -16,6 +16,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(ROOT, "radar", "config.json")
@@ -234,11 +235,17 @@ def main():
             note("Cookie-Seed: %s" % e)
         note("Cookies nach Seed: %s" % (", ".join(c.name for c in _jar) or "keine"))
 
-    # 1) Kandidaten aus der simap-Volltextsuche
+    # 1) Kandidaten aus der simap-Volltextsuche.
+    #    Nur Einwort-Begriffe werden gesucht (simap verknüpft Wörter vermutlich mit ODER,
+    #    «progiciel de gestion» träfe sonst jedes «de»). Mehrwort-Begriffe zählen nur beim Bewerten.
+    t0 = time.time()
+    budget = int(cfg.get("timeBudgetSec", 600))
+    search_words = [w for w in words if " " not in w.strip()]
     found, errors = {}, 0
-    for w in words:
+    for w in search_words:
+        max_pages = 3 if w in core else 2
         cursor, pages = None, 0
-        while pages < 5:
+        while pages < max_pages:
             params = [("lang", "de"), ("search", w), ("newestPublicationFrom", since)] + [("newestPubTypes", t) for t in types]
             if cursor:
                 params.append(("lastItem", cursor))
@@ -256,6 +263,7 @@ def main():
                 if not pid or (p.get("pubType") and p.get("pubType") not in types):
                     continue
                 if pid in found:
+                    found[pid]["foundBy"].append(w)
                     continue
                 pubs = [p.get("publicationId")] if p.get("publicationId") else []
                 for lot in p.get("lots") or []:
@@ -271,21 +279,53 @@ def main():
                     "type": p.get("pubType"),
                     "process": p.get("processType"),
                     "titleAll": " ".join(str(x) for x in (p.get("title") or {}).values() if x),
+                    "foundBy": [w],
                 }
             cursor = (r.get("pagination") or {}).get("lastItem")
             pages += 1
             if not cursor or not projects:
                 break
+        print("Suche «%s»: %d Kandidaten gesamt (%.0fs)" % (w, len(found), time.time() - t0), flush=True)
 
-    # 2) Details laden, 3) bewerten und filtern
-    items, dropped = [], {"cpv": 0, "score": 0, "frist": 0, "ausschluss": 0}
+    # Vorfilter ohne Details: Ausschlusswörter im Titel; Priorität für Kernbegriffe im Titel
+    def prio(it):
+        t = it["titleAll"]
+        core_in_title = sum(1 for _, rx in core_rx if rx.search(t))
+        return (core_in_title, len(set(it["foundBy"])), it.get("date") or "")
+    cands = []
     for it in found.values():
-        details, deadline = [], None
-        for pub in it.pop("pubs"):
+        if any(rx.search(it["titleAll"]) for _, rx in excl_rx):
+            continue
+        cands.append(it)
+    cands.sort(key=prio, reverse=True)
+    max_details = int(cfg.get("maxDetails", 150))
+    skipped = max(0, len(cands) - max_details)
+    cands = cands[:max_details]
+    print("Details für %d Kandidaten laden (%d wegen Limit übersprungen)" % (len(cands), skipped), flush=True)
+
+    def load(it):
+        if time.time() - t0 > budget:
+            return it, None
+        ds = []
+        for pub in it["pubs"]:
             try:
-                details.append(get("/publications/v1/project/%s/publication-details/%s" % (it["id"], pub)))
+                ds.append(get("/publications/v1/project/%s/publication-details/%s" % (it["id"], pub)))
             except Exception as e:  # noqa: BLE001
-                print("Details nicht ladbar:", it["id"], e, file=sys.stderr)
+                note("Details %s: %s" % (it.get("nr") or it["id"], e))
+        return it, ds
+
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        loaded = list(ex.map(load, cands))
+
+    # 2) bewerten und filtern
+    items, dropped = [], {"cpv": 0, "score": 0, "frist": 0, "ausschluss": 0, "zeit": 0, "limit": skipped}
+    for it, details in loaded:
+        it.pop("pubs", None)
+        it.pop("foundBy", None)
+        if details is None:
+            dropped["zeit"] += 1
+            continue
+        deadline = None
         for d in details:
             dl = (d.get("dates") or {}).get("offerDeadline")
             if dl and (not deadline or dl < deadline):
@@ -318,6 +358,8 @@ def main():
         "keywords": words,
         "pubTypes": types,
         "candidates": len(found),
+        "searchWords": search_words,
+        "durationSec": round(time.time() - t0),
         "dropped": dropped,
         "count": len(items),
         "diagnostics": DIAG[-20:],

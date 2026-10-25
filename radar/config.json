@@ -1,9 +1,9 @@
 {
-  "_hinweis": "core = treffen allein. context = zählen nur, wenn der CPV-Code IT oder Beratung ist. Akronyme wie SAP, ERP, CRM, AMS treffen nur exakt und in Grossbuchstaben.",
+  "_hinweis": "Nur Einwort-Begriffe werden gesucht, Mehrwort-Begriffe zählen nur beim Bewerten. core = treffen allein. context = zählen nur, wenn der CPV-Code IT oder Beratung ist. Akronyme wie SAP, ERP, CRM, AMS treffen nur exakt und in Grossbuchstaben.",
   "core": {
     "ERP und SAP": [
-      "SAP", "S/4HANA", "SAP BTP", "Ariba",
-      "ERP", "ERP-System", "Warenwirtschaft", "Materialwirtschaft", "progiciel de gestion"
+      "SAP", "S/4HANA", "BTP", "Ariba",
+      "ERP", "ERP-System", "Warenwirtschaft", "Materialwirtschaft", "progiciel"
     ],
     "Beschaffungslösungen": [
       "E-Procurement", "Beschaffungslösung", "Beschaffungsplattform", "Beschaffungssoftware",
@@ -34,6 +34,8 @@
   "excludeCpvPrefixes": ["03", "09", "14", "15", "16", "18", "19", "24", "31", "33", "34", "35", "37", "39", "41", "42", "43", "44", "45", "60", "63", "70", "71", "77", "85", "90", "92"],
   "excludeWords": ["Reinigung", "Hochbau", "Tiefbau", "Bauarbeiten", "Neubau", "Umbau", "Sanierung", "Fahrzeug", "Mobiliar", "Catering", "nettoyage"],
   "minScore": 4,
+  "maxDetails": 150,
+  "timeBudgetSec": 720,
   "maxItems": 40,
   "pubTypes": ["tender", "participant_selection", "advance_notice"],
   "daysBack": 21
