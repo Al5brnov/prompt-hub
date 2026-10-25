@@ -97,6 +97,7 @@ input[type=text]{height:48px;padding:0 12px}
 .ritem small{display:block;font-size:12px;color:var(--mut);margin-top:2px}
 .ritem .nw{display:inline-block;font-size:11px;font-weight:700;color:var(--selK);background:var(--selBg);border-radius:8px;padding:0 6px;margin-right:6px;vertical-align:1px}
 .btn:disabled{opacity:.45}
+.rlink{display:inline-block;margin-top:4px;padding:4px 0;font-size:13px;font-weight:600;color:var(--selK);text-decoration:none}
 .btn{height:48px;border:0;border-radius:10px;background:var(--ac);color:var(--acT);font-weight:600;font-size:15px}
 </style>
 </head>
@@ -487,7 +488,13 @@ input[type=text]{height:48px;padding:0 12px}
         b.appendChild(document.createTextNode(it.title || it.nr));
         var sm = document.createElement("small");
         sm.textContent = it.office + " · " + (PT[it.type] || it.type || "") + " · publiziert " + chD(it.date) + (it.deadline ? " · Frist " + chD(it.deadline) : "") + (it.score != null ? " · Relevanz " + it.score : "") + " · " + (it.hits || []).join(", ");
-        tx.appendChild(b); tx.appendChild(sm); lab.appendChild(cb); lab.appendChild(tx);
+        tx.appendChild(b); tx.appendChild(sm);
+        if (it.url) {
+          var a = document.createElement("a"); a.href = it.url; a.target = "_blank"; a.rel = "noopener"; a.className = "rlink";
+          a.textContent = "simap öffnen ↗"; a.onclick = function (e) { e.stopPropagation(); };
+          tx.appendChild(a);
+        }
+        lab.appendChild(cb); lab.appendChild(tx);
         $("rList").appendChild(lab);
       });
       rCount();
