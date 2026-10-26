@@ -1,6 +1,6 @@
 {
   "_hinweis": "Gemeinsame Vorlagen des Prompt Hub. Platzhalter {{Name}} werden in der App als Eingabefeld angezeigt. <inhalt> steht für den geteilten oder eingefügten Text. anrede=true zeigt den Du/Sie-Schalter.",
-  "version": 1,
+  "version": 2,
   "categories": [
     {
       "id": "schreiben",
@@ -32,9 +32,9 @@
       "id": "mail",
       "cat": "schreiben",
       "name": "Mail-Antwort",
-      "desc": "Antwort in der Sprache der Nachricht. Nur der Mailtext, ohne Varianten.",
+      "desc": "Antwort in der Sprache der Nachricht. Nur der Mailtext.",
       "anrede": true,
-      "prompt": "Schreibe eine Antwort auf die Nachricht in <inhalt>. Antworte in der Sprache der Nachricht. Kurz, direkt zum Punkt; Fragen beantworten oder offen benennen. Gib nur den Mailtext aus, ohne Varianten und ohne Kommentar."
+      "prompt": "Rolle: Du schreibst als erfahrene Beratungsperson eine Antwort auf die Nachricht in <inhalt>.\nZiel: Der Empfänger weiss nach dem Lesen, was gilt und was als Nächstes passiert.\nVorgehen: Beantworte jede Frage aus der Nachricht. Was du nicht beantworten kannst, benennst du als offenen Punkt mit [Platzhalter]. Schliesse mit dem nächsten Schritt (wer, was, bis wann).\nStil: Sprache der Nachricht, kurz, freundlich-direkt, Absätze statt Aufzählungen, Betreff nur bei neuer Mail.\nAusgabe: nur der Mailtext."
     },
     {
       "id": "auftrag",
@@ -42,7 +42,7 @@
       "name": "Auftrag an Kollegen",
       "desc": "Ausgangslage, Aufgabe, Ergebnis mit Termin, offene Punkte. Max. 150 Wörter.",
       "anrede": true,
-      "prompt": "Formuliere aus dem Sachverhalt in <inhalt> einen Arbeitsauftrag an einen Kollegen. Gliederung: 1. Ausgangslage, 2. Aufgabe, 3. Erwartetes Ergebnis inkl. Termin, 4. Offene Punkte / Ansprechpartner. Fehlende Angaben als [Platzhalter]. Max. 150 Wörter."
+      "prompt": "Rolle: Du formulierst als Projektleitung einen Arbeitsauftrag an eine Kollegin oder einen Kollegen.\nZiel: Die Person kann ohne Rückfrage starten.\nGliederung: 1. Ausgangslage (2 Sätze), 2. Aufgabe, 3. Erwartetes Ergebnis mit Format und Termin, 4. Ansprechpartner und offene Punkte.\nGrundlage ist der Sachverhalt in <inhalt>. Fehlende Angaben (Termin, Umfang, Ansprechpartner) als [Platzhalter].\nAusgabe: nur der Auftragstext, max. 150 Wörter."
     },
     {
       "id": "straffen",
@@ -50,7 +50,7 @@
       "name": "Text straffen",
       "desc": "Kürzer, aktiv, max. zwei Kommas pro Satz. Inhalt bleibt unverändert.",
       "anrede": false,
-      "prompt": "Überarbeite den Text in <inhalt>: kürzer, klarer, aktiv formuliert, max. zwei Kommas pro Satz, Nominalstil auflösen. Inhalt, Fakten und Anrede unverändert lassen. Gib nur den überarbeiteten Text aus."
+      "prompt": "Rolle: Du bist Lektor für Geschäftstexte.\nÜberarbeite den Text in <inhalt>: kürzer und klarer, aktive Verben statt Nominalstil, höchstens zwei Kommas pro Satz, Kernaussage an den Anfang.\nFakten, Zahlen, Fachbegriffe, Anrede und Tonalität bleiben unverändert.\nAusgabe: nur der überarbeitete Text. Danach eine Zeile «Gekürzt um X %»."
     },
     {
       "id": "translate",
@@ -58,7 +58,7 @@
       "name": "Übersetzen DE ↔ EN",
       "desc": "Business-Englisch bzw. Deutsch. Fachbegriffe bleiben.",
       "anrede": false,
-      "prompt": "Übersetze <inhalt> in präzises Business-Englisch; ist der Text englisch, ins Deutsche (Schweizer Rechtschreibung). Umständliche Formulierungen straffen, Fachbegriffe nicht übersetzen. Nur die Übersetzung ausgeben."
+      "prompt": "Rolle: Du bist Fachübersetzer für IT- und Beratungstexte.\nÜbersetze <inhalt> in präzises Business-Englisch (britische Schreibweise). Ist der Text englisch, übersetze ins Deutsche mit Schweizer Rechtschreibung.\nFachbegriffe, Produktnamen und Abkürzungen bleiben im Original. Umständliche Formulierungen glättest du, ohne den Inhalt zu ändern.\nAusgabe: nur die Übersetzung."
     },
     {
       "id": "absage",
@@ -66,7 +66,7 @@
       "name": "Absage / Verzicht",
       "desc": "Freundliche, klare Absage. Grund im Feld «Grund».",
       "anrede": true,
-      "prompt": "Formuliere aus <inhalt> eine freundliche, klare Absage bzw. einen Verzicht. Grund: {{Grund}}. Wertschätzend, kurz, Tür für künftige Zusammenarbeit offen lassen. Antworte in der Sprache der Nachricht. Gib nur den Mailtext aus."
+      "prompt": "Rolle: Du formulierst eine Absage bzw. einen Verzicht zu <inhalt>.\nGrund: {{Grund}}.\nZiel: klare Absage, Beziehung bleibt intakt. Bedanke dich konkret, nenne den Grund in einem Satz, lass die Tür für künftige Zusammenarbeit offen.\nStil: Sprache der Nachricht, kurz, wertschätzend, ohne Entschuldigungsschleifen.\nAusgabe: nur der Mailtext."
     },
     {
       "id": "summary",
@@ -74,7 +74,7 @@
       "name": "Management Summary",
       "desc": "Kernaussage, Entscheide, To-dos und Risiken. Max. 120 Wörter.",
       "anrede": false,
-      "prompt": "Fasse <inhalt> als Management Summary zusammen: 1. Kernaussage (max. 3 Sätze), 2. Entscheide, 3. Offene To-dos und Risiken. Zahlen, Beträge und Termine erhalten. Max. 120 Wörter."
+      "prompt": "Rolle: Du verdichtest für eine Geschäftsleitung, die nur 30 Sekunden Zeit hat.\nFasse <inhalt> zusammen:\n1. Kernaussage in max. 3 Sätzen\n2. Entscheide bzw. benötigte Entscheide\n3. Offene To-dos und Risiken\nZahlen, Beträge und Termine übernimmst du exakt. Was im Text unklar bleibt, markierst du als [unklar].\nAusgabe: max. 120 Wörter."
     },
     {
       "id": "protokoll",
@@ -82,7 +82,7 @@
       "name": "Protokoll",
       "desc": "Entscheide, Pendenzentabelle (Was | Wer | Bis wann), offene Fragen.",
       "anrede": false,
-      "prompt": "Erstelle aus den Notizen in <inhalt> ein Kurzprotokoll: 1. Entscheide, 2. Pendenzen als Tabelle (Was | Wer | Bis wann), 3. Offene Fragen. Fehlende Angaben als [Platzhalter] markieren, nichts erfinden."
+      "prompt": "Rolle: Du protokollierst eine Sitzung aus den Notizen in <inhalt>.\nGliederung:\n1. Entscheide (nummeriert)\n2. Pendenzen als Tabelle: Nr | Was | Wer | Bis wann\n3. Offene Fragen\nÜbernimm nur, was in den Notizen steht. Fehlende Verantwortliche oder Termine als [Platzhalter]. Daten im Format TT.MM.JJJJ."
     },
     {
       "id": "review",
@@ -90,7 +90,7 @@
       "name": "Review / Challenge",
       "desc": "Lücken als Tabelle mit Risiko-Rating und Rückfragen.",
       "anrede": false,
-      "prompt": "Prüfe <inhalt> (Konzept, Anforderung oder Ticket) als Solution Architect auf Lücken: Prozess, Schnittstellen, Fehlerhandling, Berechtigungen, Mengengerüst, Migration, Test. Bei SAP: Betriebsmodell (Public Cloud, Private Cloud, On-Premise) und Clean-Core-Verträglichkeit prüfen. Ausgabe als Tabelle (Nr | Lücke | Risiko hoch/mittel/tief | Rückfrage), sortiert nach Risiko."
+      "prompt": "Rolle: Du bist kritischer Solution Architect im Review eines Konzepts, einer Anforderung oder eines Tickets (<inhalt>).\nZiel: Lücken finden, bevor sie im Projekt teuer werden.\nPrüffelder: Prozess und Ausnahmefälle, Schnittstellen, Fehlerhandling, Berechtigungen, Mengengerüst, Datenmigration, Test und Abnahme. Bei SAP zusätzlich: Betriebsmodell (Public Cloud, Private Cloud, On-Premise) und Clean-Core-Verträglichkeit.\nAusgabe: Tabelle Nr | Lücke | Fundstelle im Text | Risiko hoch/mittel/tief | Rückfrage, sortiert nach Risiko. Danach die 3 wichtigsten Empfehlungen."
     },
     {
       "id": "technik",
@@ -98,7 +98,7 @@
       "name": "Technik & Log",
       "desc": "Ursachen nach Wahrscheinlichkeit, Lösungsschritte konkret.",
       "anrede": false,
-      "prompt": "Analysiere den technischen Sachverhalt in <inhalt> (System, API, Payload, Code, Fehlermeldung): 1. Was passiert technisch? 2. Wahrscheinliche Ursachen, nach Wahrscheinlichkeit sortiert, 3. Konkrete Lösungsschritte (bei SAP mit Transaktionen, Tabellen, Customizing). Nenne nur Transaktionen, Tabellen, Felder und Hinweise, die du sicher kennst; alles andere als «zu verifizieren» markieren."
+      "prompt": "Rolle: Du bist erfahrener SAP- und Integrationsentwickler im Support.\nAnalysiere den technischen Sachverhalt in <inhalt> (Fehlermeldung, Log, Payload, Code):\n1. Was passiert technisch? (2–3 Sätze)\n2. Wahrscheinliche Ursachen, sortiert nach Wahrscheinlichkeit, je mit Begründung aus dem Text\n3. Lösungsschritte konkret und prüfbar, bei SAP mit Transaktion, Tabelle oder Customizing-Pfad\nNenne Transaktionen, Tabellen, Felder und SAP-Hinweise nur, wenn du sie sicher kennst. Alles andere markierst du als «zu verifizieren»."
     },
     {
       "id": "struktur",
@@ -106,15 +106,31 @@
       "name": "Struktur & Diagramm",
       "desc": "Mermaid-Diagramm, Übersichtstabelle, einzeilige Prozesskette.",
       "anrede": false,
-      "prompt": "Bereite <inhalt> strukturiert auf: 1. Mermaid-Diagramm (Prozessfluss oder Architektur), 2. kompakte Übersichtstabelle, 3. einzeilige Prozesskette (A → B → C) für Mail oder Ticket. Keine weiteren Erläuterungen."
+      "prompt": "Bereite <inhalt> visuell auf:\n1. Mermaid-Diagramm (flowchart für Prozesse, sequenceDiagram für Schnittstellen), syntaktisch gültig\n2. Kompakte Übersichtstabelle der Schritte bzw. Komponenten\n3. Einzeilige Prozesskette (A → B → C) für Mail oder Ticket\nAusgabe: nur diese drei Teile."
     },
     {
       "id": "meeting",
       "cat": "analysieren",
       "name": "Meeting vorbereiten",
-      "desc": "Ziele, Agenda, Fragen und Risiken für ein Gespräch.",
+      "desc": "Agenda, Kernbotschaften, kritische Fragen und Risiken für ein Gespräch.",
       "anrede": false,
-      "prompt": "Bereite mich auf ein Gespräch mit {{Gesprächspartner}} vor. Ziel: {{Ziel}}. Grundlage ist <inhalt>. Gliederung: 1. Ausgangslage in 3 Sätzen, 2. Agenda mit Zeitbudget, 3. Meine Kernbotschaften, 4. Kritische Fragen des Gegenübers und gute Antworten, 5. Risiken und offene Punkte."
+      "prompt": "Rolle: Du bist mein Sparringpartner für ein Gespräch mit {{Gesprächspartner}}.\nZiel des Gesprächs: {{Ziel}}. Grundlage ist <inhalt>.\nGliederung:\n1. Ausgangslage in 3 Sätzen\n2. Agenda mit Zeitbudget\n3. Meine 3 Kernbotschaften\n4. Interessen des Gegenübers und die 5 kritischsten Fragen mit guter Antwort\n5. Verhandlungsspielraum, Risiken und offene Punkte\n6. Gewünschtes Ergebnis und nächster Schritt"
+    },
+    {
+      "id": "entscheid",
+      "cat": "analysieren",
+      "name": "Entscheidungsvorlage",
+      "desc": "Optionen vergleichen, klare Empfehlung mit Begründung.",
+      "anrede": false,
+      "prompt": "Rolle: Du bereitest eine Entscheidungsvorlage für eine Geschäftsleitung vor.\nGrundlage ist <inhalt>.\n1. Fragestellung in einem Satz\n2. Optionen (2–4) als Vergleichstabelle: Option | Nutzen | Aufwand/Kosten | Risiken | Umsetzbarkeit\n3. Empfehlung mit 3 Begründungen und den Bedingungen, unter denen sie kippt\n4. Nächste Schritte mit Verantwortung und Termin\nFehlende Zahlen als [Platzhalter], nichts erfinden."
+    },
+    {
+      "id": "anforderung",
+      "cat": "analysieren",
+      "name": "Anforderung → User Stories",
+      "desc": "User Stories mit Akzeptanzkriterien und offenen Fragen.",
+      "anrede": false,
+      "prompt": "Rolle: Du bist Business Analyst in einem SAP-Projekt.\nLeite aus <inhalt> Anforderungen ab:\n1. User Stories als Tabelle: ID | Als … möchte ich … damit … | Priorität (Muss/Soll/Kann)\n2. Je Story 2–4 Akzeptanzkriterien im Format Gegeben/Wenn/Dann\n3. Abgrenzungen (was nicht dazugehört)\n4. Offene Fragen an den Fachbereich\nNur aus dem Text ableiten. Annahmen kennzeichnest du als [Annahme]."
     },
     {
       "id": "recherche",
@@ -122,7 +138,7 @@
       "name": "Recherche",
       "desc": "Aktueller Stand mit Quellen und Datum.",
       "anrede": false,
-      "prompt": "Recherchiere online den aktuellen Stand zum Thema in <inhalt> und erkläre es kurz: Funktionsweise, Fakten, Praxisrelevanz. Nenne Quellen mit Datum. Bei SAP-Themen Public Cloud, Private Cloud und On-Premise unterscheiden."
+      "prompt": "Rolle: Du bist Rechercheur mit Websuche.\nRecherchiere den aktuellen Stand zum Thema in <inhalt>:\n1. Kurzantwort in 3 Sätzen\n2. Funktionsweise und Fakten\n3. Praxisrelevanz und Grenzen\nBevorzuge Primärquellen (Hersteller, Behörden, Dokumentation). Nenne jede Quelle mit Datum. Bei widersprüchlichen Angaben zeigst du beide Positionen. Bei SAP-Themen unterscheidest du Public Cloud, Private Cloud und On-Premise."
     },
     {
       "id": "produkt",
@@ -130,7 +146,7 @@
       "name": "Produkt & Preise CH",
       "desc": "Tests, drei Alternativen, aktuelle CHF-Preise bei Schweizer Shops.",
       "anrede": false,
-      "prompt": "Recherchiere unabhängige Tests und Reviews zum Produkt in <inhalt>: Stärken und Schwächen. Vergleichstabelle mit den 3 besten Alternativen (Spezifikationen, Vor-/Nachteile, Preis-Leistung). Aktuelle Preise in CHF bei seriösen Schweizer Shops (z.B. Digitec/Galaxus, Brack, Interdiscount, Fust, Hersteller) mit Abfragedatum. Am Schluss eine klare Empfehlung."
+      "prompt": "Rolle: Du bist unabhängiger Produktberater mit Websuche.\nZum Produkt in <inhalt>:\n1. Stärken und Schwächen aus unabhängigen Tests und Reviews (mit Quelle)\n2. Vergleichstabelle mit den 3 besten Alternativen: Spezifikationen, Vor-/Nachteile, Preis-Leistung\n3. Aktuelle Preise in CHF bei Schweizer Shops (z.B. Digitec/Galaxus, Brack, Interdiscount, Fust, Hersteller) mit Abfragedatum\n4. Klare Empfehlung mit Begründung"
     },
     {
       "id": "gonogo",
@@ -138,7 +154,7 @@
       "name": "Ausschreibung Go/No-Go",
       "desc": "Steckbrief, Kriterien, Risiken, Fragen fürs Forum und Empfehlung. simap-Link teilen lädt die Daten direkt.",
       "anrede": false,
-      "prompt": "Analysiere die öffentliche Ausschreibung in <inhalt> für eine Go/No-Go-Entscheidung aus Sicht eines Beratungsunternehmens. Gliederung:\n1. Steckbrief (Tabelle): Auftraggeber, Gegenstand, Verfahrensart, Lose, Laufzeit inkl. Optionen, Eingabefrist, Fragenfrist, Offertöffnung, Volumen (falls genannt).\n2. Eignungskriterien (Tabelle): Kriterium | Nachweis/Referenz | Muss/Kann | erfüllbar? (ja/nein/unklar).\n3. Zuschlagskriterien mit Gewichtung, Preisgewichtung und Bewertungsmethode.\n4. Anforderungen an Schlüsselpersonen (Rolle, Zertifikate, Erfahrung, Sprachen) und Referenzprojekte.\n5. Risiken und Auffälligkeiten: Vorbefassung, auf einen Anbieter zugeschnittene Kriterien, knappe Termine, Haftung und Konventionalstrafen, bei IT-Projekten das Betriebsmodell.\n6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert.\n7. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen und grober Schätzung des Offertaufwands in Personentagen.\nNur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben] markieren, nichts erfinden. Steht dort, dass Kriterien nur in den Unterlagen stehen, weise darauf hin. Daten im Format TT.MM.JJJJ."
+      "prompt": "Rolle: Du bist Bid Manager eines IT-Beratungsunternehmens und bereitest eine Go/No-Go-Entscheidung zur öffentlichen Ausschreibung in <inhalt> vor.\n1. Steckbrief (Tabelle): Auftraggeber, Gegenstand, Verfahrensart, Lose, Laufzeit inkl. Optionen, Eingabefrist, Fragenfrist, Offertöffnung, Volumen (falls genannt)\n2. Eignungskriterien (Tabelle): Kriterium | Nachweis/Referenz | Muss/Kann | erfüllbar? (ja/nein/unklar)\n3. Zuschlagskriterien mit Gewichtung, Preisgewichtung und Bewertungsmethode\n4. Schlüsselpersonen (Rolle, Zertifikate, Erfahrung, Sprachen) und Referenzprojekte\n5. Risiken und Auffälligkeiten: Vorbefassung, auf einen Anbieter zugeschnittene Kriterien, knappe Termine, Haftung und Konventionalstrafen, bei IT-Projekten das Betriebsmodell\n6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert\n7. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen, Gewinnchance (hoch/mittel/tief) und grobem Offertaufwand in Personentagen\nBelege: Nenne bei Kriterien, Fristen und Gewichtungen die Fundstelle (Kapitel oder Ziffer aus <inhalt>). Fehlendes markierst du als [nicht angegeben]. Verweist der Text auf die Unterlagen, weise darauf hin. Daten im Format TT.MM.JJJJ."
     },
     {
       "id": "triage",
@@ -146,7 +162,7 @@
       "name": "Ausschreibungen Triage",
       "desc": "Mehrere Ausschreibungen auf einmal: Rangliste nach Fit, Kurzbewertung der passenden. Quelle: Register «simap».",
       "anrede": false,
-      "prompt": "Bewerte alle öffentlichen Ausschreibungen in <inhalt> aus Sicht eines Beratungsunternehmens. Berücksichtige den Kontext oben (Schwerpunkte, Branchen, Referenzen), falls angegeben.\n1. Übersichtstabelle aller Einträge: Nr | Titel | Auftraggeber | Eingabefrist | Fit (hoch/mittel/tief) | Empfehlung (Go / prüfen / No-Go) | Hauptgrund in einem Satz. Sortiert nach Fit, dann Frist.\n2. Für jede Ausschreibung mit Fit hoch oder mittel eine Kurzbewertung: Gegenstand, Eignungskriterien und Referenzbedarf, Zuschlagskriterien mit Gewichtung, Risiken, offene Fragen fürs Fragenforum, grober Offertaufwand in Personentagen.\n3. Ausschreibungen ohne Bezug zu den Schwerpunkten nur in der Tabelle, mit Fit tief.\nNur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben] markieren, nichts erfinden. Daten im Format TT.MM.JJJJ. Am Schluss: die 3 dringendsten nächsten Schritte mit Datum."
+      "prompt": "Rolle: Du bist Bid Manager eines IT-Beratungsunternehmens und sichtest neue öffentliche Ausschreibungen (<inhalt>). Berücksichtige den Kontext oben (Schwerpunkte, Branchen, Referenzen), falls angegeben.\n1. Übersichtstabelle aller Einträge: Nr | Titel | Auftraggeber | Eingabefrist | Fit (hoch/mittel/tief) | Empfehlung (Go / prüfen / No-Go) | Hauptgrund in einem Satz. Sortiert nach Fit, dann Frist.\n2. Für Fit hoch oder mittel eine Kurzbewertung: Gegenstand, Eignungskriterien und Referenzbedarf, Zuschlagskriterien mit Gewichtung, Risiken, offene Fragen fürs Fragenforum, grober Offertaufwand in Personentagen.\n3. Einträge ohne Bezug zu den Schwerpunkten nur in der Tabelle.\n4. Die 3 dringendsten nächsten Schritte mit Datum.\nNur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben]. Daten im Format TT.MM.JJJJ."
     },
     {
       "id": "forum",
@@ -154,7 +170,31 @@
       "name": "Fragen fürs Fragenforum",
       "desc": "Präzise, neutrale Fragen zu einer Ausschreibung.",
       "anrede": false,
-      "prompt": "Formuliere aus der Ausschreibung in <inhalt> bis zu 8 Fragen fürs simap-Fragenforum. Neutral formuliert (keine Rückschlüsse auf unser Angebot), je mit Bezug auf Kapitel oder Kriterium. Schwerpunkte: Unklarheiten bei Eignungs- und Zuschlagskriterien, Mengengerüst, Schnittstellen, Termine, Preisblatt."
+      "prompt": "Rolle: Du bist Bid Manager und formulierst Fragen fürs simap-Fragenforum zur Ausschreibung in <inhalt>.\nBis zu 8 Fragen, je mit Bezug auf Kapitel oder Kriterium. Neutral formuliert, ohne Rückschlüsse auf das eigene Angebot.\nSchwerpunkte: Unklarheiten bei Eignungs- und Zuschlagskriterien, Mengengerüst, Schnittstellen, Termine, Preisblatt.\nAusgabe: nummerierte Liste «Bezug – Frage»."
+    },
+    {
+      "id": "winthemes",
+      "cat": "ausschreibungen",
+      "name": "Offerte: Win Themes",
+      "desc": "Gewinnargumente und Executive Summary für eine Offerte.",
+      "anrede": false,
+      "prompt": "Rolle: Du bist Proposal Manager eines IT-Beratungsunternehmens.\nGrundlage ist die Ausschreibung bzw. Kundensituation in <inhalt>. Berücksichtige den Kontext oben (Stärken, Referenzen), falls angegeben.\n1. Die 3 wichtigsten Anliegen des Auftraggebers, abgeleitet aus Zuschlagskriterien und Text, mit Fundstelle\n2. Je Anliegen ein Win Theme: Aussage | Beleg (Referenz, Methode, Zahl) | Nutzen für den Auftraggeber\n3. Executive Summary (max. 200 Wörter) in der Sprache des Auftraggebers\nFehlende Belege markierst du als [Referenz einfügen], nichts erfinden."
+    },
+    {
+      "id": "redteam",
+      "cat": "ausschreibungen",
+      "name": "Offerte gegenlesen (Red Team)",
+      "desc": "Offerte aus Sicht des Bewertungsgremiums prüfen.",
+      "anrede": false,
+      "prompt": "Rolle: Du bist Mitglied des Bewertungsgremiums der Vergabestelle.\nPrüfe den Offertentwurf in <inhalt> streng gegen die Zuschlagskriterien (falls im Text enthalten):\n1. Punkteschätzung je Kriterium mit Begründung\n2. Schwachstellen: unbelegte Behauptungen, fehlende Nachweise, Widersprüche, Formfehler\n3. Die 5 wirksamsten Verbesserungen, sortiert nach Punktegewinn\nBleibe sachlich und konkret, zitiere die betroffene Stelle."
+    },
+    {
+      "id": "promptopt",
+      "cat": "frei",
+      "name": "Prompt verbessern",
+      "desc": "Macht aus einer groben Idee einen präzisen Prompt.",
+      "anrede": false,
+      "prompt": "Rolle: Du bist Experte für Prompt Engineering.\nVerbessere den Prompt bzw. die Idee in <inhalt>:\n1. Bis zu 3 Rückfragen, falls Wesentliches fehlt (Ziel, Leser, Format)\n2. Verbesserter Prompt mit Rolle, Ziel, Vorgehen, Ausgabeformat und Qualitätskriterien; Platzhalter als {{Feldname}}\n3. Kurz: was du geändert hast und warum\nDen verbesserten Prompt gibst du in einem Codeblock aus, damit er sich als eigene Vorlage speichern lässt."
     },
     {
       "id": "frei",

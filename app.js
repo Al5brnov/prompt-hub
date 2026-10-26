@@ -8,6 +8,7 @@
   var DEV_CHAT = "https://claude.ai/code/session_01UZCHKYMVaKxmE16x2VMrRy";
   var DEV_REPO = "https://github.com/Al5brnov/prompt-hub";
   var CHANGELOG = [
+    ["26.10.2026", "Vorlagen überarbeitet (Rolle, Ziel, Belegpflicht) und 5 neue: Entscheidungsvorlage, User Stories, Win Themes, Red Team, Prompt verbessern."],
     ["26.10.2026", "Neue Struktur mit Bereichen Prompt, simap, Bibliothek und Mehr. Vorlagen per Auswahlliste, Favoriten, Platzhalter-Felder, eigene Vorlagen mit Export/Import."],
     ["25.10.2026", "simap-Radar mit CPV-Suche, Relevanz, Zuschlägen als Marktinfo und Link pro Treffer."],
     ["24.10.2026", "Erste Version als Android-Web-App mit Teilen-Ziel."]
