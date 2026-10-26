@@ -12,10 +12,19 @@ Sie erscheint nach der Installation im Teilen-Menü von Android.
 ## Nutzung
 
 1. In einer beliebigen App Text markieren → **Teilen** → **Prompt Hub**.
-2. Aufgabe wählen, optional eine Richtung eingeben.
+2. Vorlage in der Auswahlliste wählen (Favoriten zuoberst), allfällige Felder ausfüllen, optional eine Richtung eingeben.
 3. **Senden**: Der Prompt wird an das gewählte Ziel übergeben und zusätzlich in die Zwischenablage kopiert.
 
 Ohne Teilen: App öffnen, **Einfügen** tippen.
+
+## Aufbau
+
+| Register | Inhalt |
+|---|---|
+| Prompt | Vorlage wählen, Inhalt, Senden |
+| simap | Radar mit neuen Ausschreibungen und Zuschlägen, Filter, Sortierung, Auswahl bewerten |
+| Bibliothek | Alle Vorlagen nach Kategorie, Suche, Favoriten, eigene Vorlagen anlegen, Export/Import |
+| Mehr | Eigener Kontext, Zeitjournal, Weiterentwicklung, Datensicherung, Änderungen |
 
 ## Ziele
 
@@ -32,7 +41,7 @@ Sehr lange Prompts (über ca. 8'000 Zeichen) werden nur kopiert.
 ## Datenschutz
 
 - Alles läuft im Browser auf dem Gerät. Es gibt keinen Server, kein Tracking und keine Cookies.
-- Gespeichert werden lokal nur die letzte Aufgabe, das letzte Ziel, die Anrede und der optionale eigene Kontext.
+- Gespeichert werden lokal nur Einstellungen, Favoriten, eigene Vorlagen und der optionale eigene Kontext.
 - Text verlässt das Gerät nur, wenn Sie ihn aktiv an einen KI-Dienst senden. Dort gelten dessen Bedingungen.
 
 ## Ausschreibungen (simap.ch)
@@ -52,7 +61,7 @@ Die simap-Volltextsuche liefert viel Ausschuss (z.B. «SAP» in «sapeurs-pompie
 
 Feinsteuerung in `radar/config.json`: `core` (treffen allein), `context` (nur mit IT-CPV), `excludeWords` (im Titel), `minScore`, `maxItems`.
 
-In der App zeigt das Radar-Symbol oben rechts die Zahl neuer Treffer. Auswählen und «Ausgewählte bewerten»
+Im Register «simap» zeigt das Symbol die Zahl neuer Treffer. Auswählen und «Ausgewählte bewerten»
 füllt den Inhalt und wählt die Vorlage «Ausschreibungen Triage». Manuell starten: Actions → simap-Radar → Run workflow.
 
 ## Zeitjournal
@@ -63,5 +72,7 @@ Installation wie oben, Daten bleiben auf dem Gerät. Backup als Datei unter «Fa
 
 ## Anpassen
 
-Die Vorlagen stehen in `index.html` in der Liste `T`, die Ziele in `TG`.
+Gemeinsame Vorlagen stehen in `prompts/library.json` (Kategorien und Prompts, Platzhalter als `{{Feldname}}`).
+Eigene Vorlagen legt man in der App unter «Bibliothek» an. Sie bleiben auf dem Gerät und lassen sich als Datei exportieren.
+Die App-Logik steht in `app.js`, die Ziele in `TG`.
 Nach Änderungen in `sw.js` die Konstante `CACHE` hochzählen, damit installierte Apps das Update laden.

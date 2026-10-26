@@ -1,0 +1,168 @@
+{
+  "_hinweis": "Gemeinsame Vorlagen des Prompt Hub. Platzhalter {{Name}} werden in der App als Eingabefeld angezeigt. <inhalt> steht für den geteilten oder eingefügten Text. anrede=true zeigt den Du/Sie-Schalter.",
+  "version": 1,
+  "categories": [
+    {
+      "id": "schreiben",
+      "name": "Schreiben"
+    },
+    {
+      "id": "verdichten",
+      "name": "Verdichten"
+    },
+    {
+      "id": "analysieren",
+      "name": "Analysieren"
+    },
+    {
+      "id": "recherche",
+      "name": "Recherche"
+    },
+    {
+      "id": "ausschreibungen",
+      "name": "Ausschreibungen"
+    },
+    {
+      "id": "frei",
+      "name": "Frei"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "mail",
+      "cat": "schreiben",
+      "name": "Mail-Antwort",
+      "desc": "Antwort in der Sprache der Nachricht. Nur der Mailtext, ohne Varianten.",
+      "anrede": true,
+      "prompt": "Schreibe eine Antwort auf die Nachricht in <inhalt>. Antworte in der Sprache der Nachricht. Kurz, direkt zum Punkt; Fragen beantworten oder offen benennen. Gib nur den Mailtext aus, ohne Varianten und ohne Kommentar."
+    },
+    {
+      "id": "auftrag",
+      "cat": "schreiben",
+      "name": "Auftrag an Kollegen",
+      "desc": "Ausgangslage, Aufgabe, Ergebnis mit Termin, offene Punkte. Max. 150 Wörter.",
+      "anrede": true,
+      "prompt": "Formuliere aus dem Sachverhalt in <inhalt> einen Arbeitsauftrag an einen Kollegen. Gliederung: 1. Ausgangslage, 2. Aufgabe, 3. Erwartetes Ergebnis inkl. Termin, 4. Offene Punkte / Ansprechpartner. Fehlende Angaben als [Platzhalter]. Max. 150 Wörter."
+    },
+    {
+      "id": "straffen",
+      "cat": "schreiben",
+      "name": "Text straffen",
+      "desc": "Kürzer, aktiv, max. zwei Kommas pro Satz. Inhalt bleibt unverändert.",
+      "anrede": false,
+      "prompt": "Überarbeite den Text in <inhalt>: kürzer, klarer, aktiv formuliert, max. zwei Kommas pro Satz, Nominalstil auflösen. Inhalt, Fakten und Anrede unverändert lassen. Gib nur den überarbeiteten Text aus."
+    },
+    {
+      "id": "translate",
+      "cat": "schreiben",
+      "name": "Übersetzen DE ↔ EN",
+      "desc": "Business-Englisch bzw. Deutsch. Fachbegriffe bleiben.",
+      "anrede": false,
+      "prompt": "Übersetze <inhalt> in präzises Business-Englisch; ist der Text englisch, ins Deutsche (Schweizer Rechtschreibung). Umständliche Formulierungen straffen, Fachbegriffe nicht übersetzen. Nur die Übersetzung ausgeben."
+    },
+    {
+      "id": "absage",
+      "cat": "schreiben",
+      "name": "Absage / Verzicht",
+      "desc": "Freundliche, klare Absage. Grund im Feld «Grund».",
+      "anrede": true,
+      "prompt": "Formuliere aus <inhalt> eine freundliche, klare Absage bzw. einen Verzicht. Grund: {{Grund}}. Wertschätzend, kurz, Tür für künftige Zusammenarbeit offen lassen. Antworte in der Sprache der Nachricht. Gib nur den Mailtext aus."
+    },
+    {
+      "id": "summary",
+      "cat": "verdichten",
+      "name": "Management Summary",
+      "desc": "Kernaussage, Entscheide, To-dos und Risiken. Max. 120 Wörter.",
+      "anrede": false,
+      "prompt": "Fasse <inhalt> als Management Summary zusammen: 1. Kernaussage (max. 3 Sätze), 2. Entscheide, 3. Offene To-dos und Risiken. Zahlen, Beträge und Termine erhalten. Max. 120 Wörter."
+    },
+    {
+      "id": "protokoll",
+      "cat": "verdichten",
+      "name": "Protokoll",
+      "desc": "Entscheide, Pendenzentabelle (Was | Wer | Bis wann), offene Fragen.",
+      "anrede": false,
+      "prompt": "Erstelle aus den Notizen in <inhalt> ein Kurzprotokoll: 1. Entscheide, 2. Pendenzen als Tabelle (Was | Wer | Bis wann), 3. Offene Fragen. Fehlende Angaben als [Platzhalter] markieren, nichts erfinden."
+    },
+    {
+      "id": "review",
+      "cat": "analysieren",
+      "name": "Review / Challenge",
+      "desc": "Lücken als Tabelle mit Risiko-Rating und Rückfragen.",
+      "anrede": false,
+      "prompt": "Prüfe <inhalt> (Konzept, Anforderung oder Ticket) als Solution Architect auf Lücken: Prozess, Schnittstellen, Fehlerhandling, Berechtigungen, Mengengerüst, Migration, Test. Bei SAP: Betriebsmodell (Public Cloud, Private Cloud, On-Premise) und Clean-Core-Verträglichkeit prüfen. Ausgabe als Tabelle (Nr | Lücke | Risiko hoch/mittel/tief | Rückfrage), sortiert nach Risiko."
+    },
+    {
+      "id": "technik",
+      "cat": "analysieren",
+      "name": "Technik & Log",
+      "desc": "Ursachen nach Wahrscheinlichkeit, Lösungsschritte konkret.",
+      "anrede": false,
+      "prompt": "Analysiere den technischen Sachverhalt in <inhalt> (System, API, Payload, Code, Fehlermeldung): 1. Was passiert technisch? 2. Wahrscheinliche Ursachen, nach Wahrscheinlichkeit sortiert, 3. Konkrete Lösungsschritte (bei SAP mit Transaktionen, Tabellen, Customizing). Nenne nur Transaktionen, Tabellen, Felder und Hinweise, die du sicher kennst; alles andere als «zu verifizieren» markieren."
+    },
+    {
+      "id": "struktur",
+      "cat": "analysieren",
+      "name": "Struktur & Diagramm",
+      "desc": "Mermaid-Diagramm, Übersichtstabelle, einzeilige Prozesskette.",
+      "anrede": false,
+      "prompt": "Bereite <inhalt> strukturiert auf: 1. Mermaid-Diagramm (Prozessfluss oder Architektur), 2. kompakte Übersichtstabelle, 3. einzeilige Prozesskette (A → B → C) für Mail oder Ticket. Keine weiteren Erläuterungen."
+    },
+    {
+      "id": "meeting",
+      "cat": "analysieren",
+      "name": "Meeting vorbereiten",
+      "desc": "Ziele, Agenda, Fragen und Risiken für ein Gespräch.",
+      "anrede": false,
+      "prompt": "Bereite mich auf ein Gespräch mit {{Gesprächspartner}} vor. Ziel: {{Ziel}}. Grundlage ist <inhalt>. Gliederung: 1. Ausgangslage in 3 Sätzen, 2. Agenda mit Zeitbudget, 3. Meine Kernbotschaften, 4. Kritische Fragen des Gegenübers und gute Antworten, 5. Risiken und offene Punkte."
+    },
+    {
+      "id": "recherche",
+      "cat": "recherche",
+      "name": "Recherche",
+      "desc": "Aktueller Stand mit Quellen und Datum.",
+      "anrede": false,
+      "prompt": "Recherchiere online den aktuellen Stand zum Thema in <inhalt> und erkläre es kurz: Funktionsweise, Fakten, Praxisrelevanz. Nenne Quellen mit Datum. Bei SAP-Themen Public Cloud, Private Cloud und On-Premise unterscheiden."
+    },
+    {
+      "id": "produkt",
+      "cat": "recherche",
+      "name": "Produkt & Preise CH",
+      "desc": "Tests, drei Alternativen, aktuelle CHF-Preise bei Schweizer Shops.",
+      "anrede": false,
+      "prompt": "Recherchiere unabhängige Tests und Reviews zum Produkt in <inhalt>: Stärken und Schwächen. Vergleichstabelle mit den 3 besten Alternativen (Spezifikationen, Vor-/Nachteile, Preis-Leistung). Aktuelle Preise in CHF bei seriösen Schweizer Shops (z.B. Digitec/Galaxus, Brack, Interdiscount, Fust, Hersteller) mit Abfragedatum. Am Schluss eine klare Empfehlung."
+    },
+    {
+      "id": "gonogo",
+      "cat": "ausschreibungen",
+      "name": "Ausschreibung Go/No-Go",
+      "desc": "Steckbrief, Kriterien, Risiken, Fragen fürs Forum und Empfehlung. simap-Link teilen lädt die Daten direkt.",
+      "anrede": false,
+      "prompt": "Analysiere die öffentliche Ausschreibung in <inhalt> für eine Go/No-Go-Entscheidung aus Sicht eines Beratungsunternehmens. Gliederung:\n1. Steckbrief (Tabelle): Auftraggeber, Gegenstand, Verfahrensart, Lose, Laufzeit inkl. Optionen, Eingabefrist, Fragenfrist, Offertöffnung, Volumen (falls genannt).\n2. Eignungskriterien (Tabelle): Kriterium | Nachweis/Referenz | Muss/Kann | erfüllbar? (ja/nein/unklar).\n3. Zuschlagskriterien mit Gewichtung, Preisgewichtung und Bewertungsmethode.\n4. Anforderungen an Schlüsselpersonen (Rolle, Zertifikate, Erfahrung, Sprachen) und Referenzprojekte.\n5. Risiken und Auffälligkeiten: Vorbefassung, auf einen Anbieter zugeschnittene Kriterien, knappe Termine, Haftung und Konventionalstrafen, bei IT-Projekten das Betriebsmodell.\n6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert.\n7. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen und grober Schätzung des Offertaufwands in Personentagen.\nNur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben] markieren, nichts erfinden. Steht dort, dass Kriterien nur in den Unterlagen stehen, weise darauf hin. Daten im Format TT.MM.JJJJ."
+    },
+    {
+      "id": "triage",
+      "cat": "ausschreibungen",
+      "name": "Ausschreibungen Triage",
+      "desc": "Mehrere Ausschreibungen auf einmal: Rangliste nach Fit, Kurzbewertung der passenden. Quelle: Register «simap».",
+      "anrede": false,
+      "prompt": "Bewerte alle öffentlichen Ausschreibungen in <inhalt> aus Sicht eines Beratungsunternehmens. Berücksichtige den Kontext oben (Schwerpunkte, Branchen, Referenzen), falls angegeben.\n1. Übersichtstabelle aller Einträge: Nr | Titel | Auftraggeber | Eingabefrist | Fit (hoch/mittel/tief) | Empfehlung (Go / prüfen / No-Go) | Hauptgrund in einem Satz. Sortiert nach Fit, dann Frist.\n2. Für jede Ausschreibung mit Fit hoch oder mittel eine Kurzbewertung: Gegenstand, Eignungskriterien und Referenzbedarf, Zuschlagskriterien mit Gewichtung, Risiken, offene Fragen fürs Fragenforum, grober Offertaufwand in Personentagen.\n3. Ausschreibungen ohne Bezug zu den Schwerpunkten nur in der Tabelle, mit Fit tief.\nNur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben] markieren, nichts erfinden. Daten im Format TT.MM.JJJJ. Am Schluss: die 3 dringendsten nächsten Schritte mit Datum."
+    },
+    {
+      "id": "forum",
+      "cat": "ausschreibungen",
+      "name": "Fragen fürs Fragenforum",
+      "desc": "Präzise, neutrale Fragen zu einer Ausschreibung.",
+      "anrede": false,
+      "prompt": "Formuliere aus der Ausschreibung in <inhalt> bis zu 8 Fragen fürs simap-Fragenforum. Neutral formuliert (keine Rückschlüsse auf unser Angebot), je mit Bezug auf Kapitel oder Kriterium. Schwerpunkte: Unklarheiten bei Eignungs- und Zuschlagskriterien, Mengengerüst, Schnittstellen, Termine, Preisblatt."
+    },
+    {
+      "id": "frei",
+      "cat": "frei",
+      "name": "Freie Anweisung",
+      "desc": "Das Feld «Anweisung» wird zur Aufgabe.",
+      "anrede": false,
+      "prompt": ""
+    }
+  ]
+}
