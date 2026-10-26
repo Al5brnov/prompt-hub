@@ -511,7 +511,7 @@
   show((location.hash || "").replace("#", "") || "prompt");
   if (!raw.value && !spid && view === "prompt") setHint("Tipp: In einer App Text markieren → Teilen → Prompt Hub.", false);
   fetch("prompts/library.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
-    if (d && Array.isArray(d.prompts)) { LIB = d; buildSelect(); selT(st.t); if (view === "lib") renderLib(); if (view === "prompt") show("prompt"); }
+    if (d && Array.isArray(d.prompts)) { LIB = d; buildSelect(); selT(st.t); if (view === "lib" || view === "prompt") show(view); }
   }).catch(function () { toast("Vorlagen offline nicht verfügbar"); });
   loadRadar().catch(function () {});
   if (spid) $("bSimap").click();
