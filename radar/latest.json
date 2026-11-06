@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T17:09:05+00:00",
+ "generatedAt": "2026-11-06T22:19:40+00:00",
  "since": "2026-10-07",
  "keywords": [
   "SAP",
@@ -93,31 +93,26 @@
   "Prozessanalyse",
   "AMS"
  ],
- "durationSec": 1184,
- "detailsCached": 86,
- "detailsLoaded": 3,
+ "durationSec": 606,
+ "detailsCached": 89,
+ "detailsLoaded": 2,
  "dropped": {
   "vorab": 168,
   "cpv": 0,
-  "score": 8,
+  "score": 6,
   "frist": 10,
   "ausschluss": 0,
   "zeit": 0,
   "limit": 0
  },
- "count": 71,
+ "count": 73,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «Ariba»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
   "Suche «Order-to-Cash»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «E-Shop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Fakturierung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Ariba»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 6 Suchen, weiterhin fehlgeschlagen: Ariba",
-  "Details 44516: URLError bei /publications/v1/project/f513bd73-c334-4455-8e59-3f8317e495a9/publication-details/c5f68cfc-7d0b-4586-b1d0-ce025de398c4: <urlopen error [Errno 111] Connection refused>",
-  "Details 45260: URLError bei /publications/v1/project/73082dca-a699-488a-8f6e-a7b3ffd2ddb1/publication-details/7b37b268-458d-4a9b-ad20-f9a51b9993bb: <urlopen error [Errno 111] Connection refused>"
+  "Suche «E-Shop»: URLError bei /publications/v2/project/project-search: <urlopen error _ssl.c:994: The handshake operation timed out>",
+  "Suche «E-Government»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: keine"
  ],
  "rejected": [
   {
@@ -149,16 +144,6 @@
    "title": "Plattform Service für ein Dokumenten Management System ",
    "score": 2,
    "why": " | CPV 72512000"
-  },
-  {
-   "title": "Solution fiscale intégrée pour les personnes morales et les personnes physiques : mise en ",
-   "score": 1,
-   "why": ""
-  },
-  {
-   "title": "Lösung Smart Prison Justizvollzug Luzern",
-   "score": 1,
-   "why": ""
   }
  ],
  "items": [
@@ -909,6 +894,30 @@
    },
    "url": "https://www.simap.ch/de/project-detail/5cbbd72a-a9f2-4c15-9774-5f7b22c93819",
    "text": "\n  project-info:\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 9420\n      name: Abwasserverband Thurau\n      contactPerson: Markus Gresch\n      url: https://www.ara-thurau.ch\n      street: Stickereiplatz 1\n      city: Uzwil\n    procurementRecipientAddress:\n      postalCode: 9420\n      name: Abwasserverband Thurau\n      contactPerson: Markus Gresch\n      url: https://www.ara-thurau.ch\n      street: Stickereiplatz 1\n      city: Uzwil\n    title: ARA Thurau, Automatisierungs- und Prozessleitsystem\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n      - offer_external\n    publicationLanguages:\n      - de\n    processType: selective\n    orderType: supply\n    offerSpecificNote: Die Physische Einreichung muss bis 12.00 Uhr MEZ bei der Eingabestelle eintreffen.\n    offerAddress:\n      postalCode: 9420\n      name: Abwasserverband Thurau\n      contactPerson: Markus Gresch\n      street: Stickereiplatz 1\n      city: Uzwil\n  procurement:\n    orderDescription: Die Abwasserreinigungsanlagen (ARA) in Wil, Jonschwil, Zuzwil und Uzwil werden aufgehoben und es wird eine neue ARA auf dem Standort der ARA Uzwil in Niederuzwil gebaut. Die neue Anlage wird auf 130'000 Einwohner dimensioniert. Dabei ist von Gesetzes wegen eine vierte Reinigungsstufe zur Elimination von Mikroverunreinigungen zu integrieren.  Da das Abwasser von Uzwil zu \n      jedem Zeitpunkt gereinigt werden muss, wird der Neubau in mehrere Etappen gegliedert. \n      \n      Der Auftrag umfasst die Lieferung und Inbetriebnahme von:  \n      - Automatisierungssystem mit dezentral angeordneten speicherprogrammierbaren Steuerungen \n      - Prozessleitsystem\n      - Alarmierungssystem\n      - System zur Betriebsdatenerfassung\n      - Kommunikationseinrichtungen\n      \n      Die erforderlichen Systeme inklusive deren Erweiterungen sind nach dem derzeitigen Stand der Technik und den heute bekannten Bedürfnissen und Zielsetzungen auszuführen. Die Prozesssteuerungen der einzelnen Verfahrensbereiche der ARA müssen unabhängig voneinander \n      etappenweise in Betrieb genommen werden können.\n    processType: selective\n    orderType: supply\n    additionalCpvCodes:\n      - code: 45252130\n        label: Ausrüstung für Kläranlage\n      - code: 48150000\n        label: Softwarepaket für die Industrieprozesssteuerung\n    supplyType: work_contract\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 9420\n      city: Uzwil\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    options: no\n    cpvCode:\n      code: 48921000\n      label: Automatisierungssystem\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: selective\n    orderType: supply\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen seit Publikation auf www.simap.ch beim Verwaltungsgericht des Kantons St.Gallen, Webergasse 8, 9001 St.Gallen, schriftlich Beschwerde erhoben werden (Art. 52 Abs. 1 i.V.m. Art. 56 der Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen [sGS 841.51]). Die Beschwerde muss einen Antrag sowie eine Darstellung des Sachverhaltes und eine Begründung enthalten. Sie ist zu unterzeichnen und im Doppel einzureichen. Diese Verfügung ist beizulegen. Es gelten keine Gerichtsferien.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    qnas:\n      - date: 2026-11-10\n    processType: selective\n    orderType: supply\n    publicationDate: 2026-10-30\n    offerDeadline: 2026-12-02T12:00:00+01:00\n    participationRequestOpening:\n      dateTime: 2026-12-02T13:00:00+01:00\n    selectParticipants:\n      dateTime: 2027-02-05T00:00:00+01:00\n      ignoreTime: ja\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  criteria:\n    weightedQualificationCriteriaInDocuments: yes\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: selective\n    orderType: supply\n  base:\n    cpvCode:\n      code: 48921000\n      label: Automatisierungssystem\n    orderType: supply\n    title: ARA Thurau, Automatisierungs- und Prozessleitsystem\n    projectType: tender\n    processType: selective\n    lotsType: without\n    type: tender\n    publicationNumber: 46595-01\n    publicationDate: 2026-10-30\n    creationLanguage: de\n    projectNumber: 46595\n  hasProjectDocuments: ja"
+  },
+  {
+   "id": "73082dca-a699-488a-8f6e-a7b3ffd2ddb1",
+   "nr": "45260",
+   "title": "Lösung Smart Prison Justizvollzug Luzern",
+   "office": "Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug",
+   "date": "2026-10-30",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2026-12-11T12:00:00+01:00",
+   "cpv": [
+    "72000000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Beschaffung einer modularen Smart-Prison-Gesamtlösung für die Justizvollzugsanstalten Grosshof und Wauwilermoos. Der Auftrag umfasst die Bereitstellung und Integration der Lösung einschliesslich Endgeräten, Applikationen, CMS, MDM, Backend und Schnittstellen sowie Tests, Schulung und Dokumentation. Hinzu kommen Betrieb, Hosting, Lizenzen, Wartung und Support über fünf Jahre sowie die optionale Verlängerung um maximal drei weitere Betriebsjahre.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/73082dca-a699-488a-8f6e-a7b3ffd2ddb1",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 6000\n      name: Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug\n      contactPerson: Christoph Braun\n      street: Murmattweg 8\n      city: Luzern\n    procurementRecipientAddress:\n      name: Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug\n    title: Lösung Smart Prison Justizvollzug Luzern\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Beschaffung einer modularen Smart-Prison-Gesamtlösung für die Justizvollzugsanstalten Grosshof und Wauwilermoos. Der Auftrag umfasst die Bereitstellung und Integration der Lösung einschliesslich Endgeräten, Applikationen, CMS, MDM, Backend und Schnittstellen sowie Tests, Schulung und Dokumentation. Hinzu kommen Betrieb, Hosting, Lizenzen, Wartung und Support über fünf Jahre sowie die optionale Verlängerung um maximal drei weitere Betriebsjahre.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: JVA Grosshof, Eichwilstrasse 4, 6010 Kriens;\n      JVA Wauwilermoos, Wauwilermoos 1, 6243 Egolzwil\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2027-12-31\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2032-12-31\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Optionale Verlängerung von Wartung und Support um weitere drei Jahre.\n    options: yes\n    optionsNote: OP01: Optionale Verlängerung von Betrieb und Support um maximal drei weitere Betriebsjahre. \n      OP02: Optionale Beschaffung von Endgeräten und Zubehör während der Vertragslaufzeit auf Abruf.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    subContractorNote: Subunternehmen sind nur für die in den Ausschreibungsunterlagen ausdrücklich bezeichneten Grundleistungen und Optionen zugelassen. Sämtliche Subunternehmen sind offenzulegen und dürfen nicht ohne vorgängige schriftliche Genehmigung der Auftraggeberin gewechselt werden.\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen seit Publikation beim Kantonsgericht Luzern, 4.Abteilung, Obergrundstrasse 46, Postfach 3569, 6002 Luzern, Beschwerde eingereicht werden. Die Beschwerde hat einen Antrag und dessen Begründung zu enthalten und ist im Doppel einzureichen. Die angefochtene Ausschreibung und die vorhandenen Beweismittel sind beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-20\n    otherAppointments:\n      - name: Versand der Demogeräte\n        date: 2026-12-21\n      - name: Anbieterpräsentation\n        date: 2027-01-08\n        note: Präsentation der Lösung des Anbieters, vor Ort in Luzern\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-30\n    offerDeadline: 2026-12-11T12:00:00+01:00\n    offerValidityDeadlineDate: 2027-12-11\n    offerOpening:\n      dateTime: 2026-12-11T00:00:00+01:00\n      ignoreTime: ja\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    publicationTed: ja\n    title: Lösung Smart Prison Justizvollzug Luzern\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45260-01\n    publicationDate: 2026-10-30\n    creationLanguage: de\n    translationLanguages:\n      - language: en\n        type: summary\n    projectNumber: 45260\n  hasProjectDocuments: ja\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:759808-2026:HTML:DE:HTML"
   },
   {
    "id": "8ad92f96-5266-4742-a509-1f3e19c14b99",
@@ -1932,6 +1941,31 @@
    },
    "url": "https://www.simap.ch/de/project-detail/64369a57-bfe6-4447-a890-feb156aee5bb",
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 1762\n      name: Service de l'informatique et des télécommunications (SITel)\n      url: https://www.fr.ch/sitel\n      street: Route André Piller 50\n      city: Givisiez\n    title: Betriebserhaltung der Azure DevOps Server-Plattform, CI/CD-Beratung und Architektur-Expertise\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Beschaffung von Wartungs- und Betriebsleistungen für die Azure DevOps-Plattform sowie die zugehörigen Infrastrukturkomponenten. Die Leistungen umfassen zudem die Begleitung bei der Modernisierung sämtlicher Build- und Deployment-Pipelines, einschliesslich der Containerisierung von Anwendungen, der Bereitstellung auf Kubernetes nach einem GitOps-Ansatz, der Weiterentwicklung der zugehörigen Infrastrukturkomponenten sowie der Definition übergreifender Governance-Vorgaben. Darüber hinaus hat der Leistungserbringer konzeptionelle Expertise in den Bereichen Industrialisierung, Standardisierung und Wiederverwendung von Lösungen einzubringen.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 1762\n      city: Givisiez\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-02-01\n        - 2032-01-31\n    canContractBeExtended: no\n    options: yes\n    optionsNote: Bedingungen in den Dokumenten\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: none\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    remediesNotice: Diese Ausschreibung kann innert 20 Tagen nach der Publikation mittels Beschwerde beim Kantonalen Gericht des Kantons Freiburg, administrative Sektion, Augustinergasse 3, Postfach 630, 1701 Freiburg, angefochten werden.\n      oder\n      Oberamtmann des Sensebezirkes, 1712 Tafers, schriftlich Beschwerde geführt werden.  \n      oder\n       Oberamt des Seebezirk Schlossgasse 1, 3280 Murten Beschwerde geführt werden.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    reductionMinimumOfferDeadline: ja\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-22\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-09\n    offerDeadline: 2026-11-17T13:00:00+01:00\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    publicationTed: ja\n    title: Betriebserhaltung der Azure DevOps Server-Plattform, CI/CD-Beratung und Architektur-Expertise\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45593-01\n    publicationDate: 2026-10-09\n    creationLanguage: fr\n    translationLanguages:\n      - language: de\n        type: complete\n    projectNumber: 45593\n  hasProjectDocuments: ja\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:701872-2026:HTML:FR:HTML"
+  },
+  {
+   "id": "f513bd73-c334-4455-8e59-3f8317e495a9",
+   "nr": "44516",
+   "title": "Solution fiscale intégrée pour les personnes morales et les personnes physiques : mise en œuvre, maintenance et assistance",
+   "office": "République et Canton du Jura - Service des contributions",
+   "date": "2026-10-08",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2026-11-25T11:00:00+01:00",
+   "cpv": [
+    "48000000",
+    "72000000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "La République et Canton du Jura, par l'intermédiaire de son Service des contributions, recherche une solution informatique intégrée pour le traitement fiscal complet des personnes morales et des personnes physiques, en remplacement des solutions Fiscalis (PM) et TAO (PP). La solution couvre l'ensemble du cycle de traitement, de l'assujettissement et du registre fiscal jusqu'à la taxation, aux voies de droit, aux répartitions et aux échanges de données avec les systèmes tiers. Le marché comprend notamment : - la fourniture de la solution et des licences nécessaires - la mise à disposition des images conteneurisées et des artefacts techniques permettant le déploiement dans l'infrastructure Kubernetes du canton - la configuration, le paramétrage et l'intégration de la solution - la conception et la mise en œuvre des interfaces avec les systèmes tiers - la migration des données minimales, puis des dossiers et données résiduels - la maintenance et l'assistance applicatives et techniques pendant toute la durée du contrat",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/f513bd73-c334-4455-8e59-3f8317e495a9",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 2800\n      name: République et Canton du Jura - Service des contributions\n      contactPerson: Sylvain Crelier - organisateur de la procédure\n      street: Rue de la Justice 2\n      city: Delémont\n    procurementRecipientAddress:\n      postalCode: 2800\n      name: Gouvernement de la République et Canton du Jura\n      street: Rue de l'Hôpital 2\n      city: Delémont\n    title: Solution fiscale intégrée pour les personnes morales et les personnes physiques : mise en œuvre, maintenance et assistance\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: service\n    offerSpecificNote: Remise exclusivement par voie électronique via simap.ch. Les documents à signer doivent porter une signature électronique qualifiée.\n  procurement:\n    orderDescription: La République et Canton du Jura, par l'intermédiaire de son Service des contributions, recherche une solution informatique intégrée pour le traitement fiscal complet des personnes morales et des personnes physiques, en remplacement des solutions Fiscalis (PM) et TAO (PP). La solution couvre l'ensemble du cycle de traitement, de l'assujettissement et du registre fiscal jusqu'à la taxation, aux voies de droit, aux répartitions et aux échanges de données avec les systèmes tiers.\n      \n      Le marché comprend notamment :\n      - la fourniture de la solution et des licences nécessaires\n      - la mise à disposition des images conteneurisées et des artefacts techniques permettant le déploiement dans l'infrastructure Kubernetes du canton\n      - la configuration, le paramétrage et l'intégration de la solution\n      - la conception et la mise en œuvre des interfaces avec les systèmes tiers\n      - la migration des données minimales, puis des dossiers et données résiduels\n      - la maintenance et l'assistance applicatives et techniques pendant toute la durée du contrat\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 48000000\n        label: Softwarepaket und Informationssysteme\n    cpcCode:\n      code: b7f1e45b-1fe5-4e19-8cbb-98006291267d\n      label: Datenverarbeitung und verbundene Dienstleistungen\n    orderAddressOnlyDescription: no\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-05-13\n        - 2029-12-01\n    executionNote: Dates cibles : démarrage le 13.05.2027, mise en production PM le 01.12.2028 et solution complète le 01.12.2029.\n      L'adjudicateur se réserve le droit de modifier ces jalons (cf. Document 1, chapitre 2.1). Maintenance et assistance jusqu'au terme du contrat.\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 2800\n      city: Delémont\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-04-28\n        - 2032-04-27\n    canContractBeExtended: yes\n    options: yes\n    optionsNote: Prestations d'accompagnement au changement, fonctionnalités additionnelles, modules ou services complémentaires, chiffrés séparément et non pris en compte dans l'évaluation du prix.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours à la Cour administrative du Tribunal cantonal, 9, chemin du Château, 2900 Porrentruy, dans un délai de vingt jours à compter de sa publication. La procédure d’opposition est exclue. Le recours n’a pas d’effet suspensif. Le Président de la Cour administrative peut accorder, sur demande, l’effet suspensif au recours. Le mémoire de recours doit en tous les cas contenir un exposé concis des faits, des motifs et moyens de preuve, ainsi que l'énoncé des conclusions. La décision attaquée et les documents servant de moyens de preuve en possession du recourant doivent être joints au mémoire. Le recours doit être daté et signé par le recourant ou son mandataire (art. 127 Cpa). Le non-respect de ces exigences formelles peut notamment entraîner l’irrecevabilité du recours.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-28\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-08\n    offerDeadline: 2026-11-25T11:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-10-08\n        - 2026-11-25\n    offerValidityDeadlineDate: 2027-11-25\n    offerOpening:\n      dateTime: 2026-11-26T14:00:00+01:00\n    offerOpeningNotes: Procès-verbal d'ouverture mis à disposition des soumissionnaires ayant déposé une offre dans les 10 jours suivant l'ouverture (art. 10 OMP-JU).\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    title: Solution fiscale intégrée pour les personnes morales et les personnes physiques : mise en œuvre, maintenance et assistance\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 44516-01\n    publicationDate: 2026-10-08\n    creationLanguage: fr\n    cpcCode:\n      code: b7f1e45b-1fe5-4e19-8cbb-98006291267d\n      label: Datenverarbeitung und verbundene Dienstleistungen\n    projectNumber: 44516\n  hasProjectDocuments: ja"
   },
   {
    "id": "57aae4e4-bac2-4fa6-bda5-86cb96bf49d7",
