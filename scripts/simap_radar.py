@@ -23,6 +23,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(ROOT, "radar", "config.json")
 OUT = os.path.join(ROOT, "radar", "latest.json")
 HISTORY = os.path.join(ROOT, "radar", "history.csv")
+# Zwischenspeicher der Publikationsdetails (nicht im Repo, wird per actions/cache zwischen Läufen behalten)
+CACHE = os.environ.get("RADAR_CACHE", os.path.join(ROOT, ".cache", "details.json"))
 BASE = "https://www.simap.ch/api"
 UA = "prompt-hub-radar/1.0 (+https://github.com/)"
 MAX_TEXT = 6000
@@ -447,19 +449,36 @@ def main():
     cands = cands[:max_details]
     print("Details für %d Kandidaten laden (%d vorab aussortiert, %d wegen Limit übersprungen)" % (len(cands), pre_skipped, skipped), flush=True)
 
+    # Details sind pro Publikations-ID unveränderlich (Korrekturen erhalten eine neue ID): bereits geladene wiederverwenden
+    try:
+        cache = json.load(open(CACHE, encoding="utf-8")) if not FIXTURES else {}
+    except Exception:  # noqa: BLE001
+        cache = {}
+    used, stats = {}, {"cache": 0, "neu": 0}
+
     def load(it):
-        if time.time() - t0 > budget:
-            return it, None
         ds = []
         for pub in it["pubs"]:
+            key = "%s|%s" % (it["id"], pub)
+            if key in cache:
+                ds.append(cache[key]); used[key] = cache[key]; stats["cache"] += 1
+                continue
+            if time.time() - t0 > budget:
+                return it, None
             try:
-                ds.append(get("/publications/v1/project/%s/publication-details/%s" % (it["id"], pub)))
+                d = get("/publications/v1/project/%s/publication-details/%s" % (it["id"], pub))
+                ds.append(d); used[key] = d; stats["neu"] += 1
             except Exception as e:  # noqa: BLE001
                 note("Details %s: %s" % (it.get("nr") or it["id"], e))
         return it, ds
 
     with ThreadPoolExecutor(max_workers=1) as ex:
         loaded = list(ex.map(load, cands))
+    print("Details: %d aus Zwischenspeicher, %d neu geladen" % (stats["cache"], stats["neu"]), flush=True)
+    if not FIXTURES:
+        os.makedirs(os.path.dirname(CACHE), exist_ok=True)
+        with open(CACHE, "w", encoding="utf-8") as f:
+            json.dump(used, f, ensure_ascii=False)
 
     # 2) bewerten und filtern
     rejected = []
@@ -508,6 +527,8 @@ def main():
         "candidates": len(found),
         "searchWords": search_words,
         "durationSec": round(time.time() - t0),
+        "detailsCached": stats["cache"],
+        "detailsLoaded": stats["neu"],
         "dropped": dropped,
         "count": len(items),
         "diagnostics": DIAG[-20:],
