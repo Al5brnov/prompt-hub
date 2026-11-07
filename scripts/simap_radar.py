@@ -380,6 +380,32 @@ def cpv_codes(d):
     return sorted(set(codes))
 
 
+def main_cpv(details):
+    """Haupt-CPV (procurement.cpvCode) und Auftragsart (service/supply/construction) der Publikation."""
+    code, otype = "", ""
+    for d in details:
+        pr = d.get("procurement") or {}
+        c = (pr.get("cpvCode") or {}).get("code")
+        code = code or (str(c) if c else "")
+        otype = otype or pr.get("orderType") or (d.get("project-info") or {}).get("orderType") or ""
+    return code, otype
+
+
+def scope_check(main, otype, cfg):
+    """Nur Dienstleistungen rund um Software und Beratung: Auftragsart und Haupt-CPV prüfen.
+    Liefert einen Ausschlussgrund oder ""."""
+    if otype and otype in cfg.get("excludeOrderTypes", []):
+        return "Auftragsart %s" % otype
+    if not main:
+        return ""
+    if any(main.startswith(p) for p in cfg.get("mainCpvExclude", [])):
+        return "Haupt-CPV %s (Hardware/Infrastruktur)" % main
+    allow = cfg.get("mainCpvAllow")
+    if allow and not any(main.startswith(p) for p in allow):
+        return "Haupt-CPV %s ausserhalb Software/Beratung" % main
+    return ""
+
+
 def score_item(title, desc, cpvs, ptype, cfg, core_rx, ctx_rx, excl_rx):
     """Relevanz: Kernbegriffe zählen immer, Kontextbegriffe nur bei IT-/Beratungs-CPV."""
     it_cpv = any(c.startswith(tuple(cfg.get("itCpvPrefixes", ["48", "72", "794"]))) for c in cpvs)
@@ -584,7 +610,12 @@ def main():
         title_all = it.pop("titleAll") + " " + " ".join(collect(d, {"title", "lotTitle"}) for d in details)
         desc_all = " ".join(collect(d, {"orderDescription", "description", "note", "lotDescription"}) for d in details)
         cpvs = sorted({c for d in details for c in cpv_codes(d)})
-        sc, why, reason = score_item(title_all, desc_all, cpvs, it["type"], cfg, core_rx, ctx_rx, excl_rx)
+        mcpv, otype = main_cpv(details)
+        reason = scope_check(mcpv, otype, cfg)
+        if reason:
+            sc, why = 0, []
+        else:
+            sc, why, reason = score_item(title_all, desc_all, cpvs, it["type"], cfg, core_rx, ctx_rx, excl_rx)
         if it["type"] in AWARD_TYPES and not reason:
             for r in award_rows(it, details, cpvs):
                 r["Radar-relevant"] = "ja" if sc >= min_score else "nein"
@@ -593,7 +624,7 @@ def main():
             dropped["frist"] += 1
             continue
         if reason:
-            dropped["cpv" if reason.startswith("CPV") else "ausschluss"] += 1
+            dropped["cpv" if ("CPV" in reason or reason.startswith("Auftragsart")) else "ausschluss"] += 1
             rejected.append({"title": it["title"][:90], "score": 0, "why": reason[:80]})
             continue
         if sc < min_score:
