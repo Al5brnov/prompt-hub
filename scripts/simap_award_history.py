@@ -29,11 +29,11 @@ def windows(start, end, days):
         a = b + dt.timedelta(days=1)
 
 
-def search(q, a, b, max_pages, found, label):
+def search(q, a, b, max_pages, found, label, filter_types):
     cursor, pages = None, 0
     while pages < max_pages:
         params = [("lang", "de")] + q + [("newestPublicationFrom", a.isoformat()), ("newestPublicationUntil", b.isoformat())]
-        params += [("newestPubTypes", t) for t in AWARD_PUBTYPES]
+        params += [("newestPubTypes", t) for t in filter_types]  # Filterwert laut API: award_tender (award selbst gibt HTTP 400)
         if cursor:
             params.append(("lastItem", cursor))
         try:
@@ -85,7 +85,7 @@ def run(start, end, out, window_days, budget):
     queries += [(w, [("search", w)]) for w in core if " " not in w.strip() and len(w.strip()) >= 3]
     for a, b in windows(start, end, window_days):
         for label, q in queries:
-            search(q, a, b, int(cfg.get("historyPages", 30)), found, label)
+            search(q, a, b, int(cfg.get("historyPages", 30)), found, label, cfg.get("marketTypes") or ["award_tender"])
         print("%s–%s: %d Kandidaten gesamt (%.0fs)" % (a, b, len(found), time.time() - t0), flush=True)
 
     cands = []
