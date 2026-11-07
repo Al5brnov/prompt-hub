@@ -2,12 +2,14 @@
    Gemeinsame Vorlagen: prompts/library.json · eigene Vorlagen und Einstellungen: localStorage (nur dieses Gerät). */
 (function () {
   "use strict";
-  var VERSION = "2.2 · 07.11.2026";
+  var VERSION = "2.3 · 07.11.2026";
   var KEY = "promptHub.v1";
   var MAXURL = 8000;
   var DEV_CHAT = "https://claude.ai/code/session_01UZCHKYMVaKxmE16x2VMrRy";
   var DEV_REPO = "https://github.com/Al5brnov/prompt-hub";
+  var KB_URL = "https://claude.ai/artifact/RrLUJJNPPANPhMEAsHNAUU";
   var CHANGELOG = [
+    ["07.11.2026", "Link zur Wissensbasis unter Mehr → Weitere Apps."],
     ["07.11.2026", "Zuschlags-Historie bis 4 Jahre zurück, Stundensätze (wo publiziert) in Marktinfo und Analyse."],
     ["07.11.2026", "Marktinfo Zuschläge (Anbieter, Preise, Analyse-Vorlage), frühere Zuschläge des Auftraggebers in der Go/No-Go-Bewertung, Go/No-Go mit Online-Recherche."],
     ["26.10.2026", "Vorlagen überarbeitet (Rolle, Ziel, Belegpflicht) und 5 neue: Entscheidungsvorlage, User Stories, Win Themes, Red Team, Prompt verbessern."],
@@ -521,7 +523,7 @@
   $("own").value = st.own || "";
   $("own").onchange = function () { st.own = this.value.trim(); save(); };
   $("ctxSave").onclick = function () { st.ctx = $("ctx").value; st.own = $("own").value.trim(); save(); upd(); toast("Kontext gespeichert"); };
-  $("devChat").href = DEV_CHAT; $("devRepo").href = DEV_REPO;
+  $("devChat").href = DEV_CHAT; $("devRepo").href = DEV_REPO; $("kbLink").href = KB_URL;
   $("devIdea").onclick = function (e) {
     e.preventDefault();
     var t = "Weiterentwicklung Prompt Hub (Version " + VERSION + ")\nBereich: [Prompt / simap / Bibliothek / Mehr / neu]\nIdee: [was soll die App neu können?]\nNutzen: [wofür, wie oft?]";
