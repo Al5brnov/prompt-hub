@@ -64,6 +64,29 @@ Feinsteuerung in `radar/config.json`: `core` (treffen allein), `context` (nur mi
 Im Register «simap» zeigt das Symbol die Zahl neuer Treffer. Auswählen und «Ausgewählte bewerten»
 füllt den Inhalt und wählt die Vorlage «Ausschreibungen Triage». Manuell starten: Actions → simap-Radar → Run workflow.
 
+**Marktinfo Zuschläge:** Jeder Suchlauf erfasst die Zuschläge mit IT- oder Beratungs-CPV
+(`marketAllItAwards` in `radar/config.json`) und schreibt pro Zuschlagsempfänger eine Zeile nach
+`radar/awards.csv` (Excel) und `radar/awards.json` (App). Die Liste wächst fortlaufend.
+Im Register «simap» unter «Zuschläge» zeigt die App ein Anbieter-Ranking mit Zuschlagssummen.
+«Marktanalyse erstellen» füllt die Vorlage «Zuschläge: Marktanalyse». Die eigene Firma lässt sich unter «Mehr»
+nur auf dem Gerät hinterlegen und wird dann hervorgehoben.
+Bei «Ausgewählte bewerten» hängt die App frühere Zuschläge desselben Auftraggebers an den Inhalt an.
+
+**Import in Excel (Power Query):** Daten → Daten abrufen → Leere Abfrage → Erweiterter Editor:
+
+```
+let
+  Quelle = Csv.Document(Web.Contents("https://raw.githubusercontent.com/Al5brnov/prompt-hub/main/radar/awards.csv"),
+           [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+  Kopf = Table.PromoteHeaders(Quelle, [PromoteAllScalars=true]),
+  Typen = Table.TransformColumnTypes(Kopf, {{"Zuschlagsdatum", type date}, {"Preis CHF", type number},
+          {"Angebote", Int64.Type}, {"Anzahl Zuschläge", Int64.Type}, {"erfasst", type date}}, "en-US")
+in
+  Typen
+```
+
+Für die Ausschreibungen dieselbe Abfrage mit `radar/history.csv`, ohne den Schritt «Typen» (Ergebnis = `Kopf`). Abfrageeigenschaften: «Daten beim Öffnen der Datei aktualisieren».
+
 ## Zeitjournal
 
 Zweite App im Unterordner [`zeitjournal/`](zeitjournal/): Arbeitszeit per Tipp auf Favoriten erfassen

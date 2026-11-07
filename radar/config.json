@@ -1,5 +1,5 @@
 {
-  "_hinweis": "Kandidaten kommen aus der CPV-Suche (cpvSearch, alle IT- und Beratungs-Publikationen) und aus der Stichwortsuche. Nur Einwort-Begriffe werden gesucht, Mehrwort-Begriffe zählen nur beim Bewerten. core = zählt allein. context = zählt nur bei IT-/Beratungs-CPV. Akronyme wie SAP, ERP, CRM, AMS, AI, KI treffen nur exakt und in Grossbuchstaben. marketTypes = Zuschläge als Marktinfo. titleOnly = Begriffe, die nur im Titel zählen (AI ist auf Französisch oft die Invalidenversicherung).",
+  "_hinweis": "Kandidaten kommen aus der CPV-Suche (cpvSearch, alle IT- und Beratungs-Publikationen) und aus der Stichwortsuche. Nur Einwort-Begriffe werden gesucht, Mehrwort-Begriffe zählen nur beim Bewerten. core = zählt allein. context = zählt nur bei IT-/Beratungs-CPV. Akronyme wie SAP, ERP, CRM, AMS, AI, KI treffen nur exakt und in Grossbuchstaben. marketTypes = Zuschläge als Marktinfo. marketAllItAwards = alle Zuschläge mit IT-/Beratungs-CPV in radar/awards.csv erfassen, auch ohne Kernbegriff im Titel. titleOnly = Begriffe, die nur im Titel zählen (AI ist auf Französisch oft die Invalidenversicherung).",
   "core": {
     "ERP und SAP": [
       "SAP",
@@ -137,6 +137,7 @@
     "participant_selection",
     "advance_notice"
   ],
+  "marketAllItAwards": true,
   "marketTypes": [
     "award_tender"
   ],

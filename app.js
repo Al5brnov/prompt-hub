@@ -2,12 +2,13 @@
    Gemeinsame Vorlagen: prompts/library.json · eigene Vorlagen und Einstellungen: localStorage (nur dieses Gerät). */
 (function () {
   "use strict";
-  var VERSION = "2.0 · 26.10.2026";
+  var VERSION = "2.1 · 07.11.2026";
   var KEY = "promptHub.v1";
   var MAXURL = 8000;
   var DEV_CHAT = "https://claude.ai/code/session_01UZCHKYMVaKxmE16x2VMrRy";
   var DEV_REPO = "https://github.com/Al5brnov/prompt-hub";
   var CHANGELOG = [
+    ["07.11.2026", "Marktinfo Zuschläge (Anbieter, Preise, Analyse-Vorlage), frühere Zuschläge des Auftraggebers in der Go/No-Go-Bewertung, Go/No-Go mit Online-Recherche."],
     ["26.10.2026", "Vorlagen überarbeitet (Rolle, Ziel, Belegpflicht) und 5 neue: Entscheidungsvorlage, User Stories, Win Themes, Red Team, Prompt verbessern."],
     ["26.10.2026", "Neue Struktur mit Bereichen Prompt, simap, Bibliothek und Mehr. Vorlagen per Auswahlliste, Favoriten, Platzhalter-Felder, eigene Vorlagen mit Export/Import."],
     ["25.10.2026", "simap-Radar mit CPV-Suche, Relevanz, Zuschlägen als Marktinfo und Link pro Treffer."],
@@ -92,7 +93,7 @@
 
 
   /* ---------- Zustand ---------- */
-  var st = { t: "mail", g: "claude", a: "du", ctx: "", seen: [], favs: [], recent: [], lib: [], rType: "bid", rSort: "date", rMin: "0", rOnlyNew: false };
+  var st = { t: "mail", g: "claude", a: "du", ctx: "", seen: [], favs: [], recent: [], lib: [], rType: "bid", rSort: "date", rMin: "0", rOnlyNew: false, own: "", mRel: false, mDays: "365" };
   try { var s0 = JSON.parse(localStorage.getItem(KEY) || "{}"); for (var k in s0) st[k] = s0[k]; } catch (e) {}
   ["seen", "favs", "recent", "lib"].forEach(function (k) { if (!Array.isArray(st[k])) st[k] = []; });
   if (!byId(TG, st.g)) st.g = "claude";
@@ -295,6 +296,8 @@
     var L = $("rList"); L.textContent = "";
     $("rType").querySelectorAll("button").forEach(function (b) { b.classList.toggle("on", b.dataset.v === st.rType); });
     $("rSort").value = st.rSort; $("rMin").value = st.rMin; $("rOnlyNew").checked = !!st.rOnlyNew;
+    $("rMarket").hidden = st.rType !== "award";
+    if (st.rType === "award") { renderMarket(); loadAwards().then(renderMarket); }
     if (!radar) { $("rInfo").textContent = "Lade …"; return; }
     var d = radar;
     $("rInfo").textContent = d.error ? "Letzter Suchlauf (" + chD(d.generatedAt) + ") fehlgeschlagen: " + d.error
@@ -332,13 +335,83 @@
     if (!list.length) return;
     raw.value = "simap-Radar, " + list.length + " Publikationen\n\n" + list.map(function (it, i) {
       return "### " + (i + 1) + ". " + it.title + "\nProjekt " + (it.nr || it.id) + " · " + (PT[it.type] || it.type || "") + " · publiziert " + chD(it.date) +
-        (it.deadline ? " · Eingabefrist " + chD(it.deadline) : "") + "\nAuftraggeber: " + it.office + "\nLink: " + it.url + (it.text || "");
+        (it.deadline ? " · Eingabefrist " + chD(it.deadline) : "") + "\nAuftraggeber: " + it.office + "\nLink: " + it.url + (it.text || "") + priorAwards(it.office);
     }).join("\n\n");
     srcKind = "simap"; cbSrc.checked = false;
     (radar.items || []).forEach(function (it) { if (isNew(it)) st.seen.push(it.id); });
     if (st.seen.length > 800) st.seen = st.seen.slice(-800);
     sel = {}; save(); $("rBadge").hidden = true;
     show("prompt"); selT(list.length > 1 ? "triage" : "gonogo");
+  };
+
+  /* ---------- Marktinfo Zuschläge (radar/awards.json) ---------- */
+  var awards = null;
+  function loadAwards() {
+    if (awards) return Promise.resolve(awards);
+    return fetch("radar/awards.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) { awards = d.rows || []; return awards; }, function () { awards = []; return awards; });
+  }
+  function chf(n) { return n == null ? "–" : "CHF " + fmt(Math.round(n)); }
+  function norm(s) { return String(s || "").toLowerCase().replace(/\s+/g, " ").trim(); }
+  function isOwn(v) { var o = norm(st.own); return o && norm(v).indexOf(o) >= 0; }
+  function marketRows() {
+    var q = norm($("mQ").value), days = +st.mDays || 0, from = "";
+    if (days) { var d = new Date(Date.now() - days * 864e5); from = d.toISOString().slice(0, 10); }
+    return (awards || []).filter(function (r) {
+      if (st.mRel && r["Radar-relevant"] !== "ja") return false;
+      if (from && (r.Zuschlagsdatum || "") < from) return false;
+      if (q && norm(r.Anbieter + " " + r.Auftraggeber + " " + r.Titel).indexOf(q) < 0) return false;
+      return true;
+    });
+  }
+  function renderMarket() {
+    $("mRel").checked = !!st.mRel; $("mDays").value = st.mDays;
+    var rows = marketRows(), T = $("mTop"); T.textContent = "";
+    if (!awards) { $("mSum").textContent = "Lade …"; return; }
+    if (!rows.length) { $("mSum").textContent = awards.length ? "Keine Zuschläge für diese Auswahl." : "Noch keine Zuschläge erfasst. Sie kommen mit dem nächsten Suchlauf."; $("mGo").disabled = true; return; }
+    $("mGo").disabled = false;
+    var proj = {}, vend = {}, sum = 0;
+    rows.forEach(function (r) {
+      proj[r["simap-ID"]] = 1; sum += r["Preis CHF"] || 0;
+      var k = r.Anbieter || "?", v = vend[k] || (vend[k] = { n: {}, s: 0 });
+      v.n[r["simap-ID"]] = 1; v.s += r["Preis CHF"] || 0;
+    });
+    $("mSum").textContent = Object.keys(proj).length + " Verfahren · " + Object.keys(vend).length + " Anbieter · Zuschlagssumme " + chf(sum);
+    var top = Object.keys(vend).map(function (k) { return { a: k, n: Object.keys(vend[k].n).length, s: vend[k].s }; })
+      .sort(function (a, b) { return b.n - a.n || b.s - a.s; });
+    var ownIx = -1; top.forEach(function (t, i) { if (ownIx < 0 && isOwn(t.a)) ownIx = i; });
+    var show = top.slice(0, 10); if (ownIx >= 10) show.push(top[ownIx]);
+    var tb = el("table", "mt"), h = el("tr");
+    ["Anbieter", "Zuschläge", "Summe"].forEach(function (x, i) { h.appendChild(el("th", i ? "r" : null, x)); });
+    tb.appendChild(h);
+    show.forEach(function (t) {
+      var tr = el("tr", isOwn(t.a) ? "own" : null);
+      tr.appendChild(el("td", null, (top.indexOf(t) + 1) + ". " + t.a)); tr.appendChild(el("td", "r", String(t.n))); tr.appendChild(el("td", "r", chf(t.s)));
+      tb.appendChild(tr);
+    });
+    T.appendChild(tb);
+  }
+  function awardLine(r) {
+    return chD(r.Zuschlagsdatum) + " | " + r["Projekt-Nr"] + " " + r.Titel + " | " + r.Auftraggeber + (r.Los ? " | " + r.Los : "") + " | " + r.Anbieter +
+      (r["Anbieter-Ort"] ? " (" + r["Anbieter-Ort"] + ")" : "") + " | " + chf(r["Preis CHF"]) + (r.MWST ? " " + r.MWST : "") +
+      " | Angebote " + (r.Angebote != null ? r.Angebote : "?") + " | " + r.Verfahren;
+  }
+  function priorAwards(office) {
+    var o = norm(office);
+    if (!o || !awards) return "";
+    var rs = awards.filter(function (r) { return norm(r.Auftraggeber) === o; }).slice(0, 15);
+    return rs.length ? "\nFrühere Zuschläge dieses Auftraggebers (simap-Radar):\n" + rs.map(awardLine).join("\n") : "";
+  }
+  $("mQ").oninput = renderMarket;
+  $("mRel").onchange = function () { st.mRel = this.checked; save(); renderMarket(); };
+  $("mDays").onchange = function () { st.mDays = this.value; save(); renderMarket(); };
+  $("mGo").onclick = function () {
+    var rows = marketRows().slice(0, 300);
+    raw.value = "Zuschläge simap (" + rows.length + " Zeilen, Zeitraum " + ($("mDays").selectedOptions[0].textContent) + (st.mRel ? ", nur Radar-relevante" : "") + ")\n" +
+      (st.own ? "Eigene Firma: " + st.own + "\n" : "") +
+      "Spalten: Zuschlagsdatum | Projekt | Auftraggeber | Los | Anbieter (Ort) | Preis | Angebote | Verfahren\n" + rows.map(awardLine).join("\n");
+    srcKind = "simap"; cbSrc.checked = false;
+    show("prompt"); selT("marktinfo");
   };
 
   /* =========================================================
@@ -437,7 +510,9 @@
      MEHR
      ========================================================= */
   $("ctx").value = st.ctx || "";
-  $("ctxSave").onclick = function () { st.ctx = $("ctx").value; save(); upd(); toast("Kontext gespeichert"); };
+  $("own").value = st.own || "";
+  $("own").onchange = function () { st.own = this.value.trim(); save(); };
+  $("ctxSave").onclick = function () { st.ctx = $("ctx").value; st.own = $("own").value.trim(); save(); upd(); toast("Kontext gespeichert"); };
   $("devChat").href = DEV_CHAT; $("devRepo").href = DEV_REPO;
   $("devIdea").onclick = function (e) {
     e.preventDefault();
@@ -514,6 +589,7 @@
     if (d && Array.isArray(d.prompts)) { LIB = d; buildSelect(); selT(st.t); if (view === "lib" || view === "prompt") show(view); }
   }).catch(function () { toast("Vorlagen offline nicht verfügbar"); });
   loadRadar().catch(function () {});
+  loadAwards();
   if (spid) $("bSimap").click();
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function () {});
 })();

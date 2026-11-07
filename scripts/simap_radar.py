@@ -98,6 +98,9 @@ def _fixture(path, params):
             return {"projects": [], "pagination": {}}
         return d
     if "publication-details" in path:
+        own = os.path.join(FIXTURES, "publication_details_%s.json" % path.rstrip("/").split("/")[-1])
+        if os.path.exists(own):
+            return json.load(open(own, encoding="utf-8"))
         return json.load(open(os.path.join(FIXTURES, "publication_details_tender.json"), encoding="utf-8"))
     return {}
 
@@ -250,6 +253,88 @@ def write_history(items, today):
         w.writeheader()
         for r in rows:
             w.writerow({k: one_line(r.get(k, "")) for k in HIST_COLS})
+    return len(rows)
+
+
+AWARDS_JSON = os.path.join(ROOT, "radar", "awards.json")
+AWARDS_CSV = os.path.join(ROOT, "radar", "awards.csv")
+AWARD_TYPES = ("award", "direct_award")
+PRICEBASIS_DE = {"price_of_selected_offers": "Preis der berücksichtigten Angebote", "price_range": "Preisspanne", "lowest_and_highest_offer": "tiefstes und höchstes Angebot"}
+VAT_DE = {"full": "inkl. MWST", "no_vat": "exkl. MWST", "reduced": "reduzierte MWST"}
+AWARD_COLS = ["Zuschlagsdatum", "Projekt-Nr", "Titel", "Auftraggeber", "Typ", "Verfahren", "Los", "Anbieter", "Anbieter-Ort",
+              "Preis CHF", "MWST", "Preisbasis", "Angebote", "Anzahl Zuschläge", "CPV", "Radar-relevant", "Link", "erfasst", "simap-ID"]
+
+
+def _num(v):
+    try:
+        return round(float(v), 2)
+    except (TypeError, ValueError):
+        return None
+
+
+def award_rows(it, details, cpvs):
+    """Eine Zeile pro Zuschlagsempfänger (und Los). Quelle: decision.vendors der Publikationsdetails."""
+    rows = []
+    for d in details:
+        decs = []
+        if isinstance(d.get("decision"), dict):
+            decs.append((d["decision"], d.get("lot")))
+        for lot in d.get("lots") or []:
+            if isinstance(lot, dict) and isinstance(lot.get("decision"), dict):
+                decs.append((lot["decision"], lot))
+        proc = (d.get("procurement") or {}).get("processType") or it.get("process") or ""
+        for dec, lot in decs:
+            vendors = [v for v in dec.get("vendors") or [] if isinstance(v, dict)]
+            lot_txt = ""
+            if isinstance(lot, dict) and lot:
+                lot_txt = ("Los %s: %s" % (lot.get("lotNumber", "?"), one_line(lang_pick(lot.get("title")) or "", 80))).strip()
+            for v in vendors:
+                pr = v.get("price") or {}
+                price = _num(pr.get("price"))
+                if price is None and (pr.get("priceFrom") or pr.get("priceTo")):
+                    price = _num(pr.get("priceTo") or pr.get("priceFrom"))
+                addr = v.get("vendorAddress") or {}
+                cur = (pr.get("currency") or "chf").lower()
+                rows.append({
+                    "Zuschlagsdatum": (dec.get("awardDecisionDate") or it.get("date") or "")[:10],
+                    "Projekt-Nr": it.get("nr") or "", "Titel": one_line(it.get("title")), "Auftraggeber": one_line(it.get("office")),
+                    "Typ": PUBTYPE_DE.get(it.get("type"), it.get("type") or ""), "Verfahren": PROCESS_DE.get(proc, proc), "Los": lot_txt,
+                    "Anbieter": one_line(lang_pick(v.get("vendorName")) or v.get("vendorName") or ""),
+                    "Anbieter-Ort": one_line(addr.get("city") or ""),
+                    "Preis CHF": price if cur == "chf" else None, "MWST": VAT_DE.get(pr.get("vatType"), pr.get("vatType") or ""),
+                    "Preisbasis": PRICEBASIS_DE.get(dec.get("totalPriceSelection"), one_line(dec.get("totalPriceSelection") or "")), "Angebote": dec.get("numberOfSubmissions"),
+                    "Anzahl Zuschläge": len(vendors), "CPV": ", ".join(cpvs), "Link": it.get("url") or "https://www.simap.ch/de/project-detail/" + it["id"],
+                    "simap-ID": it["id"],
+                })
+    return rows
+
+
+def write_awards(new_rows, today):
+    """Marktinfo: alle je gefundenen Zuschläge, fortlaufend (JSON für die App, CSV für Excel)."""
+    try:
+        old = json.load(open(AWARDS_JSON, encoding="utf-8")).get("rows", [])
+    except Exception:  # noqa: BLE001
+        old = []
+    def key(r):
+        return "%s|%s|%s" % (r.get("simap-ID"), r.get("Los"), r.get("Anbieter", "").lower())
+    by = {key(r): r for r in old}
+    iso = today.isoformat()
+    for r in new_rows:
+        k = key(r)
+        r["erfasst"] = by.get(k, {}).get("erfasst") or iso
+        by[k] = r
+    rows = sorted(by.values(), key=lambda r: (r.get("Zuschlagsdatum") or "", r.get("Projekt-Nr") or ""), reverse=True)
+    with open(AWARDS_JSON, "w", encoding="utf-8") as f:
+        json.dump({"generatedAt": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "count": len(rows), "rows": rows},
+                  f, ensure_ascii=False, indent=0)
+    with open(AWARDS_CSV, "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=AWARD_COLS, delimiter=";", extrasaction="ignore", lineterminator="\r\n")
+        w.writeheader()
+        for r in rows:
+            out = {k: one_line(str(r.get(k)) if r.get(k) is not None else "") for k in AWARD_COLS}
+            if r.get("Preis CHF") is not None:
+                out["Preis CHF"] = ("%.2f" % r["Preis CHF"])  # Punkt als Dezimaltrenner, Power Query: Gebietsschema en-US
+            w.writerow(out)
     return len(rows)
 
 
@@ -434,8 +519,9 @@ def main():
             continue
         core_title = any(rx.search(it["titleAll"]) for _, rx in core_rx)
         if it["viaCpv"]:
-            # IT-/Beratungs-CPV bekannt: Ausschreibungen immer prüfen, Zuschläge nur mit Kernbegriff im Titel
-            if it.get("type") not in bid_types and not core_title:
+            # IT-/Beratungs-CPV bekannt: Ausschreibungen immer prüfen, Zuschläge nur mit Kernbegriff im Titel,
+            # ausser marketAllItAwards: dann alle IT-Zuschläge für die Marktinfo (niedrigste Priorität)
+            if it.get("type") not in bid_types and not core_title and not cfg.get("marketAllItAwards"):
                 pre_skipped += 1
                 continue
         elif not core_title:
@@ -481,7 +567,7 @@ def main():
             json.dump(used, f, ensure_ascii=False)
 
     # 2) bewerten und filtern
-    rejected = []
+    rejected, market = [], []
     items, dropped = [], {"vorab": pre_skipped, "cpv": 0, "score": 0, "frist": 0, "ausschluss": 0, "zeit": 0, "limit": skipped}
     for it, details in loaded:
         it.pop("pubs", None)
@@ -499,6 +585,10 @@ def main():
         desc_all = " ".join(collect(d, {"orderDescription", "description", "note", "lotDescription"}) for d in details)
         cpvs = sorted({c for d in details for c in cpv_codes(d)})
         sc, why, reason = score_item(title_all, desc_all, cpvs, it["type"], cfg, core_rx, ctx_rx, excl_rx)
+        if it["type"] in AWARD_TYPES and not reason:
+            for r in award_rows(it, details, cpvs):
+                r["Radar-relevant"] = "ja" if sc >= min_score else "nein"
+                market.append(r)
         if deadline and deadline[:10] < today.isoformat() and not os.environ.get("RADAR_KEEP_EXPIRED"):
             dropped["frist"] += 1
             continue
@@ -540,6 +630,8 @@ def main():
         json.dump(out, f, ensure_ascii=False, indent=1)
     n_hist = write_history(items, today)
     print("Trefferliste: %d Einträge in radar/history.csv" % n_hist)
+    n_aw = write_awards(market, today)
+    print("Marktinfo: %d Zuschlagszeilen in diesem Lauf, %d gesamt in radar/awards.csv" % (len(market), n_aw))
     print("simap-Radar: %d relevante von %d Kandidaten seit %s (aussortiert: %s)"
           % (len(items), len(found), since, ", ".join("%s %d" % kv for kv in dropped.items())))
 
