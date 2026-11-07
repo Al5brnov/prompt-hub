@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-07T07:32:55+00:00",
+ "generatedAt": "2026-11-07T11:21:37+00:00",
  "since": "2026-10-08",
  "keywords": [
   "SAP",
@@ -93,26 +93,26 @@
   "Prozessanalyse",
   "AMS"
  ],
- "durationSec": 635,
- "detailsCached": 149,
- "detailsLoaded": 2,
+ "durationSec": 606,
+ "detailsCached": 161,
+ "detailsLoaded": 0,
  "dropped": {
-  "vorab": 102,
-  "cpv": 26,
+  "vorab": 106,
+  "cpv": 29,
   "score": 44,
   "frist": 9,
-  "ausschluss": 2,
+  "ausschluss": 8,
   "zeit": 0,
   "limit": 0
  },
  "count": 54,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Vertriebslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Onlineshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «E-Government»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: keine"
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Kundenportal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Webshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 3 Suchen, weiterhin fehlgeschlagen: ERP-System"
  ],
  "rejected": [
   {
@@ -338,22 +338,32 @@
   {
    "title": "IT Engineering Leistungen (DevSecOps) für Cyber-Defence Campus \"armasuisse W+T\"",
    "score": 0,
-   "why": "Ausschlusswort im Titel: Infrastruktur"
+   "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
+  },
+  {
+   "title": "Gemeinde Oetwil am See, Beschaffung ICT-Betrieb und Infrastruktur",
+   "score": 0,
+   "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
   {
    "title": "ARA Thurau, Automatisierungs- und Prozessleitsystem",
    "score": 0,
-   "why": "Haupt-CPV 48921000 (Hardware/Infrastruktur)"
+   "why": "Haupt-CPV 48921000 (Hardware)"
   },
   {
    "title": "Prestations d’exploitation IT externalisées  ",
    "score": 0,
-   "why": "Haupt-CPV 72514000 (Hardware/Infrastruktur)"
+   "why": "Haupt-CPV 72514000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
   },
   {
    "title": "Lieferung, Inbetriebnahme und Migration Oracle Database Appliance",
    "score": 0,
-   "why": "Haupt-CPV 48800000 (Hardware/Infrastruktur)"
+   "why": "Haupt-CPV 48800000 (Hardware)"
+  },
+  {
+   "title": "Evaluation ICT-Infrastruktur Sourcing Partner für die Gemeinde Uitikon",
+   "score": 0,
+   "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
   {
    "title": "Mobile Umweltberatung 2027-2029 für den Kanton Luzern",
@@ -366,9 +376,14 @@
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
   },
   {
+   "title": "AO2027 - Assistance de 1er niveau (N1)",
+   "score": 0,
+   "why": "«1er niveau» im Titel ohne SAP-/ERP-Bezug"
+  },
+  {
    "title": "Plattform Service für ein Dokumenten Management System ",
    "score": 0,
-   "why": "Haupt-CPV 72512000 (Hardware/Infrastruktur)"
+   "why": "Haupt-CPV 72512000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
   },
   {
    "title": "Aktualisierung und Weiterentwicklung der nationalen Risikoanalyse «Katastrophen und Notlag",
@@ -383,7 +398,7 @@
   {
    "title": "Attribution de 52 postes externes pour l’OCSIN (LSE 2026-04)",
    "score": 0,
-   "why": "Ausschlusswort im Titel: infrastructure"
+   "why": "«infrastructure» im Titel ohne SAP-/ERP-Bezug"
   },
   {
    "title": "LSE sécurité SI 2027-2031",
@@ -398,7 +413,7 @@
   {
    "title": "FIS Innenanzeigen",
    "score": 0,
-   "why": "Haupt-CPV 48813000 (Hardware/Infrastruktur)"
+   "why": "Haupt-CPV 48813000 (Hardware)"
   },
   {
    "title": "(26043) 704 Revisionsmandate Abschluss- und IT-Prüfung ALV 2027-2031",
@@ -406,9 +421,29 @@
    "why": "Haupt-CPV 79210000 ausserhalb Software/Beratung"
   },
   {
+   "title": "MP 2025.09.795 - Support niveau 1 Service Desk",
+   "score": 0,
+   "why": "«Service Desk» im Titel ohne SAP-/ERP-Bezug"
+  },
+  {
    "title": "Zentrale Archivierung für Konkursakten",
    "score": 0,
    "why": "Haupt-CPV 79995100 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "IWB, Server und Virtualisierungs-Infrastruktur",
+   "score": 0,
+   "why": "Haupt-CPV 48800000 (Hardware)"
+  },
+  {
+   "title": "Life-cycling Oracle-Exadata-Infrastruktur ",
+   "score": 0,
+   "why": "Haupt-CPV 48820000 (Hardware)"
+  },
+  {
+   "title": "Erneuerung der IT-Infrastruktur im Jahr 2027",
+   "score": 0,
+   "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
   {
    "title": "Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem",
@@ -433,17 +468,22 @@
   {
    "title": "ICT-Ausschreibung \"Full-Outsourcing\"",
    "score": 0,
-   "why": "Haupt-CPV 72500000 (Hardware/Infrastruktur)"
+   "why": "Haupt-CPV 72500000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
   },
   {
    "title": "ICT-Ausschreibung \"Netzwerk\"",
    "score": 0,
-   "why": "Haupt-CPV 72700000 (Hardware/Infrastruktur)"
+   "why": "Haupt-CPV 72700000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
   },
   {
    "title": "Rahmenvertrag Fachleistungen Bahnbetrieb",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "IWB, Storage Infrastruktur",
+   "score": 0,
+   "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
   {
    "title": "Ganzer Kanton, Instandhaltung / Störungsbehebung, Verkehszählstellen (MIV+Velo)",
@@ -461,6 +501,11 @@
    "why": "Haupt-CPV 30210000 ausserhalb Software/Beratung"
   },
   {
+   "title": "ICT-Betrieb, Infrastruktur, Support und Gerätebeschaffung für die Schulen Birr und Lupfig",
+   "score": 0,
+   "why": "Haupt-CPV 30200000 ausserhalb Software/Beratung"
+  },
+  {
    "title": "(26006) 805 Informationsprogramm zu erneuerbaren Energien und Energieeffizienz auf Social ",
    "score": 0,
    "why": "Haupt-CPV 79340000 ausserhalb Software/Beratung"
@@ -469,11 +514,6 @@
    "title": "Mise à disposition d’unꞏe responsable du développement du pôle cantonal de santé et soins ",
    "score": 0,
    "why": "Haupt-CPV 75122000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "Betrieb und Unterhaltsmanagement MIV, VELO, LSA ",
-   "score": 0,
-   "why": "Haupt-CPV 50410000 ausserhalb Software/Beratung"
   }
  ],
  "items": [
