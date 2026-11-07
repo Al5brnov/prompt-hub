@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-07T11:21:37+00:00",
+ "generatedAt": "2026-11-07T11:54:09+00:00",
  "since": "2026-10-08",
  "keywords": [
   "SAP",
@@ -93,7 +93,7 @@
   "Prozessanalyse",
   "AMS"
  ],
- "durationSec": 606,
+ "durationSec": 663,
  "detailsCached": 161,
  "detailsLoaded": 0,
  "dropped": {
@@ -108,11 +108,10 @@
  "count": 54,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Kundenportal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Webshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 3 Suchen, weiterhin fehlgeschlagen: ERP-System"
+  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «CRM»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Webshop»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Wiederholt: 3 Suchen, weiterhin fehlgeschlagen: keine"
  ],
  "rejected": [
   {
