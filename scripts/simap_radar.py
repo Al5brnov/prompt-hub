@@ -273,7 +273,8 @@ AWARD_TYPES = ("award", "direct_award")
 PRICEBASIS_DE = {"price_of_selected_offers": "Preis der berücksichtigten Angebote", "price_range": "Preisspanne", "lowest_and_highest_offer": "tiefstes und höchstes Angebot"}
 VAT_DE = {"full": "inkl. MWST", "no_vat": "exkl. MWST", "reduced": "reduzierte MWST"}
 AWARD_COLS = ["Zuschlagsdatum", "Projekt-Nr", "Titel", "Auftraggeber", "Typ", "Verfahren", "Los", "Anbieter", "Anbieter-Ort",
-              "Preis CHF", "MWST", "Preisbasis", "Angebote", "Anzahl Zuschläge", "CPV", "Radar-relevant", "Link", "erfasst", "simap-ID"]
+              "Preis CHF", "MWST", "Preisbasis", "Angebote", "Anzahl Zuschläge", "CPV", "Radar-relevant", "Link", "erfasst", "simap-ID",
+              "Stundensatz CHF", "Stundensatz Fundstelle"]
 
 
 def _num(v):
@@ -283,9 +284,48 @@ def _num(v):
         return None
 
 
+RATE_RX = re.compile(r"(stundens[aä]tz\w*|stundenans[aä]tz\w*|std\.?-?s[aä]tz\w*|pro stunde|/\s*std\.?\b|/\s*h\b|chf\s*/\s*h|taux horaires?|tarifs? horaires?|par heure|tariff[ae] orari[ae]|all.ora|hourly rates?|per hour)", re.I)
+NUM_RX = re.compile(r"(?<![\d'’.])(\d{2,3}(?:[.,]\d{1,2})?)(?![\d'’])")
+
+
+def all_strings(v):
+    """Alle Textwerte einer Publikation (alle Sprachen), ohne IDs/Kontaktdaten."""
+    out = []
+    def walk(x, k=None):
+        if k and SKIP_KEY.match(k):
+            return
+        if isinstance(x, dict):
+            for kk, vv in x.items():
+                walk(vv, kk)
+        elif isinstance(x, list):
+            for y in x:
+                walk(y, k)
+        elif isinstance(x, str):
+            out.append(strip_html(x))
+    walk(v)
+    return out
+
+
+def hourly_rates(details):
+    """Stundensätze, wo im Publikationstext genannt: (Liste CHF-Werte 60–400, Fundstellen)."""
+    vals, spots = [], []
+    for d in details:
+        for t in all_strings(d):
+            for m in RATE_RX.finditer(t):
+                win = t[max(0, m.start() - 90): m.end() + 90]
+                nums = [float(n.replace(",", ".")) for n in NUM_RX.findall(win)]
+                nums = [n for n in nums if 60 <= n <= 400]
+                if nums:
+                    vals += nums
+                    spots.append(one_line(win, 200))
+    return sorted(set(vals)), list(dict.fromkeys(spots))[:3]
+
+
 def award_rows(it, details, cpvs):
     """Eine Zeile pro Zuschlagsempfänger (und Los). Quelle: decision.vendors der Publikationsdetails."""
     rows = []
+    rates, spots = hourly_rates(details)
+    rate_txt = ("%.0f" % rates[0] if len(rates) == 1 else "%.0f–%.0f" % (rates[0], rates[-1])) if rates else ""
     for d in details:
         decs = []
         if isinstance(d.get("decision"), dict):
@@ -315,7 +355,7 @@ def award_rows(it, details, cpvs):
                     "Preis CHF": price if cur == "chf" else None, "MWST": VAT_DE.get(pr.get("vatType"), pr.get("vatType") or ""),
                     "Preisbasis": PRICEBASIS_DE.get(dec.get("totalPriceSelection"), one_line(dec.get("totalPriceSelection") or "")), "Angebote": dec.get("numberOfSubmissions"),
                     "Anzahl Zuschläge": len(vendors), "CPV": ", ".join(cpvs), "Link": it.get("url") or "https://www.simap.ch/de/project-detail/" + it["id"],
-                    "simap-ID": it["id"],
+                    "simap-ID": it["id"], "Stundensatz CHF": rate_txt, "Stundensatz Fundstelle": " | ".join(spots),
                 })
     return rows
 
@@ -337,7 +377,7 @@ def write_awards(new_rows, today):
     rows = sorted(by.values(), key=lambda r: (r.get("Zuschlagsdatum") or "", r.get("Projekt-Nr") or ""), reverse=True)
     with open(AWARDS_JSON, "w", encoding="utf-8") as f:
         json.dump({"generatedAt": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "count": len(rows), "rows": rows},
-                  f, ensure_ascii=False, indent=0)
+                  f, ensure_ascii=False, separators=(",", ":"))
     with open(AWARDS_CSV, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=AWARD_COLS, delimiter=";", extrasaction="ignore", lineterminator="\r\n")
         w.writeheader()

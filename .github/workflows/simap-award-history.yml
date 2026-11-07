@@ -1,0 +1,71 @@
+name: simap-Zuschlags-Historie
+
+# Einmalig bzw. bei Bedarf von Hand starten: Actions → simap-Zuschlags-Historie → Run workflow.
+# Holt die Zuschläge der letzten Jahre mit derselben Logik wie der Radar und ergänzt radar/awards.csv/json.
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Anzahl Jahre zurück (1–4)"
+        default: "4"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        year: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Zuschläge eines Jahres holen
+        if: ${{ matrix.year < fromJSON(github.event.inputs.years) }}
+        run: |
+          END=$(date -u -d "today - $(( ${{ matrix.year }} * 365 )) days" +%F)
+          START=$(date -u -d "$END - 364 days" +%F)
+          echo "Zeitraum $START bis $END"
+          python scripts/simap_award_history.py --from "$START" --to "$END" --out "awards_part_${{ matrix.year }}.json" --budget 19800
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && matrix.year < fromJSON(github.event.inputs.years) }}
+        with:
+          name: awards-part-${{ matrix.year }}
+          path: awards_part_${{ matrix.year }}.json
+          if-no-files-found: warn
+
+  merge:
+    needs: fetch
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/parts
+          merge-multiple: true
+      - name: Zusammenführen und speichern
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          ls -la /tmp/parts
+          for i in 1 2 3; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            python scripts/simap_award_history.py --merge /tmp/parts/*.json
+            git add radar/awards.json radar/awards.csv
+            if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
+            git commit -q -m "simap: Zuschlags-Historie ergänzt"
+            if git push -q origin HEAD:main; then echo "Gespeichert."; exit 0; fi
+            sleep 5
+          done
+          exit 1

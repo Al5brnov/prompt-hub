@@ -49,13 +49,15 @@ jobs:
           # Ergebnisdateien sichern, auf den neusten Stand von main setzen und nur die Ergebnisse darüberlegen.
           # So gibt es keine Merge-Konflikte, wenn inzwischen Code oder ein anderer Lauf gepusht wurde.
           mkdir -p /tmp/out
-          for f in latest.json history.csv awards.json awards.csv; do
+          for f in latest.json history.csv awards.json; do
             [ -f "radar/$f" ] && cp "radar/$f" /tmp/out/
           done
           for i in 1 2 3; do
             git fetch -q origin main
             git reset -q --hard origin/main
-            cp /tmp/out/* radar/ 2>/dev/null || true
+            cp /tmp/out/latest.json /tmp/out/history.csv radar/ 2>/dev/null || true
+            # Zuschläge zusammenführen statt überschreiben (die Historie kann parallel ergänzt worden sein)
+            [ -f /tmp/out/awards.json ] && python scripts/simap_award_history.py --merge /tmp/out/awards.json
             git add radar/latest.json radar/history.csv radar/awards.json radar/awards.csv 2>/dev/null || true
             if git diff --cached --quiet; then
               echo "Keine Änderungen."

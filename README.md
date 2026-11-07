@@ -73,6 +73,8 @@ Im Register «simap» unter «Zuschläge» zeigt die App ein Anbieter-Ranking mi
 nur auf dem Gerät hinterlegen und wird dann hervorgehoben.
 Bei «Ausgewählte bewerten» hängt die App frühere Zuschläge desselben Auftraggebers an den Inhalt an.
 
+**Zuschlags-Historie:** Actions → «simap-Zuschlags-Historie» → Run workflow holt die Zuschläge der letzten 1–4 Jahre mit derselben Logik (je Jahr ein Job, bis ca. 5,5 Std.) und ergänzt `radar/awards.csv`. Stundensätze werden übernommen, wo sie im Publikationstext stehen (Spalten «Stundensatz CHF» und «Stundensatz Fundstelle»). Preisblätter in den Ausschreibungsunterlagen sind ohne Login nicht zugänglich.
+
 **Import in Excel (Power Query):** Daten → Daten abrufen → Leere Abfrage → Erweiterter Editor:
 
 ```

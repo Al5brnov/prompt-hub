@@ -2,12 +2,13 @@
    Gemeinsame Vorlagen: prompts/library.json · eigene Vorlagen und Einstellungen: localStorage (nur dieses Gerät). */
 (function () {
   "use strict";
-  var VERSION = "2.1 · 07.11.2026";
+  var VERSION = "2.2 · 07.11.2026";
   var KEY = "promptHub.v1";
   var MAXURL = 8000;
   var DEV_CHAT = "https://claude.ai/code/session_01UZCHKYMVaKxmE16x2VMrRy";
   var DEV_REPO = "https://github.com/Al5brnov/prompt-hub";
   var CHANGELOG = [
+    ["07.11.2026", "Zuschlags-Historie bis 4 Jahre zurück, Stundensätze (wo publiziert) in Marktinfo und Analyse."],
     ["07.11.2026", "Marktinfo Zuschläge (Anbieter, Preise, Analyse-Vorlage), frühere Zuschläge des Auftraggebers in der Go/No-Go-Bewertung, Go/No-Go mit Online-Recherche."],
     ["26.10.2026", "Vorlagen überarbeitet (Rolle, Ziel, Belegpflicht) und 5 neue: Entscheidungsvorlage, User Stories, Win Themes, Red Team, Prompt verbessern."],
     ["26.10.2026", "Neue Struktur mit Bereichen Prompt, simap, Bibliothek und Mehr. Vorlagen per Auswahlliste, Favoriten, Platzhalter-Felder, eigene Vorlagen mit Export/Import."],
@@ -333,6 +334,10 @@
   $("rGo").onclick = function () {
     var list = Object.keys(sel).map(function (k) { return sel[k]; });
     if (!list.length) return;
+    this.disabled = true;
+    loadAwards().then(function () { $("rGo").disabled = false; goRadar(list); });
+  };
+  function goRadar(list) {
     raw.value = "simap-Radar, " + list.length + " Publikationen\n\n" + list.map(function (it, i) {
       return "### " + (i + 1) + ". " + it.title + "\nProjekt " + (it.nr || it.id) + " · " + (PT[it.type] || it.type || "") + " · publiziert " + chD(it.date) +
         (it.deadline ? " · Eingabefrist " + chD(it.deadline) : "") + "\nAuftraggeber: " + it.office + "\nLink: " + it.url + (it.text || "") + priorAwards(it.office);
@@ -342,7 +347,7 @@
     if (st.seen.length > 800) st.seen = st.seen.slice(-800);
     sel = {}; save(); $("rBadge").hidden = true;
     show("prompt"); selT(list.length > 1 ? "triage" : "gonogo");
-  };
+  }
 
   /* ---------- Marktinfo Zuschläge (radar/awards.json) ---------- */
   var awards = null;
@@ -376,7 +381,9 @@
       var k = r.Anbieter || "?", v = vend[k] || (vend[k] = { n: {}, s: 0 });
       v.n[r["simap-ID"]] = 1; v.s += r["Preis CHF"] || 0;
     });
-    $("mSum").textContent = Object.keys(proj).length + " Verfahren · " + Object.keys(vend).length + " Anbieter · Zuschlagssumme " + chf(sum);
+    var rated = {}; rows.forEach(function (r) { if (r["Stundensatz CHF"]) rated[r["simap-ID"]] = 1; });
+    $("mSum").textContent = Object.keys(proj).length + " Verfahren · " + Object.keys(vend).length + " Anbieter · Zuschlagssumme " + chf(sum) +
+      " · Stundensätze in " + Object.keys(rated).length + " Verfahren";
     var top = Object.keys(vend).map(function (k) { return { a: k, n: Object.keys(vend[k].n).length, s: vend[k].s }; })
       .sort(function (a, b) { return b.n - a.n || b.s - a.s; });
     var ownIx = -1; top.forEach(function (t, i) { if (ownIx < 0 && isOwn(t.a)) ownIx = i; });
@@ -394,7 +401,8 @@
   function awardLine(r) {
     return chD(r.Zuschlagsdatum) + " | " + r["Projekt-Nr"] + " " + r.Titel + " | " + r.Auftraggeber + (r.Los ? " | " + r.Los : "") + " | " + r.Anbieter +
       (r["Anbieter-Ort"] ? " (" + r["Anbieter-Ort"] + ")" : "") + " | " + chf(r["Preis CHF"]) + (r.MWST ? " " + r.MWST : "") +
-      " | Angebote " + (r.Angebote != null ? r.Angebote : "?") + " | " + r.Verfahren;
+      " | Angebote " + (r.Angebote != null ? r.Angebote : "?") + " | " + r.Verfahren +
+      (r["Stundensatz CHF"] ? " | Stundensatz CHF " + r["Stundensatz CHF"] + " (" + r["Stundensatz Fundstelle"] + ")" : "");
   }
   function priorAwards(office) {
     var o = norm(office);
@@ -406,10 +414,10 @@
   $("mRel").onchange = function () { st.mRel = this.checked; save(); renderMarket(); };
   $("mDays").onchange = function () { st.mDays = this.value; save(); renderMarket(); };
   $("mGo").onclick = function () {
-    var rows = marketRows().slice(0, 300);
+    var rows = marketRows().slice(0, 400);
     raw.value = "Zuschläge simap (" + rows.length + " Zeilen, Zeitraum " + ($("mDays").selectedOptions[0].textContent) + (st.mRel ? ", nur Radar-relevante" : "") + ")\n" +
       (st.own ? "Eigene Firma: " + st.own + "\n" : "") +
-      "Spalten: Zuschlagsdatum | Projekt | Auftraggeber | Los | Anbieter (Ort) | Preis | Angebote | Verfahren\n" + rows.map(awardLine).join("\n");
+      "Spalten: Zuschlagsdatum | Projekt | Auftraggeber | Los | Anbieter (Ort) | Preis | Angebote | Verfahren | Stundensatz (falls publiziert)\n" + rows.map(awardLine).join("\n");
     srcKind = "simap"; cbSrc.checked = false;
     show("prompt"); selT("marktinfo");
   };
@@ -589,7 +597,6 @@
     if (d && Array.isArray(d.prompts)) { LIB = d; buildSelect(); selT(st.t); if (view === "lib" || view === "prompt") show(view); }
   }).catch(function () { toast("Vorlagen offline nicht verfügbar"); });
   loadRadar().catch(function () {});
-  loadAwards();
   if (spid) $("bSimap").click();
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function () {});
 })();
