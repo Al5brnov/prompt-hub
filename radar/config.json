@@ -42,6 +42,18 @@
       "KI",
       "Künstliche Intelligenz",
       "Digitalisierung"
+    ],
+    "SAP-Lösungen": [
+      "SuccessFactors",
+      "Signavio",
+      "Datasphere",
+      "Fiori",
+      "WalkMe",
+      "PSCD",
+      "EWM",
+      "Analytics Cloud",
+      "Business Data Cloud",
+      "Clean Core"
     ]
   },
   "context": {
@@ -63,6 +75,17 @@
       "Anforderungsanalyse",
       "Prozessanalyse",
       "AMS"
+    ],
+    "Fachbereiche": [
+      "Instandhaltung",
+      "Lagerverwaltung",
+      "Immobilienverwaltung",
+      "Personaladministration",
+      "Lohnverarbeitung",
+      "Rechnungswesen",
+      "Fallbearbeitung",
+      "Schuladministration",
+      "Testmanagement"
     ]
   },
   "titleOnly": [

@@ -133,6 +133,14 @@
       "prompt": "Rolle: Du bist Business Analyst in einem SAP-Projekt.\nLeite aus <inhalt> Anforderungen ab:\n1. User Stories als Tabelle: ID | Als … möchte ich … damit … | Priorität (Muss/Soll/Kann)\n2. Je Story 2–4 Akzeptanzkriterien im Format Gegeben/Wenn/Dann\n3. Abgrenzungen (was nicht dazugehört)\n4. Offene Fragen an den Fachbereich\nNur aus dem Text ableiten. Annahmen kennzeichnest du als [Annahme]."
     },
     {
+      "id": "loesung",
+      "cat": "analysieren",
+      "name": "SAP-Lösungsskizze",
+      "desc": "Anforderung → Optionen nach Betriebsmodell und Clean Core, Empfehlung.",
+      "anrede": false,
+      "prompt": "Rolle: Du bist SAP-Lösungsarchitekt. Erstelle aus der Anforderung in <inhalt> eine Lösungsskizze.\n1. Anforderung in 3 Sätzen, betroffene Prozesse (End-to-End)\n2. Lösungsoptionen (Tabelle): Option | SAP-Lösung, Scope Items, Transaktionen oder Fiori-Apps | Public Cloud | Private Cloud | On-Premise | Clean-Core-Verträglichkeit (Standard, Key-User-Erweiterung, BTP Side-by-Side, klassische Modifikation) | Aufwand grob | Risiken\n3. Empfehlung mit 3 Begründungen\n4. Offene Fragen an den Fachbereich\nSAP-Details (Scope Items, Apps, Felder, Release-Stände) nur nennen, wenn du sie sicher kennst oder per Websuche belegst; sonst als [prüfen] markieren. Keine Grundlagen erklären."
+    },
+    {
       "id": "recherche",
       "cat": "recherche",
       "name": "Recherche",
@@ -154,7 +162,7 @@
       "name": "Ausschreibung Go/No-Go",
       "desc": "Steckbrief, Kriterien, Risiken, Fragen fürs Forum, Online-Recherche zu Auftraggeber und Projekt, Empfehlung. simap-Link teilen lädt die Daten direkt.",
       "anrede": false,
-      "prompt": "Rolle: Du bist Bid Manager eines IT-Beratungsunternehmens und bereitest eine Go/No-Go-Entscheidung zur öffentlichen Ausschreibung in <inhalt> vor.\n1. Steckbrief (Tabelle): Auftraggeber, Gegenstand, Verfahrensart, Lose, Laufzeit inkl. Optionen, Eingabefrist, Fragenfrist, Offertöffnung, Volumen (falls genannt)\n2. Eignungskriterien (Tabelle): Kriterium | Nachweis/Referenz | Muss/Kann | erfüllbar? (ja/nein/unklar)\n3. Zuschlagskriterien mit Gewichtung, Preisgewichtung und Bewertungsmethode\n4. Schlüsselpersonen (Rolle, Zertifikate, Erfahrung, Sprachen) und Referenzprojekte\n5. Risiken und Auffälligkeiten: Vorbefassung, auf einen Anbieter zugeschnittene Kriterien, knappe Termine, Haftung und Konventionalstrafen, bei IT-Projekten das Betriebsmodell\n6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert\n7. Online-Recherche zu Auftraggeber und Projekt (nur mit Websuche, sonst Abschnitt weglassen und 5 Suchbegriffe vorschlagen):\n   a) Auftraggeber: Organisation, Grösse, Strategie und laufende Digitalisierungs- oder ERP-Vorhaben\n   b) IT-Landschaft: eingesetzte Systeme, bei SAP Release und Betriebsmodell (Public Cloud, Private Cloud, On-Premise), bisherige Dienstleister\n   c) Vorgeschichte: frühere Ausschreibungen und Zuschläge des Auftraggebers auf simap (Anbieter, Preise, Verfahren). Steht in <inhalt> ein Block «Frühere Zuschläge», werte ihn zuerst aus.\n   d) Vorbefassung und wahrscheinliche Mitbewerber mit Begründung\n   e) Presse und Medienmitteilungen der letzten 12 Monate, Budget- oder Parlamentsbeschlüsse zum Vorhaben\n   f) Entscheidungsträger nur mit Funktion (keine Privatdaten)\n   Jede Angabe mit Quelle und Datum. Recherche-Ergebnisse trennst du klar von Angaben aus <inhalt>.\n8. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen (inkl. Erkenntnissen aus der Recherche), Gewinnchance (hoch/mittel/tief) und grobem Offertaufwand in Personentagen\nBelege: Nenne bei Kriterien, Fristen und Gewichtungen die Fundstelle (Kapitel oder Ziffer aus <inhalt>). Fehlendes markierst du als [nicht angegeben]. Verweist der Text auf die Unterlagen, weise darauf hin. Daten im Format TT.MM.JJJJ."
+      "prompt": "Rolle: Du bist Bid Manager eines IT-Beratungsunternehmens und bereitest eine Go/No-Go-Entscheidung zur öffentlichen Ausschreibung in <inhalt> vor.\n1. Steckbrief (Tabelle): Auftraggeber, Gegenstand, Verfahrensart, Lose, Laufzeit inkl. Optionen, Eingabefrist, Fragenfrist, Offertöffnung, Volumen (falls genannt)\n2. Eignungskriterien (Tabelle): Kriterium | Nachweis/Referenz | Muss/Kann | erfüllbar? (ja/nein/unklar)\n3. Zuschlagskriterien mit Gewichtung, Preisgewichtung und Bewertungsmethode\n4. Schlüsselpersonen (Rolle, Zertifikate, Erfahrung, Sprachen) und Referenzprojekte\n5. Risiken und Auffälligkeiten: Vorbefassung, auf einen Anbieter zugeschnittene Kriterien, knappe Termine, Haftung und Konventionalstrafen, bei IT-Projekten das Betriebsmodell\n6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert\n7. Online-Recherche zu Auftraggeber und Projekt (nur mit Websuche, sonst Abschnitt weglassen und 5 Suchbegriffe vorschlagen):\n   a) Auftraggeber: Organisation, Grösse, Strategie und laufende Digitalisierungs- oder ERP-Vorhaben\n   b) IT-Landschaft: eingesetzte Systeme, bei SAP Release und Betriebsmodell (Public Cloud, Private Cloud, On-Premise), bisherige Dienstleister\n   c) Vorgeschichte: frühere Ausschreibungen und Zuschläge des Auftraggebers auf simap (Anbieter, Preise, Verfahren). Steht in <inhalt> ein Block «Frühere Zuschläge», werte ihn zuerst aus.\n   d) Vorbefassung und wahrscheinliche Mitbewerber mit Begründung\n   e) Presse und Medienmitteilungen der letzten 12 Monate, Budget- oder Parlamentsbeschlüsse zum Vorhaben\n   f) Entscheidungsträger nur mit Funktion (keine Privatdaten)\n   Jede Angabe mit Quelle und Datum. Recherche-Ergebnisse trennst du klar von Angaben aus <inhalt>.\n8. Fit zum eigenen Angebot (nur wenn der Kontext oben Schwerpunkte, Leistungen oder Referenzen nennt): Tabelle Anforderung | passende Leistung oder Referenz aus dem Kontext | Lücke | Massnahme (Partner, Schlüsselperson, Verzicht)\n9. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen (inkl. Erkenntnissen aus der Recherche), Gewinnchance (hoch/mittel/tief) und grobem Offertaufwand in Personentagen\nBelege: Nenne bei Kriterien, Fristen und Gewichtungen die Fundstelle (Kapitel oder Ziffer aus <inhalt>). Fehlendes markierst du als [nicht angegeben]. Verweist der Text auf die Unterlagen, weise darauf hin. Daten im Format TT.MM.JJJJ."
     },
     {
       "id": "triage",
@@ -195,6 +203,22 @@
       "desc": "Offerte aus Sicht des Bewertungsgremiums prüfen.",
       "anrede": false,
       "prompt": "Rolle: Du bist Mitglied des Bewertungsgremiums der Vergabestelle.\nPrüfe den Offertentwurf in <inhalt> streng gegen die Zuschlagskriterien (falls im Text enthalten):\n1. Punkteschätzung je Kriterium mit Begründung\n2. Schwachstellen: unbelegte Behauptungen, fehlende Nachweise, Widersprüche, Formfehler\n3. Die 5 wirksamsten Verbesserungen, sortiert nach Punktegewinn\nBleibe sachlich und konkret, zitiere die betroffene Stelle."
+    },
+    {
+      "id": "referenz",
+      "cat": "ausschreibungen",
+      "name": "Referenzbeschreibung",
+      "desc": "Projektnotizen → Referenzblatt für Offerten und Eignungsnachweise.",
+      "anrede": false,
+      "prompt": "Rolle: Du bist Proposal Manager eines IT-Beratungsunternehmens und schreibst aus den Projektangaben in <inhalt> eine Referenzbeschreibung.\n1. Steckbrief (Tabelle): Auftraggeber | Branche | Zeitraum | Volumen (PT oder CHF) | Lösung und Module (bei SAP mit Betriebsmodell Public Cloud, Private Cloud oder On-Premise) | Rolle des Anbieters | Projektmethode | Auszeichnungen\n2. Ausgangslage, Vorgehen, Ergebnis: je 2–3 Sätze, Ergebnis mit messbarer Wirkung\n3. Drei Sätze, die sich direkt als Eignungsnachweis verwenden lassen (vergleichbare Grösse, Komplexität, Branche)\n4. Passende Schlagworte für die Referenzsuche (max. 10)\nNur Angaben aus <inhalt>. Fehlendes als [Platzhalter], Ansprechperson immer als [Referenzperson, Freigabe prüfen]. Max. eine A4-Seite."
+    },
+    {
+      "id": "vorgehen",
+      "cat": "ausschreibungen",
+      "name": "Offerte: Vorgehen und Methodik",
+      "desc": "Projektvorgehen nach HERMES, SAP Activate oder agil für das Offertkapitel.",
+      "anrede": false,
+      "prompt": "Rolle: Du bist erfahrene Projektleitung für SAP- und IT-Einführungen und schreibst das Offertkapitel «Vorgehen und Methodik» zur Ausschreibung in <inhalt>.\nMethode: {{Methode (HERMES, SAP Activate, agil, hybrid)}}.\n1. Kurzbegründung der Methode für dieses Vorhaben (3 Sätze, Bezug auf Anforderungen mit Fundstelle)\n2. Phasenplan (Tabelle): Phase | Ziel | wichtigste Ergebnisse | Meilenstein / Entscheid | Dauer\n3. Projektorganisation: Rollen Auftraggeber und Anbieter, Gremien, Eskalation\n4. Querschnitt: Test (Stufen, Automatisierung), Datenmigration, Change Management und Schulung, Qualitäts- und Risikomanagement, Übergang in den Betrieb\n5. Die 5 grössten Projektrisiken mit Massnahme\nAnforderungen der Ausschreibung haben Vorrang vor der Methode. Fehlendes als [Platzhalter]. Max. 2 A4-Seiten, Sprache des Auftraggebers."
     },
     {
       "id": "promptopt",

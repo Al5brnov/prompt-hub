@@ -9,6 +9,7 @@
   var DEV_REPO = "https://github.com/Al5brnov/prompt-hub";
   var KB_URL = "https://claude.ai/artifact/RrLUJJNPPANPhMEAsHNAUU";
   var CHANGELOG = [
+    ["07.11.2026", "Neue Vorlagen Referenzbeschreibung, Offerte: Vorgehen und Methodik, SAP-Lösungsskizze. Go/No-Go gleicht mit dem eigenen Kontext ab. Radar sucht zusätzlich nach SAP-Lösungen und Fachbereichen."],
     ["07.11.2026", "Link zur Wissensbasis unter Mehr → Weitere Apps."],
     ["07.11.2026", "Zuschlags-Historie bis 4 Jahre zurück, Stundensätze (wo publiziert) in Marktinfo und Analyse."],
     ["07.11.2026", "Marktinfo Zuschläge (Anbieter, Preise, Analyse-Vorlage), frühere Zuschläge des Auftraggebers in der Go/No-Go-Bewertung, Go/No-Go mit Online-Recherche."],
