@@ -163,6 +163,7 @@ def flat_words(v):
 
 PUBTYPE_DE = {"award": "Zuschlag", "direct_award": "Freihändige Vergabe", "tender": "Ausschreibung", "participant_selection": "Präqualifikation", "advance_notice": "Vorankündigung",
               "competition": "Wettbewerb", "study_contract": "Studienauftrag", "request_for_information": "Informationsanfrage"}
+ORDER_DE = {"service": "Dienstleistung", "supply": "Lieferung", "construction": "Bau"}
 PROCESS_DE = {"open": "offen", "selective": "selektiv", "invitation": "Einladung", "direct": "freihändig", "no_process": "ohne Verfahren"}
 
 
@@ -217,11 +218,14 @@ def fields(details):
 
 HIST_COLS = ["Projekt-Nr", "Titel", "Auftraggeber", "Typ", "Verfahren", "publiziert", "Eingabefrist", "Relevanz",
              "Treffergrund", "Gegenstand", "Eignungskriterien", "Zuschlagskriterien", "Lose", "CPV", "Link",
-             "zuerst gefunden", "zuletzt gesehen", "Status simap", "simap-ID"]
+             "zuerst gefunden", "zuletzt gesehen", "Status simap", "simap-ID",
+             # neu ab 07.11.2026, nur hinten anfügen: die Excel-Pipeline ordnet A–S nach Position zu
+             "Haupt-CPV", "Auftragsart", "Umfang"]
 
 
-def write_history(items, today):
-    """Fortlaufende Liste: nichts wird gelöscht, neue Treffer kommen ans Ende."""
+def write_history(items, today, scope=None, backfill=None):
+    """Fortlaufende Liste: nichts wird gelöscht, neue Treffer kommen ans Ende.
+    scope: Umfang-Prüfung je simap-ID aus diesem Lauf. backfill(ids) -> dict für alte Zeilen ohne Umfang."""
     rows = []
     if os.path.exists(HISTORY):
         with open(HISTORY, encoding="utf-8-sig", newline="") as f:
@@ -245,6 +249,13 @@ def write_history(items, today):
             new["zuerst gefunden"] = iso
             rows.append(new)
             by_id[it["id"]] = new
+    scope = dict(scope or {})
+    missing = [r.get("simap-ID") for r in rows if not r.get("Umfang") and r.get("simap-ID") not in scope]
+    if backfill and missing:
+        scope.update(backfill(missing))
+    for r in rows:
+        if r.get("simap-ID") in scope:
+            r.update(scope[r["simap-ID"]])
     for r in rows:
         fr = (r.get("Eingabefrist") or "")[:10]
         r["Status simap"] = "Frist abgelaufen" if fr and fr < iso else "offen"
@@ -391,18 +402,30 @@ def main_cpv(details):
     return code, otype
 
 
-def scope_check(main, otype, cfg):
-    """Nur Dienstleistungen rund um Software und Beratung: Auftragsart und Haupt-CPV prüfen.
+def scope_check(main, otype, cfg, title="", desc="", core_rx=()):
+    """Nur Dienstleistungen rund um Software, Beratung, Betrieb und Support.
+    Hart: Auftragsart (Bau), Haupt-CPV ausserhalb mainCpvAllow oder in mainCpvExclude (Hardware).
+    Weich: softCpvExclude und softExcludeWords (Betrieb, Infrastruktur, Service Desk) schliessen nur aus,
+    wenn kein Kernbegriff (SAP, ERP …) in Titel oder Beschreibung vorkommt.
     Liefert einen Ausschlussgrund oder ""."""
     if otype and otype in cfg.get("excludeOrderTypes", []):
         return "Auftragsart %s" % otype
-    if not main:
-        return ""
-    if any(main.startswith(p) for p in cfg.get("mainCpvExclude", [])):
-        return "Haupt-CPV %s (Hardware/Infrastruktur)" % main
-    allow = cfg.get("mainCpvAllow")
-    if allow and not any(main.startswith(p) for p in allow):
-        return "Haupt-CPV %s ausserhalb Software/Beratung" % main
+    if main:
+        if any(main.startswith(p) for p in cfg.get("mainCpvExclude", [])):
+            return "Haupt-CPV %s (Hardware)" % main
+        allow = cfg.get("mainCpvAllow")
+        if allow and not any(main.startswith(p) for p in allow):
+            return "Haupt-CPV %s ausserhalb Software/Beratung" % main
+    soft = ""
+    if main and any(main.startswith(p) for p in cfg.get("softCpvExclude", [])):
+        soft = "Haupt-CPV %s (Betrieb/Infrastruktur)" % main
+    if not soft:
+        for w in flat_words(cfg.get("softExcludeWords")):
+            if re.search(r"(?<![\w])" + re.escape(w), title, re.I):
+                soft = "«%s» im Titel" % w
+                break
+    if soft and not any(rx.search(title) or rx.search(desc) for _, rx in core_rx):
+        return soft + " ohne SAP-/ERP-Bezug"
     return ""
 
 
@@ -593,7 +616,7 @@ def main():
             json.dump(used, f, ensure_ascii=False)
 
     # 2) bewerten und filtern
-    rejected, market = [], []
+    rejected, market, scope = [], [], {}
     items, dropped = [], {"vorab": pre_skipped, "cpv": 0, "score": 0, "frist": 0, "ausschluss": 0, "zeit": 0, "limit": skipped}
     for it, details in loaded:
         it.pop("pubs", None)
@@ -611,7 +634,8 @@ def main():
         desc_all = " ".join(collect(d, {"orderDescription", "description", "note", "lotDescription"}) for d in details)
         cpvs = sorted({c for d in details for c in cpv_codes(d)})
         mcpv, otype = main_cpv(details)
-        reason = scope_check(mcpv, otype, cfg)
+        reason = scope_check(mcpv, otype, cfg, title_all, desc_all, core_rx)
+        scope[it["id"]] = {"Haupt-CPV": mcpv, "Auftragsart": ORDER_DE.get(otype, otype), "Umfang": ("ausserhalb: " + reason) if reason else "passt"}
         if reason:
             sc, why = 0, []
         else:
@@ -659,7 +683,41 @@ def main():
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
-    n_hist = write_history(items, today)
+    def backfill(ids):
+        """Alte Trefferzeilen ohne Umfang nachträglich prüfen (Projektkopf + Details, mit Zwischenspeicher)."""
+        out, hist_title = {}, {}
+        if os.path.exists(HISTORY):
+            with open(HISTORY, encoding="utf-8-sig", newline="") as f:
+                for r in csv.DictReader(f, delimiter=";"):
+                    hist_title[r.get("simap-ID")] = (r.get("Titel") or "", r.get("Gegenstand") or "")
+        for pid in ids[: int(cfg.get("backfillMax", 150))]:
+            if time.time() - t0 > budget + 300:
+                note("Umfang-Nachprüfung abgebrochen (Zeit), Rest im nächsten Lauf")
+                break
+            try:
+                h = get("/publications/v2/project/%s/project-header" % pid)
+                pubs = [x["id"] for x in [h.get("latestPublication") or {}] + [l.get("latestPublication") or {} for l in h.get("lots") or []] if x.get("id")]
+                ds = []
+                for pub in pubs[:3]:
+                    key = "%s|%s" % (pid, pub)
+                    d = cache.get(key) or get("/publications/v1/project/%s/publication-details/%s" % (pid, pub))
+                    used[key] = d; ds.append(d)
+                mcpv, otype = main_cpv(ds)
+                otype = otype or h.get("orderType") or ""
+                t, g = hist_title.get(pid, ("", ""))
+                t += " " + " ".join(collect(d, {"title", "lotTitle"}) for d in ds)
+                g += " " + " ".join(collect(d, {"orderDescription", "description", "note", "lotDescription"}) for d in ds)
+                reason = scope_check(mcpv, otype, cfg, t, g, core_rx)
+                out[pid] = {"Haupt-CPV": mcpv, "Auftragsart": ORDER_DE.get(otype, otype), "Umfang": ("ausserhalb: " + reason) if reason else "passt"}
+            except Exception as e:  # noqa: BLE001
+                note("Umfang-Nachprüfung %s: %s" % (pid, e))
+        print("Umfang-Nachprüfung: %d alte Zeilen geprüft" % len(out), flush=True)
+        return out
+
+    n_hist = write_history(items, today, scope, None if FIXTURES else backfill)
+    if not FIXTURES and used:
+        with open(CACHE, "w", encoding="utf-8") as f:
+            json.dump(used, f, ensure_ascii=False)
     print("Trefferliste: %d Einträge in radar/history.csv" % n_hist)
     n_aw = write_awards(market, today)
     print("Marktinfo: %d Zuschlagszeilen in diesem Lauf, %d gesamt in radar/awards.csv" % (len(market), n_aw))

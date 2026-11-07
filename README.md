@@ -57,7 +57,7 @@ nach neuen Publikationen (Ausschreibung, Präqualifikation, Vorankündigung) zu 
 Die simap-Volltextsuche liefert viel Ausschuss (z.B. «SAP» in «sapeurs-pompiers»). Das Skript filtert deshalb in drei Stufen:
 1. **Wortgrenzen:** Akronyme wie SAP, ERP, CRM, AMS zählen nur exakt und in Grossbuchstaben.
 2. **CPV-Code:** Publikationen nur mit Bau-, Fahrzeug-, Reinigungs- oder ähnlichen CPV-Codes (`excludeCpvPrefixes`) fallen weg. Begriffe unter `context` zählen nur, wenn ein IT- oder Beratungs-CPV (`itCpvPrefixes`) vorliegt.
-3. **Umfang:** Nur Dienstleistungen rund um Software und Beratung. Bauaufträge, Haupt-CPV ausserhalb von IT-Diensten (72), Software (48), Unternehmensberatung (794) und IT-Schulung (80533) sowie Hardware, Server und IT-Betrieb (`mainCpvExclude`) fallen weg.
+3. **Umfang:** Dienstleistungen rund um Software, Beratung, Betrieb und Support. Hart ausgeschlossen: Bauaufträge, Haupt-CPV ausserhalb von IT-Diensten (72), Software (48), Unternehmensberatung (794) und IT-Schulung (80533) sowie Hardware und Server (`mainCpvExclude`). IT-Betrieb, Infrastruktur und Service Desk (`softCpvExclude`, `softExcludeWords`) bleiben drin, sobald ein Kernbegriff wie SAP oder ERP vorkommt. Die Trefferliste `history.csv` zeigt das Ergebnis in den Spalten «Haupt-CPV», «Auftragsart» und «Umfang» (passt / ausserhalb: Grund), auch für ältere Zeilen.
 4. **Relevanz-Score:** Kernbegriff im Titel 5, in der Beschreibung 3, Kontextbegriffe bis 4, IT-CPV 2, Ausschreibung/Präqualifikation 1. Unter `minScore` fällt ein Treffer weg, höchstens `maxItems` Treffer.
 
 Feinsteuerung in `radar/config.json`: `core` (treffen allein), `context` (nur mit IT-CPV), `excludeWords` (im Titel), `minScore`, `maxItems`.
