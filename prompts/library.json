@@ -23,6 +23,10 @@
       "name": "Ausschreibungen"
     },
     {
+      "id": "dokumente",
+      "name": "Dokumente"
+    },
+    {
       "id": "frei",
       "name": "Frei"
     }
@@ -219,6 +223,30 @@
       "desc": "Projektvorgehen nach HERMES, SAP Activate oder agil für das Offertkapitel.",
       "anrede": false,
       "prompt": "Rolle: Du bist erfahrene Projektleitung für SAP- und IT-Einführungen und schreibst das Offertkapitel «Vorgehen und Methodik» zur Ausschreibung in <inhalt>.\nMethode: {{Methode (HERMES, SAP Activate, agil, hybrid)}}.\n1. Kurzbegründung der Methode für dieses Vorhaben (3 Sätze, Bezug auf Anforderungen mit Fundstelle)\n2. Phasenplan (Tabelle): Phase | Ziel | wichtigste Ergebnisse | Meilenstein / Entscheid | Dauer\n3. Projektorganisation: Rollen Auftraggeber und Anbieter, Gremien, Eskalation\n4. Querschnitt: Test (Stufen, Automatisierung), Datenmigration, Change Management und Schulung, Qualitäts- und Risikomanagement, Übergang in den Betrieb\n5. Die 5 grössten Projektrisiken mit Massnahme\nAnforderungen der Ausschreibung haben Vorrang vor der Methode. Fehlendes als [Platzhalter]. Max. 2 A4-Seiten, Sprache des Auftraggebers."
+    },
+    {
+      "id": "praesentation",
+      "cat": "dokumente",
+      "name": "Präsentation (Firmenvorlage)",
+      "desc": "PPTX in der Firmenvorlage, Folien aus <inhalt>.",
+      "anrede": true,
+      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen.\nErstelle aus <inhalt> eine Präsentation als PPTX.\nZweck und Publikum: {{Zweck und Publikum}}. Umfang: {{Anzahl Folien}}.\nAufbau: Titelfolie, Ausgangslage, Kernaussagen, Optionen mit Vergleichstabelle und Empfehlung, nächste Schritte, Schlussfolie der Vorlage.\nFolientitel als Aussage, max. 6 Bullets je Folie. Fehlendes als [Platzhalter]."
+    },
+    {
+      "id": "konzept",
+      "cat": "dokumente",
+      "name": "Konzept (Firmenvorlage)",
+      "desc": "HERMES-Konzept als DOCX mit Review aus sechs Rollen.",
+      "anrede": false,
+      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen. Für Konzepte zusätzlich den Skill «hermes-konzept» verwenden.\nErstelle aus <inhalt> ein {{Ergebnistyp (Systemkonzept, Betriebskonzept, Detailspezifikation …)}} zum Thema {{Thema}} für {{Kunde}} als DOCX, Version V0.1.\nAnnahmen als AN-xx, offene Punkte als P-xx mit Adressat und Priorität. Sie-Form."
+    },
+    {
+      "id": "offerte",
+      "cat": "dokumente",
+      "name": "Offerte (Firmenvorlage)",
+      "desc": "Offerte als DOCX nach der Standardgliederung der Firmenvorlage.",
+      "anrede": false,
+      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen.\nErstelle aus <inhalt> eine Offerte für {{Kunde}} zu {{Gegenstand}} als DOCX, Version V1.0.\nGliederung gemäss Skill (Ausgangslage bis Unterschriften). Gibt die Ausschreibung eine Struktur vor, hat diese Vorrang.\nAufwand in Personentagen je Rolle und Arbeitspaket. Tagessätze und Preise nie erfinden, sondern als [x'xxx] und offenen Punkt führen. Sie-Form."
     },
     {
       "id": "promptopt",
