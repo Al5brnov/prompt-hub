@@ -90,6 +90,14 @@ in
 
 Für die Ausschreibungen dieselbe Abfrage mit `radar/history.csv`, ohne den Schritt «Typen» (Ergebnis = `Kopf`). Abfrageeigenschaften: «Daten beim Öffnen der Datei aktualisieren».
 
+## Vorlagen und Claude-Skills
+
+Einzelne Vorlagen nennen im Feld `skill` einen passenden Claude-Skill (z.B. `ausschreibung-go-no-go`, `hermes-konzept`, `sap-sd-mm-experte`, `firmenvorlagen`).
+Ist das Ziel Claude, hängt die App den Hinweis an, den Skill zu nutzen, falls er verfügbar ist (ausser der Prompt nennt ihn schon). Bei anderen Zielen bleibt der Prompt unverändert.
+Die Vorlage ist die öffentliche, neutrale Kurzform. Der Skill enthält das ausführliche Vorgehen und eigenes Fachwissen und bleibt privat.
+Verbesserungen fliessen in beide Richtungen: Bewährt sich etwas im Skill, wird die Vorlage in neutraler Form nachgeführt, und umgekehrt.
+Inhalte in diesem Repo bleiben ohne Personen- und Firmennamen.
+
 ## Zeitjournal
 
 Zweite App im Unterordner [`zeitjournal/`](zeitjournal/): Arbeitszeit per Tipp auf Favoriten erfassen
