@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-06T22:19:40+00:00",
- "since": "2026-10-07",
+ "generatedAt": "2026-11-07T06:57:48+00:00",
+ "since": "2026-10-08",
  "keywords": [
   "SAP",
   "S/4HANA",
@@ -51,7 +51,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 303,
+ "candidates": 299,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -93,26 +93,28 @@
   "Prozessanalyse",
   "AMS"
  ],
- "durationSec": 606,
- "detailsCached": 89,
- "detailsLoaded": 2,
+ "durationSec": 1220,
+ "detailsCached": 86,
+ "detailsLoaded": 78,
  "dropped": {
-  "vorab": 168,
+  "vorab": 106,
   "cpv": 0,
-  "score": 6,
-  "frist": 10,
+  "score": 64,
+  "frist": 9,
   "ausschluss": 0,
   "zeit": 0,
   "limit": 0
  },
- "count": 73,
+ "count": 77,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Order-to-Cash»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «E-Shop»: URLError bei /publications/v2/project/project-search: <urlopen error _ssl.c:994: The handshake operation timed out>",
-  "Suche «E-Government»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: keine"
+  "Suche «Beschaffungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Self-Service-Portal»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Beschaffungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Wiederholt: 2 Suchen, weiterhin fehlgeschlagen: Beschaffungslösung",
+  "Details 43558: URLError bei /publications/v1/project/f59eb055-8b27-43c0-a170-0a71a13bbe6c/publication-details/1d71271a-b11f-449b-b1c2-53252cc5acb4: <urlopen error timed out>",
+  "Details 41106: URLError bei /publications/v1/project/3004814f-2565-465b-a45b-0db1dd2f4c1d/publication-details/a0220394-2584-423d-895e-1f9cd4182e6c: <urlopen error timed out>",
+  "Details 30813: URLError bei /publications/v1/project/d6c2e14d-db60-4311-8d29-197fca5cc5ac/publication-details/24b7d23b-7375-4b6f-b392-ed01455a8fa6: <urlopen error timed out>"
  ],
  "rejected": [
   {
@@ -144,6 +146,296 @@
    "title": "Plattform Service für ein Dokumenten Management System ",
    "score": 2,
    "why": " | CPV 72512000"
+  },
+  {
+   "title": "Beschaffung einer ITSM-/ESM-Lösung mit Self-Service-Funktionalität",
+   "score": 2,
+   "why": " | CPV 48000000,72000000"
+  },
+  {
+   "title": "Erbringung von Informatikdienstleistungen «Betrieb Datacenter Services»",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Zentrale Archivierung für Konkursakten",
+   "score": 2,
+   "why": " | CPV 72252000,79995100,92512000"
+  },
+  {
+   "title": "Limmi.ch: Beschaffung einer Patienten- und Zuweiserportallösung",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "IWB, Package Repository",
+   "score": 2,
+   "why": " | CPV 48000000,48900000"
+  },
+  {
+   "title": "IWB, Server und Virtualisierungs-Infrastruktur",
+   "score": 2,
+   "why": " | CPV 48000000,48800000"
+  },
+  {
+   "title": "Transportpolizei Vorgangsbearbeitungs- und Informationssystem (TPO-VIS)",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Qualitäts- und Risikomanagement-Dienstleistungen IGS GmbH",
+   "score": 2,
+   "why": " | CPV 72000000,72224000"
+  },
+  {
+   "title": "Weiterentwicklung und Weiterbetrieb Kunden Online Service (KOS) Framework und MicroService",
+   "score": 2,
+   "why": " | CPV 48000000,72000000"
+  },
+  {
+   "title": "Beschaffung eines zukunftsorientierten GIS für die Stadtwerke Wetzikon",
+   "score": 2,
+   "why": " | CPV 48000000,71354100,72000000"
+  },
+  {
+   "title": "Ausrüstung Gerichtsaal- und Sitzungszimmer",
+   "score": 2,
+   "why": " | CPV 32210000,32321300,32322000"
+  },
+  {
+   "title": "Life-cycling Oracle-Exadata-Infrastruktur ",
+   "score": 2,
+   "why": " | CPV 48000000,48820000,72263000"
+  },
+  {
+   "title": "Erneuerung der IT-Infrastruktur im Jahr 2027",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Lieferung, Einführung und Betrieb des Software Asset Management (SAM)",
+   "score": 2,
+   "why": " | CPV 48000000,72000000"
+  },
+  {
+   "title": "(25018) 609 Statisches Code Scanning Tool",
+   "score": 2,
+   "why": " | CPV 48000000,72260000"
+  },
+  {
+   "title": "IT Clients: Lieferung und Leistungen",
+   "score": 2,
+   "why": " | CPV 30210000,48000000,72000000"
+  },
+  {
+   "title": " IT Präsentationsperipherie: Lieferung und Leistungen",
+   "score": 2,
+   "why": " | CPV 30210000,30232000,48000000"
+  },
+  {
+   "title": "Beschaffung einer WebGIS-Applikation mit ÖREB-Kataster-Funktionalitäten",
+   "score": 2,
+   "why": " | CPV 38221000,48000000,72000000"
+  },
+  {
+   "title": "IWB, Bereitstellung von Dienstleistungen für NES-Systemsoftware (SIP-Platinum)",
+   "score": 2,
+   "why": " | CPV 48100000,65000000,72000000"
+  },
+  {
+   "title": "ICT-Ausschreibung \"Full-Outsourcing\"",
+   "score": 2,
+   "why": " | CPV 72250000,72300000,72400000"
+  },
+  {
+   "title": "ICT-Ausschreibung \"Netzwerk\"",
+   "score": 2,
+   "why": " | CPV 32400000,72250000,72700000"
+  },
+  {
+   "title": "Submission Applikationslösung BGM ",
+   "score": 2,
+   "why": " | CPV 48000000,72000000"
+  },
+  {
+   "title": "AffDyn_A1 /Fourniture d'une solution d'affichage dynamique en mode SaaS et ses prestations",
+   "score": 2,
+   "why": " | CPV 48000000,72260000"
+  },
+  {
+   "title": "Idira",
+   "score": 2,
+   "why": " | CPV 48000000,72200000,72600000"
+  },
+  {
+   "title": "Rahmenvertrag Fachleistungen Bahnbetrieb",
+   "score": 2,
+   "why": " | CPV 32000000,64200000,71000000"
+  },
+  {
+   "title": "Rahmenvertrag Unterstützungsleistungen Submissionen",
+   "score": 2,
+   "why": " | CPV 79000000,79410000,79418000"
+  },
+  {
+   "title": "Klinik-Informationssystem (KIS)",
+   "score": 2,
+   "why": " | CPV 48814400,72000000"
+  },
+  {
+   "title": "(26044) 307 Ablösung AIS (HelveticArchives)",
+   "score": 2,
+   "why": " | CPV 48000000,72000000,72267100"
+  },
+  {
+   "title": "Système de records management électronique (ERMS) - Fourniture, déploiement et support",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Betrieb und Weiterentwicklung Adobe Experience Manager (AEM) as a Cloud Service (AEMaaCS) ",
+   "score": 2,
+   "why": " | CPV 72000000,72260000"
+  },
+  {
+   "title": "Software für die Sicherheitsverantworlichen der Gemeinden des Kantons Wallis",
+   "score": 2,
+   "why": " | CPV 48170000"
+  },
+  {
+   "title": "IWB, Storage Infrastruktur",
+   "score": 2,
+   "why": " | CPV 48000000,48800000"
+  },
+  {
+   "title": "Ganzer Kanton, Instandhaltung / Störungsbehebung, Verkehszählstellen (MIV+Velo)",
+   "score": 2,
+   "why": " | CPV 50410000,63712710,72267000"
+  },
+  {
+   "title": "Ersatz des Gebäudeleitsystems der UPD",
+   "score": 2,
+   "why": " | CPV 45300000,48900000"
+  },
+  {
+   "title": "Ausschreibung SailPoint-IAM-Dienstleisterin",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Wartungs- und Supportleistungen für die Anwendung TaxPPEnc des Kantons Freiburg",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Wartungs- und Supportleistungen für die Anwendung TaxPM/DiPMWeb des Kantons Freiburg",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Parkplatzbewirtschaftung RBS  und AREMO",
+   "score": 2,
+   "why": " | CPV 72300000,79900000"
+  },
+  {
+   "title": "Attribution de 34 postes externes pour l’OCSIN (LSE 2026-01)",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Concours pour la conclusion d’un nouveau contrat Microsoft Enterprise Agreement Subscripti",
+   "score": 2,
+   "why": " | CPV 48000000"
+  },
+  {
+   "title": "IWB, Verlängerte Werkbank IT-Profile",
+   "score": 2,
+   "why": " | CPV 72000000,72200000,72300000"
+  },
+  {
+   "title": "Rahmenvertrag Dienstleistungen im Bereich ICT Datacenter / Netzwerk",
+   "score": 2,
+   "why": " | CPV 30210000,32420000,72000000"
+  },
+  {
+   "title": "Mandat Projektkommunikation betreffend Sirius3 – Zentrales Aus- und Weiterbildungszentrum ",
+   "score": 2,
+   "why": " | CPV 79416000,79416200"
+  },
+  {
+   "title": "Appel d'offres TerraCom et TerraDocs",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "NSPM-Lösung 2026",
+   "score": 2,
+   "why": " | CPV 48000000"
+  },
+  {
+   "title": "ICT-Betrieb, Infrastruktur, Support und Gerätebeschaffung für die Schulen Birr und Lupfig",
+   "score": 2,
+   "why": " | CPV 30200000,72000000"
+  },
+  {
+   "title": "AFC Gestion des activités",
+   "score": 2,
+   "why": " | CPV 48000000"
+  },
+  {
+   "title": "Beschaffung eines GRC (Governance Risk Compliance) Tool",
+   "score": 2,
+   "why": " | CPV 48000000"
+  },
+  {
+   "title": "(26006) 805 Informationsprogramm zu erneuerbaren Energien und Energieeffizienz auf Social ",
+   "score": 2,
+   "why": " | CPV 71314000,75000000,75100000"
+  },
+  {
+   "title": "Mise à disposition d’unꞏe responsable du développement du pôle cantonal de santé et soins ",
+   "score": 2,
+   "why": " | CPV 75122000,79411000,85120000"
+  },
+  {
+   "title": "(25178) 609 Breitbandanschlüsse",
+   "score": 2,
+   "why": " | CPV 64000000,72000000"
+  },
+  {
+   "title": "Betrieb und Unterhaltsmanagement MIV, VELO, LSA ",
+   "score": 2,
+   "why": " | CPV 50410000,63712710,72267000"
+  },
+  {
+   "title": "N00.00 MP-00000 - Rahmenverträge F2 - Rahmenverträge Ausschreibungen Los 1 Kanton Bern ID ",
+   "score": 2,
+   "why": " | CPV 71300000,79418000"
+  },
+  {
+   "title": "APPEL D’OFFRES PUBLIC POUR L’ACQUISITION D’UNE SOLUTION DLP ET D’UNE SOLUTION DRM",
+   "score": 2,
+   "why": " | CPV 48000000"
+  },
+  {
+   "title": "eQV/eLearn – Rahmenvertrag für Nutzung einer Prüfungs- und Lehr-/Lernplattform (LMS) inkl.",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Teledermatologie-Plattform",
+   "score": 2,
+   "why": " | CPV 48328000"
+  },
+  {
+   "title": "IT-Service-Management-Tool",
+   "score": 0,
+   "why": ""
+  },
+  {
+   "title": "(26023) 704 Rechenzentrum (RZ) Move LW10",
+   "score": 0,
+   "why": ""
   }
  ],
  "items": [
@@ -461,7 +753,7 @@
    "nr": "45909",
    "title": "Dienstleistung für Microsoft Power Apps und Power Automate",
    "office": "Dienst für Informatikplanung",
-   "date": "2026-10-16",
+   "date": "2026-11-07",
    "type": "tender",
    "process": "open",
    "deadline": "2026-11-27T16:00:00+01:00",
@@ -480,7 +772,87 @@
     "verfahren": "offen"
    },
    "url": "https://www.simap.ch/de/project-detail/28c65ede-87ca-46ca-a7b6-f4b20d00a8a7",
-   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 9001\n      name: Dienst für Informatikplanung\n      street: Davidstrasse 35\n      city: St. Gallen\n    title: Dienstleistung für Microsoft Power Apps und Power Automate\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Der Kanton St.Gallen führt im Rahmen des Programms DRIVE die Microsoft Power Platform als Bestandteil seines digitalen Arbeitsplatzes ein. Die technische Plattform, die Betriebsorganisation sowie die grundlegenden Governance-, Architektur- und Sicherheitsvorgaben werden durch den Kanton St.Gallen und seine bestehenden Leistungserbringer bereitgestellt. Die Microsoft Power Platform steht den Organisationseinheiten des Kantons als standardisierte Plattform für die Digitalisierung und Automatisierung von Geschäftsprozessen zur Verfügung. \n      Mit Microsoft Power Apps und Microsoft Power Automate sollen insbesondere Applikationen, digitale Formulare, Genehmigungs- und Workflow-Lösungen sowie weitere Prozessautomatisierungen realisiert und weiterentwickelt werden. Je nach Anwendungsfall können die in der kantonalen Microsoft-365-Umgebung freigegebenen Standard-Konnektoren eingesetzt werden. \n      Für die professionelle Umsetzung benötigt der Kanton ergänzende externe Kompetenzen und Kapazitäten. Die Lösungen müssen den jeweils geltenden Vorgaben zu Architektur, Governance, Informationssicherheit, Datenschutz, Qualitätssicherung, Dokumentation und Betrieb entsprechen. Sie müssen nachvollziehbar, wartbar und so dokumentiert sein, dass eine geordnete Übernahme, Nutzung, Unterstützung und Weiterentwicklung sichergestellt ist. \n      Zur flexiblen Deckung des künftig anfallenden und im Voraus nicht abschliessend bestimmbaren Bedarfs sollen mit drei qualifizierten Anbieterinnen separate, inhaltlich gleichlautende Rahmenverträge abgeschlossen werden. Die Vergabe der Einzelaufträge erfolgt nach den in diesen Ausschreibungsunterlagen und den Rahmenverträgen festgelegten Abrufregeln.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 9001\n      city: St. Gallen\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Kann um ein Jahr verlängert werden (siehe Ausschreibungsunterlagen).\n    options: no\n    cpvCode:\n      code: 72260000\n      label: Dienstleistungen in Verbindung mit Software\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen seit Publikation auf www.simap.ch beim Verwaltungsgericht des Kantons St.Gallen, Webergasse 8, 9001 St.Gallen, schriftlich Beschwerde erhoben werden (Art. 52 Abs. 1 i.V.m. Art. 56 der Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen [sGS 841.51]). Die Frist ist eingehalten, wenn die Beschwerde spätestens am letzten Tag der Frist beim Gericht eingereicht oder zu dessen Handen der Schweizerischen Post oder einer schweizerischen diplomatischen oder konsularischen Vertretung übergeben wird (Art. 143 Abs. 1 der Schweizerischen Zivilprozessordnung [SR 272] i.V.m. Art. 30 Abs. 1 des Gesetzes über die Verwaltungsrechtspflege [sGS 951.1]). Die Beschwerde muss einen Antrag sowie eine Darstellung des Sachverhaltes und eine Begründung enthalten. Sie ist zu unterzeichnen und im Doppel einzureichen. Diese Verfügung ist beizulegen. Es gelten keine Gerichtsferien.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-30\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-16\n    offerDeadline: 2026-11-27T16:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-10-16\n        - 2026-11-27\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72260000\n      label: Dienstleistungen in Verbindung mit Software\n    orderType: service\n    publicationTed: ja\n    title: Dienstleistung für Microsoft Power Apps und Power Automate\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45909-01\n    publicationDate: 2026-10-16\n    creationLanguage: de\n    translationLanguages:\n      - language: en\n        type: summary\n    projectNumber: 45909\n  hasProjectDocuments: ja\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:719624-2026:HTML:DE:HTML"
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 9001\n      name: Dienst für Informatikplanung\n      street: Davidstrasse 35\n      city: St. Gallen\n    title: Dienstleistung für Microsoft Power Apps und Power Automate\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Der Kanton St.Gallen führt im Rahmen des Programms DRIVE die Microsoft Power Platform als Bestandteil seines digitalen Arbeitsplatzes ein. Die technische Plattform, die Betriebsorganisation sowie die grundlegenden Governance-, Architektur- und Sicherheitsvorgaben werden durch den Kanton St.Gallen und seine bestehenden Leistungserbringer bereitgestellt. Die Microsoft Power Platform steht den Organisationseinheiten des Kantons als standardisierte Plattform für die Digitalisierung und Automatisierung von Geschäftsprozessen zur Verfügung. \n      Mit Microsoft Power Apps und Microsoft Power Automate sollen insbesondere Applikationen, digitale Formulare, Genehmigungs- und Workflow-Lösungen sowie weitere Prozessautomatisierungen realisiert und weiterentwickelt werden. Je nach Anwendungsfall können die in der kantonalen Microsoft-365-Umgebung freigegebenen Standard-Konnektoren eingesetzt werden. \n      Für die professionelle Umsetzung benötigt der Kanton ergänzende externe Kompetenzen und Kapazitäten. Die Lösungen müssen den jeweils geltenden Vorgaben zu Architektur, Governance, Informationssicherheit, Datenschutz, Qualitätssicherung, Dokumentation und Betrieb entsprechen. Sie müssen nachvollziehbar, wartbar und so dokumentiert sein, dass eine geordnete Übernahme, Nutzung, Unterstützung und Weiterentwicklung sichergestellt ist. \n      Zur flexiblen Deckung des künftig anfallenden und im Voraus nicht abschliessend bestimmbaren Bedarfs sollen mit drei qualifizierten Anbieterinnen separate, inhaltlich gleichlautende Rahmenverträge abgeschlossen werden. Die Vergabe der Einzelaufträge erfolgt nach den in diesen Ausschreibungsunterlagen und den Rahmenverträgen festgelegten Abrufregeln.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 9001\n      city: St. Gallen\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Kann um ein Jahr verlängert werden (siehe Ausschreibungsunterlagen).\n    options: no\n    cpvCode:\n      code: 72260000\n      label: Dienstleistungen in Verbindung mit Software\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen seit Publikation auf www.simap.ch beim Verwaltungsgericht des Kantons St.Gallen, Webergasse 8, 9001 St.Gallen, schriftlich Beschwerde erhoben werden (Art. 52 Abs. 1 i.V.m. Art. 56 der Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen [sGS 841.51]). Die Frist ist eingehalten, wenn die Beschwerde spätestens am letzten Tag der Frist beim Gericht eingereicht oder zu dessen Handen der Schweizerischen Post oder einer schweizerischen diplomatischen oder konsularischen Vertretung übergeben wird (Art. 143 Abs. 1 der Schweizerischen Zivilprozessordnung [SR 272] i.V.m. Art. 30 Abs. 1 des Gesetzes über die Verwaltungsrechtspflege [sGS 951.1]). Die Beschwerde muss einen Antrag sowie eine Darstellung des Sachverhaltes und eine Begründung enthalten. Sie ist zu unterzeichnen und im Doppel einzureichen. Diese Verfügung ist beizulegen. Es gelten keine Gerichtsferien.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-30\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-07\n    initialPublicationDate: 2026-10-16\n    offerDeadline: 2026-11-27T16:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-10-16\n        - 2026-11-27\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  correction:\n    initialPublicationDate: 2026-10-16\n    remarks: Folgende Änderungen wurden vorgenommen:\n      \n      A00_Dienstleistungen für Applikationen auf Microsoft Power Platform Ausschreibungsunterlagen offenes Verfahren_v2.pdf\n      Unter Ziff. 2.2 in der Tabelle 2 B05 als .docx angegeben.\n      \n      B02_Rahmenvertragsentwurf_Dienstleistungen für Microsoft Power Apps und Power Automate_v2.pdf\n      Ziff. 17 Ausschreibungsgegenstand abgegrenzt.\n      \n      B05_Vertraulichkeitserklaerung_2026.docx\n      Dokument hochgeladen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 45909-01\n    publicationDate: 2026-10-16\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    corrected: ja\n    cpvCode:\n      code: 72260000\n      label: Dienstleistungen in Verbindung mit Software\n    orderType: service\n    publicationTed: ja\n    title: Dienstleistung für Microsoft Power Apps und Power Automate\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45909-02\n    publicationDate: 2026-11-07\n    creationLanguage: de\n    translationLanguages:\n      - language: en\n        type: summary\n    initialPublicationDate: 2026-10-16\n    projectNumber: 45909\n  hasProjectDocuments: ja"
+  },
+  {
+   "id": "2f206509-0258-4a45-b44b-7308df09bbe1",
+   "nr": "39110",
+   "title": "Geografisches Informationssytem (GIS+AM)",
+   "office": "BERNMOBIL Städt. Verkehrsbetriebe Bern (SVB)",
+   "date": "2026-11-07",
+   "type": "award",
+   "process": "open",
+   "deadline": null,
+   "cpv": [
+    "72000000"
+   ],
+   "score": 5,
+   "hits": [
+    "SAP"
+   ],
+   "fields": {
+    "gegenstand": "BERNMOBIL beabsichtigt die Einführung von einem digitalen Geografischen Informationssystems (GIS) sowie einem Anlagenmanagementsystems (AM). Die vorhandenen Umsysteme wie zum Beispiel RailCloud (im Bereich der Fahrbahn) oder SAP (BERNMOBIL übergreifend) welche heute bereits Objektdaten-, Wartungs- und Instandhaltungsaufträge führen sind dabei zu berücksichtigen und einzubinden. Für die Infrastruktur von Fahrstrom- und Sicherungsanlagen sowie Energie & Telematik besteht heute noch kein AM-System welches vergleichbare Funktionen wie das RailCloud aufweist.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/2f206509-0258-4a45-b44b-7308df09bbe1",
+   "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: BERNMOBIL beabsichtigt die Einführung von einem digitalen Geografischen Informationssystems (GIS) sowie einem Anlagenmanagementsystems (AM). \n      Die vorhandenen Umsysteme wie zum Beispiel RailCloud (im Bereich der Fahrbahn) oder SAP (BERNMOBIL übergreifend) welche heute bereits Objektdaten-, Wartungs- und Instandhaltungsaufträge führen sind dabei zu berücksichtigen und einzubinden. Für die Infrastruktur von Fahrstrom- und Sicherungsanlagen sowie Energie & Telematik besteht heute noch kein AM-System welches vergleichbare Funktionen wie das RailCloud aufweist.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 3007\n      name: BERNMOBIL Städt. Verkehrsbetriebe Bern (SVB)\n      url: https://bernmobil.ch\n      street: Eigerplatz 3\n      city: Bern\n    title: Geografisches Informationssytem (GIS+AM)\n    stateContractArea: ja\n    publicationTed: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: Basler & Hofmann AG\n        vendorAddress:\n          street: Forchstrasse 395\n          city: Zürich\n          postalCode: 8008\n        price:\n          currency: chf\n          price: 841760.65\n          vatType: full\n    numberOfSubmissions: 3\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-11-03\n    awardDecisionJustification: Die Zuschlagsempfängerin hat gesamthaft gemäss den publizierten Zuschlagskriterien die höchsten Wertungen erzielt und das vorteilhafteste Angebot eingereicht (Art. 41 Interkantonale Vereinbarung über das öffentliche Beschaffungswesen, IVöB). Das Angebot entspricht den Anforderungen und enthält alle verlangten Beilagen.\n      Der Punkterückstand der zweitplatzierten Anbieterin gegenüber der erstplatzierten ergibt sich aus der Bewertung der ZK 1 (Wirtschaftlichkeit), ZK 3 (Schlüsselpersonen), ZK4 (Nachhaltigkeit). Darüber hinaus überzeugte das Konzept mit allen geforderten Details, die als gut und nachvollziehbar dokumentiert wurden.\n    awardDecisionNote: Die vorliegende Zuschlagserteilung erfolgt unter Vorbehalt der Genehmigung der für die Beschaffung erforderlichen Kredite.\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 IVöB innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Regierungsstatthalteramt Bern-Mittelland, Poststrasse 25, 3071 Ostermundigen erhoben werden. Eine allfällige Beschwerde muss einen Antrag, die Angaben von Tatsachen und Beweismitteln, eine Begründung sowie eine Unterschrift enthalten. Die angefochtene Verfügung und greifbare Beweismittel sind beizulegen. Einer allfälligen Beschwerde kommt keine aufschiebende Wirkung zu (Art. 54 Abs. 1 IVöB)\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 39110-01\n    publicationDate: 2026-06-17\n  base:\n    publicationTed: ja\n    title: Geografisches Informationssytem (GIS+AM)\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: award\n    publicationNumber: 39110-02\n    publicationDate: 2026-11-07\n    creationLanguage: de\n    projectNumber: 39110"
+  },
+  {
+   "id": "caef9c0f-92dc-470d-aa49-235cca6d04e7",
+   "nr": "40905",
+   "title": "Acquisition et intégration d'une solution de gestion électronique des documents (GED) pour l'administration communale",
+   "office": "Conseil communal de Villars-sur-Glâne ",
+   "date": "2026-11-05",
+   "type": "award",
+   "process": "open",
+   "deadline": null,
+   "cpv": [
+    "48000000",
+    "48613000"
+   ],
+   "score": 5,
+   "hits": [
+    "Digitalisierung"
+   ],
+   "fields": {
+    "gegenstand": "Le présent marché a pour objet l'acquisition, l'intégration et la maintenance d'une solution de gestion électronique des documents (GED) pour l'administration communale de Villars-sur-Glâne (environ 100 postes de travail), y compris la numérisation centralisée du courrier entrant, la reprise des données existantes, la formation des administrateurs et référents, et les prestations d'exploitation associées. L'analyse préalable des besoins a identifié la solution M-Files comme référence apte à couvrir les besoins de la Commune, notamment en raison de son adoption par plusieurs communes romandes de taille comparable, de son ergonomie et de sa capacité à appliquer les règles du cycle de vie des dossiers et documents. Conformément à la législation sur les marchés publics, cette référence n’exclut pas la présentation d’autres solutions : toute solution équivalente satisfaisant aux exigences fonctionnelles et techniques du présent document sera admise et évaluée selon les mêmes critères (« M-Files ou équivalent »). Au surplus, il est renvoyé aux documents d’appel d’offres. Gegenstand der vorliegenden Beschaffung ist die Beschaffung, Implementierung und Wartung einer elektronischen Dokumen…",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/caef9c0f-92dc-470d-aa49-235cca6d04e7",
+   "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Le présent marché a pour objet l'acquisition, l'intégration et la maintenance d'une solution de gestion électronique des documents (GED) pour l'administration communale de Villars-sur-Glâne (environ 100 postes de travail), y compris la numérisation centralisée du courrier entrant, la reprise des données existantes, la formation des administrateurs et référents, et les prestations d'exploitation associées.\n      L'analyse préalable des besoins a identifié la solution M-Files comme référence apte à couvrir les besoins de la Commune, notamment en raison de son adoption par plusieurs communes romandes de taille comparable, de son ergonomie et de sa capacité à appliquer les règles du cycle de vie des dossiers et documents. Conformément à la législation sur les marchés publics, cette référence n’exclut pas la présentation d’autres solutions : toute solution équivalente satisfaisant aux exigences fonctionnelles et techniques du présent document sera admise et évaluée selon les mêmes critères (« M-Files ou équivalent »).\n       \n      Au surplus, il est renvoyé aux documents d’appel d’offres. \n      \n      Gegenstand der vorliegenden Beschaffung ist die Beschaffung, Implementierung und Wartung einer elektronischen Dokumentenmanagement-Lösung (DMS) für die Gemeindeverwaltung Villars-sur-Glâne (rund 100 Arbeitsplätze), einschliesslich der zentralisierten Digitalisierung der eingehenden Post, der Übernahme bestehender Daten, der Schulung der Administratorinnen und Administratoren sowie der Fachverantwortlichen (Key User) und der damit verbundenen Betriebsleistungen.\n       \n      Die vorgängige Bedarfsanalyse hat ergeben, dass die Lösung M-Files als Referenz geeignet ist, die Bedürfnisse der Gemeinde abzudecken, insbesondere aufgrund ihres Einsatzes in mehreren Westschweizer Gemeinden vergleichbarer Grösse, ihrer Benutzerfreundlichkeit sowie ihrer Fähigkeit, die Regeln des Lebenszyklusmanagements von Dossiers und Dokumenten abzubilden. Gemäss der Gesetzgebung über das öffentliche Beschaffungswesen schliesst diese Referenz die Einreichung anderer Lösungen nicht aus: Jede gleichwertige Lösung, welche die funktionalen und technischen Anforderungen der vorliegenden Ausschreibungsunterlagen erfüllt, wird zugelassen und nach denselben Kriterien bewertet («M-Files oder gleichwertig»).\n       \n      Im Übrigen wird auf die Ausschreibungsunterlagen verwiesen.\n    additionalCpvCodes:\n      - code: 48613000\n        label: Elektronische Datenverwaltung\n    cpvCode:\n      code: 48000000\n      label: Softwarepaket und Informationssysteme\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 1752\n      name: Conseil communal de Villars-sur-Glâne\n      url: https://www.villars-sur-glane.ch\n      street: Route du Petit-Moncor 1b\n      city: Villars-sur-Glâne\n    title: Acquisition et intégration d'une solution de gestion électronique des documents (GED) pour l'administration communale\n    stateContractArea: ja\n  decision:\n    vendors:\n      - vendorName: Tebicom SA\n        vendorAddress:\n          street: Route du Petit Moncor 1 a\n          city: Villars-sur-Glâne\n          postalCode: 1752\n        price:\n          currency: chf\n          price: 486477.0\n          vatType: full\n    numberOfSubmissions: 4\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-11-02\n    remediesNotice: Cette décision peut, dans un délai de 20 jours dès la présente publication, faire l'objet d'un recours auprès du Tribunal cantonal, section administrative, Rue des Augustins 3, Case postale 630, 1701 Fribourg.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 40905-01\n    publicationDate: 2026-08-27\n  base:\n    title: Acquisition et intégration d'une solution de gestion électronique des documents (GED) pour l'administration communale\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: award\n    publicationNumber: 40905-02\n    publicationDate: 2026-11-05\n    creationLanguage: fr\n    projectNumber: 40905"
+  },
+  {
+   "id": "5b7cdabd-b7c9-480d-b240-673d58398260",
+   "nr": "42736",
+   "title": "Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem",
+   "office": "DIB - Elektrizitätswerk der Stadt Zürich (ewz)",
+   "date": "2026-11-03",
+   "type": "award",
+   "process": "open",
+   "deadline": null,
+   "cpv": [
+    "71000000",
+    "72314000"
+   ],
+   "score": 5,
+   "hits": [
+    "SAP"
+   ],
+   "fields": {
+    "gegenstand": "Los 1: Aktualisierung und Bereinigung von Schematas mit KKS-Code • Vereinheitlichung der KKS-Kennzeichnung in den R&I-Fliessbildern • Auswertung der KKS-Kennzeichnungen und Aufbau Gesamtdatenbestand • Ergänzung des Datenbestandes um Texte und Metadaten • Vor-Ort-Abgleich mit der technischen Anlage • Aktualisierung der Fliessbilder und erneute Datenvalidierung • Integration der elektrotechnischen KKS-Daten • Betriebsunterstützung für drei Jahre Weitere Details sind im Dokument «5_Technischer Teil» ersichtlich. / Systemvorbereitung und Datenmigration •Systemvorbereitung ADAM •Keyuser Schulung ADAM •Datenmigration nach ADAM •Aufbereitung der Daten und Integration in SAP-PM Weitere Details sind im Dokument «5_Technischer Teil» ersichtlich.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "Los 1: Aktualisierung und Bereinigung von Schematas mit KKS-Code; Los 2: Systemvorbereitung und Datenmigration",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/5b7cdabd-b7c9-480d-b240-673d58398260",
+   "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Los 1: Aktualisierung und Bereinigung von Schematas mit KKS-Code\n      • Vereinheitlichung der KKS-Kennzeichnung in den R&I-Fliessbildern\n      • Auswertung der KKS-Kennzeichnungen und Aufbau Gesamtdatenbestand\n      • Ergänzung des Datenbestandes um Texte und Metadaten\n      • Vor-Ort-Abgleich mit der technischen Anlage\n      • Aktualisierung der Fliessbilder und erneute Datenvalidierung\n      • Integration der elektrotechnischen KKS-Daten\n      • Betriebsunterstützung für drei Jahre\n      \n      Weitere Details sind im Dokument «5_Technischer Teil» ersichtlich.\n    additionalCpvCodes:\n      - code: 71000000\n        label: Dienstleistungen von Architektur-, Konstruktions- und Ingenieurbüros und Prüfstellen\n      - code: 72314000\n        label: Datenerhebung und -zusammentragung\n    cpvCode:\n      code: 71000000\n      label: Dienstleistungen von Architektur-, Konstruktions- und Ingenieurbüros und Prüfstellen\n    projectOrderDescription: Im Bereich Wärmeproduktion sind sämtliche Produktionsanlagen und deren Komponenten mit einem KKS (Kraftwerk-Kennzeichnungssystem) ausgezeichnet. Diese Informationen finden sich in den zugehörigen R&I Schemata und Einlinienschaltpläne wieder. Weiter wird ein zentrales Excel als KKS-Gesamtliste geführt mit der KKS-Struktur und den KKS-Codes. \n      \n      Aufgrund der fehlenden Synchronisation der Schemata und der KKS-Gesamtliste, kam es über die Jahrzehnte zu Differenzen zwischen den Schemata und auch gegenüber den Produktionsanlagen.\n      \n      ewz möchte im Bereich KVA & Holz ebenfalls die KKS-Verwaltungslösung ADAM von der Firma Menger Engineering GmbH nutzen, wie dies bereits seit vielen Jahren im Bereich Hydro der Fall ist. Diese Lösung integriert die CAD-Zeichnungen und deren KKS-Kennzeichnung mit der zentralen Verwaltung und erstellt in SAP die zugehörigen technischen Plätze für die Instandhaltung.\n      \n      Um diese Lösung nutzen zu können, müssen die Stammdatengrundlagen korrekt sein. Aus diesem Grund schreibt ewz folgende Tätigkeit aus:\n      \n      •Vereinheitlichung der KKS-Kennzeichnung in den R&I-Fliessbildern\n      •Auswertung der KKS-Kennzeichnungen und Aufbau Gesamtdatenbestand\n      •Ergänzung des Datenbestandes um Texte und Metadaten\n      •Vor-Ort-Abgleich mit der technischen Anlage\n      •Aktualisierung der Fliessbilder und erneute Datenvalidierung\n      •Integration der elektrotechnischen KKS-Daten\n      •Systemvorbereitung ADAM\n      •Keyuser Schulung ADAM\n      •Datenmigration und Datenaufbau in ADAM\n      •Aufbereitung der Daten und Integration in SAP-PM\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 8050\n      name: DIB - Elektrizitätswerk der Stadt Zürich (ewz)\n      contactPerson: Tobias Teubner\n      url: https://www.ewz.ch\n      street: Tramstrasse 35\n      city: Zürich\n    procurementRecipientAddress:\n      postalCode: 8050\n      name: DIB - Elektrizitätswerk der Stadt Zürich (ewz)\n      contactPerson: Tobias Teubner\n      url: https://www.ewz.ch\n      street: Tramstrasse 35\n      city: Zürich\n    title: Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: eicher+pauli Luzern AG\n        vendorAddress:\n          street: Arsenalstrasse 21\n          city: Kriens\n          postalCode: 6010\n        price:\n          currency: chf\n          price: 475640.0\n          vatType: full\n    numberOfSubmissions: 3\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-11-02\n    awardDecisionJustification: Ausschlaggebend für die höchste Gesamtpunktzahl waren insbesondere das günstigste Angebot, die überzeugende Auftragsanalyse, die sehr guten Referenzen sowie die ausgewiesenen Leistungen im Bereich Nachhaltigkeit.\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen seit deren Eröffnung durch Publikation beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen, sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Verfügung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und soweit möglich beizulegen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 42736-01\n    publicationDate: 2026-08-20\n  base:\n    title: Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem\n    projectType: tender\n    processType: open\n    lotsType: with\n    type: award\n    publicationNumber: 42736-02\n    publicationDate: 2026-11-03\n    creationLanguage: de\n    projectNumber: 42736\n  lot:\n    lotNumber: 1\n    title: Aktualisierung und Bereinigung von Schematas mit KKS-Code\n    projectSubType: service\n\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Systemvorbereitung und Datenmigration\n      \n      •Systemvorbereitung ADAM\n      •Keyuser Schulung ADAM\n      •Datenmigration nach ADAM\n      •Aufbereitung der Daten und Integration in SAP-PM\n      \n      Weitere Details sind im Dokument «5_Technischer Teil» ersichtlich.\n    additionalCpvCodes:\n      - code: 71000000\n        label: Dienstleistungen von Architektur-, Konstruktions- und Ingenieurbüros und Prüfstellen\n      - code: 72314000\n        label: Datenerhebung und -zusammentragung\n    cpvCode:\n      code: 71000000\n      label: Dienstleistungen von Architektur-, Konstruktions- und Ingenieurbüros und Prüfstellen\n    projectOrderDescription: Im Bereich Wärmeproduktion sind sämtliche Produktionsanlagen und deren Komponenten mit einem KKS (Kraftwerk-Kennzeichnungssystem) ausgezeichnet. Diese Informationen finden sich in den zugehörigen R&I Schemata und Einlinienschaltpläne wieder. Weiter wird ein zentrales Ex\n  [… gekürzt]"
   },
   {
    "id": "77bb9875-f7fb-48fd-a921-c7bab138b704",
@@ -507,6 +879,123 @@
    },
    "url": "https://www.simap.ch/de/project-detail/77bb9875-f7fb-48fd-a921-c7bab138b704",
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 3003\n      name: Bundesamt für Gesundheit BAG\n      contactPerson: Abteilung Leistungen Krankenversicherung LKV\n      street: Schwarzenburgstrasse 157\n      city: Bern\n    procurementRecipientAddress:\n      name: Bundesamt für Gesundheit BAG\n      contactPerson: Abteilung Leistungen Krankenversicherung LKV\n    title: (26260) 316 Forensische Datenanalysen zwecks Rückforderung zu Unrecht in Rechnung gestellter Covid-Testkosten\n    documentsLanguages:\n      - de\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n      - fr\n      - it\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    documentsLanguagesNote: Die Ausschreibungsunterlagen sind in deutscher und französischer Sprache erhältlich. Bei Widersprüchen zwischen den Fassungen ist die deutsche Version massgebend.\n    offerSpecificNote: Das vollständige Angebot (vgl. Vorgaben unter Ziffer 7.2 des Pflichtenhefts) ist bis spätestens am 23.12.2026 elektronisch via simap-Plattform einzureichen.\n      \n      Für vorbefasste Firmen – auch wenn sie in der Vorbereitung lediglich Teil einer Arbeitsgemeinschaft waren – gilt die Einreichungsfrist nach Pflichtenheft Ziff. 8.1 «Zum Verfahren zugelassene vorbefasste Anbieter».\n      \n      Hinweise:\n      - Bitte laden Sie keine einzelnen Dokumente hoch, sondern fügen Sie vor dem Hochladen alle Angebotsbestandteile in einem ZIP-Ordner zusammen.\n      - Stellen Sie sicher, dass Sie die Übermittlung des Angebots mittels der Schaltfläche «Angebot einreichen» abschliessen und der Status auf «Angebot eingereicht» in grüner Farbe wechselt, ansonsten Ihr Angebot nicht als eingereicht gilt. Sie erhalten eine von der simap-Plattform automatisch generierte Bestätigung via E-Mail.\n      \n      Zu spät eingereichte Angebote können nicht berücksichtigt werden.\n      \n      Zudem ist Folgendes zu beachten:\n      Das Angebot ist durch die zeichnungsberechtigte(n) Person(en) gültig zu unterzeichnen.\n  procurement:\n    orderDescription: Leistungen im Bereich der Datenanalyse, um die Arbeiten im Rahmen zu Unrecht in Rechnung gestellter Covid-19-Testkosten weiterführen und abschliessen zu können.\n    processType: open\n    orderType: service\n    cpcCode:\n      code: b7f1e45b-1fe5-4e19-8cbb-98006291267d\n      label: Datenverarbeitung und verbundene Dienstleistungen\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Bern und anderswo.\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-04-01\n        - 2028-12-31\n    executionNote: Beginn: 01.04.2027, Ende: 31.12.2027 (Grundauftrag)\n      Beginn: 01.01.2028, Ende: 31.12.2028 (Option 1)\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-04-01\n        - 2027-12-31\n    canContractBeExtended: yes\n    options: yes\n    optionsNote: Option 1: Verlängerung der Leistungen bis 31.12.2028\n      Option 2: Zusätzliche 1000 Stunden\n    cpvCode:\n      code: 72316000\n      label: Datenanalyse\n  terms:\n    termsType: in_documents\n    consortiumAllowed: yes\n    consortiumMultiApplicationAllowed: yes\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    preInvolvedVendor: Die Firma Blacklight Analytics AG hat die bisherigen Analysen erarbeitet und dieses Mandat endet in der ersten Jahreshälfte 2027. Beispiele von bisher erarbeiteten Datenanalysen und Berichten sind dieser Ausschreibung beigefügt.\n      Die Frist zur Einreichung einer allfälligen Offerte durch die vorbefasste Firma oder Bietergemeinschaft, an der diese Firma beteiligt ist, endet am 09.12.2026. Für alle anderen Anbieter gilt die Frist gemäss Ziff. 9.1.3 des Pflichtenhefts «Frist für die Einreichung des Angebotes». \n      Gestützt auf diese Massnahmen wird die Firma Blacklight Analytics AG im Verfahren als Anbieterin zugelassen (Art. 14 BöB).\n    termsOfBusiness: Geschäftsabwicklung gemäss den Allgemeinen Geschäftsbedingungen des Bundes (AGB) für \n      - Informatikdienstleistungen (Ausgabe Oktober 2010, Stand Januar 2024)\n      Abrufbar unter: https://www.bkb.admin.ch/de/agb-des-bundes\n      \n      ergänzt durch die Standardbestimmungen vom 01. Januar 2026 zur Informationssicherheit mit Bezug zu Informatikmitteln des Bundes ohne Abgabe von Bundesgeräten (I2).\n      Abrufbar auf der Website des SEPOS (https://www.sepos.admin.ch/de/sicherheit-in-der-beschaffung) sowie den Ausschreibungsunterlagen beigelegt.\n    termsOfPayment: 30 Tage nach Erhalt der Rechnung, netto in CHF, zuzüglich MwSt. Korrekte Rechnungsstellung mittels E-Rechnung vorausgesetzt.\n      Informationen der Bundesverwaltung zur E-Rechnung finden Sie auf folgender Webseite: https://www.efv.admin.ch/efv/de/home/efv/erechnung/aktuell.html\n    includedCosts: Alle Preisangaben sind in Schweizer Franken (CHF) und exkl. MwSt. auszuweisen. Der Preis exkl. MwSt. beinhaltet insbesondere Versicherung, Spesen, Sozialabgaben etc.\n    securityDeposits: Keine.\n    nonWTORequirements: Keine.\n    termsNote: Die in Anhang 1 aufgeführten Teilnahmebedingungen müssen vollständig und ohne Einschränkung oder Modifikation erfüllt und nachgewiesen werden, ansonsten wird nicht auf das Angebot eingegangen.\n    otherRequirements: Kreditvorbehalt: Vorbehalten bleiben die jährlichen Kreditanträge und -beschlüsse der zuständigen Organe des Bundes zu Voranschlag und Finanzplan.\n    consortiumNote: Nimmt der Anbieter als Bietergemeinschaft am Verfahren teil, muss er eine Unternehmung bezeichnen, welche die Federführung (Stellvertretung, Koordination) übernimmt. Der Anbieter führt alle Beteiligten mit den ihnen zugewiesenen Rollen auf.\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (Bö\n  [… gekürzt]"
+  },
+  {
+   "id": "f49f8fee-d889-43f1-b145-465bb602dd25",
+   "nr": "37229",
+   "title": "Rahmenverträge über die Erbringung von IT-Entwicklungs- und Supportleistungen",
+   "office": "Kantonale Gebäudeversicherung (Akinoa Sàrl)",
+   "date": "2026-10-09",
+   "type": "award",
+   "process": "open",
+   "deadline": null,
+   "cpv": [
+    "72230000",
+    "72267100"
+   ],
+   "score": 5,
+   "hits": [
+    "Künstliche Intelligenz"
+   ],
+   "fields": {
+    "gegenstand": "Die KGV (Kantonale Gebäudeversicherung) ist dafür zuständig, alle Gebäude im Kanton Freiburg zu versichern und zur Prävention sowie zur Bekämpfung von Bränden und Naturgefahren beizutragen. Sie führt IT-Entwicklungsprojekte durch, die ihren internen Nutzern und externen Partnern zugutekommen, deren Tätigkeit die Bereiche Gebäudeversicherung, Brandschutz oder Naturgefahrenprävention betrifft. Ziel dieser Ausschreibung ist es, Dienstleister auszuwählen, die über Fachwissen und fundierte Erfahrung im Bereich der durch künstliche Intelligenz (KI) unterstützten Entwicklung verfügen. Um eine dauerhafte Beziehung zu vertrauenswürdigen Partnern aufzubauen und gleichzeitig die Vielfalt der angefragten Dienstleister sowie einen gesunden Wettbewerb zwischen ihnen zu gewährleisten, möchte die KGV Rahmenverträge über IT-Entwicklungs- und Wartungsdienstleistungen mit drei Marktteilnehmern abschliessen.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/f49f8fee-d889-43f1-b145-465bb602dd25",
+   "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Die KGV (Kantonale Gebäudeversicherung) ist dafür zuständig, alle Gebäude im Kanton Freiburg zu versichern und zur Prävention sowie zur Bekämpfung von Bränden und Naturgefahren beizutragen. Sie führt IT-Entwicklungsprojekte durch, die ihren internen Nutzern und externen Partnern zugutekommen, deren Tätigkeit die Bereiche Gebäudeversicherung, Brandschutz oder Naturgefahrenprävention betrifft.\n      Ziel dieser Ausschreibung ist es, Dienstleister auszuwählen, die über Fachwissen und fundierte Erfahrung im Bereich der durch künstliche Intelligenz (KI) unterstützten Entwicklung verfügen.\n      Um eine dauerhafte Beziehung zu vertrauenswürdigen Partnern aufzubauen und gleichzeitig die Vielfalt der angefragten Dienstleister sowie einen gesunden Wettbewerb zwischen ihnen zu gewährleisten, möchte die KGV Rahmenverträge über IT-Entwicklungs- und Wartungsdienstleistungen mit drei Marktteilnehmern abschliessen.\n    additionalCpvCodes:\n      - code: 72267100\n        label: Wartung von Informationstechnologiesoftware\n    cpvCode:\n      code: 72230000\n      label: Entwicklung von kundenspezifischer Software\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 1020\n      name: Kantonale Gebäudeversicherung (Akinoa Sàrl)\n      contactPerson: Jean-Paul Gaspoz\n      street: Rue du Bugnon 42\n      city: Renens\n    procurementRecipientAddress:\n      postalCode: 1763\n      name: Abteilung für Informatik und Digitalisierung\n      contactPerson: Thierry Prêtre\n      street: Maison-de-Montenach 1\n      city: Granges-Paccot\n    title: Rahmenverträge über die Erbringung von IT-Entwicklungs- und Supportleistungen\n    stateContractArea: ja\n    publicationTed: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: Digital Solutions SA\n        vendorAddress:\n          street: Rue de la Roche-de-Mars 5\n          city: Porrentruy\n          postalCode: 2900\n        price:\n          currency: chf\n          price: 466992.0\n          vatType: full\n      - vendorName: QIM Info SA\n        vendorAddress:\n          street: rue du Tunnel 15-17\n          city: Carouge GE\n          postalCode: 1227\n        price:\n          currency: chf\n          price: 485455.48\n          vatType: full\n      - vendorName: Softcom Technologies SA\n        vendorAddress:\n          street: Route du Jura 37 A\n          city: Fribourg\n          postalCode: 1700\n        price:\n          currency: chf\n          price: 576173.0\n          vatType: full\n    numberOfSubmissions: 11\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-09-08\n    awardDecisionJustification: Als erfolgreiche Angebote gelten die zulässigen Angebote mit den günstigsten Konditionen. Sie zeichnen sich durch attraktive finanzielle Konditionen, die Qualität der für die Dienstleistung vorgeschlagenen Mitarbeitenden sowie durch eine sehr gute Beherrschung der Methoden und Werkzeuge der KI-gestützten Entwicklung aus.\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen ab Publikation beim Kantonsgericht, Verwaltungsrechtliche Abteilung, Rue des Augustins 3, Postfach 630, 1701 Freiburg, Beschwerde eingereicht werden.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 37229-01\n    publicationDate: 2026-05-22\n  base:\n    publicationTed: ja\n    title: Rahmenverträge über die Erbringung von IT-Entwicklungs- und Supportleistungen\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: award\n    publicationNumber: 37229-02\n    publicationDate: 2026-10-09\n    creationLanguage: fr\n    translationLanguages:\n      - language: de\n        type: complete\n    projectNumber: 37229\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:704131-2026:HTML:FR:HTML"
+  },
+  {
+   "id": "32a60420-726d-48e6-a81a-a8682c941b3a",
+   "nr": "37291",
+   "title": "Einführung Self-Service Procurement & Katalogmanagement (USZ)",
+   "office": "Universitätsspital Zürich",
+   "date": "2026-10-08",
+   "type": "award",
+   "process": "open",
+   "deadline": null,
+   "cpv": [
+    "48100000",
+    "48490000"
+   ],
+   "score": 5,
+   "hits": [
+    "SAP"
+   ],
+   "fields": {
+    "gegenstand": "Das Universitätsspital (USZ) beabsichtigt die bestehende zentrale Einkaufsplattform EBIS (SAP SRM7) durch eine moderne Lösung zu ersetzen. Gegenstand dieser Ausschreibung ist die Evaluation von Software und eines Implementierungspartners. Die neue Lösung soll effiziente Workflows, Transparenz, Compliance sowie die Zusammenarbeit mit internen und externen Stakeholdern verbessern und sich flexibel in die bestehende Systemlandschaft integrieren. Zudem soll sie die strategischen wie operativen Anforderungen des Einkaufs des USZ ganzheitlich abdecken.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/32a60420-726d-48e6-a81a-a8682c941b3a",
+   "text": "\n  procurement:\n    additionalCpvCodes:\n      - code: 48490000\n        label: Softwarepaket für das Beschaffungswesen\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: supply\n    orderDescription: Das Universitätsspital (USZ) beabsichtigt die bestehende zentrale Einkaufsplattform EBIS (SAP SRM7) durch eine moderne Lösung zu ersetzen.\n      Gegenstand dieser Ausschreibung ist die Evaluation von Software und eines Implementierungspartners. \n      Die neue Lösung soll effiziente Workflows, Transparenz, Compliance sowie die Zusammenarbeit mit internen und externen Stakeholdern verbessern und sich flexibel in die bestehende Systemlandschaft integrieren. Zudem soll sie die strategischen wie operativen Anforderungen des Einkaufs des USZ ganzheitlich abdecken.\n    supplyType: buy\n    cpvCode:\n      code: 48100000\n      label: Branchenspezifisches Softwarepaket\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 8091\n      name: Universitätsspital Zürich\n      contactPerson: Bürgler, Patrick\n      street: Rämistrasse\n      city: Zürich\n    procurementRecipientAddress:\n      postalCode: 8091\n      name: Universitätsspital Zürich\n      contactPerson: Bürgler, Patrick\n      street: Rämistrasse\n      city: Zürich\n    title: Einführung Self-Service Procurement & Katalogmanagement (USZ)\n    stateContractArea: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: Veenion GmbH\n        vendorAddress:\n          street: Europaallee 11-13\n          city: Kaiserslautern\n          postalCode: 67657\n        price:\n          currency: chf\n          price: 1026061.0\n          vatType: no_vat\n    numberOfSubmissions: 8\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-10-07\n    awardDecisionJustification: Die Vergabe erfolgt an das vorteilhaftesten Angebot gemäss Zuschlagskriterien.\n    remediesNotice: Gegen diesen Beschluss kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Verfügung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 37291-01\n    publicationDate: 2026-05-16\n  base:\n    title: Einführung Self-Service Procurement & Katalogmanagement (USZ)\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: award\n    publicationNumber: 37291-02\n    publicationDate: 2026-10-08\n    creationLanguage: de\n    projectNumber: 37291"
+  },
+  {
+   "id": "fd42a0d2-a38f-4595-a1e8-99f24bf071b3",
+   "nr": "33885",
+   "title": "Ausschreibung Preferred Supplier Modell",
+   "office": "Sihltal Zürich Uetliberg Bahn SZU AG",
+   "date": "2026-10-13",
+   "type": "award",
+   "process": "open",
+   "deadline": null,
+   "cpv": [
+    "72000000",
+    "72220000",
+    "72221000",
+    "72224000",
+    "72246000",
+    "72260000",
+    "79400000"
+   ],
+   "score": 4,
+   "hits": [
+    "Workshop"
+   ],
+   "fields": {
+    "gegenstand": "Beratung der SZU-Geschäftsleitung zu ICT-Strategie, Governance und Transformation. Durchführung von Reifegradanalysen, Erarbeitung von Entscheidungsgrundlagen und Begleitung von Verbesserungsinitiativen. Moderation von Workshops mit Management und Betrieb. Pensum: 60 % (132 Tage/Jahr). / Leitung und Koordination von Transformationsprojekten inkl. Roadmap-Pflege, Stakeholder-Kommunikation, Lieferantensteuerung sowie Erstellung von Management- und Gremienunterlagen. Zwei Senioritätsstufen. Pensum gesamt: 240 % (528 Tage/Jahr). / Planung, Steuerung und Umsetzung von ICT-Projekten nach klassischem/hybridem Vorgehen. Verantwortung für Termine, Kosten, Qualität, Scope und Risiken inkl. Rollout, Cutover und Hypercare. Pensum: 200 % (440 Tage/Jahr).",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "Los 1: Business Consultant / Management Berater:in; Los 2: Projekt- und Teilprojektleiter:in; Los 3: ICT Projektleiter:in",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/fd42a0d2-a38f-4595-a1e8-99f24bf071b3",
+   "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Beratung der SZU-Geschäftsleitung zu ICT-Strategie, Governance und Transformation. Durchführung von Reifegradanalysen, Erarbeitung von Entscheidungsgrundlagen und Begleitung von Verbesserungsinitiativen. Moderation von Workshops mit Management und Betrieb. Pensum: 60 % (132 Tage/Jahr).\n    additionalCpvCodes:\n      - code: 72221000\n        label: Beratung im Bereich Unternehmensanalyse\n      - code: 79400000\n        label: Unternehmens- und Managementberatung und zugehörige Dienste\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    projectOrderDescription: Damit der SZU ab September 2026 eine vertragliche Basis für den Abruf von Dienstleistungen zur Verfügung steht, sucht die SZU Partnerfirmen für folgende Rollen (eine Rolle je Los):\n      \n      Los \t\tRolle\n      1 \t\t\tBusiness Consultant / Management Berater:in\n      2 \t\t\tSupport Programmleitung / Projekt- und Teilprojektleiter:in\n      3 \t\t\tICT Projektleiter:in\n      4 \t\t\tEnterprise Architekt:in\n      5 \t\t\tBusiness- und Prozessanalyst:in\n      6 \t\t\tICT System Engineer\n      7 \t\t\tCISO\n      \n      In einigen Losen werden Personen mit unterschiedlichem Senioritätslevel gesucht.\n      \n      Ziel ist es, für die sieben Lose je maximal drei Partnerfirmen als Rahmenvertragsnehmerinnen unter Vertrag zu nehmen, die für eine Vertragsdauer von fünf Jahren auf Abruf zur Verfügung stehen.\n      \n      Eine Partnerfirma kann mehrere Lose (=mehrere Rollen) abdecken. Je Rolle und je Senioritätslevel ist eine Schlüsselperson zu definieren, die für die Leistungserfüllung verantwortlich ist. Eine Schlüsselperson kann mehrere Rollen und/oder mehrere Senioritätslevel abdecken.\n      \n      Für die individuellen Abrufe von Leistungen werden jeweils Einzelverträge abgeschlossen. Es besteht keine konkrete Grundleistung. Inhalt, Umfang und Zeitbedarf für die Leistungserbringung ergibt sich aus dem jeweiligen Abruf.\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 8045\n      name: Sihltal Zürich Uetliberg Bahn SZU AG\n      url: https://www.szu.ch\n      street: Wolframplatz 21\n      city: Zürich\n    procurementRecipientAddress:\n      postalCode: 8045\n      name: Sihltal Zürich Uetliberg Bahn SZU AG\n      url: https://www.szu.ch\n      street: Wolframplatz 21\n      city: Zürich\n    title: Ausschreibung Preferred Supplier Modell\n    stateContractArea: ja\n    publicationTed: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: APEXA GmbH\n        vendorAddress:\n          street: Rütistrasse 10+12\n          city: Baden\n          postalCode: 5400\n        price:\n          currency: chf\n          price: 947478.88\n          vatType: full\n      - vendorName: consulteer ag\n        vendorAddress:\n          street: Riedweg 6\n          city: Meggen\n          postalCode: 6045\n        price:\n          currency: chf\n          price: 1018653.95\n          vatType: full\n      - vendorName: kiwi Consultants AG\n        vendorAddress:\n          street: Beundenfeldstrasse 13\n          city: Bern\n          postalCode: 3013\n        price:\n          currency: chf\n          price: 1065317.07\n          vatType: full\n    numberOfSubmissions: 39\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-10-12\n    awardDecisionJustification: Die Firmen Consulteer AG, APEXA GmbH und kiwi Consultants AG haben basierend auf der Bewertung der eingegangenen Angebote und der Beurteilung der Zuschlagskriterien 413.12, 391.40 resp. 390.70 von 500.00 möglichen Punkten erreicht. Damit erzielen sie die drei höchsten Gesamtpunktzahlen und stellen dementsprechend die vorteilhaftesten Angebote dar. Die massgebenden Merkmale und Vorteile des Angebotes der Firma Consulteer AG liegen insbesondere in der Bewertung der Zuschlagskriterien ZK 2 (Auftragsanalyse) und ZK 3 (Schlüsselperson Expert), jene der Firma APEXA GmbH insbesondere in der Bewertung der Zuschlagskriterien ZK 1 (Preis) und ZK 3 (Schlüsselperson Expert) und jene der Firma kiwi Consultants AG insbesondere in der Bewertung des Zuschlagskriteriums ZK 3 (Schlüsselperson Expert).\n    remediesNotice: Gegen diesen Zuschlag kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Zuschlagsverfügung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    corrected: ja\n    publicationNumber: 33885-02\n    publicationDate: 2026-05-15\n  base:\n    publicationTed: ja\n    title: Ausschreibung Preferred Supplier Modell\n    projectType: tender\n    processType: open\n    lotsType: with\n    stateContractArea: ja\n    type: award\n    publicationNumber: 33885-07\n    publicationDate: 2026-10-13\n    creationLanguage: de\n    projectNumber: 33885\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:710345-2026:HTML:DE:HTML\n  lot:\n    lotNumber: 1\n    title: Business Consultant / Management Berater:in\n    projectSubType: service\n\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Leitung und Koordination von Transformationsprojekten inkl. Roadmap-Pflege, Stakeholder-Kommunikation, Lieferantensteuerung sowie Erstellung von Management- und Gremienunterlagen. Zwei Senioritätsstufen. Pensum gesamt: 240 % (528 Tage/Jahr).\n    additionalCpvCodes:\n      - code: 72224000\n        label: Beratung im Bereich Projektleitung\n      - code: 72246000\n        label: Systemberatung\n    cpvCode:\n      code: 72000000\n      label: \n  [… gekürzt]"
+  },
+  {
+   "id": "f822d224-fba4-4651-9eee-2535ce16ebbc",
+   "nr": "44852",
+   "title": "Relaunch EHB-Website ",
+   "office": "Eidgenössische Hochschule für Berufsbildung EHB",
+   "date": "2026-11-07",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2026-11-30T00:00:00+01:00",
+   "cpv": [
+    "72000000",
+    "72212200",
+    "72212220",
+    "72413000",
+    "72415000",
+    "79822500",
+    "79961000",
+    "79970000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Gegenstand der Beschaffung ist die vollständige konzeptionelle, technische, gestalterische und inhaltliche Gesamterneuerung der Corporate Website der EHB (Relaunch) als integrierte Leistung aus Beratung, Entwicklung, Content-Erstellung, Implementierung und Betrieb.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/f822d224-fba4-4651-9eee-2535ce16ebbc",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 3052\n      name: Eidgenössische Hochschule für Berufsbildung EHB\n      street: Kirchlindachstrasse 79\n      city: Zollikofen\n    title: Relaunch EHB-Website\n    documentsLanguages:\n      - de\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n      - fr\n      - it\n    offerTypes:\n      - offer_digital_simap\n      - offer_external\n    publicationLanguages:\n      - de\n      - fr\n    processType: open\n    orderType: service\n    documentsLanguagesNote: Die Ausschreibungsunterlagen in der deutschen Sprachversion gelten als verbindliche Referenzfassung.\n    offerAddress:\n      postalCode: 3052\n      name: Eidgenössische Hochschule für Berufsbildung EHB\n      contactPerson: Projekt Website Relaunch – bitte nicht öffnen\n      street: Kirchlindachstrasse 79\n      city: Zollikofen\n  procurement:\n    orderDescription: Gegenstand der Beschaffung ist die vollständige konzeptionelle, technische, gestalterische und inhaltliche Gesamterneuerung der Corporate Website der EHB (Relaunch) als integrierte Leistung aus Beratung, Entwicklung, Content-Erstellung, Implementierung und Betrieb.\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 72212200\n        label: Entwicklung von Vernetzungs-, Internet- und Intranetsoftware\n      - code: 72212220\n        label: Entwicklung von Internet- und Intranetsoftware\n      - code: 72413000\n        label: Website-Gestaltung\n      - code: 72415000\n        label: Internetseitenbetreiberdienste\n      - code: 79822500\n        label: Dienstleistungen im Grafik-Design\n      - code: 79961000\n        label: Dienstleistungen des fotografischen Gewerbes\n      - code: 79970000\n        label: Verlagsdienste\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Schweiz\n    executionDeadlineType: not_specified\n    executionNote: Gemäss Vertrag\n    variants: no\n    partialOffers: no\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Einmalige Option für eine Verlängerung der Laufzeit um 1 bis max. 36 Monate.\n    options: yes\n    optionsNote: Die optionale Leistung umfasst die Implementierung von KI-Funktionalitäten im Backend und/oder Frontend. Die EHB kann die im Angebot enthaltene Option beziehen. Es besteht von Seiten der EHB keine Verpflichtung zum Bezug der Option. Von Seiten der Anbieterin/des Anbieters besteht kein Anspruch auf die Ausführung der optionalen Leistungen, selbst wenn diese im Angebot enthalten und bewertet wurden. Die EHB entscheidet im Laufe der Projektrealisierung, ob und zu welchem Zeitpunkt sie die angebotene optionale Leistung beziehen möchte.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    subContractorNote: Zieht der Anbieter zur Leistungserfüllung Subunternehmer bei, übernimmt er die Gesamtverantwortung. Er führt alle beteiligten Subunternehmer mit den ihnen zugewiesenen Rollen auf. \n      Die charakteristische Leistung ist grundsätzlich vom Anbieter zu erbringen.\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-12\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-07\n    initialPublicationDate: 2026-09-28\n    offerDeadline: 2026-11-30T00:00:00+01:00\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  correction:\n    initialPublicationDate: 2026-09-28\n    correctionDiffKeys:\n      - dates.offerDeadline\n    remarks: Folgendes wurde in den Ausschreibungsdokumenten berichtigt: \n      \n      Pflichtenheft \n      -\tDas Kapitel 6.3 wurde analog zu den Bezeichnungen im Preisblatt angepasst.\n      -\tIn Kapitel 13 wurde der Punkt «Entwicklung und Implementierung» ergänzt. \n      -\tIn Kapitel 8 und 15 wurde das Datum zur Einreichung des Angebots auf den 30.11.2026 angepasst.\n      \n      Anforderungskatalog\n      -\tIm Blatt C-Technische Spezifikationen wurde der Satz auf Zeile 2 folgendermassen angepasst «Die bereitgestellte Lösung muss für die folgenden Anforderungen Funktionen bereitstellen. Die Erfüllung der nachstehend aufgeführten Muss-Kriterien muss hier bestätigt werden.».\n      -\tIm Blatt C-Technische Spezifikationen wurde Zeile 26 folgendermassen angepasst «Für Entwicklung, Testing und Abnahme sowie Betrieb sind mindestens drei getrennte Systemumgebungen bereitzustellen.».\n      -\tIm Blatt E-Referenzen wurde der Satz auf Zeile 2 folgendermassen angepasst: «Die Go-Lives der Referenzprojekte dürfen nicht mehr als drei Jahre zurückliegen.»\n      \n      Vertrag\n      -\tAuf Seite 7 wurden die Behebungsfristen ergänzt. \n      \n      Preisblatt\n      -\tDie Hosting-Kosten im Ausland wurden gestrichen.\n      -\tDas Kostendach wurde klarer gekennzeichnet.\n      -\tEs wurden redaktionelle Änderungen zwecks Präzisierungen vorgenommen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n \n  [… gekürzt]"
   },
   {
    "id": "da7d21a8-ba11-4c33-8efd-407d9543b27e",
@@ -1610,32 +2099,6 @@
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 1470\n      name: Office fédéral des routes OFROU, Division Infrastructure routière Ouest, filiale Estavayer-le-Lac\n      contactPerson: N05.60 MP-230028 – 12064\n      street: Place de la Gare 7\n      city: Estavayer-le-Lac\n    procurementRecipientAddress:\n      postalCode: 1470\n      name: Office fédéral des routes OFROU, Division Infrastructure routière Ouest, filiale Estavayer-le-Lac\n      contactPerson: N05.60 MP-230028 – 12064\n      street: Place de la Gare 7\n      city: Estavayer-le-Lac\n    title: N05.60 MP-230028 - BSA Grandson - Areuse renouvellement - Fourniture, installation et mise en service du système de supervision/gestion AR Onnens/Concise/Lance (ID 12064)\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n      - fr\n      - it\n    offerTypes:\n      - offer_external\n      - offer_specific\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: construction\n    documentsSourceNote: Bezug der Ausschreibungsunterlagen\n      Ausschließlich www.simap.ch\n      \n      Die folgenden Dokumente können bis zum Ablauf der Einreichungsfrist auf simap.ch heruntergeladen werden:\n      P0 Ausschreibungsunterlagen \n      P1 Vertragsentwurf\n      P2 Verhaltenskodex\n      P3 Verhalten auf den RN\n      P4 Leistungsbeschreibung & Preisliste\n      P5 Allgemeine Geschäftsbedingungen KBOB 2024\n      P6 Zeitplan\n      P7 Technische Unterlagen\n    offerSpecificNote: Vollständige Unterlagen in Papierform (2 Exemplare) und in digitaler Form auf 2 USB-Sticks in einem versiegelten Umschlag, der die Nummer bzw. die offizielle Bezeichnung des Projekts sowie den Vermerk „Nicht öffnen, Ausschreibungsunterlagen“ trägt.\n      Bei postalischem Versand (mindestens per A-Post) entscheidet der Poststempel oder der Barcode der Schweizerischen Post oder einer offiziell anerkannten ausländischen Poststelle darüber, ob die Einreichungsfrist eingehalten wurde (vom Unternehmen selbst aufgebrachte Frankatur gilt nicht als Poststempel).\n      Bei persönlicher Abgabe muss das Angebot spätestens innerhalb der oben genannten Frist während der Öffnungszeiten (Montag bis Donnerstag: 8:00 – 12:00 Uhr und 13:30 – 17:00 Uhr. Freitag: 8:00 – 12:00 Uhr und 13:30 – 16:00 Uhr) gegen Aushändigung einer Empfangsbestätigung abgegeben werden.\n      Bei Einreichung bei einer diplomatischen oder konsularischen Vertretung der Schweiz im Ausland können ausländische Anbieter ihr Angebot dort gegen Aushändigung einer Empfangsbestätigung spätestens bis zu dem oben genannten Datum während der Öffnungszeiten einreichen. Die Empfangsbestätigung muss dann spätestens bis zu dem angegebenen Datum per E-Mail an den Auftraggeber gesendet werden.\n      In jedem Fall obliegt es dem Anbieter, den Nachweis zu erbringen, dass er sein Angebot fristgerecht eingereicht hat. Verspätet eingereichte Angebote können nicht berücksichtigt werden und werden ungeöffnet an den Absender zurückgesandt.\n      Per Fax oder E-Mail eingegangene Angebote werden nicht berücksichtigt. Sie werden nicht im Protokoll über die Angebotseröffnung aufgeführt und nicht bewertet.\n    offerAddress:\n      postalCode: 1470\n      name: Office fédéral des routes OFROU, Division Infrastructure routière Ouest, filiale Estavayer-le-Lac\n      reference: N05.60 MP-230028 - 12064 - Ne pas ouvrir, documents d’appel d’offres\n      street: Place de la Gare 7\n      city: Estavayer-le-Lac\n    publicationLanguagesComment: Das bedeutet, dass alle Mitteilungen des öffentlichen Auftraggebers mindestens in dieser Sprache erfolgen.\n      Bei Abweichungen zwischen den SIMAP-Veröffentlichungen und/oder den Ausschreibungsunterlagen in französischer Sprache und den Veröffentlichungen und/oder Unterlagen in anderen Sprachen sind die Veröffentlichungen und Unterlagen in französischer Sprache maßgebend.\n  procurement:\n    orderDescription: Erneuerung der BSA-Ausrüstung für die Kommunikation und das Managementsystem des Abschnitts N05. \n      Der betroffene Bereich umfasst hauptsächlich folgende unterirdische Bauwerke: den Onnens-Tunnel (600 m), den Concise-Tunnel (1’412 m) und den La-Lance-Tunnel (335 m) sowie die dazugehörigen offenen Abschnitte in deren Zufahrtsbereichen.\n      Dieses Los „AR/Überwachung“ umfasst:\n      ·        die Lieferung und Inbetriebnahme neuer Anlagen für die Managementsysteme, die mit dem neuen Managementsystem des Kantons Waadt (außerhalb des Auftragsumfangs) verbunden sind und mit diesem kommunizieren,\n      ·        die Entwicklung der Plattform des einheitlichen Abschnittsmanagementsystems (AR-Onnens/Concise/Lance) gemäß dessen neuer Architektur,\n      ·        die Neuorganisation der Steuerung der verschiedenen Bauwerke im IP-Abschnitt, der auf diesen Abschnitt N05 begrenzt ist, durch das Abschnittsmanagementsystem (AR-Onnens/Concise/Lance),\n      ·        Bereitstellung einer virtualisierten Umgebung für die Bereitstellung der webbasierten Benutzeroberflächen der AS.\n      ·        Die Anbindung des Abschnittsmanagementsystems AR-Onnens/Concise/Lance an die ihm unterstellten Anlagensteuerungen (AS),\n      ·        Die Anbindung (ausschließlich) an die bestehenden AS-VTV-Verwaltungsanlagen, die auf die neue Architektur portiert und angepasst wurden (die Arbeiten zur Portierung und Anpassung des AS-VTV sind nicht Bestandteil dieses AR/Supervision-Auftrags).\n    processType: open\n    orderType: construction\n    additionalCpvCodes:\n      - code: 42961000\n        label: Steuerungs- und Kontrollsystem\n      - code: 48000000\n        label: Softwarepaket und Informationssysteme\n    bkpCodes:\n      - code: 335\n        label: Schwachstromapparate\n      - code: 336\n        label: Schwachstrominstallationen\n    constructionType: execution\n    constructionCategory: civil_engineering\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Sitzungen:\n      ASTR\n  [… gekürzt]"
   },
   {
-   "id": "ec4b629c-9c8d-4018-a5d3-ae7f2f9e4d25",
-   "nr": "45683",
-   "title": "AO Storage S3 DISTIC 2026",
-   "office": "Service de conseil et de soutien pour les marchés publics de l'Université de Genève",
-   "date": "2026-10-16",
-   "type": "tender",
-   "process": "open",
-   "deadline": "2026-11-06T12:00:00+01:00",
-   "cpv": [
-    "30233100",
-    "30233180",
-    "48782000"
-   ],
-   "score": 3,
-   "hits": [],
-   "fields": {
-    "gegenstand": "L’Université de Genève, au travers de sa division du Système et des Technologies de l'Information et de la Communication (DISTIC) doit mettre en place une nouvelle infrastructure de stockage S3 sur deux sites distincts.",
-    "eignung": "Critères d'aptitude et techniques obligatoires",
-    "zuschlag": "Capacités de stockage et adéquation fonctionnelle (Gewichtung 35); Prix (Gewichtung 25); Architecture technique et performances (Gewichtung 15); Sécurité des données (Gewichtung 15); Services, prestations et développement durable (Gewichtung 10)",
-    "lose": "",
-    "verfahren": "offen"
-   },
-   "url": "https://www.simap.ch/de/project-detail/ec4b629c-9c8d-4018-a5d3-ae7f2f9e4d25",
-   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 1211\n      name: Service de conseil et de soutien pour les marchés publics de l'Université de Genève\n      street: Rue du Général- Dufour 24\n      city: Genève 4\n    procurementRecipientAddress:\n      postalCode: 1211\n      name: Université de Genève. Division du Système et des Technologies de l'Information et de la Communication (DISTIC)\n      street: Rue du Général- Dufour 24\n      city: Genève 4\n    title: AO Storage S3 DISTIC 2026\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: supply\n  procurement:\n    orderDescription: L’Université de Genève, au travers de sa division du Système et des Technologies de l'Information et de la Communication (DISTIC) doit mettre en place une nouvelle infrastructure de stockage S3 sur deux sites distincts.\n    processType: open\n    orderType: supply\n    additionalCpvCodes:\n      - code: 30233180\n        label: Flashspeichergeräte\n      - code: 48782000\n        label: Zentralspeicherverwaltungssoftwarepaket\n    supplyType: buy\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 1205\n      city: Genève\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Voir options\n    options: yes\n    optionsNote: Voir cahier des charges et annexe prix\n    cpvCode:\n      code: 30233100\n      label: Computerspeichereinheiten\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: supply\n    termsNote: Notamment P2 /P6\n    subContractorNote: Voir conditions dossier administratif 3.10\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours auprès de la Chambre administrative de la Cour de justice, 10 rue Saint-Léger, case postale 1956, 1211 Genève 1, dans les dix jours dès sa publication. Le recours doit être signé, se référer au présent appel d'offres, contenir les conclusions dûment motivées avec indication des moyens de preuve.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    reductionMinimumOfferDeadline: ja\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-26\n        note: L’adjudicateur ne traitera aucune demande par téléphone. Les questions doivent être précises et concises, avec référence à un chapitre et/ou à un document remis par l’adjudicateur.\n    processType: open\n    orderType: supply\n    publicationDate: 2026-10-16\n    offerDeadline: 2026-11-06T12:00:00+01:00\n    specificDeadlinesAndFormalRequirements: Voir chapitre 1.4 du dossier administratif\n    offerValidityDeadlineDate: 2026-12-10\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: no\n    qualificationCriteria:\n      - description: Solution fournie sous forme d'appliances (couches logicielle et matérielle intégrées et intégralement supportées par le fabriquant/soumissionnaire).\n          \n          Séparation des réseaux de services, de stockage et de gestion (VLANs, microségmentation, etc.).\n          \n          Chiffrement des données (flux et au repos).\n          \n          Configurations matérielle et logicielle isométriques de l'infrastructure entre les sites primaire et secondaire.\n        title: Critères d'aptitude et techniques obligatoires\n        verification: Engagement formel et démonstration des compétences et expertises techniques.\n    awardCriteriaSelection: criteria_defined\n    awardCriteria:\n      - description: Voir Dossier administratif 4.6\n        title: Capacités de stockage et adéquation fonctionnelle\n        weighting: 35\n      - description: Voir Dossier administratif 4.6 et 4.9\n        title: Prix\n        isPriceCriterion: ja\n        weighting: 25\n      - description: Voir Dossier administratif 4.6\n        title: Architecture technique et performances\n        weighting: 15\n      - description: Voir Dossier administratif 4.6\n        title: Sécurité des données\n        weighting: 15\n      - description: Voir Dossier administratif 4.6\n        title: Services, prestations et développement durable\n        weighting: 10\n    processType: open\n    orderType: supply\n  base:\n    cpvCode:\n      code: 30233100\n      label: Computerspeichereinheiten\n    orderType: supply\n    publicationTed: ja\n    title: AO Storage S3 DISTIC 2026\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45683-01\n    publicationDate: 2026-10-16\n    creationLanguage: fr\n    projectNumber: 45683\n  hasProjectDocuments: ja\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:722303-2026:HTML:FR:HTML"
-  },
-  {
    "id": "58baab3d-b8ec-4f47-8b59-76fee03f99bb",
    "nr": "45850",
    "title": "Prestations d’exploitation IT externalisées  ",
@@ -1966,59 +2429,6 @@
    },
    "url": "https://www.simap.ch/de/project-detail/f513bd73-c334-4455-8e59-3f8317e495a9",
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 2800\n      name: République et Canton du Jura - Service des contributions\n      contactPerson: Sylvain Crelier - organisateur de la procédure\n      street: Rue de la Justice 2\n      city: Delémont\n    procurementRecipientAddress:\n      postalCode: 2800\n      name: Gouvernement de la République et Canton du Jura\n      street: Rue de l'Hôpital 2\n      city: Delémont\n    title: Solution fiscale intégrée pour les personnes morales et les personnes physiques : mise en œuvre, maintenance et assistance\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: service\n    offerSpecificNote: Remise exclusivement par voie électronique via simap.ch. Les documents à signer doivent porter une signature électronique qualifiée.\n  procurement:\n    orderDescription: La République et Canton du Jura, par l'intermédiaire de son Service des contributions, recherche une solution informatique intégrée pour le traitement fiscal complet des personnes morales et des personnes physiques, en remplacement des solutions Fiscalis (PM) et TAO (PP). La solution couvre l'ensemble du cycle de traitement, de l'assujettissement et du registre fiscal jusqu'à la taxation, aux voies de droit, aux répartitions et aux échanges de données avec les systèmes tiers.\n      \n      Le marché comprend notamment :\n      - la fourniture de la solution et des licences nécessaires\n      - la mise à disposition des images conteneurisées et des artefacts techniques permettant le déploiement dans l'infrastructure Kubernetes du canton\n      - la configuration, le paramétrage et l'intégration de la solution\n      - la conception et la mise en œuvre des interfaces avec les systèmes tiers\n      - la migration des données minimales, puis des dossiers et données résiduels\n      - la maintenance et l'assistance applicatives et techniques pendant toute la durée du contrat\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 48000000\n        label: Softwarepaket und Informationssysteme\n    cpcCode:\n      code: b7f1e45b-1fe5-4e19-8cbb-98006291267d\n      label: Datenverarbeitung und verbundene Dienstleistungen\n    orderAddressOnlyDescription: no\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-05-13\n        - 2029-12-01\n    executionNote: Dates cibles : démarrage le 13.05.2027, mise en production PM le 01.12.2028 et solution complète le 01.12.2029.\n      L'adjudicateur se réserve le droit de modifier ces jalons (cf. Document 1, chapitre 2.1). Maintenance et assistance jusqu'au terme du contrat.\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 2800\n      city: Delémont\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-04-28\n        - 2032-04-27\n    canContractBeExtended: yes\n    options: yes\n    optionsNote: Prestations d'accompagnement au changement, fonctionnalités additionnelles, modules ou services complémentaires, chiffrés séparément et non pris en compte dans l'évaluation du prix.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours à la Cour administrative du Tribunal cantonal, 9, chemin du Château, 2900 Porrentruy, dans un délai de vingt jours à compter de sa publication. La procédure d’opposition est exclue. Le recours n’a pas d’effet suspensif. Le Président de la Cour administrative peut accorder, sur demande, l’effet suspensif au recours. Le mémoire de recours doit en tous les cas contenir un exposé concis des faits, des motifs et moyens de preuve, ainsi que l'énoncé des conclusions. La décision attaquée et les documents servant de moyens de preuve en possession du recourant doivent être joints au mémoire. Le recours doit être daté et signé par le recourant ou son mandataire (art. 127 Cpa). Le non-respect de ces exigences formelles peut notamment entraîner l’irrecevabilité du recours.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-28\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-08\n    offerDeadline: 2026-11-25T11:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-10-08\n        - 2026-11-25\n    offerValidityDeadlineDate: 2027-11-25\n    offerOpening:\n      dateTime: 2026-11-26T14:00:00+01:00\n    offerOpeningNotes: Procès-verbal d'ouverture mis à disposition des soumissionnaires ayant déposé une offre dans les 10 jours suivant l'ouverture (art. 10 OMP-JU).\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    title: Solution fiscale intégrée pour les personnes morales et les personnes physiques : mise en œuvre, maintenance et assistance\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 44516-01\n    publicationDate: 2026-10-08\n    creationLanguage: fr\n    cpcCode:\n      code: b7f1e45b-1fe5-4e19-8cbb-98006291267d\n      label: Datenverarbeitung und verbundene Dienstleistungen\n    projectNumber: 44516\n  hasProjectDocuments: ja"
-  },
-  {
-   "id": "57aae4e4-bac2-4fa6-bda5-86cb96bf49d7",
-   "nr": "44378",
-   "title": "Ablösung GIS Gemeindewerke Pfäffikon ZH",
-   "office": "Gemeindewerke Pfäffikon",
-   "date": "2026-10-07",
-   "type": "tender",
-   "process": "open",
-   "deadline": "2026-11-18T14:00:00+01:00",
-   "cpv": [
-    "48000000",
-    "71354100",
-    "72222300",
-    "72250000",
-    "72263000",
-    "72320000"
-   ],
-   "score": 3,
-   "hits": [],
-   "fields": {
-    "gegenstand": "Die Gemeindewerke Pfäffikon (gwp) beabsichtigen das vorhandene Geoinformationssystem (GIS) und den dahinterstehenden Dienstleistungauftrag mit einem praxisorientierten, zukunftsorientiertem System und entsprechenden Dienstleistungen abzulösen. Der Lieferumfang beinhaltet die vollumfängliche Migration der vorhandenen Daten (Medien: Wasser, Abwasser, Strom, Erdgas, Fernwärme). Der Anbieter stellt zudem den Betrieb (Wartung, Support, ...) der GIS-Infrastruktur inklusive Web-GIS für die gwp über eine Basislaufzeit von 5 Jahren, mit optionaler Verlängerung, sicher.",
-    "eignung": "gemäss Ausschreibungsunterlagen",
-    "zuschlag": "gemäss Ausschreibungsunterlagen",
-    "lose": "",
-    "verfahren": "offen"
-   },
-   "url": "https://www.simap.ch/de/project-detail/57aae4e4-bac2-4fa6-bda5-86cb96bf49d7",
-   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 8330\n      name: Gemeindewerke Pfäffikon\n      url: https://www.gwpzh.ch\n      street: Schanzweg 2\n      city: Pfäffikon\n    title: Ablösung GIS Gemeindewerke Pfäffikon ZH\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_email\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_external\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    documentsSourceEmail: beat.krucker@gwpzh.ch\n    documentsSourceNote: Submissionsunterlagen Ablösung GIS\n    offerSpecificNote: Das Angebot inklusive sämtlicher relevanter Dokumente sind in deutscher Sprache in Papierform und zusätzlich auf einem USB-Stick in elektronischer Form (.docx, .xlsx, .pdf) einzureichen.\n    offerAddress:\n      postalCode: 8330\n      name: Gemeindewerke Pfäffikon\n      contactPerson: Martin Meile (Leiter Netze Infrastruktur)\n      reference: Nicht öffnen (Submission Ablösung GIS)\n      street: Schanzweg 2\n      city: Pfäffikon ZH\n  procurement:\n    orderDescription: Die Gemeindewerke Pfäffikon (gwp) beabsichtigen das vorhandene Geoinformationssystem (GIS) und den dahinterstehenden Dienstleistungauftrag mit einem praxisorientierten, zukunftsorientiertem System und entsprechenden Dienstleistungen abzulösen.\n      Der Lieferumfang beinhaltet die vollumfängliche Migration der vorhandenen Daten (Medien: Wasser, Abwasser, Strom, Erdgas, Fernwärme). Der Anbieter stellt zudem den Betrieb (Wartung, Support, ...) der GIS-Infrastruktur inklusive Web-GIS für die gwp über eine Basislaufzeit von 5 Jahren, mit optionaler Verlängerung, sicher.\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 48000000\n        label: Softwarepaket und Informationssysteme\n      - code: 71354100\n        label: Digitalisierte Kartenerstellung\n      - code: 72222300\n        label: Informationstechnologiedienste\n      - code: 72263000\n        label: Software-Implementierung\n      - code: 72320000\n        label: Datenbankdienste\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    executionNote: Inbetriebnahme der neuen GIS-Infrastruktur mit den vollumigrierten Daten währen des ersten Halbjahres 2027. \n      Danach Betrieb über 5 Jahre.\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 8330\n      city: Pfäffikon\n    contractDeadlineType: days_after\n    contractDays: 1825\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Der Auftrag kann verlängert werden.\n    options: yes\n    optionsNote: Optionale Verlängerung des Betriebes um weitere Jahre. Optionale Erweiterungen, Dienstleistungen.\n    cpvCode:\n      code: 72250000\n      label: Systemdienstleistungen und Unterstützungsdienste\n  terms:\n    termsType: in_documents\n    consortiumAllowed: yes\n    consortiumMultiApplicationAllowed: yes\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Ausschreibung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  dates:\n    qnaRoundSourceType: external_system\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-22\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-07\n    offerDeadline: 2026-11-18T14:00:00+01:00\n    specificDeadlinesAndFormalRequirements: Das Angebot inklusive sämtlicher relevanter Dokumente sind in deutscher Sprache in Papierform und zusätzlich auf einem USB-Stick in elektronischer Form (.docx, .xlsx, .pdf) einzureichen\n    documentsAvailable:\n      dateRange:\n        - 2026-10-07\n        - 2026-10-21\n    offerValidityDeadlineDate: 2027-07-02\n    offerOpeningPostalCode: 8330\n    offerOpeningCity: Gemeindewerke Pfäffikon\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72250000\n      label: Systemdienstleistungen und Unterstützungsdienste\n    orderType: service\n    title: Ablösung GIS Gemeindewerke Pfäffikon ZH\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 44378-01\n    publicationDate: 2026-10-07\n    creationLanguage: de\n    translationLanguages:\n      - language: en\n        type: summary\n    projectNumber: 44378"
-  },
-  {
-   "id": "90b8b41c-ccfa-49b1-9f69-3f01c79d3ddf",
-   "nr": "45383",
-   "title": "Strategische & operative Beratung im Digital Marketing",
-   "office": "Universitätsspital Zürich",
-   "date": "2026-10-07",
-   "type": "tender",
-   "process": "open",
-   "deadline": "2026-11-16T12:00:11+01:00",
-   "cpv": [
-    "79413000"
-   ],
-   "score": 3,
-   "hits": [],
-   "fields": {
-    "gegenstand": "Das Universitätsspital Zürich sucht eine Lead-Agentur, welche die Abteilung «Kommunikation & Marketing» sowie das \"HRM\" (Employer Branding) strategisch und operativ in verschiedenen Bereichen des Digital Marketings unterstützt.",
-    "eignung": "gemäss Ausschreibungsunterlagen",
-    "zuschlag": "gemäss Ausschreibungsunterlagen",
-    "lose": "",
-    "verfahren": "offen"
-   },
-   "url": "https://www.simap.ch/de/project-detail/90b8b41c-ccfa-49b1-9f69-3f01c79d3ddf",
-   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 8091\n      name: Universitätsspital Zürich\n      contactPerson: Kowalkowski, Alexandra\n      street: Rämistrasse\n      city: Zürich\n    procurementRecipientAddress:\n      postalCode: 8091\n      name: Universitätsspital Zürich\n      contactPerson: Kowalkowski, Alexandra\n      street: Rämistrasse\n      city: Zürich\n    title: Strategische & operative Beratung im Digital Marketing\n    documentsSourceType: documents_source_url\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_external_platform\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    documentsCosts:\n      currency: chf\n      price: 0.0\n    documentsSourceUrl: https://www.xatena.com/prod/offer/public/105497696\n    offerSpecificNote: Angebote sind ausschliesslich digitalisiert unter https://www.xatena.com/prod/offer/public/105497696 zu erfassen und einzureichen. Abschliessend muss eine Angebotsquittung unterschrieben werden und unter Einhaltung der Eingabefrist bei der Beschaffungsstelle eintreffen.\n    offerDigitalExternalPlatformUrl: https://www.xatena.com/prod/offer/public/105497696\n  procurement:\n    orderDescription: Das Universitätsspital Zürich sucht eine Lead-Agentur, welche die Abteilung «Kommunikation & Marketing» sowie das \"HRM\" (Employer Branding) strategisch und operativ in verschiedenen Bereichen des Digital Marketings unterstützt.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Gemäss Ausschreibungsunterlagen unter https://www.xatena.com/prod/offer/public/105497696\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: not_specified\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-02-01\n        - 2030-01-31\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Strategische & operative Beratung im Digital Marketing: 2x1 Jahr\n    options: yes\n    optionsNote: Vertragsverlängerung 2x1 Jahr\n    cpvCode:\n      code: 79413000\n      label: Marketing-Beratung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    termsOfPayment: 30 Tage netto.\n    termsNote: Gemäss Ausschreibungsunterlagen unter https://www.xatena.com/prod/offer/public/105497696\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Ausschreibung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  dates:\n    qnaRoundSourceType: external_system\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-13\n        note: Fragen werden ausschliesslich unter https://www.xatena.com/prod/offer/public/105497696 entgegengenommen\n        externalLink: https://www.xatena.com/prod/offer/public/105497696\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-07\n    offerDeadline: 2026-11-16T12:00:11+01:00\n    specificDeadlinesAndFormalRequirements: Angebote sind ausschliesslich digitalisiert unter https://www.xatena.com/prod/offer/public/105497696 zu erfassen und einzureichen. Abschliessend muss eine Angebotsquittung unterschrieben werden und unter Einhaltung der Eingabefrist bei der Beschaffungsstelle eintreffen.\n    offerValidityDeadlineDate: 2027-11-16\n    offerOpening:\n      dateTime: 2026-11-17T00:00:00+01:00\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n    qualificationCriteriaNote: Gemäss Ausschreibungsunterlagen unter https://www.xatena.com/prod/offer/public/105497696\n    awardCriteriaNote: Gemäss Ausschreibungsunterlagen unter https://www.xatena.com/prod/offer/public/105497696\n  base:\n    cpvCode:\n      code: 79413000\n      label: Marketing-Beratung\n    orderType: service\n    title: Strategische & operative Beratung im Digital Marketing\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45383-01\n    publicationDate: 2026-10-07\n    creationLanguage: de\n    translationLanguages:\n      - language: fr\n        type: summary\n    projectNumber: 45383"
   }
  ]
 }
