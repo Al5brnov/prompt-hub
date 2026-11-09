@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-09T14:12:11+00:00",
+ "generatedAt": "2026-11-09T23:44:37+00:00",
  "since": "2026-10-10",
  "keywords": [
   "SAP",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 315,
+ "candidates": 327,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,26 +128,30 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 792,
- "detailsCached": 151,
- "detailsLoaded": 3,
+ "durationSec": 999,
+ "detailsCached": 154,
+ "detailsLoaded": 8,
  "dropped": {
-  "vorab": 123,
-  "cpv": 29,
-  "score": 41,
-  "frist": 9,
+  "vorab": 132,
+  "cpv": 31,
+  "score": 42,
+  "frist": 10,
   "ausschluss": 7,
   "zeit": 0,
   "limit": 0
  },
- "count": 51,
+ "count": 54,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «Warenwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Softwareevaluation»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «SuccessFactors»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Personaladministration»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: keine"
+  "Suche «Materialwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «progiciel»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Portallösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Softwareevaluation»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Workshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Anforderungsanalyse»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Materialwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «progiciel»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 6 Suchen, weiterhin fehlgeschlagen: Materialwirtschaft, progiciel"
  ],
  "rejected": [
   {
@@ -186,9 +190,9 @@
    "why": " | CPV 72000000"
   },
   {
-   "title": "IWB, Package Repository",
+   "title": "IWB, eProcurement-Lösung",
    "score": 2,
-   "why": " | CPV 48000000,48900000"
+   "why": " | CPV 72000000"
   },
   {
    "title": "Weiterentwicklung und Weiterbetrieb Kunden Online Service (KOS) Framework und MicroService",
@@ -239,6 +243,11 @@
    "title": "Rahmenvertrag Unterstützungsleistungen Submissionen",
    "score": 2,
    "why": " | CPV 79000000,79410000,79418000"
+  },
+  {
+   "title": "IWB, Package Repository",
+   "score": 2,
+   "why": " | CPV 48000000,48900000"
   },
   {
    "title": "Transportpolizei Vorgangsbearbeitungs- und Informationssystem (TPO-VIS)",
@@ -441,14 +450,19 @@
    "why": "Haupt-CPV 79210000 ausserhalb Software/Beratung"
   },
   {
+   "title": "Primarschule Greifensee: Präsentationsperipherie",
+   "score": 0,
+   "why": "Haupt-CPV 30232000 ausserhalb Software/Beratung"
+  },
+  {
    "title": "Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
   },
   {
-   "title": "IWB, Server und Virtualisierungs-Infrastruktur",
+   "title": "PRINTING@Neuenhof",
    "score": 0,
-   "why": "Haupt-CPV 48800000 (Hardware)"
+   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
   },
   {
    "title": "Zentrale Archivierung für Konkursakten",
@@ -499,6 +513,11 @@
    "title": "Rahmenvertrag Fachleistungen Bahnbetrieb",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "IWB, Server und Virtualisierungs-Infrastruktur",
+   "score": 0,
+   "why": "Haupt-CPV 48800000 (Hardware)"
   },
   {
    "title": "IWB, Storage Infrastruktur",
@@ -1009,6 +1028,81 @@
    },
    "url": "https://www.simap.ch/de/project-detail/fd42a0d2-a38f-4595-a1e8-99f24bf071b3",
    "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Beratung der SZU-Geschäftsleitung zu ICT-Strategie, Governance und Transformation. Durchführung von Reifegradanalysen, Erarbeitung von Entscheidungsgrundlagen und Begleitung von Verbesserungsinitiativen. Moderation von Workshops mit Management und Betrieb. Pensum: 60 % (132 Tage/Jahr).\n    additionalCpvCodes:\n      - code: 72221000\n        label: Beratung im Bereich Unternehmensanalyse\n      - code: 79400000\n        label: Unternehmens- und Managementberatung und zugehörige Dienste\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    projectOrderDescription: Damit der SZU ab September 2026 eine vertragliche Basis für den Abruf von Dienstleistungen zur Verfügung steht, sucht die SZU Partnerfirmen für folgende Rollen (eine Rolle je Los):\n      \n      Los \t\tRolle\n      1 \t\t\tBusiness Consultant / Management Berater:in\n      2 \t\t\tSupport Programmleitung / Projekt- und Teilprojektleiter:in\n      3 \t\t\tICT Projektleiter:in\n      4 \t\t\tEnterprise Architekt:in\n      5 \t\t\tBusiness- und Prozessanalyst:in\n      6 \t\t\tICT System Engineer\n      7 \t\t\tCISO\n      \n      In einigen Losen werden Personen mit unterschiedlichem Senioritätslevel gesucht.\n      \n      Ziel ist es, für die sieben Lose je maximal drei Partnerfirmen als Rahmenvertragsnehmerinnen unter Vertrag zu nehmen, die für eine Vertragsdauer von fünf Jahren auf Abruf zur Verfügung stehen.\n      \n      Eine Partnerfirma kann mehrere Lose (=mehrere Rollen) abdecken. Je Rolle und je Senioritätslevel ist eine Schlüsselperson zu definieren, die für die Leistungserfüllung verantwortlich ist. Eine Schlüsselperson kann mehrere Rollen und/oder mehrere Senioritätslevel abdecken.\n      \n      Für die individuellen Abrufe von Leistungen werden jeweils Einzelverträge abgeschlossen. Es besteht keine konkrete Grundleistung. Inhalt, Umfang und Zeitbedarf für die Leistungserbringung ergibt sich aus dem jeweiligen Abruf.\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 8045\n      name: Sihltal Zürich Uetliberg Bahn SZU AG\n      url: https://www.szu.ch\n      street: Wolframplatz 21\n      city: Zürich\n    procurementRecipientAddress:\n      postalCode: 8045\n      name: Sihltal Zürich Uetliberg Bahn SZU AG\n      url: https://www.szu.ch\n      street: Wolframplatz 21\n      city: Zürich\n    title: Ausschreibung Preferred Supplier Modell\n    stateContractArea: ja\n    publicationTed: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: APEXA GmbH\n        vendorAddress:\n          street: Rütistrasse 10+12\n          city: Baden\n          postalCode: 5400\n        price:\n          currency: chf\n          price: 947478.88\n          vatType: full\n      - vendorName: consulteer ag\n        vendorAddress:\n          street: Riedweg 6\n          city: Meggen\n          postalCode: 6045\n        price:\n          currency: chf\n          price: 1018653.95\n          vatType: full\n      - vendorName: kiwi Consultants AG\n        vendorAddress:\n          street: Beundenfeldstrasse 13\n          city: Bern\n          postalCode: 3013\n        price:\n          currency: chf\n          price: 1065317.07\n          vatType: full\n    numberOfSubmissions: 39\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-10-12\n    awardDecisionJustification: Die Firmen Consulteer AG, APEXA GmbH und kiwi Consultants AG haben basierend auf der Bewertung der eingegangenen Angebote und der Beurteilung der Zuschlagskriterien 413.12, 391.40 resp. 390.70 von 500.00 möglichen Punkten erreicht. Damit erzielen sie die drei höchsten Gesamtpunktzahlen und stellen dementsprechend die vorteilhaftesten Angebote dar. Die massgebenden Merkmale und Vorteile des Angebotes der Firma Consulteer AG liegen insbesondere in der Bewertung der Zuschlagskriterien ZK 2 (Auftragsanalyse) und ZK 3 (Schlüsselperson Expert), jene der Firma APEXA GmbH insbesondere in der Bewertung der Zuschlagskriterien ZK 1 (Preis) und ZK 3 (Schlüsselperson Expert) und jene der Firma kiwi Consultants AG insbesondere in der Bewertung des Zuschlagskriteriums ZK 3 (Schlüsselperson Expert).\n    remediesNotice: Gegen diesen Zuschlag kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Zuschlagsverfügung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    corrected: ja\n    publicationNumber: 33885-02\n    publicationDate: 2026-05-15\n  base:\n    publicationTed: ja\n    title: Ausschreibung Preferred Supplier Modell\n    projectType: tender\n    processType: open\n    lotsType: with\n    stateContractArea: ja\n    type: award\n    publicationNumber: 33885-07\n    publicationDate: 2026-10-13\n    creationLanguage: de\n    projectNumber: 33885\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:710345-2026:HTML:DE:HTML\n  lot:\n    lotNumber: 1\n    title: Business Consultant / Management Berater:in\n    projectSubType: service\n\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Leitung und Koordination von Transformationsprojekten inkl. Roadmap-Pflege, Stakeholder-Kommunikation, Lieferantensteuerung sowie Erstellung von Management- und Gremienunterlagen. Zwei Senioritätsstufen. Pensum gesamt: 240 % (528 Tage/Jahr).\n    additionalCpvCodes:\n      - code: 72224000\n        label: Beratung im Bereich Projektleitung\n      - code: 72246000\n        label: Systemberatung\n    cpvCode:\n      code: 72000000\n      label: \n  [… gekürzt]"
+  },
+  {
+   "id": "e244b250-40d4-4d09-9639-296ef07ff814",
+   "nr": "44163",
+   "title": "E-Learning Bibliothek",
+   "office": "Kanton Zürich",
+   "date": "2026-11-10",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2026-12-22T12:00:00+01:00",
+   "cpv": [
+    "72000000",
+    "80420000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Mit der vorliegenden Ausschreibung soll eine E-Learning Bibliothek beschafft werden, die das bestehende Lern- und Weiterbildungsangebot gezielt um kleinformatige, zeit- und ortsunabhängig nutzbare Lernformate wie E-Learnings, Videos, Podcasts oder weitere digitale Lernformate ergänzt.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/e244b250-40d4-4d09-9639-296ef07ff814",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 8090\n      name: Kanton Zürich\n      street: Walcheplatz 1\n      city: Zürich\n    title: E-Learning Bibliothek\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Mit der vorliegenden Ausschreibung soll eine E-Learning Bibliothek beschafft werden, die das bestehende Lern- und Weiterbildungsangebot gezielt um kleinformatige, zeit- und ortsunabhängig nutzbare Lernformate wie E-Learnings, Videos, Podcasts oder weitere digitale Lernformate ergänzt.\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 80420000\n        label: E-Learning\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    executionNote: Bedingungen in den Dokumenten\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 8090\n      city: Zürich\n    contractDeadlineType: days_after\n    contractDays: 30\n    canContractBeExtended: no\n    options: no\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Ausschreibung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-24\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-10\n    offerDeadline: 2026-12-22T12:00:00+01:00\n    offerValidityDeadlineDays: 180\n    offerOpening:\n      dateTime: 2026-12-22T00:00:00+01:00\n      ignoreTime: ja\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    publicationTed: ja\n    title: E-Learning Bibliothek\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 44163-01\n    publicationDate: 2026-11-10\n    creationLanguage: de\n    translationLanguages:\n      - language: fr\n        type: summary\n    projectNumber: 44163\n  hasProjectDocuments: ja"
+  },
+  {
+   "id": "659c9e27-1472-4fbf-b304-f111d23e3f85",
+   "nr": "47143",
+   "title": "regiosuisse: Kommunikationsdienstleistungen, Website und Events",
+   "office": "Staatssekretariat für Wirtschaft (SECO) - Standortförderung",
+   "date": "2026-11-10",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2027-01-12T23:59:00+01:00",
+   "cpv": [
+    "79416000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Diese Ausschreibung und die damit verbundenen Dienstleistungen tragen zur Umsetzung des Auftrags der Wissensmanagement- und Netzwerkstelle regiosuisse (nachfolgend «regiosuisse») zwischen Januar 2028 und Juni 2032 bei. Die Dienstleistungen ergänzen diejenigen des Los1 des 2023 vergebenen regiosuisse-Auftrags (regiosuisse-Leistungen «Leitung der Netzwerkstelle, wissensintensive Veranstaltungen und Analysen»), der sich ebenfalls bis 2032 erstreckt. Neben der Mandatsführung betrifft der Grossteil der Leistungen die Umsetzung von Kommunikationsmassnahmen, insbesondere über die Website regiosuisse.ch, sowie die Organisation von Events. regiosuisse wurde 2008 gegründet und hat sich als wichtige Akteurin im Bereich des Wissensmanagements und der Wissensverbreitung zur Regionalentwicklung sowie bei der Vernetzung relevanter Akteure etabliert. Die Neue Regionalpolitik (NRP) stand von Anfang an im Mittelpunkt ihres Auftrags. Das Staatssekretariat für Wirtschaft (SECO) ist für die Umsetzung der NRP und damit für den Auftrag von regiosuisse zuständig. Ab 2016 wurde das Wissensmanagement im Zusammenhang mit der Agglomerationspolitik (AggloPol) und der Politik für die ländlichen Räume und Bergg…",
+    "eignung": "EK 1; EK 2; EK 3; EK 4; EK 5; EK 6; EK 7; EK 8",
+    "zuschlag": "ZK 1; ZK 2; ZK 3; ZK 4; ZK 5; ZK 6; ZK 7; ZK 8; ZK 9; ZK 10; ZK 11; ZK 12",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/659c9e27-1472-4fbf-b304-f111d23e3f85",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 3003\n      name: Staatssekretariat für Wirtschaft (SECO) - Standortförderung\n      street: Holzikofenweg 36\n      city: Bern\n    procurementRecipientAddress:\n      postalCode: 3003\n      name: Staatssekretariat für Wirtschaft (SECO) - Standortförderung\n      street: Holzikofenweg 36\n      city: Bern\n    title: regiosuisse: Kommunikationsdienstleistungen, Website und Events\n    documentsLanguages:\n      - de\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n      - fr\n      - it\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n      - fr\n    processType: open\n    orderType: service\n    offerSpecificNote: Hinweise:\n      \n      - Bitte laden Sie keine einzelnen Dokumente hoch, sondern fügen Sie vor dem Hochladen alle Angebotsbestandteile in einem ZIP-Ordner zusammen.\n      - Stellen Sie sicher, dass Sie die Übermittlung des Angebots mittels der Schaltfläche «Angebot einreichen» abschliessen und der Status auf «Angebot eingereicht» in grüner Farbe wechselt, ansonsten Ihr Angebot nicht als eingereicht gilt. Sie erhalten eine von der simap-Plattform automatisch generierte Bestätigung via E-Mail.\n      \n      Zudem ist Folgendes zu beachten:\n      Das Angebot ist durch die zeichnungsberechtigte(n) Person(en) gültig zu unterzeichnen.\n  procurement:\n    orderDescription: Diese Ausschreibung und die damit verbundenen Dienstleistungen tragen zur Umsetzung des Auftrags der Wissensmanagement- und Netzwerkstelle regiosuisse (nachfolgend «regiosuisse») zwischen Januar 2028 und Juni 2032 bei. Die Dienstleistungen ergänzen diejenigen des Los1 des 2023 vergebenen regiosuisse-Auftrags (regiosuisse-Leistungen «Leitung der Netzwerkstelle, wissensintensive Veranstaltungen und Analysen»), der sich ebenfalls bis 2032 erstreckt. Neben der Mandatsführung betrifft der Grossteil der Leistungen die Umsetzung von Kommunikationsmassnahmen, insbesondere über die Website regiosuisse.ch, sowie die Organisation von Events.\n      regiosuisse wurde 2008 gegründet und hat sich als wichtige Akteurin im Bereich des Wissensmanagements und der Wissensverbreitung zur Regionalentwicklung sowie bei der Vernetzung relevanter Akteure etabliert. Die Neue Regionalpolitik (NRP) stand von Anfang an im Mittelpunkt ihres Auftrags. Das Staatssekretariat für Wirtschaft (SECO) ist für die Umsetzung der NRP und damit für den Auftrag von regiosuisse zuständig. Ab 2016 wurde das Wissensmanagement im Zusammenhang mit der Agglomerationspolitik (AggloPol) und der Politik für die ländlichen Räume und Berggebiete (P-LRB) in die Leistungsvereinbarung mit regiosuisse aufgenommen.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: In der Schweiz in den Räumlichkeiten des Auftragnehmers.\n    executionDeadlineType: not_specified\n    executionNote: 01.01.2028 – 31.12.2031 für den Grundauftrag; 01.01.2032 – 30.06.2032 für die Optionen\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2028-01-01\n        - 2032-06-30\n    canContractBeExtended: no\n    options: yes\n    optionsNote: Die Optionen entsprechen den Leistungsgegenständen P2–3, die insgesamt den Zeitraum vom 1. Januar 2032 bis zum 30. Juni 2032 abdecken. Diese Optionen beziehen sich zum einen auf die Aufgaben, die zu dem Abschluss des Mandats erforderlich sind. Andererseits ermöglichen sie einen bestmöglichen Übergang zu den Anbieterinnen, die regiosuisse nach 2031 übernehmen werden, vorausgesetzt, das regiosuisse-Mandat wird ab 2032 in ähnlicher Form fortgeführt.\n    cpvCode:\n      code: 79416000\n      label: Öffentlichkeitsarbeit\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-30\n        note: Falls sich beim Erstellen des Angebots Fragen ergeben, können Sie diese anonymisiert ins Frageforum auf www.simap.ch stellen.\n          Zu spät eingereichte Fragen können nicht mehr beantwortet werden.\n          Die Anbieter werden per E-Mail informiert, sobald die Antworten auf www.simap.ch publiziert sind.\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-10\n    offerDeadline: 2027-01-12T23:59:00+01:00\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: no\n    qualificationCriteria:\n      - description: Wirtschaftliche/finanzielle Leistungsfähigkeit\n          Die Anbieterin verfügt über eine genügende wirtschaftliche/finanzielle Leistungsfähigkeit, um den Auftrag erfüllen zu können.\n        title: EK 1\n        verification: Auszug aus dem Betreibungsregister nicht älter als 3 Monate zum Zeitpunkt der Aufforderung durch die Bedarfsstelle. Bei Anbietern aus dem Ausland vergleichbare aktuelle, amtliche Urkunde des Auslandes. \n          Hinweis: Die Vergabestelle überprüft elektronisch den Auszug aus dem Zentralen\n  [… gekürzt]"
+  },
+  {
+   "id": "309b3130-eed5-4559-94f5-ed19d34d7f91",
+   "nr": "46179",
+   "title": "Acquisition d’un système de gestion de la charge (SGC/CMS)",
+   "office": "MBC Transports de la région Morges Bière Cossonay SA - Service Achats",
+   "date": "2026-11-10",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2026-12-01T13:00:00+01:00",
+   "cpv": [
+    "48150000",
+    "71314200",
+    "71314300"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "La Solution de Gestion de la Charge (SGC) constitue l'élément central de pilotage des opérations de recharge des véhicules électriques de movodis. Elle devra s'interfacer avec les infrastructures de recharge des différents sites d'exploitation ainsi qu'avec les systèmes d'information de movodis et de ses filiales. La solution assurera notamment les fonctions de : · planification des sessions de recharge ; · pilotage et contrôle des infrastructures de recharge ; · allocation dynamique de la puissance disponible ; · optimisation énergétique et opérationnelle ; · supervision en temps réel des équipements et des opérations ; · gestion des alarmes et événements ; · gestion des utilisateurs et des droits d'accès ; · production de rapports, de statistiques et d'indicateurs de performance. La solution devra permettre une gestion centralisée de l'ensemble des sites actuels et futurs exploités par movodis, tout en tenant compte des contraintes d'exploitation, des besoins énergétiques des véhicules et des capacités des infrastructures électriques disponibles.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/309b3130-eed5-4559-94f5-ed19d34d7f91",
+   "text": "\n  project-info:\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 1110\n      name: MBC Transports de la région Morges Bière Cossonay SA - Service Achats\n      street: Av. de la Gottaz 28\n      city: Morges 2\n    procurementRecipientAddress:\n      name: movodis SA\n    title: Acquisition d’un système de gestion de la charge (SGC/CMS)\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: supply\n  procurement:\n    orderDescription: La Solution de Gestion de la Charge (SGC) constitue l'élément central de pilotage des opérations de recharge des véhicules électriques de movodis.\n      Elle devra s'interfacer avec les infrastructures de recharge des différents sites d'exploitation ainsi qu'avec les systèmes d'information de movodis et de ses filiales. La solution assurera notamment les fonctions de :\n      ·       planification des sessions de recharge ;\n      ·       pilotage et contrôle des infrastructures de recharge ;\n      ·       allocation dynamique de la puissance disponible ;\n      ·       optimisation énergétique et opérationnelle ;\n      ·       supervision en temps réel des équipements et des opérations ;\n      ·       gestion des alarmes et événements ;\n      ·       gestion des utilisateurs et des droits d'accès ;\n      ·       production de rapports, de statistiques et d'indicateurs de performance.\n      La solution devra permettre une gestion centralisée de l'ensemble des sites actuels et futurs exploités par movodis, tout en tenant compte des contraintes d'exploitation, des besoins énergétiques des véhicules et des capacités des infrastructures électriques disponibles.\n    processType: open\n    orderType: supply\n    additionalCpvCodes:\n      - code: 71314200\n        label: Verwaltungsdienste für Energieversorgung\n      - code: 71314300\n        label: Beratung im Bereich Energieeinsparung\n    supplyType: buy\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Canton de Vaud\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    contractDeadlineType: not_specified\n    canContractBeExtended: no\n    options: yes\n    optionsNote: Onglet \"Options\" de l'Annexe_R1 - Montant de l'offre en rapport avec le cahier des charges _SGC\n    cpvCode:\n      code: 48150000\n      label: Softwarepaket für die Industrieprozesssteuerung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: supply\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours à la Cour de droit administratif et public du Tribunal cantonal, Route du Signal 8 (Palais de Justice de l’Hermitage), 1014 Lausanne, dans les vingt jours dès sa notification par publication ; le recours doit être signé et indiquer les conclusions et ses motifs. La décision attaquée est jointe au recours.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-19\n    processType: open\n    orderType: supply\n    publicationDate: 2026-11-10\n    offerDeadline: 2026-12-01T13:00:00+01:00\n    offerValidityDeadlineDays: 365\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: supply\n  base:\n    cpvCode:\n      code: 48150000\n      label: Softwarepaket für die Industrieprozesssteuerung\n    orderType: supply\n    publicationTed: ja\n    title: Acquisition d’un système de gestion de la charge (SGC/CMS)\n    projectType: tender\n    processType: open\n    lotsType: without\n    type: tender\n    publicationNumber: 46179-01\n    publicationDate: 2026-11-10\n    creationLanguage: fr\n    projectNumber: 46179\n  hasProjectDocuments: ja"
   },
   {
    "id": "69fc8f9b-b7e2-49de-be2c-ac16b7c9e4c5",
