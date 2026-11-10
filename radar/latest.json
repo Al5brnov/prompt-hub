@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-10T13:46:12+00:00",
+ "generatedAt": "2026-11-10T21:05:06+00:00",
  "since": "2026-10-11",
  "keywords": [
   "SAP",
@@ -128,7 +128,7 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 821,
+ "durationSec": 764,
  "detailsCached": 160,
  "detailsLoaded": 0,
  "dropped": {
@@ -143,15 +143,13 @@
  "count": 54,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
   "Suche «Warenwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Digitalisierung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «SuccessFactors»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Webshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Fallbearbeitung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Schuladministration»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 8 Suchen, weiterhin fehlgeschlagen: keine"
+  "Suche «Order-to-Cash»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «WalkMe»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «PSCD»: URLError bei /publications/v2/project/project-search: <urlopen error _ssl.c:994: The handshake operation timed out>",
+  "Suche «Instandhaltung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Rechnungswesen»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 6 Suchen, weiterhin fehlgeschlagen: keine"
  ],
  "rejected": [
   {
