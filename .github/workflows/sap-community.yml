@@ -1,0 +1,47 @@
+name: SAP-Community-Feeds
+
+on:
+  schedule:
+    - cron: "17 5 * * 1-5"  # werktags 05:17 UTC (06:17 Schweizer Winterzeit), vor dem Morgen-Block
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - radar/sap-feeds.json
+      - scripts/sap_community.py
+      - .github/workflows/sap-community.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sap-community
+  cancel-in-progress: false
+
+jobs:
+  feeds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Feeds lesen
+        run: python scripts/sap_community.py
+      - name: Ergebnis speichern
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp radar/sap-community.json /tmp/sap-community.json
+          for i in 1 2 3; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp /tmp/sap-community.json radar/
+            git add radar/sap-community.json
+            if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
+            git commit -q -m "SAP Community: Feeds aktualisiert"
+            if git push -q origin HEAD:main; then echo "Gespeichert."; exit 0; fi
+            sleep 5
+          done
+          exit 1
