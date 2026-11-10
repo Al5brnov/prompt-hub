@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-09T23:44:37+00:00",
- "since": "2026-10-10",
+ "generatedAt": "2026-11-10T13:46:12+00:00",
+ "since": "2026-10-11",
  "keywords": [
   "SAP",
   "S/4HANA",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 327,
+ "candidates": 325,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,14 +128,14 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 999,
- "detailsCached": 154,
- "detailsLoaded": 8,
+ "durationSec": 821,
+ "detailsCached": 160,
+ "detailsLoaded": 0,
  "dropped": {
   "vorab": 132,
   "cpv": 31,
-  "score": 42,
-  "frist": 10,
+  "score": 41,
+  "frist": 9,
   "ausschluss": 7,
   "zeit": 0,
   "limit": 0
@@ -143,15 +143,15 @@
  "count": 54,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «Materialwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «progiciel»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Portallösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Softwareevaluation»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Workshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Anforderungsanalyse»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Materialwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «progiciel»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 6 Suchen, weiterhin fehlgeschlagen: Materialwirtschaft, progiciel"
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Warenwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Digitalisierung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «SuccessFactors»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Webshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Fallbearbeitung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Schuladministration»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 8 Suchen, weiterhin fehlgeschlagen: keine"
  ],
  "rejected": [
   {
@@ -358,11 +358,6 @@
    "title": "eQV/eLearn – Rahmenvertrag für Nutzung einer Prüfungs- und Lehr-/Lernplattform (LMS) inkl.",
    "score": 2,
    "why": " | CPV 72000000"
-  },
-  {
-   "title": "Teledermatologie-Plattform",
-   "score": 2,
-   "why": " | CPV 48328000"
   },
   {
    "title": "IT Engineering Leistungen (DevSecOps) für Cyber-Defence Campus \"armasuisse W+T\"",
