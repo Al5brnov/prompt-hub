@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T13:06:14+00:00",
+ "generatedAt": "2026-11-11T20:27:54+00:00",
  "since": "2026-10-12",
  "keywords": [
   "SAP",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 283,
+ "candidates": 330,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,11 +128,11 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 1160,
- "detailsCached": 157,
- "detailsLoaded": 8,
+ "durationSec": 809,
+ "detailsCached": 165,
+ "detailsLoaded": 0,
  "dropped": {
-  "vorab": 92,
+  "vorab": 127,
   "cpv": 34,
   "score": 42,
   "frist": 8,
@@ -143,16 +143,11 @@
  "count": 56,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Ariba»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Lieferantenportal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «CRM»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «SuccessFactors»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Auftragsabwicklung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «E-Commerce»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Instandhaltung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 8 Suchen, weiterhin fehlgeschlagen: S/4HANA"
+  "Suche «BTP»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «E-Shop»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Vertrieb»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Lagerverwaltung»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: keine"
  ],
  "rejected": [
   {
@@ -187,6 +182,16 @@
   },
   {
    "title": "Limmi.ch: Beschaffung einer Patienten- und Zuweiserportallösung",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "(25076) 801  RedPro2.0 – IT-Services ",
+   "score": 2,
+   "why": " | CPV 72268000"
+  },
+  {
+   "title": "IWB, eProcurement-Lösung",
    "score": 2,
    "why": " | CPV 72000000"
   },
@@ -239,16 +244,6 @@
    "title": "Rahmenvertrag Unterstützungsleistungen Submissionen",
    "score": 2,
    "why": " | CPV 79000000,79410000,79418000"
-  },
-  {
-   "title": "(25076) 801  RedPro2.0 – IT-Services ",
-   "score": 2,
-   "why": " | CPV 72268000"
-  },
-  {
-   "title": "IWB, eProcurement-Lösung",
-   "score": 2,
-   "why": " | CPV 72000000"
   },
   {
    "title": "IWB, Package Repository",
@@ -456,9 +451,29 @@
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
   },
   {
+   "title": "ICT an der Schule Interlaken",
+   "score": 0,
+   "why": "Haupt-CPV 30213000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "PRINTING@VSG AHS",
+   "score": 0,
+   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "Kampagne E-Trendfahrzeuge",
+   "score": 0,
+   "why": "Haupt-CPV 79340000 ausserhalb Software/Beratung"
+  },
+  {
    "title": "Primarschule Greifensee: Präsentationsperipherie",
    "score": 0,
    "why": "Haupt-CPV 30232000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "PRINTING@Neuenhof",
+   "score": 0,
+   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
   },
   {
    "title": "Zentrale Archivierung für Konkursakten",
@@ -509,26 +524,6 @@
    "title": "Rahmenvertrag Fachleistungen Bahnbetrieb",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "ICT an der Schule Interlaken",
-   "score": 0,
-   "why": "Haupt-CPV 30213000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "PRINTING@VSG AHS",
-   "score": 0,
-   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "Kampagne E-Trendfahrzeuge",
-   "score": 0,
-   "why": "Haupt-CPV 79340000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "PRINTING@Neuenhof",
-   "score": 0,
-   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
   },
   {
    "title": "IWB, Server und Virtualisierungs-Infrastruktur",
