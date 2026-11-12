@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T14:03:43+00:00",
+ "generatedAt": "2026-11-12T21:41:57+00:00",
  "since": "2026-10-13",
  "keywords": [
   "SAP",
@@ -128,9 +128,9 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 798,
- "detailsCached": 161,
- "detailsLoaded": 8,
+ "durationSec": 755,
+ "detailsCached": 169,
+ "detailsLoaded": 0,
  "dropped": {
   "vorab": 120,
   "cpv": 32,
@@ -143,11 +143,12 @@
  "count": 57,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «Beschaffungssoftware»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «EWM»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Personaladministration»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Beschaffungssoftware»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 3 Suchen, weiterhin fehlgeschlagen: Beschaffungssoftware"
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Self-Service-Portal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Onlineschalter»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Self-Service-Portal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 3 Suchen, weiterhin fehlgeschlagen: ERP-System, Self-Service-Portal"
  ],
  "rejected": [
   {
