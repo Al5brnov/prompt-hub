@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-11T20:27:54+00:00",
- "since": "2026-10-12",
+ "generatedAt": "2026-11-12T14:03:43+00:00",
+ "since": "2026-10-13",
  "keywords": [
   "SAP",
   "S/4HANA",
@@ -128,26 +128,26 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 809,
- "detailsCached": 165,
- "detailsLoaded": 0,
+ "durationSec": 798,
+ "detailsCached": 161,
+ "detailsLoaded": 8,
  "dropped": {
-  "vorab": 127,
-  "cpv": 34,
-  "score": 42,
+  "vorab": 120,
+  "cpv": 32,
+  "score": 44,
   "frist": 8,
-  "ausschluss": 7,
+  "ausschluss": 9,
   "zeit": 0,
   "limit": 0
  },
- "count": 56,
+ "count": 57,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «BTP»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «E-Shop»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Vertrieb»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Lagerverwaltung»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: keine"
+  "Suche «Beschaffungssoftware»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «EWM»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Personaladministration»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Beschaffungssoftware»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 3 Suchen, weiterhin fehlgeschlagen: Beschaffungssoftware"
  ],
  "rejected": [
   {
@@ -186,14 +186,19 @@
    "why": " | CPV 72000000"
   },
   {
+   "title": "Universität Basel Unisport Webportal ",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Lifecycle Datacenter Network",
+   "score": 2,
+   "why": " | CPV 30000000,72000000"
+  },
+  {
    "title": "(25076) 801  RedPro2.0 – IT-Services ",
    "score": 2,
    "why": " | CPV 72268000"
-  },
-  {
-   "title": "IWB, eProcurement-Lösung",
-   "score": 2,
-   "why": " | CPV 72000000"
   },
   {
    "title": "Weiterentwicklung und Weiterbetrieb Kunden Online Service (KOS) Framework und MicroService",
@@ -244,6 +249,11 @@
    "title": "Rahmenvertrag Unterstützungsleistungen Submissionen",
    "score": 2,
    "why": " | CPV 79000000,79410000,79418000"
+  },
+  {
+   "title": "IWB, eProcurement-Lösung",
+   "score": 2,
+   "why": " | CPV 72000000"
   },
   {
    "title": "IWB, Package Repository",
@@ -386,9 +396,9 @@
    "why": "Haupt-CPV 72514000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
   },
   {
-   "title": "Lieferung, Inbetriebnahme und Migration Oracle Database Appliance",
+   "title": "MP 2025.09.795 - Support niveau 1 Service Desk",
    "score": 0,
-   "why": "Haupt-CPV 48800000 (Hardware)"
+   "why": "«Service Desk» im Titel ohne SAP-/ERP-Bezug"
   },
   {
    "title": "Evaluation ICT-Infrastruktur Sourcing Partner für die Gemeinde Uitikon",
@@ -441,9 +451,9 @@
    "why": "Haupt-CPV 48813000 (Hardware)"
   },
   {
-   "title": "(26043) 704 Revisionsmandate Abschluss- und IT-Prüfung ALV 2027-2031",
+   "title": "eDiscovery 2027+",
    "score": 0,
-   "why": "Haupt-CPV 79210000 ausserhalb Software/Beratung"
+   "why": "Ausschlusswort im Titel: Lizenz"
   },
   {
    "title": "Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem",
@@ -469,11 +479,6 @@
    "title": "Primarschule Greifensee: Präsentationsperipherie",
    "score": 0,
    "why": "Haupt-CPV 30232000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "PRINTING@Neuenhof",
-   "score": 0,
-   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
   },
   {
    "title": "Zentrale Archivierung für Konkursakten",
@@ -526,6 +531,11 @@
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
   },
   {
+   "title": "PRINTING@Neuenhof",
+   "score": 0,
+   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
+  },
+  {
    "title": "IWB, Server und Virtualisierungs-Infrastruktur",
    "score": 0,
    "why": "Haupt-CPV 48800000 (Hardware)"
@@ -539,16 +549,6 @@
    "title": "Ersatz des Gebäudeleitsystems der UPD",
    "score": 0,
    "why": "Auftragsart construction"
-  },
-  {
-   "title": "Rahmenvertrag Dienstleistungen im Bereich ICT Datacenter / Netzwerk",
-   "score": 0,
-   "why": "Haupt-CPV 30210000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "ICT-Betrieb, Infrastruktur, Support und Gerätebeschaffung für die Schulen Birr und Lupfig",
-   "score": 0,
-   "why": "Haupt-CPV 30200000 ausserhalb Software/Beratung"
   }
  ],
  "items": [
@@ -675,6 +675,70 @@
    "text": "\n  project-info:\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 1950\n      name: HYDRO Exploitation SA\n      contactPerson: Michaël Vuistiner\n      url: https://www.hydro.ch\n      street: Rue de l'Industrie 10\n      city: Sion\n    procurementRecipientAddress:\n      postalCode: 1950\n      name: HYDRO Exploitation SA\n      url: https://www.hydro.ch\n      street: Rue de l'Industrie 10\n      city: Sion\n    title: Conversion du système SAP ECC vers SAP S4HANA Private Cloud\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_email\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: service\n    documentsSourceEmail: achats@hydro.ch\n    documentsSourceNote: Les documents remis dans le cadre de la présente procédure d'adjudication contiennent des informations destinées exclusivement à la préparation et à l'établissement d'une offre.\n      Les annexes nécessaires à l'élaboration de l'offre seront remises sur demande auprès de l'adjudicateur.\n      Les soumissionnaires s'engagent à traiter de manière confidentielle l'ensemble des informations techniques, organisationnelles, commerciales et stratégiques obtenues dans le cadre de la procédure. Ils s'interdisent notamment de divulguer ces informations à des tiers n'intervenant pas directement dans la préparation de leur offre.\n      La transmission d'informations à des collaborateurs, sous-traitants, partenaires ou conseillers externes est admise dans la mesure nécessaire à l'élaboration de l'offre, sous réserve que ces personnes soient elles-mêmes soumises à une obligation de confidentialité équivalente.\n      Les documents mis à disposition ne peuvent être utilisés à d'autres fins que la participation à la présente procédure d'adjudication. Ils ne peuvent être reproduits, publiés ou diffusés, en tout ou partie, sans l'accord écrit préalable de l'adjudicateur.\n      Les obligations de confidentialité demeurent applicables après la clôture de la procédure, indépendamment de l'attribution ou non du marché.\n  procurement:\n    orderDescription: Le présent appel d'offres a pour objet de définir les prestations attendues dans le cadre de la conversion du système SAP ECC 6.0 vers SAP S/4HANA Private Cloud. Il couvre l'ensemble des prestations nécessaires à la préparation, à la réalisation et à la sécurisation de la conversion du système SAP ERP actuellement exploité par HYDRO Exploitation vers la solution SAP S/4HANA Private Cloud.\n      Le projet s'inscrit dans une démarche de continuité du système d'information et vise à assurer la pérennité de la plateforme SAP tout en préservant les processus métiers existants. La solution cible retenue repose sur une conversion de système vers la solution SAP S/4HANA Private Cloud (System Conversion – Brownfield) conformément aux recommandations de l'étude préalable réalisée.\n      Le titulaire sera responsable de l'ensemble des prestations permettant de préparer, exécuter, valider et accompagner la conversion du système jusqu'à sa mise en production et sa stabilisation.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: no\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-02-01\n        - 2027-11-30\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 1950\n      city: Sion\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-02-01\n        - 2027-12-31\n    canContractBeExtended: no\n    options: no\n    cpvCode:\n      code: 72212451\n      label: Entwicklung von Software für die Unternehmensressourcenplanung (ERP)\n  terms:\n    termsType: none\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: not_specified\n    subContractorMultiApplicationAllowed: not_specified\n    processType: open\n    orderType: service\n    remediesNotice: La présente décision peut faire l'objet d'un recours dans les 20 jours dès sa publication auprès de la Cour de droit public du Tribunal cantonal à Sion.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    reductionMinimumOfferDeadline: ja\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-25\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-03\n    offerDeadline: 2026-12-03T10:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-11-03\n        - 2026-11-25\n    offerValidityDeadlineDate: 2027-06-30\n    offerOpening:\n      dateTime: 2026-12-03T13:00:00+01:00\n    offerOpeningPostalCode: 1950\n    offerOpeningCity: Sion\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: no\n    qualificationCriteria:\n      - description: Les soumissionnaires présenteront plusieurs références significatives portant sur des projets comparables, réalisés au cours des dernières années.\n        title: Expérience dans la réalisation de projets SAP comparables\n        verification: Les soumissionnaires présenteront 3 références significatives portant sur des projets comparables, réalisés au cours des 5 dernières années.\n      - description: Le soumissionnaire présentera l'ensemble des ressources affectées au projet.\n        title: Capacité à mobiliser une équipe disposant des compétences requises\n        verification: Présentation de l'organigramme du projet, avec les noms, titres et expériences des différents intervenants.\n      - description: Le soumissionnaire présentera l'organisation qu'il propose pour assurer la réalisation des prestations.\n        title: Organisation en matière de gestion de projet, d'assurance qualité et de gestion des risques\n        verification: Le soumissionnaire présentera l'organisation qu'il propose pour assurer la réalisation des prestations.\n      - description: Le soumissionnaire présentera sa capacité financière à accomplir les prestations jusqu'à leur terme.\n       \n  [… gekürzt]"
   },
   {
+   "id": "56433f15-4353-4887-a6e2-42507a108518",
+   "nr": "46635",
+   "title": "Ticketing-Software für Schweizer Kulturhäuser",
+   "office": "Schauspielhaus Zürich AG",
+   "date": "2026-11-12",
+   "type": "tender",
+   "process": "selective",
+   "deadline": "2026-12-08T23:59:00+01:00",
+   "cpv": [
+    "48000000",
+    "48110000",
+    "48481000",
+    "72250000",
+    "72261000",
+    "72262000",
+    "72263000",
+    "72265000",
+    "72267000",
+    "72268000"
+   ],
+   "score": 13,
+   "hits": [
+    "CRM",
+    "KI (Titel)",
+    "Webshop"
+   ],
+   "fields": {
+    "gegenstand": "Das Schauspielhaus Zürich AG, Zeltweg 5, 8032 Zürich, handelnd als federführende Vergabestelle in dieser gemeinsamen Beschaffung für sich selbst sowie im Namen der übrigen Auftraggeberinnen (beteiligte Institutionen): ● Schauspielhaus Zürich AG, Zeltweg 5, 8032 Zürich ● Tonhalle-Gesellschaft Zürich AG, Gotthardstrasse 5, 8002 Zürich ● Theater Winterthur AG, Theaterstrasse 6, 8401 Winterthur ● Luzerner Theater, Theaterstrasse 2, 6003 Luzern schreibt folgende Leistungen aus: Bereitstellung und Betrieb einer Ticketing-Software (SaaS) für Kasse, Webshop, Abonnements, CRM-Funktionalitäten, Zutrittskontrolle, Auswertungen und Schnittstellen zur Finanzbuchhaltung u. a., einschliesslich Implementierung, Datenmigration, Schulung und Support. Die Einführung erfolgt gestaffelt für jede beteiligte Institution im Frühjahr 2027. Die nähere Leistungsbeschreibung findet sich im Leistungsverzeichnis. Vertragsdauer für jede beteiligte Institution: vier Jahre fest mit zweimaliger Verlängerungsoption der jeweiligen Institution um je ein Jahr.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "Preis (Gewichtung 30); Angaben im Leistungsverzeichnis (Gewichtung 30); Auftragsbezogenes Ablaufkonzept für Implementierung (Gewichtung 10); Use-Cases (Gewichtung 20); KI-Konzept (Gewichtung 5); Anbieterpräsentation (Gewichtung 5)",
+    "lose": "",
+    "verfahren": "selektiv"
+   },
+   "url": "https://www.simap.ch/de/project-detail/56433f15-4353-4887-a6e2-42507a108518",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 8032\n      name: Schauspielhaus Zürich AG\n      street: Zeltweg 5\n      city: Zürich\n    title: Ticketing-Software für Schweizer Kulturhäuser\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: selective\n    orderType: supply\n    participantLimitation: 7\n  procurement:\n    orderDescription: Das Schauspielhaus Zürich AG, Zeltweg 5, 8032 Zürich, handelnd als federführende Vergabestelle in dieser gemeinsamen Beschaffung für sich selbst sowie im Namen der übrigen Auftraggeberinnen (beteiligte Institutionen):\n      ●     Schauspielhaus Zürich AG, Zeltweg 5, 8032 Zürich\n      ●     Tonhalle-Gesellschaft Zürich AG, Gotthardstrasse 5, 8002 Zürich\n      ●     Theater Winterthur AG, Theaterstrasse 6, 8401 Winterthur\n      ●     Luzerner Theater, Theaterstrasse 2, 6003 Luzern\n      schreibt folgende Leistungen aus:\n      Bereitstellung und Betrieb einer Ticketing-Software (SaaS) für Kasse, Webshop, Abonnements, CRM-Funktionalitäten, Zutrittskontrolle, Auswertungen und Schnittstellen zur Finanzbuchhaltung u. a., einschliesslich Implementierung, Datenmigration, Schulung und Support. Die Einführung erfolgt gestaffelt für jede beteiligte Institution im Frühjahr 2027.\n      Die nähere Leistungsbeschreibung findet sich im Leistungsverzeichnis.\n      Vertragsdauer für jede beteiligte Institution: vier Jahre fest mit zweimaliger Verlängerungsoption der jeweiligen Institution um je ein Jahr.\n    processType: selective\n    orderType: supply\n    additionalCpvCodes:\n      - code: 48110000\n        label: Softwarepaket für POS-Kassenterminals\n      - code: 48481000\n        label: Vertriebs- und Marketingsoftwarepaket\n      - code: 72250000\n        label: Systemdienstleistungen und Unterstützungsdienste\n      - code: 72261000\n        label: Software-Unterstützung\n      - code: 72262000\n        label: Software-Entwicklung\n      - code: 72263000\n        label: Software-Implementierung\n      - code: 72265000\n        label: Software-Konfiguration\n      - code: 72267000\n        label: Software-Wartung und -Reparatur\n      - code: 72268000\n        label: Bereitstellung von Software\n    supplyType: rent\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Die Einführung erfolgt gestaffelt für jede beteiligte Institution vor Ort.\n    executionDeadlineType: not_specified\n    executionNote: Siehe Leistungsverzeichnis und Dokumente.\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2031-03-31\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Die Datumsangaben sind indikativ. Der Abschluss der Beschaffungsverträge erfolgt individuell durch jede beteiligte Institution.\n    options: yes\n    optionsNote: Eine zweimalige Verlängerung um ein weiteres Jahr ist optional möglich.\n    cpvCode:\n      code: 48000000\n      label: Softwarepaket und Informationssysteme\n  terms:\n    termsType: in_documents\n    consortiumAllowed: yes\n    consortiumMultiApplicationAllowed: yes\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: selective\n    orderType: supply\n    termsNote: Rahmenbedingungen in den Dokumenten hinterlegt.\n    consortiumNote: Rahmenbedingungen in den Dokumenten hinterlegt.\n    subContractorNote: Rahmenbedingungen in den Dokumenten hinterlegt.\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Ausschreibung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    qnas:\n      - date: 2026-11-28\n        note: Die eingereichten Fragen werden voraussichtlich bis 2.12.2026 beantwortet.\n    otherAppointments:\n      - name: Frist für die Einreichung allfälliger ergänzender Anbieterfragen\n        date: 2026-12-14\n        note: Hier handelt es sich um Anbieterfragen für die 2. Stufe (Angebotsphase).\n      - name: Veröffentlichung der Antworten\n        date: 2026-12-16\n      - name: Voraussichtliche Termine für die Bieterpräsentationen von 14.-21.1.2027\n        date: 2027-01-14\n    processType: selective\n    orderType: supply\n    publicationDate: 2026-11-12\n    offerDeadline: 2026-12-08T23:59:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-11-12\n        - 2027-03-01\n    selectParticipants:\n      dateTime: 2026-12-10T00:00:00+01:00\n      ignoreTime: ja\n    selectParticipantsNotes: Die Benachrichtigung der Anbieterinnen ist für den 10.12.2026 geplant.\n    offerSubmission:\n      dateTime: 2027-01-05T23:59:00+01:00\n    offerValidityDeadlineDate: 2027-07-05\n  type: tender\n  projectType: tender\n  criteria:\n    weightedQualificationCriteriaInDocuments: yes\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_defined\n    awardCriteria:\n      - description: Siehe Angaben Preisblatt.\n        title: Preis\n        isPriceCriterion: ja\n        weighting: 30\n        maxPoints: 300\n      - description: Siehe Leistungsverzeichnis\n        title: Angaben im Leistungsverzeichnis\n        weighting: 30\n        maxPoints: 300\n      - description: Siehe Dokument A2.1 - Anhang zu den allgemeinen Submissionsbedingungen zweite Stufe\n        title: Auftragsbezogenes Ablaufkonzept für Implementierung\n        weighting: 10\n        maxPoints: 100\n      - description: Siehe Dokument A2.1 - Anhang zu den allgemeinen Submissionsbedingungen zweit\n  [… gekürzt]"
+  },
+  {
+   "id": "c207bb0a-5ca3-4c0c-8fd0-9b66bbe40bbd",
+   "nr": "40615",
+   "title": "DiWaJu+ – Digitaler Wandel Justiz",
+   "office": "Kantonale Fachstelle für öffentliche Beschaffungen Basel-Stadt",
+   "date": "2026-11-12",
+   "type": "participant_selection",
+   "process": "selective",
+   "deadline": null,
+   "cpv": [
+    "72000000"
+   ],
+   "score": 8,
+   "hits": [
+    "Digitalisierung",
+    "Fallbearbeitung"
+   ],
+   "fields": {
+    "gegenstand": "Beschaffung einer Digitalisierungsplattform, welche die Geschäftsprozesse der beteiligten Justizbehörden der Kantone Basel-Stadt, Glarus und Schaffhausen digital abbildet und deren medienbruchfreie Bearbeitung unterstützt. Die Plattform löst die heute im Einsatz stehenden Geschäftsverwaltungslösungen (insbesondere JURIS 4 und JURIS 5) ab und bildet künftig die zentrale, geschäftskritische Anwendung für die Fallbearbeitung in Gerichten, Staatsanwaltschaften, Justizvollzugsbehörden und weiteren Verwaltungsbehörden mit Justizkompetenz.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "",
+    "verfahren": "selektiv"
+   },
+   "url": "https://www.simap.ch/de/project-detail/c207bb0a-5ca3-4c0c-8fd0-9b66bbe40bbd",
+   "text": "\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: selective\n    publicationNumber: 40615-01\n    publicationDate: 2026-07-09\n  project-info:\n    procOfficeAddress:\n      postalCode: 4001\n      name: Kantonale Fachstelle für öffentliche Beschaffungen Basel-Stadt\n      street: Münsterplatz 11, Postfach\n      city: Basel\n  procurement:\n    projectType: tender\n    processType: selective\n    pubType: participant_selection\n    orderType: service\n    orderDescription: Beschaffung einer Digitalisierungsplattform, welche die Geschäftsprozesse der beteiligten Justizbehörden der Kantone Basel-Stadt, Glarus und Schaffhausen digital abbildet und deren medienbruchfreie Bearbeitung unterstützt. Die Plattform löst die heute im Einsatz stehenden Geschäftsverwaltungslösungen (insbesondere JURIS 4 und JURIS 5) ab und bildet künftig die zentrale, geschäftskritische Anwendung für die Fallbearbeitung in Gerichten, Staatsanwaltschaften, Justizvollzugsbehörden und weiteren Verwaltungsbehörden mit Justizkompetenz.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  participant-selection:\n    participantSelectionLimitation: yes\n    participantSelectionCommunication: simap\n    vendors:\n      - vendorName: Bietergemeinschaft Zeilenwerk GmbH & Puzzle ICT AG\n        vendorAddress:\n          street: Engehaldenstrasse 20\n          city: Bern\n          postalCode: 3012\n      - vendorName: LogObject AG\n        vendorAddress:\n          street: Thurgauerstrasse 101A\n          city: Opfikon\n          postalCode: 8152\n      - vendorName: Object ECM AG\n        vendorAddress:\n          street: Albisriederstrasse 252\n          city: Zürich\n          postalCode: 8047\n      - vendorName: ti&m AG Bern\n        vendorAddress:\n          street: Helvetiastrasse 17\n          city: Bern\n          postalCode: 3005\n      - vendorName: Delta Logic AG\n        vendorAddress:\n          street: Leopoldstrasse 13\n          city: Sursee\n          postalCode: 6210\n    participantSelectionNote: Bewertung der Präqualifikationskriterien mit hypothetischer Maximalnote, da die Anzahl Teilnehmeranträge der Anzahl für die Präqualifikation zugelassenen Anbieter entspricht\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen seit der Eröffnung auf www.simap.ch beim Verwaltungsgericht Basel-Stadt, Bäumleingasse 1, 4051 Basel, schriftlich Beschwerde erhoben werden. Die Beschwerdeschrift muss einen Antrag, dessen Begründung sowie eine genaue Bezeichnung der Beweismittel enthalten. Die angefochtene Verfügung und, soweit möglich, die genannten Beweismittel sind beizulegen.\n  type: participant_selection\n  projectType: tender\n  base:\n    title: DiWaJu+ – Digitaler Wandel Justiz\n    projectType: tender\n    processType: selective\n    lotsType: without\n    stateContractArea: ja\n    type: participant_selection\n    publicationNumber: 40615-02\n    publicationDate: 2026-11-12\n    creationLanguage: de\n    projectNumber: 40615"
+  },
+  {
    "id": "2ca4b7c0-eeb4-4d14-91ca-500e8e5f6a25",
    "nr": "44311",
    "title": "ERP-Lösung Identitas AG",
@@ -699,33 +763,6 @@
    },
    "url": "https://www.simap.ch/de/project-detail/2ca4b7c0-eeb4-4d14-91ca-500e8e5f6a25",
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 3014\n      name: Identitas AG\n      url: https://www.identitas.ch\n      street: Adamstrasse 6\n      city: Bern\n    procurementRecipientAddress:\n      postalCode: 3014\n      name: Identitas AG\n      url: https://www.identitas.ch\n      street: Adamstrasse 6\n      city: Bern\n    title: ERP-Lösung Identitas AG\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n      - fr\n      - it\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    documentsLanguagesNote: Gem. Art. 21 Abs. 3 lit. b VöB können «Die Ausschreibungsunterlagen überdies nur in einer Amtssprache des Bundes oder in den Fällen nach Artikel 20 in einer anderen Sprache verfasst werden, wenn:\n      …\n      b. die Leistung nicht in verschiedenen Sprachregionen der Schweiz und nicht mit Auswirkungen auf verschiedene Sprachregionen der Schweiz zu erbringen ist.»\n  procurement:\n    orderDescription: Mit der vorliegenden Ausschreibung wird eine leistungsfähige Anbieterin evaluiert, die die neue ERP-Lösung (Open Source oder Closed Source) im SaaS-Modell bereitstellt und nach der erfolgreichen Produktivsetzung über die gesamte Vertragslaufzeit die Wartung, den Support, den Betrieb sowie allfällige Weiterentwicklungen sicherstellen kann.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Die Leistungen sind grundsätzlich bei der Identitas AG in Bern sowie an den Standorten der Anbieterin zu erbringen.\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-06-01\n        - 2038-12-31\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-06-01\n        - 2038-12-31\n    canContractBeExtended: no\n    options: yes\n    optionsNote: OP01: Nutzung der ERP-Lösung (SaaS) für weitere 5 Jahre im Leistungszeitraum 01.01.2034 – 31.12.2038\n      \n      OP02: Life Cycle Unterstützung ERP-Lösung im Leistungszeitraum 01.06.2027 – 31.12.2038\n      \n      OP03: Nutzung oder Bezug von zusätzlichen Funktionserweiterungen oder Zusatzprodukten zur ERP-Lösung im Leistungszeitraum 01.01.2029 – 31.12.2038\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    termsOfBusiness: Allgemeine Geschäftsbedingungen Digitale Verwaltung Schweiz für IKT-Leistungen, Ausgabe 2025\n    includedCosts: Der Gesamtpreis ist in CHF (exkl. MWST) anzugeben. Sämtliche Spesen und Nebenkosten sind in den Preisen enthalten. Reisezeiten werden nicht separat vergütet und sind ebenfalls in den Preisen einzurechnen.\n    securityDeposits: Keine\n    otherRequirements: Geheimhaltung\n      Die Parteien behandeln alle Tatsachen und Informationen vertraulich, die weder offenkundig noch allgemein zugänglich sind. Im Zweifelsfall sind Tatsachen und Informationen vertraulich zu behandeln. Die Parteien verpflichten sich, alle wirtschaftlich zumutbaren sowie technisch und organisatorisch möglichen Vorkehrungen zu treffen, damit vertrauliche Tatsachen und Informationen gegen den Zugang und die Kenntnisnahme durch Unbefugte wirksam geschützt sind.\n      Ohne schriftliche Einwilligung der Auftraggeberin darf die Anbieterin mit der Tatsache, dass eine Zusammenarbeit mit der Auftraggeberin besteht oder bestand, nicht werben und die Auftraggeberin auch nicht als Referenz angeben.\n      Die Parteien überbinden die Geheimhaltungspflicht auf ihre Mitarbeitenden, Subunternehmer, Unterlieferanten sowie weitere beigezogene Dritte.\n      \n      Integritätsklausel\n      Die Anbieterin und die Auftraggeberin verpflichten sich, alle erforderlichen Massnahmen zur Vermeidung von Korruption zu ergreifen, so dass insbesondere keine Zuwendungen oder andere Vorteile angeboten oder angenommen werden. \n      Bei Missachtung der Integritätsklausel hat die Anbieterin der Auftraggeberin eine Konventionalstrafe zu bezahlen. Diese beträgt 10 % der Vertragssumme, mindestens CHF 3 000 pro Verstoss. \n      Die Anbieterin nimmt zur Kenntnis, dass ein Verstoss gegen die Integritätsklausel in der Regel zur Aufhebung des Zuschlags sowie zu einer vorzeitigen Vertragsauflösung aus wichtigen Gründen durch die Auftraggeberin führt.\n      \n      Rückgabe Unterlagen\n      Sämtliche im Zusammenhang mit dieser Ausschreibung der Identitas AG fristgerecht zugestellten Unterlagen verbleiben nach dem Abgabetermin im Eigentum der Identitas AG und werden nicht zurückgegeben. Die Unterlagen werden seitens Identitas AG vertraulich behandelt.\n      \n      Entschädigungen\n      Für die Erstellung und Einreichung der Angebote werden keine Entschädigungen geleistet.\n      Durch die Teilnahme an der Ausschreibung entstehen den Anbieterinnen keinerlei Rechte auf Ausführung von Leistungen und/oder Vergütungen jedweder Art.\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung.\n  dates:\n    qnaRoundSourceType: simap\n \n  [… gekürzt]"
-  },
-  {
-   "id": "c66ccc50-4a78-43d5-867b-da99be59ab4f",
-   "nr": "44065",
-   "title": "IT-Dienstleistungen Digital Transformation Services & AI Technical Solution & Operation Services",
-   "office": "Zürcher Hochschule der Künste, strategischer Einkauf",
-   "date": "2026-10-28",
-   "type": "tender",
-   "process": "open",
-   "deadline": "2026-11-11T23:59:00+01:00",
-   "cpv": [
-    "72000000",
-    "75000000"
-   ],
-   "score": 8,
-   "hits": [
-    "AI (Titel)"
-   ],
-   "fields": {
-    "gegenstand": "In Ergänzung zu den Eigenleistungen werden Unternehmen gesucht, welche die ZHdK für drei Jahre (mit Option auf Verlängerung um einmal zwei Jahre oder zweimal ein Jahr) mit ihren Leistungen im Informatikbereich unterstützen. Es geht konkret um folgende Dienstleistungen: - Los 1: Digital Transformation Services: Expertise sowie Beratung und Unterstützung der ZHdK in der digitalen und agilen Trans-formation sowie dem damit verbundenen Kulturwandel Leitung von oder Unterstützung in Projekten oder Programmen im Bereich der digitalen und agilen Transformation - Los 2: AI Technical Solution & Operation Services: Aufbau, Weiterentwicklung und Betrieb von AI-Services sowie der dafür erforderlichen AI-Plattformen, Infrastrukturen und technischen Grundlagen Umsetzung, Integration und Governance von AI-Lösungen sowie Befähigung der ZHdK zum nachhaltigen und sicheren Einsatz von Künstlicher Intelligenz Die gesuchten Dienstleistungen sind in zwei Lose unterteilt. Jedes Los besteht aus einem oder meh-reren Profilen für die Leistungserbringung. Die konkreten Anforderungen und Tätigkeiten sind in den beiden Los-Beschreibungen in Kapitel 2 pro Los beschrieben. Es werden Unternehmen gesucht, deren K…",
-    "eignung": "",
-    "zuschlag": "",
-    "lose": "Los 1: Digital Transformation Services; Los 2: AI Technical Solution & Operation Services",
-    "verfahren": "offen"
-   },
-   "url": "https://www.simap.ch/de/project-detail/c66ccc50-4a78-43d5-867b-da99be59ab4f",
-   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 8005\n      name: Zürcher Hochschule der Künste, strategischer Einkauf\n      contactPerson: Zürcher Hochschule der Künste, strategischer Einkauf\n      url: https://www.zhdk.ch\n      street: Pfingstweidstrasse 96\n      city: Zürich\n    procurementRecipientAddress:\n      postalCode: 8005\n      name: Zürcher Hochschule der Künste, strategischer Einkauf\n      contactPerson: Zürcher Hochschule der Künste, strategischer Einkauf\n      url: https://www.zhdk.ch\n      street: Pfingstweidstrasse 96\n      city: Zürich\n    title: IT-Dienstleistungen Digital Transformation Services & AI Technical Solution & Operation Services\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    participantLotsLimitationNote: Sehr geehrte Anbieter:innen\n      \n      Wir informieren Sie, dass die Frist für die Einreichung der Angebote für alle Anbieter:innen bis zum 11.11.2026 verlängert wird. Die Berichtigungspublikation muss den Status ( eingereicht ) haben, damit die neuen Termine ab Publikatonstermin Berichtigung aktiv werden. Das heisst die Fristverlängerung sehen Sie erst ab dem 06.11.2026.\n      \n      Hintergrund: Die Antworten auf die bis zum 23.10.2026, 23:59 Uhr eingegangenen Fragen wurden aufgrund eines technischen Fehlers nicht korrekt publiziert. Nachdem wir durch einen Hinweis aus dem Kreis der Anbieter:innen darauf aufmerksam gemacht wurden, konnten wir die Antworten heute, am 27.10.2026, erfolgreich publizieren. Sie sind spätestens ab dem 28.10.2026 auf simap.ch einsehbar.\n      \n      Wir danken Ihnen für Ihr Verständnis.\n      \n      Freundliche Grüsse\n      \n      Beschaffungsstelle der Zürcher Hochschule der Künste (ZHdK)\n    offerSpecificNote: Alle Angebote Online einreichen.\n  procurement:\n    orderDescription: In Ergänzung zu den Eigenleistungen werden Unternehmen gesucht, welche die ZHdK für drei Jahre (mit Option auf Verlängerung um einmal zwei Jahre oder zweimal ein Jahr) mit ihren Leistungen im Informatikbereich unterstützen.\n      Es geht konkret um folgende Dienstleistungen:\n      \n      - Los 1: Digital Transformation Services:\n      \n      Expertise sowie Beratung und Unterstützung der ZHdK in der digitalen und agilen Trans-formation sowie dem damit verbundenen Kulturwandel\n      \n      Leitung von oder Unterstützung in Projekten oder Programmen im Bereich der digitalen und agilen Transformation\n      \n      - Los 2: AI Technical Solution & Operation Services:\n      \n      Aufbau, Weiterentwicklung und Betrieb von AI-Services sowie der dafür erforderlichen AI-Plattformen, Infrastrukturen und technischen Grundlagen\n      \n      Umsetzung, Integration und Governance von AI-Lösungen sowie Befähigung der ZHdK zum nachhaltigen und sicheren Einsatz von Künstlicher Intelligenz\n      Die gesuchten Dienstleistungen sind in zwei Lose unterteilt. Jedes Los besteht aus einem oder meh-reren Profilen für die Leistungserbringung. Die konkreten Anforderungen und Tätigkeiten sind in den beiden Los-Beschreibungen in Kapitel 2 pro Los beschrieben.\n      Es werden Unternehmen gesucht, deren Kernkompetenzen in den beschriebenen Bereichen des In-formatikumfelds liegen und die über eigenes, qualifiziertes Personal verfügen.\n      Für jedes Los wird der Zuschlag an bis zu drei Unternehmen erteilt. Es besteht keine Begrenzung der Angebote, d.h. es dürfen für beide Lose Angebote eingereicht werden. Es ist allerdings erwünscht, dass sich Unternehmen auf Angebote in ihren jeweiligen Kernkompetenzen konzentrieren.\n    processType: open\n    orderType: service\n    cpcCode:\n      code: b7f1e45b-1fe5-4e19-8cbb-98006291267d\n      label: Datenverarbeitung und verbundene Dienstleistungen\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    walkThroughNotes: keine\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Ausschreibung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-16\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-28\n    initialPublicationDate: 2026-09-14\n    offerDeadline: 2026-11-11T23:59:00+01:00\n    offerValidityDeadlineDate: 2027-05-06\n    offerOpening:\n      dateTime: 2026-11-12T00:00:00+01:00\n      ignoreTime: ja\n    offerOpeningNotes: Offertöffnung durch Auftraggeberin (nicht öffentlich)\n    offerOpeningPostalCode: 8005\n    offerOpeningCity: Zürich\n  type: tender\n  projectType: tender\n  correction:\n    initialPublicationDate: 2026-09-14\n    correctionDiffKeys:\n      - project-info.participantLotsLimitationNote.de\n      - project-info.offerSpecificNote\n      - dates.offerDeadline\n      - dates.offerOpening.dateTime\n      - dates.offerOpeningPostalCode\n      - dates.offerOpeningCity.de\n    remarks: Wir informieren Sie, dass die Frist für die Einreichung der Angebote für alle Anbieter:innen bis zum 11.11.2026 verlängert wird. Die Berichtigungspublikation muss den Status ( eingereicht ) haben, damit die neuen Termine ab Publikatonstermin Berichtigung aktiv werden. \n      \n     \n  [… gekürzt]"
   },
   {
    "id": "6cd8cc8a-9980-4f99-8832-aa3e952c5a88",
@@ -1050,6 +1087,31 @@
    },
    "url": "https://www.simap.ch/de/project-detail/fd42a0d2-a38f-4595-a1e8-99f24bf071b3",
    "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Beratung der SZU-Geschäftsleitung zu ICT-Strategie, Governance und Transformation. Durchführung von Reifegradanalysen, Erarbeitung von Entscheidungsgrundlagen und Begleitung von Verbesserungsinitiativen. Moderation von Workshops mit Management und Betrieb. Pensum: 60 % (132 Tage/Jahr).\n    additionalCpvCodes:\n      - code: 72221000\n        label: Beratung im Bereich Unternehmensanalyse\n      - code: 79400000\n        label: Unternehmens- und Managementberatung und zugehörige Dienste\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    projectOrderDescription: Damit der SZU ab September 2026 eine vertragliche Basis für den Abruf von Dienstleistungen zur Verfügung steht, sucht die SZU Partnerfirmen für folgende Rollen (eine Rolle je Los):\n      \n      Los \t\tRolle\n      1 \t\t\tBusiness Consultant / Management Berater:in\n      2 \t\t\tSupport Programmleitung / Projekt- und Teilprojektleiter:in\n      3 \t\t\tICT Projektleiter:in\n      4 \t\t\tEnterprise Architekt:in\n      5 \t\t\tBusiness- und Prozessanalyst:in\n      6 \t\t\tICT System Engineer\n      7 \t\t\tCISO\n      \n      In einigen Losen werden Personen mit unterschiedlichem Senioritätslevel gesucht.\n      \n      Ziel ist es, für die sieben Lose je maximal drei Partnerfirmen als Rahmenvertragsnehmerinnen unter Vertrag zu nehmen, die für eine Vertragsdauer von fünf Jahren auf Abruf zur Verfügung stehen.\n      \n      Eine Partnerfirma kann mehrere Lose (=mehrere Rollen) abdecken. Je Rolle und je Senioritätslevel ist eine Schlüsselperson zu definieren, die für die Leistungserfüllung verantwortlich ist. Eine Schlüsselperson kann mehrere Rollen und/oder mehrere Senioritätslevel abdecken.\n      \n      Für die individuellen Abrufe von Leistungen werden jeweils Einzelverträge abgeschlossen. Es besteht keine konkrete Grundleistung. Inhalt, Umfang und Zeitbedarf für die Leistungserbringung ergibt sich aus dem jeweiligen Abruf.\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 8045\n      name: Sihltal Zürich Uetliberg Bahn SZU AG\n      url: https://www.szu.ch\n      street: Wolframplatz 21\n      city: Zürich\n    procurementRecipientAddress:\n      postalCode: 8045\n      name: Sihltal Zürich Uetliberg Bahn SZU AG\n      url: https://www.szu.ch\n      street: Wolframplatz 21\n      city: Zürich\n    title: Ausschreibung Preferred Supplier Modell\n    stateContractArea: ja\n    publicationTed: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: APEXA GmbH\n        vendorAddress:\n          street: Rütistrasse 10+12\n          city: Baden\n          postalCode: 5400\n        price:\n          currency: chf\n          price: 947478.88\n          vatType: full\n      - vendorName: consulteer ag\n        vendorAddress:\n          street: Riedweg 6\n          city: Meggen\n          postalCode: 6045\n        price:\n          currency: chf\n          price: 1018653.95\n          vatType: full\n      - vendorName: kiwi Consultants AG\n        vendorAddress:\n          street: Beundenfeldstrasse 13\n          city: Bern\n          postalCode: 3013\n        price:\n          currency: chf\n          price: 1065317.07\n          vatType: full\n    numberOfSubmissions: 39\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-10-12\n    awardDecisionJustification: Die Firmen Consulteer AG, APEXA GmbH und kiwi Consultants AG haben basierend auf der Bewertung der eingegangenen Angebote und der Beurteilung der Zuschlagskriterien 413.12, 391.40 resp. 390.70 von 500.00 möglichen Punkten erreicht. Damit erzielen sie die drei höchsten Gesamtpunktzahlen und stellen dementsprechend die vorteilhaftesten Angebote dar. Die massgebenden Merkmale und Vorteile des Angebotes der Firma Consulteer AG liegen insbesondere in der Bewertung der Zuschlagskriterien ZK 2 (Auftragsanalyse) und ZK 3 (Schlüsselperson Expert), jene der Firma APEXA GmbH insbesondere in der Bewertung der Zuschlagskriterien ZK 1 (Preis) und ZK 3 (Schlüsselperson Expert) und jene der Firma kiwi Consultants AG insbesondere in der Bewertung des Zuschlagskriteriums ZK 3 (Schlüsselperson Expert).\n    remediesNotice: Gegen diesen Zuschlag kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Zuschlagsverfügung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    corrected: ja\n    publicationNumber: 33885-02\n    publicationDate: 2026-05-15\n  base:\n    publicationTed: ja\n    title: Ausschreibung Preferred Supplier Modell\n    projectType: tender\n    processType: open\n    lotsType: with\n    stateContractArea: ja\n    type: award\n    publicationNumber: 33885-07\n    publicationDate: 2026-10-13\n    creationLanguage: de\n    projectNumber: 33885\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:710345-2026:HTML:DE:HTML\n  lot:\n    lotNumber: 1\n    title: Business Consultant / Management Berater:in\n    projectSubType: service\n\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Leitung und Koordination von Transformationsprojekten inkl. Roadmap-Pflege, Stakeholder-Kommunikation, Lieferantensteuerung sowie Erstellung von Management- und Gremienunterlagen. Zwei Senioritätsstufen. Pensum gesamt: 240 % (528 Tage/Jahr).\n    additionalCpvCodes:\n      - code: 72224000\n        label: Beratung im Bereich Projektleitung\n      - code: 72246000\n        label: Systemberatung\n    cpvCode:\n      code: 72000000\n      label: \n  [… gekürzt]"
+  },
+  {
+   "id": "62a1ffbd-8a0e-472b-8135-03abc61ba380",
+   "nr": "45155",
+   "title": "Common Data Environment (CDE) für Bauprojekte der ETH Zürich",
+   "office": "ETH Zürich - Abt. Procurement Services VPIN",
+   "date": "2026-11-12",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2026-12-22T23:59:00+01:00",
+   "cpv": [
+    "48100000",
+    "72000000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Die ETH Zürich sucht eine Plattform für die Abwicklung ihrer Bauprojekte. Die neue Plattform organisiert Modelle, Pläne, Dokumente, Aufgaben und Protokolle an einem zentralen Ort und ermöglicht so für alle Beteiligten eine strukturierte, nachvollziehbare und einheitliche Projektabwicklung der ETH Bauprojekte.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/62a1ffbd-8a0e-472b-8135-03abc61ba380",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 8092\n      name: ETH Zürich - Abt. Procurement Services VPIN\n      contactPerson: Thomas Benz\n      url: https://www.ethz.ch\n      street: Binzmühlestrasse 130\n      city: Zürich\n    procurementRecipientAddress:\n      postalCode: 8092\n      name: ETH Zürich - Abt. Real Estate Management\n      url: https://www.ethz.ch\n      street: Binzmühlestrasse 130\n      city: Zürich\n    title: Common Data Environment (CDE) für Bauprojekte der ETH Zürich\n    documentsLanguages:\n      - de\n      - it\n      - en\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n      - en\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    offerSpecificNote: Gemäss Ausschreibungsunterlagen\n  procurement:\n    orderDescription: Die ETH Zürich sucht eine Plattform für die Abwicklung ihrer Bauprojekte. Die neue Plattform organisiert Modelle, Pläne, Dokumente, Aufgaben und Protokolle an einem zentralen Ort und ermöglicht so für alle Beteiligten eine strukturierte, nachvollziehbare und einheitliche Projektabwicklung der ETH Bauprojekte.\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 72000000\n        label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    executionNote: Gemäss Ausschreibungsunterlagen\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 8092\n      city: Zürich\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    options: yes\n    optionsNote: Optionale Dienstleistungen gemäss Ausschreibungsunterlagen.\n    cpvCode:\n      code: 48100000\n      label: Branchenspezifisches Softwarepaket\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    subContractorNote: Zieht die Anbieterin zur Leistungserfüllung Subunternehmer bei, übernimmt sie die Gesamtverantwortung. Sie führt alle beteiligten Subunternehmer mit den ihnen zugewiesenen Rollen auf.\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-26\n        note: Bitte Formvorschriften in den Ausschreibungsunterlagen beachten.\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-12\n    offerDeadline: 2026-12-22T23:59:00+01:00\n    specificDeadlinesAndFormalRequirements: Gemäss Ausschreibungsunterlagen\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  referencingPub:\n    pubType: advance_notice\n    projectType: tender\n    processType: open\n    publicationNumber: 45155-01\n    publicationDate: 2026-10-01\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 48100000\n      label: Branchenspezifisches Softwarepaket\n    orderType: service\n    title: Common Data Environment (CDE) für Bauprojekte der ETH Zürich\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45155-02\n    publicationDate: 2026-11-12\n    creationLanguage: de\n    translationLanguages:\n      - language: fr\n        type: complete\n      - language: it\n        type: complete\n    projectNumber: 45155\n  hasProjectDocuments: ja"
   },
   {
    "id": "436dd2d5-f786-4cdf-b488-e89dbe50706b",
@@ -1969,30 +2031,6 @@
    },
    "url": "https://www.simap.ch/de/project-detail/1c8ab8ec-7cc2-4e20-9419-80c2612bbef5",
    "text": "\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: selective\n    publicationNumber: 41984-01\n    publicationDate: 2026-08-10\n  project-info:\n    procOfficeAddress:\n      postalCode: 8090\n      name: Kanton Zürich, Finanzdirektion, Amt für Informatik\n      street: Waltersbachstrasse 5\n      city: Zürich\n  procurement:\n    projectType: tender\n    processType: selective\n    pubType: participant_selection\n    orderType: service\n    orderDescription: Gegenstand der Beschaffung ist die Lieferung (und ggf. Entwicklung) interaktiver E-Learning-Kurse zum Thema Cybersicherheit. Die Kurse sind als SCORM-kompatible Lernmodule bereitzustellen und müssen mit dem bestehenden Learning Management System (LMS) des Auftragsgebers kompatibel sein.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  participant-selection:\n    participantSelectionLimitation: not_specified\n    participantSelectionCommunication: simap\n    vendors:\n      - vendorName: HoxHunt Oy\n        vendorAddress:\n          street: Porkkalankatu 3\n          city: HELSINKI\n          postalCode: 00180\n      - vendorName: SoSafe SE\n        vendorAddress:\n          street: Lichtstr. 25a\n          city: Köln\n          postalCode: 50825\n      - vendorName: MetaCompliance GmbH\n        vendorAddress:\n          street: Katharinenstr. 21\n          city: Leipzig\n          postalCode: 04109\n    participantSelectionNote: Nach Durchführung der ersten Phase des Vergabeverfahrens «eLearning Cybersicherheit» nach der IVöB im selektiven Verfahren im Staatsvertragsbereich stehen die zur 2. Phase (Angebot) zugelassenen Anbietenden fest. \n      \n      Begründung: Beste Erfüllung der Eignungskriterien als Bewertungskriterien.\n    remediesNotice: Gegen diesen Entscheid kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Zuschlagsverfügung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  type: participant_selection\n  projectType: tender\n  base:\n    title: «eLearning Cybersicherheit»\n    projectType: tender\n    processType: selective\n    lotsType: without\n    stateContractArea: ja\n    type: participant_selection\n    publicationNumber: 41984-02\n    publicationDate: 2026-10-16\n    creationLanguage: de\n    translationLanguages:\n      - language: fr\n        type: complete\n    projectNumber: 41984"
-  },
-  {
-   "id": "5be46c5d-82ed-4245-87a2-552f51965981",
-   "nr": "45681",
-   "title": "ITAM - Remplacement Discovery",
-   "office": "Etat de Vaud, DGNSI - Direction générale du numérique et des systèmes d'information",
-   "date": "2026-10-12",
-   "type": "tender",
-   "process": "open",
-   "deadline": "2026-11-27T12:00:00+01:00",
-   "cpv": [
-    "48000000"
-   ],
-   "score": 3,
-   "hits": [],
-   "fields": {
-    "gegenstand": "Acquisition d'une solution du marché pour le remplacement de la solution Discovery permettant de mettre à jour un référentiel précis et complet des ressources IT (matériel, logiciel).",
-    "eignung": "gemäss Ausschreibungsunterlagen",
-    "zuschlag": "gemäss Ausschreibungsunterlagen",
-    "lose": "",
-    "verfahren": "offen"
-   },
-   "url": "https://www.simap.ch/de/project-detail/5be46c5d-82ed-4245-87a2-552f51965981",
-   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 1020\n      name: Etat de Vaud, DGNSI - Direction générale du numérique et des systèmes d'information\n      url: https://www.vd.ch\n      street: Avenue de Longemalle 1\n      city: Renens\n    procurementRecipientAddress:\n      postalCode: 1020\n      name: Etat de Vaud, DGNSI - Direction générale du numérique et des systèmes d'information\n      url: https://www.vd.ch\n      street: Avenue de Longemalle 1\n      city: Renens\n    title: ITAM - Remplacement Discovery\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_external\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: supply\n    offerAddress:\n      postalCode: 1020\n      name: Etat de Vaud, DGNSI - Direction générale du numérique et des systèmes d'information\n      street: Avenue de Longemalle 1\n      city: Renens\n  procurement:\n    orderDescription: Acquisition d'une solution du marché pour le remplacement de la solution Discovery permettant de mettre à jour un référentiel précis et complet des ressources IT (matériel, logiciel).\n    processType: open\n    orderType: supply\n    supplyType: work_contract\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 1020\n      city: Renens\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2032-02-28\n    canContractBeExtended: no\n    options: no\n    cpvCode:\n      code: 48000000\n      label: Softwarepaket und Informationssysteme\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: supply\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours à la Cour de droit administratif et public du Tribunal cantonal, Route du Signal 8 (Palais de Justice de l’Hermitage), 1014 Lausanne, dans les vingt jours dès sa notification par publication ; le recours doit être signé et indiquer les conclusions et ses motifs. La décision attaquée est jointe au recours.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-02\n    processType: open\n    orderType: supply\n    publicationDate: 2026-10-12\n    offerDeadline: 2026-11-27T12:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-10-12\n        - 2026-11-26\n    expressionOfInterestUntil: 2026-11-26\n    offerValidityDeadlineDays: 360\n    offerOpening:\n      dateTime: 2026-11-27T14:00:00+01:00\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: supply\n  base:\n    cpvCode:\n      code: 48000000\n      label: Softwarepaket und Informationssysteme\n    orderType: supply\n    publicationTed: ja\n    title: ITAM - Remplacement Discovery\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45681-01\n    publicationDate: 2026-10-12\n    creationLanguage: fr\n    projectNumber: 45681\n  hasProjectDocuments: ja\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:705872-2026:HTML:FR:HTML"
   }
  ]
 }
