@@ -1,6 +1,6 @@
 {
-  "_hinweis": "Gemeinsame Vorlagen des Prompt Hub. Platzhalter {{Name}} werden in der App als Eingabefeld angezeigt. <inhalt> steht für den geteilten oder eingefügten Text. anrede=true zeigt den Du/Sie-Schalter.",
-  "version": 2,
+  "_hinweis": "Gemeinsame Vorlagen des Prompt Hub. Platzhalter {{Name}} werden in der App als Eingabefeld angezeigt. <inhalt> steht für den geteilten oder eingefügten Text. anrede=true zeigt den Du/Sie-Schalter. skill nennt den passenden Claude-Skill; die App weist nur beim Ziel Claude darauf hin.",
+  "version": 3,
   "categories": [
     {
       "id": "schreiben",
@@ -94,15 +94,25 @@
       "name": "Review / Challenge",
       "desc": "Lücken als Tabelle mit Risiko-Rating und Rückfragen.",
       "anrede": false,
-      "prompt": "Rolle: Du bist kritischer Solution Architect im Review eines Konzepts, einer Anforderung oder eines Tickets (<inhalt>).\nZiel: Lücken finden, bevor sie im Projekt teuer werden.\nPrüffelder: Prozess und Ausnahmefälle, Schnittstellen, Fehlerhandling, Berechtigungen, Mengengerüst, Datenmigration, Test und Abnahme. Bei SAP zusätzlich: Betriebsmodell (Public Cloud, Private Cloud, On-Premise) und Clean-Core-Verträglichkeit.\nAusgabe: Tabelle Nr | Lücke | Fundstelle im Text | Risiko hoch/mittel/tief | Rückfrage, sortiert nach Risiko. Danach die 3 wichtigsten Empfehlungen."
+      "prompt": "Rolle: Du bist kritischer Solution Architect im Review eines Konzepts, einer Anforderung oder eines Tickets (<inhalt>).\nZiel: Lücken finden, bevor sie im Projekt teuer werden.\nPrüffelder: Prozess und Ausnahmefälle, Schnittstellen, Fehlerhandling, Berechtigungen, Mengengerüst, Datenmigration, Test und Abnahme. Bei SAP zusätzlich: Betriebsmodell (Public Cloud, Private Cloud, On-Premise) und Clean-Core-Verträglichkeit.\nAusgabe: Tabelle Nr | Lücke | Fundstelle im Text | Risiko hoch/mittel/tief | Rückfrage, sortiert nach Risiko. Danach die 3 wichtigsten Empfehlungen.",
+      "skill": "hermes-konzept"
+    },
+    {
+      "id": "konzeptreview",
+      "cat": "analysieren",
+      "name": "Konzept-Review (6 Rollen)",
+      "skill": "hermes-konzept",
+      "desc": "Konzept aus Sicht Projektleitung, Architektur, Schnittstelle, Vertrieb, Finanzen und Auftraggeber prüfen. Lücken mit Vorschlag.",
+      "prompt": "Rolle: Du prüfst das Konzept in <inhalt> nacheinander aus sechs Rollen. Ziel: Lücken finden und gleich einen Textvorschlag liefern.\n1. Projektleitung: Annahmen explizit? Abgrenzung? Entscheide mit Entscheider und Termin? Risiken bewertet und zugeordnet? Was blockiert die Freigabe?\n2. Architektur: Betriebsmodell (Public Cloud, Private Cloud, On-Premise) und Release benannt? Clean-Core-Einordnung je Option? Synchron/asynchron begründet? Idempotenz über fachlichen Schlüssel, Korrelationskennung, Fehlerpfad (Wiederholung, Fehlerspeicher, Wiederaufsetzen)? Nicht-funktionale Anforderungen quantifiziert (Durchsatz, Verfügbarkeit, RTO, RPO)?\n3. Schnittstelle: Feldabbildung mit Pflichtfeldern, Feldlängen, Fehlerklassen, Storno und Teilverarbeitung, Reihenfolge, Rückmeldung an die Quelle? Sind genannte APIs und Nachrichtentypen verifiziert?\n4. Vertrieb/Logistik (z.B. SD/MM): Belegarten, Belegfluss Ware vs. Leistung, Partner und Adressen, führende Preisfindung, Steuer, Sperren, Storno, Retoure, Gutschrift, Belegausgabe ohne Doppelversand?\n5. Finanzen (FI): Kontenmodell inkl. Verrechnungs- und Differenzkonten, Buchungsschema als Beispiel, Buchen vs. Ausgleichen, Steuer bei Rückabwicklung, Periodenwechsel, Abschluss, Revisionsfähigkeit?\n6. Auftraggeber: messbarer Nutzen, Mitwirkung des Kunden, fachlicher Notfallprozess, Erkennung stiller Fehler (Mengenabstimmung), Datenschutz, Abhängigkeit von Anbietern, verständliche Sprache?\nAusgabe: Tabelle Nr | Rolle | Lücke | Fundstelle | Risiko hoch/mittel/tief | Vorschlag (Textbaustein oder Rückfrage), sortiert nach Risiko. Danach die offenen Punkte als P-01 … mit Adressat. Nichts erfinden: Unbekanntes als [Platzhalter]."
     },
     {
       "id": "technik",
       "cat": "analysieren",
       "name": "Technik & Log",
-      "desc": "Ursachen nach Wahrscheinlichkeit, Lösungsschritte konkret.",
+      "desc": "Ursachen nach Wahrscheinlichkeit, Analysepfad mit Transaktionen, Lösungsschritte prüfbar.",
       "anrede": false,
-      "prompt": "Rolle: Du bist erfahrener SAP- und Integrationsentwickler im Support.\nAnalysiere den technischen Sachverhalt in <inhalt> (Fehlermeldung, Log, Payload, Code):\n1. Was passiert technisch? (2–3 Sätze)\n2. Wahrscheinliche Ursachen, sortiert nach Wahrscheinlichkeit, je mit Begründung aus dem Text\n3. Lösungsschritte konkret und prüfbar, bei SAP mit Transaktion, Tabelle oder Customizing-Pfad\nNenne Transaktionen, Tabellen, Felder und SAP-Hinweise nur, wenn du sie sicher kennst. Alles andere markierst du als «zu verifizieren»."
+      "prompt": "Rolle: Du bist erfahrener SAP- und Integrationsentwickler im Support.\nAnalysiere den technischen Sachverhalt in <inhalt> (Fehlermeldung, Log, Payload, Code):\n1. Einordnung: System und Betriebsmodell (Public Cloud, Private Cloud, On-Premise), Schnittstellentechnik (IDoc, OData, SOAP, RFC, Datei). Was nicht im Text steht, als [unklar] markieren.\n2. Was passiert technisch? (2–3 Sätze)\n3. Wahrscheinliche Ursachen, sortiert nach Wahrscheinlichkeit, je mit Begründung aus dem Text\n4. Analysepfad: wo man nachschaut, in sinnvoller Reihenfolge. Typische Stellen: IDoc-Status (WE02, BD87), Gateway-Fehlerprotokolle (/IWFND/ERROR_LOG, /IWBEP/ERROR_LOG), Anwendungslog (SLG1), Web-Service-Protokolle (SRT_UTIL), tRFC/qRFC (SM58, SMQ1, SMQ2), Kurzdumps (ST22), Berechtigungen (SU53, STAUTHTRACE). In Public Cloud gelten die Fiori-Apps statt GUI-Transaktionen.\n5. Lösungsschritte konkret und prüfbar, bei SAP mit Transaktion, Tabelle oder Customizing-Pfad, je mit Clean-Core-Einschätzung, falls Code nötig ist\nNenne Transaktionen, Tabellen, Felder und SAP-Hinweise nur, wenn du sie sicher kennst. Alles andere markierst du als «zu verifizieren».",
+      "skill": "sap-sd-mm-experte"
     },
     {
       "id": "struktur",
@@ -129,6 +139,13 @@
       "prompt": "Rolle: Du bereitest eine Entscheidungsvorlage für eine Geschäftsleitung vor.\nGrundlage ist <inhalt>.\n1. Fragestellung in einem Satz\n2. Optionen (2–4) als Vergleichstabelle: Option | Nutzen | Aufwand/Kosten | Risiken | Umsetzbarkeit\n3. Empfehlung mit 3 Begründungen und den Bedingungen, unter denen sie kippt\n4. Nächste Schritte mit Verantwortung und Termin\nFehlende Zahlen als [Platzhalter], nichts erfinden."
     },
     {
+      "id": "vertrag",
+      "cat": "analysieren",
+      "name": "Vertrag / SLA prüfen",
+      "desc": "Werkvertrag, Rahmenvertrag oder SLA aus Sicht der Leistungserbringerin prüfen: Risiken, Lücken, Formulierungsvorschläge.",
+      "prompt": "Rolle: Du prüfst als erfahrene Vertragsmanagerin eines IT-Dienstleisters den Vertrag bzw. das SLA in <inhalt>. Du bist keine Anwältin; rechtliche Beurteilungen kennzeichnest du als «juristisch prüfen».\nPrüffelder:\n1. Leistungsumfang und Abgrenzung: Was ist geschuldet, was ausdrücklich nicht? Fehlen Systeme oder Module im Scope?\n2. Mitwirkungspflichten des Kunden und Folgen, wenn sie ausbleiben\n3. Abnahme: Verfahren, Fristen, Abnahmefiktion, Anzahl Nachbesserungsversuche, Testkonzept-Freigabe\n4. Service Level: Verfügbarkeit, Reaktions- und Lösungszeiten je Priorität, Servicezeiten, RTO/RPO, Messmethode und Reporting\n5. Sanktionen: Service Credits, Malus, Konventionalstrafe (Höhe, Deckel, Kumulation), Bonus\n6. Haftung: Begrenzung, Ausschlüsse, Verhältnis zu Konventionalstrafen; Versicherung\n7. Verantwortlichkeiten zwischen den Parteien und Dritten (z.B. Softwarehersteller, Hosting), Eskalation\n8. Laufzeit, Kündigung, Exit und Datenrückgabe, Preisanpassung, Mehraufwand und Change-Verfahren\nAusgabe: Tabelle Nr | Klausel/Ziffer | Befund | Risiko hoch/mittel/tief | Vorschlag (konkrete Formulierung). Danach die 5 wichtigsten Verhandlungspunkte. Bevorzuge schlanke, praktisch durchsetzbare Regelungen."
+    },
+    {
       "id": "anforderung",
       "cat": "analysieren",
       "name": "Anforderung → User Stories",
@@ -137,12 +154,20 @@
       "prompt": "Rolle: Du bist Business Analyst in einem SAP-Projekt.\nLeite aus <inhalt> Anforderungen ab:\n1. User Stories als Tabelle: ID | Als … möchte ich … damit … | Priorität (Muss/Soll/Kann)\n2. Je Story 2–4 Akzeptanzkriterien im Format Gegeben/Wenn/Dann\n3. Abgrenzungen (was nicht dazugehört)\n4. Offene Fragen an den Fachbereich\nNur aus dem Text ableiten. Annahmen kennzeichnest du als [Annahme]."
     },
     {
+      "id": "testfaelle",
+      "cat": "analysieren",
+      "name": "Testfälle ableiten",
+      "desc": "Aus Anforderung, Konzept oder Prozess: Testfälle E2E, Variante, Negativ, Berechtigung, Schnittstelle. Tabelle für Jira-Import.",
+      "prompt": "Rolle: Du bist Testmanager in einem SAP-Projekt.\nLeite aus <inhalt> Testfälle ab:\n1. Testfall-Tabelle: ID | Typ (E2E, Variante, Negativ, Berechtigung, Schnittstelle) | Titel | Vorbedingungen/Testdaten | Schritte (nummeriert, kurz) | Erwartetes Ergebnis | Priorität (hoch/mittel/tief) | Bezug (Anforderung/Kapitel)\n2. Je Geschäftsprozess mindestens ein E2E-Fall und die wichtigsten Negativfälle (Storno, fehlende Stammdaten, Berechtigung fehlt, Schnittstelle nicht erreichbar)\n3. Abdeckungslücken: Anforderungen ohne Testfall, Testdaten, die beschafft werden müssen\nDie Tabelle soll sich als CSV für einen Jira-Import übernehmen lassen (übergeordneter Fall = E2E, Unterfälle als Child). Nur aus dem Text ableiten, Annahmen als [Annahme]."
+    },
+    {
       "id": "loesung",
       "cat": "analysieren",
       "name": "SAP-Lösungsskizze",
       "desc": "Anforderung → Optionen nach Betriebsmodell und Clean Core, Empfehlung.",
       "anrede": false,
-      "prompt": "Rolle: Du bist SAP-Lösungsarchitekt. Erstelle aus der Anforderung in <inhalt> eine Lösungsskizze.\n1. Anforderung in 3 Sätzen, betroffene Prozesse (End-to-End)\n2. Lösungsoptionen (Tabelle): Option | SAP-Lösung, Scope Items, Transaktionen oder Fiori-Apps | Public Cloud | Private Cloud | On-Premise | Clean-Core-Verträglichkeit (Standard, Key-User-Erweiterung, BTP Side-by-Side, klassische Modifikation) | Aufwand grob | Risiken\n3. Empfehlung mit 3 Begründungen\n4. Offene Fragen an den Fachbereich\nSAP-Details (Scope Items, Apps, Felder, Release-Stände) nur nennen, wenn du sie sicher kennst oder per Websuche belegst; sonst als [prüfen] markieren. Keine Grundlagen erklären."
+      "prompt": "Rolle: Du bist SAP-Lösungsarchitekt. Erstelle aus der Anforderung in <inhalt> eine Lösungsskizze.\n1. Anforderung in 3 Sätzen, betroffene Prozesse (End-to-End)\n2. Lösungsoptionen (Tabelle): Option | SAP-Lösung, Scope Items, Transaktionen oder Fiori-Apps | Public Cloud | Private Cloud | On-Premise | Clean-Core-Verträglichkeit (Standard, Key-User-Erweiterung, BTP Side-by-Side, klassische Modifikation) | Aufwand grob | Risiken\n3. Empfehlung mit 3 Begründungen\n4. Offene Fragen an den Fachbereich\nSAP-Details (Scope Items, Apps, Felder, Release-Stände) nur nennen, wenn du sie sicher kennst oder per Websuche belegst; sonst als [prüfen] markieren. Keine Grundlagen erklären.",
+      "skill": "sap-sd-mm-experte"
     },
     {
       "id": "recherche",
@@ -151,6 +176,13 @@
       "desc": "Aktueller Stand mit Quellen und Datum.",
       "anrede": false,
       "prompt": "Rolle: Du bist Rechercheur mit Websuche.\nRecherchiere den aktuellen Stand zum Thema in <inhalt>:\n1. Kurzantwort in 3 Sätzen\n2. Funktionsweise und Fakten\n3. Praxisrelevanz und Grenzen\nBevorzuge Primärquellen (Hersteller, Behörden, Dokumentation). Nenne jede Quelle mit Datum. Bei widersprüchlichen Angaben zeigst du beide Positionen. Bei SAP-Themen unterscheidest du Public Cloud, Private Cloud und On-Premise."
+    },
+    {
+      "id": "saprelease",
+      "cat": "recherche",
+      "name": "SAP Release & Lizenz",
+      "desc": "Wartungsfristen, Release-Pfad, Compatibility Pack, Lizenzfolgen (z.B. Digital Access) zu einer SAP-Frage. Mit Quellen.",
+      "prompt": "Rolle: Du bist SAP-Architekt mit Websuche und beurteilst die Frage in <inhalt> zu Release, Wartung oder Lizenz.\n1. Kurzantwort in 3 Sätzen\n2. Fakten mit Quelle und Datum: Wartungsende des Release, nächster sinnvoller Zielrelease, Fristen für Compatibility-Pack-Nutzung bzw. Nachfolgelösungen, betroffene SAP-Hinweise (Nummer nur, wenn verifiziert)\n3. Unterscheidung Public Cloud, Private Cloud, On-Premise: was gilt jeweils?\n4. Lizenzfolgen: indirekte Nutzung bzw. Digital Access (Dokumenttypen), Paket- oder Nutzerlizenzen, Rise-Vertragsbestandteile. Lizenzaussagen als «mit SAP-Account-Team bestätigen» kennzeichnen\n5. Clean-Core-Einordnung und Risiken bei Zuwarten\n6. Empfehlung mit Termin für die Entscheidung\nBevorzuge Primärquellen (help.sap.com, SAP for Me, SAP News Center, Roadmap Explorer). Bei widersprüchlichen Angaben beide Positionen zeigen."
     },
     {
       "id": "produkt",
@@ -166,7 +198,8 @@
       "name": "Ausschreibung Go/No-Go",
       "desc": "Steckbrief, Kriterien, Risiken, Fragen fürs Forum, Online-Recherche zu Auftraggeber und Projekt, Empfehlung. simap-Link teilen lädt die Daten direkt.",
       "anrede": false,
-      "prompt": "Rolle: Du bist Bid Manager eines IT-Beratungsunternehmens und bereitest eine Go/No-Go-Entscheidung zur öffentlichen Ausschreibung in <inhalt> vor.\n1. Steckbrief (Tabelle): Auftraggeber, Gegenstand, Verfahrensart, Lose, Laufzeit inkl. Optionen, Eingabefrist, Fragenfrist, Offertöffnung, Volumen (falls genannt)\n2. Eignungskriterien (Tabelle): Kriterium | Nachweis/Referenz | Muss/Kann | erfüllbar? (ja/nein/unklar)\n3. Zuschlagskriterien mit Gewichtung, Preisgewichtung und Bewertungsmethode\n4. Schlüsselpersonen (Rolle, Zertifikate, Erfahrung, Sprachen) und Referenzprojekte\n5. Risiken und Auffälligkeiten: Vorbefassung, auf einen Anbieter zugeschnittene Kriterien, knappe Termine, Haftung und Konventionalstrafen, bei IT-Projekten das Betriebsmodell\n6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert\n7. Online-Recherche zu Auftraggeber und Projekt (nur mit Websuche, sonst Abschnitt weglassen und 5 Suchbegriffe vorschlagen):\n   a) Auftraggeber: Organisation, Grösse, Strategie und laufende Digitalisierungs- oder ERP-Vorhaben\n   b) IT-Landschaft: eingesetzte Systeme, bei SAP Release und Betriebsmodell (Public Cloud, Private Cloud, On-Premise), bisherige Dienstleister\n   c) Vorgeschichte: frühere Ausschreibungen und Zuschläge des Auftraggebers auf simap (Anbieter, Preise, Verfahren). Steht in <inhalt> ein Block «Frühere Zuschläge», werte ihn zuerst aus.\n   d) Vorbefassung und wahrscheinliche Mitbewerber mit Begründung\n   e) Presse und Medienmitteilungen der letzten 12 Monate, Budget- oder Parlamentsbeschlüsse zum Vorhaben\n   f) Entscheidungsträger nur mit Funktion (keine Privatdaten)\n   Jede Angabe mit Quelle und Datum. Recherche-Ergebnisse trennst du klar von Angaben aus <inhalt>.\n8. Fit zum eigenen Angebot (nur wenn der Kontext oben Schwerpunkte, Leistungen oder Referenzen nennt): Tabelle Anforderung | passende Leistung oder Referenz aus dem Kontext | Lücke | Massnahme (Partner, Schlüsselperson, Verzicht)\n9. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen (inkl. Erkenntnissen aus der Recherche), Gewinnchance (hoch/mittel/tief) und grobem Offertaufwand in Personentagen\nBelege: Nenne bei Kriterien, Fristen und Gewichtungen die Fundstelle (Kapitel oder Ziffer aus <inhalt>). Fehlendes markierst du als [nicht angegeben]. Verweist der Text auf die Unterlagen, weise darauf hin. Daten im Format TT.MM.JJJJ."
+      "prompt": "Rolle: Du bist Bid Manager eines IT-Beratungsunternehmens und bereitest eine Go/No-Go-Entscheidung zur öffentlichen Ausschreibung in <inhalt> vor.\n0. Schnellprüfung vorab (3 Zeilen): Verlangt die Ausschreibung Muss-Leistungen ausserhalb des eigenen Profils laut Kontext (z.B. eigenes Rechenzentrum, eigenes SOC, Hardware, Bau)? Ist die Frist realistisch? Gibt es Hinweise auf Vorbefassung? Ist eines davon ein klares K.-o., die Empfehlung No-Go gleich zu Beginn nennen und die übrigen Punkte kurz halten.\n1. Steckbrief (Tabelle): Auftraggeber, Gegenstand, Verfahrensart, Lose, Laufzeit inkl. Optionen, Eingabefrist, Fragenfrist, Offertöffnung, Volumen (falls genannt)\n2. Eignungskriterien (Tabelle): Kriterium | Nachweis/Referenz | Muss/Kann | erfüllbar? (ja/nein/unklar)\n3. Zuschlagskriterien mit Gewichtung, Preisgewichtung und Bewertungsmethode\n4. Schlüsselpersonen (Rolle, Zertifikate, Erfahrung, Sprachen) und Referenzprojekte\n5. Risiken und Auffälligkeiten: Vorbefassung, auf einen Anbieter zugeschnittene Kriterien, knappe Termine, Haftung und Konventionalstrafen, bei IT-Projekten das Betriebsmodell\n6. Bis zu 5 Fragen fürs Fragenforum, neutral formuliert\n7. Online-Recherche zu Auftraggeber und Projekt (nur mit Websuche, sonst Abschnitt weglassen und 5 Suchbegriffe vorschlagen):\n   a) Auftraggeber: Organisation, Grösse, Strategie und laufende Digitalisierungs- oder ERP-Vorhaben\n   b) IT-Landschaft: eingesetzte Systeme, bei SAP Release und Betriebsmodell (Public Cloud, Private Cloud, On-Premise), bisherige Dienstleister\n   c) Vorgeschichte: frühere Ausschreibungen und Zuschläge des Auftraggebers auf simap (Anbieter, Preise, Verfahren). Steht in <inhalt> ein Block «Frühere Zuschläge», werte ihn zuerst aus.\n   d) Vorbefassung und wahrscheinliche Mitbewerber mit Begründung\n   e) Presse und Medienmitteilungen der letzten 12 Monate, Budget- oder Parlamentsbeschlüsse zum Vorhaben\n   f) Entscheidungsträger nur mit Funktion (keine Privatdaten)\n   Jede Angabe mit Quelle und Datum. Recherche-Ergebnisse trennst du klar von Angaben aus <inhalt>.\n8. Fit zum eigenen Angebot (nur wenn der Kontext oben Schwerpunkte, Leistungen oder Referenzen nennt): Tabelle Anforderung | passende Leistung oder Referenz aus dem Kontext | Lücke | Massnahme (Partner, Schlüsselperson, Verzicht)\n9. Empfehlung: Go / No-Go / Go mit Partner, mit 3 Begründungen (inkl. Erkenntnissen aus der Recherche), Gewinnchance (hoch/mittel/tief) und grobem Offertaufwand in Personentagen\nBelege: Nenne bei Kriterien, Fristen und Gewichtungen die Fundstelle (Kapitel oder Ziffer aus <inhalt>). Fehlendes markierst du als [nicht angegeben]. Verweist der Text auf die Unterlagen, weise darauf hin. Daten im Format TT.MM.JJJJ.",
+      "skill": "ausschreibung-go-no-go"
     },
     {
       "id": "triage",
@@ -174,7 +207,8 @@
       "name": "Ausschreibungen Triage",
       "desc": "Mehrere Ausschreibungen auf einmal: Rangliste nach Fit, Kurzbewertung der passenden. Quelle: Register «simap».",
       "anrede": false,
-      "prompt": "Rolle: Du bist Bid Manager eines IT-Beratungsunternehmens und sichtest neue öffentliche Ausschreibungen (<inhalt>). Berücksichtige den Kontext oben (Schwerpunkte, Branchen, Referenzen), falls angegeben.\n1. Übersichtstabelle aller Einträge: Nr | Titel | Auftraggeber | Eingabefrist | Fit (hoch/mittel/tief) | Empfehlung (Go / prüfen / No-Go) | Hauptgrund in einem Satz. Sortiert nach Fit, dann Frist.\n2. Für Fit hoch oder mittel eine Kurzbewertung: Gegenstand, Eignungskriterien und Referenzbedarf, Zuschlagskriterien mit Gewichtung, Risiken, offene Fragen fürs Fragenforum, grober Offertaufwand in Personentagen.\n3. Einträge ohne Bezug zu den Schwerpunkten nur in der Tabelle.\n4. Die 3 dringendsten nächsten Schritte mit Datum.\nNur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben]. Daten im Format TT.MM.JJJJ."
+      "prompt": "Rolle: Du bist Bid Manager eines IT-Beratungsunternehmens und sichtest neue öffentliche Ausschreibungen (<inhalt>). Berücksichtige den Kontext oben (Schwerpunkte, Branchen, Referenzen), falls angegeben.\n1. Übersichtstabelle aller Einträge: Nr | Titel | Auftraggeber | Eingabefrist | Fit (hoch/mittel/tief) | Empfehlung (Go / prüfen / No-Go) | Hauptgrund in einem Satz. Sortiert nach Fit, dann Frist.\n2. Für Fit hoch oder mittel eine Kurzbewertung: Gegenstand, Eignungskriterien und Referenzbedarf, Zuschlagskriterien mit Gewichtung, Risiken, offene Fragen fürs Fragenforum, grober Offertaufwand in Personentagen.\n3. Einträge ohne Bezug zu den Schwerpunkten nur in der Tabelle.\n4. Die 3 dringendsten nächsten Schritte mit Datum.\nNur Angaben aus <inhalt> verwenden. Fehlendes als [nicht angegeben]. Daten im Format TT.MM.JJJJ.",
+      "skill": "ausschreibung-go-no-go"
     },
     {
       "id": "marktinfo",
@@ -190,7 +224,8 @@
       "name": "Fragen fürs Fragenforum",
       "desc": "Präzise, neutrale Fragen zu einer Ausschreibung.",
       "anrede": false,
-      "prompt": "Rolle: Du bist Bid Manager und formulierst Fragen fürs simap-Fragenforum zur Ausschreibung in <inhalt>.\nBis zu 8 Fragen, je mit Bezug auf Kapitel oder Kriterium. Neutral formuliert, ohne Rückschlüsse auf das eigene Angebot.\nSchwerpunkte: Unklarheiten bei Eignungs- und Zuschlagskriterien, Mengengerüst, Schnittstellen, Termine, Preisblatt.\nAusgabe: nummerierte Liste «Bezug – Frage»."
+      "prompt": "Rolle: Du bist Bid Manager und formulierst Fragen fürs simap-Fragenforum zur Ausschreibung in <inhalt>.\nBis zu 8 Fragen, je mit Bezug auf Kapitel oder Kriterium. Neutral formuliert, ohne Rückschlüsse auf das eigene Angebot.\nSchwerpunkte: Unklarheiten bei Eignungs- und Zuschlagskriterien, Mengengerüst, Schnittstellen, Termine, Preisblatt.\nAusgabe: nummerierte Liste «Bezug – Frage».",
+      "skill": "ausschreibung-go-no-go"
     },
     {
       "id": "winthemes",
@@ -230,7 +265,8 @@
       "name": "Präsentation (Firmenvorlage)",
       "desc": "PPTX in der Firmenvorlage, Folien aus <inhalt>.",
       "anrede": true,
-      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen.\nErstelle aus <inhalt> eine Präsentation als PPTX.\nZweck und Publikum: {{Zweck und Publikum}}. Umfang: {{Anzahl Folien}}.\nAufbau: Titelfolie, Ausgangslage, Kernaussagen, Optionen mit Vergleichstabelle und Empfehlung, nächste Schritte, Schlussfolie der Vorlage.\nFolientitel als Aussage, max. 6 Bullets je Folie. Fehlendes als [Platzhalter]."
+      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen.\nErstelle aus <inhalt> eine Präsentation als PPTX.\nZweck und Publikum: {{Zweck und Publikum}}. Umfang: {{Anzahl Folien}}.\nAufbau: Titelfolie, Ausgangslage, Kernaussagen, Optionen mit Vergleichstabelle und Empfehlung, nächste Schritte, Schlussfolie der Vorlage.\nFolientitel als Aussage, max. 6 Bullets je Folie. Fehlendes als [Platzhalter].",
+      "skill": "firmenvorlagen"
     },
     {
       "id": "konzept",
@@ -238,7 +274,8 @@
       "name": "Konzept (Firmenvorlage)",
       "desc": "HERMES-Konzept als DOCX mit Review aus sechs Rollen.",
       "anrede": false,
-      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen. Für Konzepte zusätzlich den Skill «hermes-konzept» verwenden.\nErstelle aus <inhalt> ein {{Ergebnistyp (Systemkonzept, Betriebskonzept, Detailspezifikation …)}} zum Thema {{Thema}} für {{Kunde}} als DOCX, Version V0.1.\nAnnahmen als AN-xx, offene Punkte als P-xx mit Adressat und Priorität. Sie-Form."
+      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen. Für Konzepte zusätzlich den Skill «hermes-konzept» verwenden.\nErstelle aus <inhalt> ein {{Ergebnistyp (Systemkonzept, Betriebskonzept, Detailspezifikation …)}} zum Thema {{Thema}} für {{Kunde}} als DOCX, Version V0.1.\nAnnahmen als AN-xx, offene Punkte als P-xx mit Adressat und Priorität. Sie-Form.",
+      "skill": "firmenvorlagen"
     },
     {
       "id": "offerte",
@@ -246,7 +283,8 @@
       "name": "Offerte (Firmenvorlage)",
       "desc": "Offerte als DOCX nach der Standardgliederung der Firmenvorlage.",
       "anrede": false,
-      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen.\nErstelle aus <inhalt> eine Offerte für {{Kunde}} zu {{Gegenstand}} als DOCX, Version V1.0.\nGliederung gemäss Skill (Ausgangslage bis Unterschriften). Gibt die Ausschreibung eine Struktur vor, hat diese Vorrang.\nAufwand in Personentagen je Rolle und Arbeitspaket. Tagessätze und Preise nie erfinden, sondern als [x'xxx] und offenen Punkt führen. Sie-Form."
+      "prompt": "Verwende zwingend den Skill «firmenvorlagen»: Firmenvorlage vom Google Drive laden und exakt anwenden, keine Artefakt-Typen, kein eigenes Layout. Vor der Übergabe gerendert prüfen.\nErstelle aus <inhalt> eine Offerte für {{Kunde}} zu {{Gegenstand}} als DOCX, Version V1.0.\nGliederung gemäss Skill (Ausgangslage bis Unterschriften). Gibt die Ausschreibung eine Struktur vor, hat diese Vorrang.\nAufwand in Personentagen je Rolle und Arbeitspaket. Tagessätze und Preise nie erfinden, sondern als [x'xxx] und offenen Punkt führen. Sie-Form.",
+      "skill": "firmenvorlagen"
     },
     {
       "id": "promptopt",

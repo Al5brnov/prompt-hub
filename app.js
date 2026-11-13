@@ -9,6 +9,7 @@
   var DEV_REPO = "https://github.com/Al5brnov/prompt-hub";
   var KB_URL = "https://claude.ai/artifact/RrLUJJNPPANPhMEAsHNAUU";
   var CHANGELOG = [
+    ["07.11.2026", "Vorlagen mit Claude-Skills verknüpft (Hinweis nur beim Ziel Claude). Neu: Konzept-Review aus 6 Rollen, Vertrag/SLA prüfen, Testfälle ableiten, SAP Release & Lizenz. Technik & Log mit Analysepfad, Go/No-Go mit Schnellprüfung."],
     ["07.11.2026", "Neue Kategorie Dokumente: Präsentation, Konzept und Offerte in der Firmenvorlage (Skill «firmenvorlagen»)."],
     ["07.11.2026", "Neue Vorlagen Referenzbeschreibung, Offerte: Vorgehen und Methodik, SAP-Lösungsskizze. Go/No-Go gleicht mit dem eigenen Kontext ab. Radar sucht zusätzlich nach SAP-Lösungen und Fachbereichen."],
     ["07.11.2026", "Link zur Wissensbasis unter Mehr → Weitere Apps."],
@@ -189,6 +190,7 @@
     out += "\nAUFGABE:\n" + (p.prompt ? fill(p) : (h || "[Anweisung im Feld «Anweisung» eingeben]"));
     if (p.anrede) out += "\nAnrede: " + (st.a === "sie" ? "Sie-Form, höflich-formell." : "Du-Form, kollegial.");
     if (p.prompt && h) out += "\nZusätzliche Vorgabe (hat Vorrang): " + h;
+    if (p.skill && st.g === "claude" && (p.prompt || "").indexOf(p.skill) < 0) out += "\nFalls der Skill «" + p.skill + "» verfügbar ist, nutze ihn; er hat Vorrang vor dieser Vorlage.";
     pv.value = out;
     $("meta").textContent = r ? (srcKind === "simap" ? "simap" : shared && r === shText ? "geteilt" : "Inhalt") + " · " + fmt(r.length) + " Zeichen" : "leer";
     $("discN").textContent = fmt(out.length) + " Zeichen";
@@ -220,7 +222,7 @@
     st.g = id; var g = byId(TG, id);
     $("go").textContent = g.s; setHint(g.f, false);
     for (var k in mItems) { mItems[k].b.classList.toggle("on", k === id); mItems[k].c.style.visibility = k === id ? "visible" : "hidden"; }
-    save();
+    upd(); save();
   }
   function setHint(t, ok) { var e = $("hintLine"); e.textContent = t; e.classList.toggle("ok", !!ok); }
   function showWarn(t) { var w = $("warn"); w.lastChild.textContent = t; w.hidden = false; }
@@ -452,6 +454,7 @@
       h.appendChild(tags); c.appendChild(h);
       c.appendChild(el("p", null, p.desc || ""));
       var vs = varsOf(p); if (vs.length) c.appendChild(el("p", null, "Felder: " + vs.join(", ")));
+      if (p.skill) c.appendChild(el("p", null, "Claude-Skill: " + p.skill));
       var a = el("div", "acts2");
       var use = el("button", "pri", "Verwenden"); use.onclick = function () { show("prompt"); selT(p.id); };
       var fav = el("button", null, isFav(p.id) ? "★ Favorit" : "☆ Favorit"); fav.onclick = function () { toggleFav(p.id); };
