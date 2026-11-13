@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T13:28:41+00:00",
+ "generatedAt": "2026-11-13T20:33:07+00:00",
  "since": "2026-10-14",
  "keywords": [
   "SAP",
@@ -128,9 +128,9 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 1002,
- "detailsCached": 160,
- "detailsLoaded": 12,
+ "durationSec": 88,
+ "detailsCached": 172,
+ "detailsLoaded": 2,
  "dropped": {
   "vorab": 121,
   "cpv": 35,
@@ -142,15 +142,7 @@
  },
  "count": 62,
  "diagnostics": [
-  "Cookies nach Seed: SCDID_S",
-  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Vertriebslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Onlineshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Rechnungswesen»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 5 Suchen, weiterhin fehlgeschlagen: keine",
-  "Details 42969: URLError bei /publications/v1/project/deafc86c-7a01-425b-92a2-03c133b57748/publication-details/2bd55746-f8ff-4d10-a9eb-33c11f43ba46: <urlopen error [Errno 111] Connection refused>",
-  "Details 41500: URLError bei /publications/v1/project/4fa8771d-0fb6-4817-93bc-75ad93c6c17c/publication-details/6f63cb15-a921-4d90-b14f-4904dc1d24eb: <urlopen error [Errno 111] Connection refused>"
+  "Cookies nach Seed: SCDID_S"
  ],
  "rejected": [
   {
@@ -194,9 +186,19 @@
    "why": " | CPV 72000000"
   },
   {
+   "title": "Fachliche Unterstützung bei der Umsetzung der kantonalen Geoinformationsgesetzgebung und d",
+   "score": 2,
+   "why": " | CPV 71332000,72260000"
+  },
+  {
    "title": "Nextcloud Reseller",
    "score": 2,
    "why": " | CPV 48780000"
+  },
+  {
+   "title": "Neubewertung von kantonalen Liegenschaften des Finanzvermögens und des Strassenfonds",
+   "score": 2,
+   "why": " | CPV 70100000,70300000,79200000"
   },
   {
    "title": "Weiterentwicklung und Weiterbetrieb Kunden Online Service (KOS) Framework und MicroService",
@@ -477,16 +479,6 @@
    "title": "Client Lifecycle Management (LCM)",
    "score": 0,
    "why": "Haupt-CPV 50300000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "Fachliche Unterstützung bei der Umsetzung der kantonalen Geoinformationsgesetzgebung und d",
-   "score": 0,
-   "why": ""
-  },
-  {
-   "title": "Neubewertung von kantonalen Liegenschaften des Finanzvermögens und des Strassenfonds",
-   "score": 0,
-   "why": ""
   },
   {
    "title": "eDiscovery 2027+",
