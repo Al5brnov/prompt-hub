@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-13T20:33:07+00:00",
- "since": "2026-10-14",
+ "generatedAt": "2026-11-16T13:57:51+00:00",
+ "since": "2026-10-17",
  "keywords": [
   "SAP",
   "S/4HANA",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 334,
+ "candidates": 327,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,21 +128,29 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 88,
- "detailsCached": 172,
- "detailsLoaded": 2,
+ "durationSec": 818,
+ "detailsCached": 163,
+ "detailsLoaded": 4,
  "dropped": {
-  "vorab": 121,
-  "cpv": 35,
-  "score": 46,
-  "frist": 7,
-  "ausschluss": 9,
+  "vorab": 123,
+  "cpv": 30,
+  "score": 48,
+  "frist": 5,
+  "ausschluss": 8,
   "zeit": 0,
   "limit": 0
  },
- "count": 62,
+ "count": 61,
  "diagnostics": [
-  "Cookies nach Seed: SCDID_S"
+  "Cookies nach Seed: SCDID_S",
+  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Kundenportal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Self-Service-Portal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Fakturierung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Testmanagement»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 7 Suchen, weiterhin fehlgeschlagen: keine"
  ],
  "rejected": [
   {
@@ -166,11 +174,6 @@
    "why": " | CPV 72000000,72315200"
   },
   {
-   "title": "ggst.sz Neue Applikation Grundstückgewinnsteuer",
-   "score": 2,
-   "why": " | CPV 48100000,72211000,72212100"
-  },
-  {
    "title": "Beschaffung einer ITSM-/ESM-Lösung mit Self-Service-Funktionalität",
    "score": 2,
    "why": " | CPV 48000000,72000000"
@@ -186,19 +189,9 @@
    "why": " | CPV 72000000"
   },
   {
-   "title": "Fachliche Unterstützung bei der Umsetzung der kantonalen Geoinformationsgesetzgebung und d",
+   "title": "ggst.sz Neue Applikation Grundstückgewinnsteuer",
    "score": 2,
-   "why": " | CPV 71332000,72260000"
-  },
-  {
-   "title": "Nextcloud Reseller",
-   "score": 2,
-   "why": " | CPV 48780000"
-  },
-  {
-   "title": "Neubewertung von kantonalen Liegenschaften des Finanzvermögens und des Strassenfonds",
-   "score": 2,
-   "why": " | CPV 70100000,70300000,79200000"
+   "why": " | CPV 48100000,72211000,72212100"
   },
   {
    "title": "Weiterentwicklung und Weiterbetrieb Kunden Online Service (KOS) Framework und MicroService",
@@ -241,9 +234,39 @@
    "why": " | CPV 48000000,72260000"
   },
   {
-   "title": "Idira",
+   "title": "COP - Cadastre des ouvrages de protection",
    "score": 2,
-   "why": " | CPV 48000000,72200000,72600000"
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Prestation de Technical Leader Java",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Renouvellement souscription Ping Identity 2027-2029",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
+   "title": "Commissariat pour la manifestation Lausanne Jardins 2029",
+   "score": 2,
+   "why": " | CPV 79421000"
+  },
+  {
+   "title": "Fachliche Unterstützung bei der Umsetzung der kantonalen Geoinformationsgesetzgebung und d",
+   "score": 2,
+   "why": " | CPV 71332000,72260000"
+  },
+  {
+   "title": "Nextcloud Reseller",
+   "score": 2,
+   "why": " | CPV 48780000"
+  },
+  {
+   "title": "Neubewertung von kantonalen Liegenschaften des Finanzvermögens und des Strassenfonds",
+   "score": 2,
+   "why": " | CPV 70100000,70300000,79200000"
   },
   {
    "title": "Universität Basel Unisport Webportal ",
@@ -371,16 +394,6 @@
    "why": " | CPV 71300000,79418000"
   },
   {
-   "title": "APPEL D’OFFRES PUBLIC POUR L’ACQUISITION D’UNE SOLUTION DLP ET D’UNE SOLUTION DRM",
-   "score": 2,
-   "why": " | CPV 48000000"
-  },
-  {
-   "title": "Wärme- und Kälteverbund Opfikon, BKP248 Gebäudeautomation",
-   "score": 0,
-   "why": "Auftragsart construction"
-  },
-  {
    "title": "Bauherrenvertretung & Projektsteuerung neuer Hauptsitz SZU / neue Instandhaltungsanlage",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
@@ -391,24 +404,19 @@
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
   {
-   "title": "ARA Thurau, Automatisierungs- und Prozessleitsystem",
-   "score": 0,
-   "why": "Haupt-CPV 48921000 (Hardware)"
-  },
-  {
    "title": "IT Engineering Leistungen (DevSecOps) für Cyber-Defence Campus \"armasuisse W+T\"",
    "score": 0,
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
   {
-   "title": "Prestations d’exploitation IT externalisées  ",
-   "score": 0,
-   "why": "Haupt-CPV 72514000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
-  },
-  {
    "title": "IT5050.1019 / Rechenzentrumsstandort 4",
    "score": 0,
    "why": "Haupt-CPV 72510000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
+  },
+  {
+   "title": "Wärme- und Kälteverbund Opfikon, BKP248 Gebäudeautomation",
+   "score": 0,
+   "why": "Auftragsart construction"
   },
   {
    "title": "MP 2025.09.795 - Support niveau 1 Service Desk",
@@ -431,6 +439,11 @@
    "why": "«1er niveau» im Titel ohne SAP-/ERP-Bezug"
   },
   {
+   "title": "ARA Thurau, Automatisierungs- und Prozessleitsystem",
+   "score": 0,
+   "why": "Haupt-CPV 48921000 (Hardware)"
+  },
+  {
    "title": "Plattform Service für ein Dokumenten Management System ",
    "score": 0,
    "why": "Haupt-CPV 72512000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
@@ -441,44 +454,14 @@
    "why": "Haupt-CPV 71300000 ausserhalb Software/Beratung"
   },
   {
-   "title": "Appel d'offres public pour la mise en valeur et la création de contenu éditorial pour le p",
-   "score": 0,
-   "why": "Haupt-CPV 79970000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "Attribution de 52 postes externes pour l’OCSIN (LSE 2026-04)",
-   "score": 0,
-   "why": "«infrastructure» im Titel ohne SAP-/ERP-Bezug"
-  },
-  {
-   "title": "LSE sécurité SI 2027-2031",
-   "score": 0,
-   "why": "Haupt-CPV 79620000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "N05.60 MP-230028 - BSA Grandson - Areuse renouvellement - Fourniture, installation et mise",
-   "score": 0,
-   "why": "Auftragsart construction"
-  },
-  {
-   "title": "FIS Innenanzeigen",
-   "score": 0,
-   "why": "Haupt-CPV 48813000 (Hardware)"
-  },
-  {
-   "title": "IT-Dienstleistungen und -Infrastruktur Gemeinde Zumikon",
-   "score": 0,
-   "why": "Haupt-CPV 51610000 ausserhalb Software/Beratung"
-  },
-  {
    "title": "Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
   },
   {
-   "title": "Client Lifecycle Management (LCM)",
+   "title": "IT-Dienstleistungen und -Infrastruktur Gemeinde Zumikon",
    "score": 0,
-   "why": "Haupt-CPV 50300000 ausserhalb Software/Beratung"
+   "why": "Haupt-CPV 51610000 ausserhalb Software/Beratung"
   },
   {
    "title": "eDiscovery 2027+",
@@ -536,6 +519,11 @@
    "why": "Haupt-CPV 72700000 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
   },
   {
+   "title": "Client Lifecycle Management (LCM)",
+   "score": 0,
+   "why": "Haupt-CPV 50300000 ausserhalb Software/Beratung"
+  },
+  {
    "title": "ICT an der Schule Interlaken",
    "score": 0,
    "why": "Haupt-CPV 30213000 ausserhalb Software/Beratung"
@@ -544,6 +532,26 @@
    "title": "PRINTING@VSG AHS",
    "score": 0,
    "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "Kampagne E-Trendfahrzeuge",
+   "score": 0,
+   "why": "Haupt-CPV 79340000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "PRINTING@Neuenhof",
+   "score": 0,
+   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "IWB, Server und Virtualisierungs-Infrastruktur",
+   "score": 0,
+   "why": "Haupt-CPV 48800000 (Hardware)"
+  },
+  {
+   "title": "IWB, Storage Infrastruktur",
+   "score": 0,
+   "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   }
  ],
  "items": [
@@ -2144,30 +2152,6 @@
    },
    "url": "https://www.simap.ch/de/project-detail/6694cc70-9e7d-4af5-8f98-13e0271a797d",
    "text": "\n  project-info:\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 1212\n      name: Transport publics genevois (tpg)\n      contactPerson: Julia Charamel\n      street: Route de la Chapelle 1\n      city: Grand Lancy\n    procurementRecipientAddress:\n      postalCode: 1212\n      name: Transport publics genevois (tpg)\n      contactPerson: Julia Charamel\n      street: Route de la Chapelle 1\n      city: Grand Lancy\n    title: AO - TPG - Organisation, animation et évaluation d’un exercice de crise cyber sur table pour des systèmes critiques\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_external\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: service\n    offerSpecificNote: Selon les conditions définies dans le K2\n    offerAddress:\n      postalCode: 1212\n      name: Transport publics genevois (tpg)\n      contactPerson: Julia Charamel\n      street: Route de la Chapelle 1\n      city: Grand Lancy\n  procurement:\n    orderDescription: Les Transports publics genevois (tpg) souhaitent sous-traiter la conception, la préparation, l'animation, l'évaluation et le retour d'expérience (RETEX) d'un exercice de gestion de crise sur table (table top), multi-niveaux, portant sur un scénario de cyberattaque de type rançongiciel affectant simultanément des systèmes critiques.\n       \n      /!\\ afin d'obtenir le cahier des charges (CdC), merci de signer le NDA ci-joint et de l’envoyer par email à l’adresse indiquée dans le K2 /!\\\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    executionNote: Selon les livrables décris dans le Cahier des Charges\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 1212\n      city: Grand-lancy\n    contractDeadlineType: not_specified\n    canContractBeExtended: no\n    options: yes\n    optionsNote: Selon les indications définies dans le Cahier des Charges et la grille de prix\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    subContractorNote: Selon les indications décrites dans le K2\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours auprès de la Chambre administrative de la Cour de justice, 10 rue Saint-Léger, case postale 1956, 1211 Genève 1, dans les dix jours dès sa publication. Le recours doit être signé, se référer au présent appel d'offres, contenir les conclusions dûment motivées avec indication des moyens de preuve.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-02\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-19\n    offerDeadline: 2026-11-30T12:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-10-19\n        - 2026-11-30\n    offerValidityDeadlineDate: 2027-11-30\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    title: AO - TPG - Organisation, animation et évaluation d’un exercice de crise cyber sur table pour des systèmes critiques\n    projectType: tender\n    processType: open\n    lotsType: without\n    type: tender\n    publicationNumber: 45873-01\n    publicationDate: 2026-10-19\n    creationLanguage: fr\n    projectNumber: 45873\n  hasProjectDocuments: ja"
-  },
-  {
-   "id": "1c8ab8ec-7cc2-4e20-9419-80c2612bbef5",
-   "nr": "41984",
-   "title": "«eLearning Cybersicherheit»",
-   "office": "Kanton Zürich, Finanzdirektion, Amt für Informatik",
-   "date": "2026-10-16",
-   "type": "participant_selection",
-   "process": "selective",
-   "deadline": null,
-   "cpv": [
-    "72000000"
-   ],
-   "score": 3,
-   "hits": [],
-   "fields": {
-    "gegenstand": "Gegenstand der Beschaffung ist die Lieferung (und ggf. Entwicklung) interaktiver E-Learning-Kurse zum Thema Cybersicherheit. Die Kurse sind als SCORM-kompatible Lernmodule bereitzustellen und müssen mit dem bestehenden Learning Management System (LMS) des Auftragsgebers kompatibel sein.",
-    "eignung": "",
-    "zuschlag": "",
-    "lose": "",
-    "verfahren": "selektiv"
-   },
-   "url": "https://www.simap.ch/de/project-detail/1c8ab8ec-7cc2-4e20-9419-80c2612bbef5",
-   "text": "\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: selective\n    publicationNumber: 41984-01\n    publicationDate: 2026-08-10\n  project-info:\n    procOfficeAddress:\n      postalCode: 8090\n      name: Kanton Zürich, Finanzdirektion, Amt für Informatik\n      street: Waltersbachstrasse 5\n      city: Zürich\n  procurement:\n    projectType: tender\n    processType: selective\n    pubType: participant_selection\n    orderType: service\n    orderDescription: Gegenstand der Beschaffung ist die Lieferung (und ggf. Entwicklung) interaktiver E-Learning-Kurse zum Thema Cybersicherheit. Die Kurse sind als SCORM-kompatible Lernmodule bereitzustellen und müssen mit dem bestehenden Learning Management System (LMS) des Auftragsgebers kompatibel sein.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  participant-selection:\n    participantSelectionLimitation: not_specified\n    participantSelectionCommunication: simap\n    vendors:\n      - vendorName: HoxHunt Oy\n        vendorAddress:\n          street: Porkkalankatu 3\n          city: HELSINKI\n          postalCode: 00180\n      - vendorName: SoSafe SE\n        vendorAddress:\n          street: Lichtstr. 25a\n          city: Köln\n          postalCode: 50825\n      - vendorName: MetaCompliance GmbH\n        vendorAddress:\n          street: Katharinenstr. 21\n          city: Leipzig\n          postalCode: 04109\n    participantSelectionNote: Nach Durchführung der ersten Phase des Vergabeverfahrens «eLearning Cybersicherheit» nach der IVöB im selektiven Verfahren im Staatsvertragsbereich stehen die zur 2. Phase (Angebot) zugelassenen Anbietenden fest. \n      \n      Begründung: Beste Erfüllung der Eignungskriterien als Bewertungskriterien.\n    remediesNotice: Gegen diesen Entscheid kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Zuschlagsverfügung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  type: participant_selection\n  projectType: tender\n  base:\n    title: «eLearning Cybersicherheit»\n    projectType: tender\n    processType: selective\n    lotsType: without\n    stateContractArea: ja\n    type: participant_selection\n    publicationNumber: 41984-02\n    publicationDate: 2026-10-16\n    creationLanguage: de\n    translationLanguages:\n      - language: fr\n        type: complete\n    projectNumber: 41984"
   }
  ]
 }
