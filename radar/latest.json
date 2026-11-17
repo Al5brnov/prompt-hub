@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-16T23:27:28+00:00",
- "since": "2026-10-17",
+ "generatedAt": "2026-11-17T14:35:47+00:00",
+ "since": "2026-10-18",
  "keywords": [
   "SAP",
   "S/4HANA",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 334,
+ "candidates": 331,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,11 +128,11 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 116,
- "detailsCached": 167,
- "detailsLoaded": 5,
+ "durationSec": 110,
+ "detailsCached": 172,
+ "detailsLoaded": 0,
  "dropped": {
-  "vorab": 114,
+  "vorab": 112,
   "cpv": 31,
   "score": 49,
   "frist": 5,
