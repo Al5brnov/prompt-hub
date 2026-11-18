@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-18T14:27:15+00:00",
+ "generatedAt": "2026-11-18T22:17:41+00:00",
  "since": "2026-10-19",
  "keywords": [
   "SAP",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 322,
+ "candidates": 338,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,11 +128,11 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 1032,
- "detailsCached": 172,
- "detailsLoaded": 8,
+ "durationSec": 882,
+ "detailsCached": 180,
+ "detailsLoaded": 0,
  "dropped": {
-  "vorab": 104,
+  "vorab": 114,
   "cpv": 33,
   "score": 51,
   "frist": 5,
@@ -143,13 +143,15 @@
  "count": 68,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «CRM»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Fiori»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «AMS»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Lohnverarbeitung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 5 Suchen, weiterhin fehlgeschlagen: S/4HANA"
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Warenwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Onlineshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Kundenportal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Onlineschalter»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «E-Government»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Warenwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 6 Suchen, weiterhin fehlgeschlagen: ERP-System, Warenwirtschaft"
  ],
  "rejected": [
   {
@@ -413,6 +415,11 @@
    "why": "Haupt-CPV 48820000 (Hardware)"
   },
   {
+   "title": "N05.60 MP-230028 - BSA Grandson - Areuse renouvellement - Fourniture, installation et mise",
+   "score": 0,
+   "why": "Auftragsart construction"
+  },
+  {
    "title": "Bauherrenvertretung & Projektsteuerung neuer Hauptsitz SZU / neue Instandhaltungsanlage",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
@@ -426,11 +433,6 @@
    "title": "IT Engineering Leistungen (DevSecOps) für Cyber-Defence Campus \"armasuisse W+T\"",
    "score": 0,
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
-  },
-  {
-   "title": "N05.60 MP-230028 - BSA Grandson - Areuse renouvellement - Fourniture, installation et mise",
-   "score": 0,
-   "why": "Auftragsart construction"
   },
   {
    "title": "IT5050.1019 / Rechenzentrumsstandort 4",
