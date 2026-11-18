@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-17T23:10:54+00:00",
- "since": "2026-10-18",
+ "generatedAt": "2026-11-18T14:27:15+00:00",
+ "since": "2026-10-19",
  "keywords": [
   "SAP",
   "S/4HANA",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 333,
+ "candidates": 322,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,27 +128,28 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 840,
+ "durationSec": 1032,
  "detailsCached": 172,
- "detailsLoaded": 0,
+ "detailsLoaded": 8,
  "dropped": {
-  "vorab": 114,
-  "cpv": 31,
-  "score": 49,
+  "vorab": 104,
+  "cpv": 33,
+  "score": 51,
   "frist": 5,
   "ausschluss": 8,
   "zeit": 0,
   "limit": 0
  },
- "count": 64,
+ "count": 68,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Lieferantenportal»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Portallösung»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «gestionale»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Testmanagement»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Wiederholt: 5 Suchen, weiterhin fehlgeschlagen: keine"
+  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «CRM»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Fiori»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «AMS»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Lohnverarbeitung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 5 Suchen, weiterhin fehlgeschlagen: S/4HANA"
  ],
  "rejected": [
   {
@@ -172,6 +173,11 @@
    "why": " | CPV 72000000,72315200"
   },
   {
+   "title": "(26112) 609 Dienstleistungen zu Red Hat Produkten",
+   "score": 2,
+   "why": " | CPV 72000000"
+  },
+  {
    "title": "Kernapplikation Prävention NG",
    "score": 2,
    "why": " | CPV 48000000,48100000,72000000"
@@ -187,9 +193,9 @@
    "why": " | CPV 72000000"
   },
   {
-   "title": "Limmi.ch: Beschaffung einer Patienten- und Zuweiserportallösung",
+   "title": "Leitsystem für TGB",
    "score": 2,
-   "why": " | CPV 72000000"
+   "why": " | CPV 48000000,65100000,65300000"
   },
   {
    "title": "ggst.sz Neue Applikation Grundstückgewinnsteuer",
@@ -210,6 +216,11 @@
    "title": "Ausrüstung Gerichtsaal- und Sitzungszimmer",
    "score": 2,
    "why": " | CPV 32210000,32321300,32322000"
+  },
+  {
+   "title": "Limmi.ch: Beschaffung einer Patienten- und Zuweiserportallösung",
+   "score": 2,
+   "why": " | CPV 72000000"
   },
   {
    "title": "Lieferung, Einführung und Betrieb des Software Asset Management (SAM)",
@@ -397,6 +408,11 @@
    "why": " | CPV 71300000,79418000"
   },
   {
+   "title": "Rahmenverträge für High Performance Computing Systems",
+   "score": 0,
+   "why": "Haupt-CPV 48820000 (Hardware)"
+  },
+  {
    "title": "Bauherrenvertretung & Projektsteuerung neuer Hauptsitz SZU / neue Instandhaltungsanlage",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
@@ -410,6 +426,11 @@
    "title": "IT Engineering Leistungen (DevSecOps) für Cyber-Defence Campus \"armasuisse W+T\"",
    "score": 0,
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
+  },
+  {
+   "title": "N05.60 MP-230028 - BSA Grandson - Areuse renouvellement - Fourniture, installation et mise",
+   "score": 0,
+   "why": "Auftragsart construction"
   },
   {
    "title": "IT5050.1019 / Rechenzentrumsstandort 4",
@@ -530,26 +551,6 @@
    "title": "Client Lifecycle Management (LCM)",
    "score": 0,
    "why": "Haupt-CPV 50300000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "ICT an der Schule Interlaken",
-   "score": 0,
-   "why": "Haupt-CPV 30213000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "PRINTING@VSG AHS",
-   "score": 0,
-   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "Kampagne E-Trendfahrzeuge",
-   "score": 0,
-   "why": "Haupt-CPV 79340000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "PRINTING@Neuenhof",
-   "score": 0,
-   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
   }
  ],
  "items": [
@@ -835,6 +836,34 @@
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 8032\n      name: Schauspielhaus Zürich AG\n      street: Zeltweg 5\n      city: Zürich\n    title: Ticketing-Software für Schweizer Kulturhäuser\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: selective\n    orderType: supply\n    participantLimitation: 7\n  procurement:\n    orderDescription: Das Schauspielhaus Zürich AG, Zeltweg 5, 8032 Zürich, handelnd als federführende Vergabestelle in dieser gemeinsamen Beschaffung für sich selbst sowie im Namen der übrigen Auftraggeberinnen (beteiligte Institutionen):\n      ●     Schauspielhaus Zürich AG, Zeltweg 5, 8032 Zürich\n      ●     Tonhalle-Gesellschaft Zürich AG, Gotthardstrasse 5, 8002 Zürich\n      ●     Theater Winterthur AG, Theaterstrasse 6, 8401 Winterthur\n      ●     Luzerner Theater, Theaterstrasse 2, 6003 Luzern\n      schreibt folgende Leistungen aus:\n      Bereitstellung und Betrieb einer Ticketing-Software (SaaS) für Kasse, Webshop, Abonnements, CRM-Funktionalitäten, Zutrittskontrolle, Auswertungen und Schnittstellen zur Finanzbuchhaltung u. a., einschliesslich Implementierung, Datenmigration, Schulung und Support. Die Einführung erfolgt gestaffelt für jede beteiligte Institution im Frühjahr 2027.\n      Die nähere Leistungsbeschreibung findet sich im Leistungsverzeichnis.\n      Vertragsdauer für jede beteiligte Institution: vier Jahre fest mit zweimaliger Verlängerungsoption der jeweiligen Institution um je ein Jahr.\n    processType: selective\n    orderType: supply\n    additionalCpvCodes:\n      - code: 48110000\n        label: Softwarepaket für POS-Kassenterminals\n      - code: 48481000\n        label: Vertriebs- und Marketingsoftwarepaket\n      - code: 72250000\n        label: Systemdienstleistungen und Unterstützungsdienste\n      - code: 72261000\n        label: Software-Unterstützung\n      - code: 72262000\n        label: Software-Entwicklung\n      - code: 72263000\n        label: Software-Implementierung\n      - code: 72265000\n        label: Software-Konfiguration\n      - code: 72267000\n        label: Software-Wartung und -Reparatur\n      - code: 72268000\n        label: Bereitstellung von Software\n    supplyType: rent\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Die Einführung erfolgt gestaffelt für jede beteiligte Institution vor Ort.\n    executionDeadlineType: not_specified\n    executionNote: Siehe Leistungsverzeichnis und Dokumente.\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2031-03-31\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Die Datumsangaben sind indikativ. Der Abschluss der Beschaffungsverträge erfolgt individuell durch jede beteiligte Institution.\n    options: yes\n    optionsNote: Eine zweimalige Verlängerung um ein weiteres Jahr ist optional möglich.\n    cpvCode:\n      code: 48000000\n      label: Softwarepaket und Informationssysteme\n  terms:\n    termsType: in_documents\n    consortiumAllowed: yes\n    consortiumMultiApplicationAllowed: yes\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: selective\n    orderType: supply\n    termsNote: Rahmenbedingungen in den Dokumenten hinterlegt.\n    consortiumNote: Rahmenbedingungen in den Dokumenten hinterlegt.\n    subContractorNote: Rahmenbedingungen in den Dokumenten hinterlegt.\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Ausschreibung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    qnas:\n      - date: 2026-11-28\n        note: Die eingereichten Fragen werden voraussichtlich bis 2.12.2026 beantwortet.\n    otherAppointments:\n      - name: Frist für die Einreichung allfälliger ergänzender Anbieterfragen\n        date: 2026-12-14\n        note: Hier handelt es sich um Anbieterfragen für die 2. Stufe (Angebotsphase).\n      - name: Veröffentlichung der Antworten\n        date: 2026-12-16\n      - name: Voraussichtliche Termine für die Bieterpräsentationen von 14.-21.1.2027\n        date: 2027-01-14\n    processType: selective\n    orderType: supply\n    publicationDate: 2026-11-12\n    offerDeadline: 2026-12-08T23:59:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-11-12\n        - 2027-03-01\n    selectParticipants:\n      dateTime: 2026-12-10T00:00:00+01:00\n      ignoreTime: ja\n    selectParticipantsNotes: Die Benachrichtigung der Anbieterinnen ist für den 10.12.2026 geplant.\n    offerSubmission:\n      dateTime: 2027-01-05T23:59:00+01:00\n    offerValidityDeadlineDate: 2027-07-05\n  type: tender\n  projectType: tender\n  criteria:\n    weightedQualificationCriteriaInDocuments: yes\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_defined\n    awardCriteria:\n      - description: Siehe Angaben Preisblatt.\n        title: Preis\n        isPriceCriterion: ja\n        weighting: 30\n        maxPoints: 300\n      - description: Siehe Leistungsverzeichnis\n        title: Angaben im Leistungsverzeichnis\n        weighting: 30\n        maxPoints: 300\n      - description: Siehe Dokument A2.1 - Anhang zu den allgemeinen Submissionsbedingungen zweite Stufe\n        title: Auftragsbezogenes Ablaufkonzept für Implementierung\n        weighting: 10\n        maxPoints: 100\n      - description: Siehe Dokument A2.1 - Anhang zu den allgemeinen Submissionsbedingungen zweit\n  [… gekürzt]"
   },
   {
+   "id": "e387a1f2-4213-46c8-abcb-cbf08813c60a",
+   "nr": "47553",
+   "title": "Rahmenvertrag, Beratungsdienstleistungen für Digital Stadt Bern, 6 Lose ",
+   "office": "Fachstelle Beschaffungswesen Stadt Bern",
+   "date": "2026-11-18",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2027-01-12T16:00:00+01:00",
+   "cpv": [
+    "72224000",
+    "79400000"
+   ],
+   "score": 9,
+   "hits": [
+    "Künstliche Intelligenz",
+    "Digitalisierung"
+   ],
+   "fields": {
+    "gegenstand": "Der Auftrag umfasst die Bereitstellung von Fachwissen und Dienstleistungen zur Unterstützung der digitalen Entwicklung der Stadt Bern. Ziel ist die Umsetzung der Vorhaben aus dem Digitalportfolio, unter Einbezug externer Expertise in Bereichen wie Beschaffung, Studien, Analysen, Projektleitung und Kommunikation. Die Kompetenz-Bereiche werden in sechs Lose unterteilt. Dabei sucht die Beschaffungsstelle ausschliesslich Unterstützung in den Maturitätsstufen Professional, Senior und Expert.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "Los 1: Los 1 – Projektmanagement; Los 2: Los 2 – Strategieberatung; Los 3: Los 3 – Change & Befähigung, Organisationsberatung; Los 4: Los 4 – Digitale Unternehmensentwicklung; Los 5: Los 5 – Fachberatung Digital Governance; Los 6: Los 6 – Kommunikation, Grafik, Design, Webberatung, Video",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/e387a1f2-4213-46c8-abcb-cbf08813c60a",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 3011\n      name: Fachstelle Beschaffungswesen Stadt Bern\n      url: https://www.bern.ch/wirtschaft/beschaffung\n      street: Bundesgasse 33\n      city: Bern\n    procurementRecipientAddress:\n      postalCode: 3011\n      name: Präsidialdirektion, Personal, Finanzen & Digitale Entwicklung\n      url: https://www.bern.ch/wirtschaft/beschaffung\n      street: Bundesgasse 33\n      city: Bern\n    title: Rahmenvertrag, Beratungsdienstleistungen für Digital Stadt Bern, 6 Lose\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_external\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    offerSpecificNote: Die Angebote sind innerhalb der Frist bei der Fachstelle Beschaffungswesen einzureichen (A-Post, Stempel einer offiziellen Poststelle, firmeneigene Frankiermaschinen werden nicht anerkannt).\n      Bei einer Abgabe vor Ort werden keine Bestätigungen ausgestellt. Beachten Sie die aktuellen Öffnungszeiten vom Empfang Immobilien Stadt Bern an der Bundesgasse 33. Die Offerten inkl. digitalem Angebot auf USB-Stick, sind im verschlossenen Kuvert mit der Aufschrift \"Beratungsdienstleistungen für Digital Stadt Bern / Los XY\" und dem Vermerk «Bitte nicht öffnen» einzureichen.\n    offerAddress:\n      postalCode: 3011\n      name: Fachstelle Beschaffungswesen Stadt Bern\n      street: Bundesgasse 33\n      city: Bern\n  procurement:\n    orderDescription: Der Auftrag umfasst die Bereitstellung von Fachwissen und Dienstleistungen zur Unterstützung der digitalen Entwicklung der Stadt Bern. Ziel ist die Umsetzung der Vorhaben aus dem Digitalportfolio, unter Einbezug externer Expertise in Bereichen wie Beschaffung, Studien, Analysen, Projektleitung und Kommunikation.\n      \n      Die Kompetenz-Bereiche werden in sechs Lose unterteilt.\n      \n      Dabei sucht die Beschaffungsstelle ausschliesslich Unterstützung in den Maturitätsstufen Professional, Senior und Expert.\n    processType: open\n    orderType: service\n    cpvCode:\n      code: 79400000\n      label: Unternehmens- und Managementberatung und zugehörige Dienste\n  terms:\n    termsType: defined\n    termsCriteria:\n      - description: Anbieterinnen und Anbieter gelten als teilnahmeberechtigt, sofern keine Ausschlussgründe nach Art. 44 IVöB 2019 vorliegen und sämtliche Nachweise gemäss Art. 7 IVöBV erbracht worden sind, u. a. sind folgende Voraussetzungen zu erfüllen:\n          \n          −Einhaltung der Gesamtarbeitsverträge oder bei deren Fehlen Gewährung von orts- und branchenüblichen Arbeitsbedingungen (Leistungsortsprinzip).\n          −Erfüllung der Pflichten gegenüber der öffentlichen Hand, der Sozialversicherungen sowie den Arbeitnehmenden.\n          −Einhaltung der Lohngleichheit von Frau und Mann.\n          \n          Zwischen dem Auftraggeber und dem Anbieter bestehen keine Forderungen aus vertraglichen oder ausservertraglichen Verpflichtungen, über deren Erledigung noch keine Einigung erzielt worden ist.\n        verification: Die erforderlichen Nachweise sind in den Dokumenten hinterlegt.\n    consortiumAllowed: yes\n    consortiumMultiApplicationAllowed: yes\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    termsOfBusiness: Es sind Netto-Offerten einzureichen. Skontoabzüge sind nicht zulässig, diese sind direkt in die Rabatte zu inkludieren. Nicht fristgerecht oder unvollständig eingereichte Angebote werden vom Wettbewerb ausgeschlossen. Offerten mit Preisabsprachen werden nicht berücksichtigt. Der Zuschlag erfolgt auf Grund des Angebots.\n    walkThroughNotes: Es findet keine obligatorische Begehung statt. Den Unternehmungen wird jedoch empfohlen, sich über die örtlichen Verhältnisse ins Bild zu setzen.\n    termsNote: Grundsätzliche Anforderungen\n      \n      Die Auftraggeberin vergibt öffentliche Aufträge für in der Schweiz zu erbringenden Leistungen nur an Anbieterinnen und Anbieter, welche die Einhaltung der Arbeitsschutzbestimmungen und der Arbeitsbedingungen für Arbeitnehmer und Arbeitnehmerinnen sowie die Lohngleichheit von Frau und Mann gewährleisten (Art. 12 Abs. 1 IVöB 2019).\n      \n      Die Einhaltung der Arbeitsschutzbestimmungen, Arbeitsbedingungen und Lohngleichheit ist durch alle Teilnehmenden im Rahmen der Selbstdeklaration zu bestätigen. Ab dem städtischen Schwellenwert für das Einladungsverfahren hat das zuschlagnehmende Unternehmen die Einhaltung der Lohngleichheit für Frau und Mann zusätzlich gestützt auf eine betriebsinterne Lohngleichheitsanalyse mittels einer Methode gemäss Artikel 13c des Bundesgesetzes vom 24. März 1995 über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz; GlG; SR 151.1) nachzuweisen. Der Bund stellt dazu ein kostenloses Analyse-Tool zur Verfügung (www.logib.ch). Der Nachweis muss spätestens 60 Tage nach der Zuschlagserteilung erfolgen. Der Referenzmonat der Analyse darf nicht mehr als vier Jahre zurückliegen (Art. 3a der Verordnung vom 4. Dezember 2002 über das öffentliche Beschaffungswesen der Stadt Bern [Beschaffungsverordnung; VBW; SSSB 731.21]). Ausgenommen von der Nachweispflicht sind Unternehmen mit Mitarbeitenden nur einen Geschlechts oder mit weniger als zehn Mitarbeitenden. Auftragnehmende Unternehmen mit Sitz im Ausland fallen nur dann unter die Nachweispflicht, wenn sie die Leistung in der Schweiz erbringen. Weitergehende Nachweispflichten gestützt auf das übergeordnete Recht bleiben vorbehalten.\n      \n      Unabhängig von der Nachweispflicht ist die Auftraggeberin berechtigt, die Einhaltung der Vergabebestimmungen und namentlich auch der Lohngleichheit von Frau und Mann zu kontrollieren oder durch Dritte kontrollieren zu lassen. Anbietende sind verpflichtet, an einer angeordneten Kontrolle mitzuwirken und die erforderlichen Daten, Informationen und \n  [… gekürzt]"
+  },
+  {
    "id": "66f87b24-6cc6-41d1-b709-3b8997bce282",
    "nr": "47573",
    "title": "Digitalisierung & Sharing der SBB Strassenfahrzeuge",
@@ -1102,6 +1131,34 @@
    "text": "\n  procurement:\n    projectType: tender\n    processType: invitation\n    pubType: award\n    orderType: service\n    orderDescription: Die Flughafen Zürich AG (FZAG) möchte die Potenziale von Artificial Intelligence (AI) systematisch\n      analysieren. In verschiedenen Bereichen der Organisation gibt es bereits erste Aktivitäten, jedoch fehlt derzeit eine strukturierte Gesamtsicht darauf, welche Opportunities sich durch AI für die FZAG ergeben und wo diese den grössten Nutzen stiften können.\n      \n      Mit dieser Ausschreibung sucht die FZAG einen Partner, der gemeinsam mit den Business Units eine strukturierte Analyse von AI-Opportunities durchführt. Im Zentrum steht die Identifikation und Bewertung konkreter Möglichkeiten für den Einsatz von AI innerhalb der Organisation sowie im erweiterten Flughafen Ökosystem.\n      \n      Die Analyse soll sowohl kurzfristig realisierbare Opportunities als auch längerfristige Perspektiven\n      berücksichtigen. Neben einzelnen Anwendungsfällen soll insbesondere geprüft werden, ob sich\n      Opportunities clustern lassen und beispielsweise über gemeinsame Plattformen oder Agentic-AI-Ansätze realisiert werden könnten.\n      \n      Als Resultat wird eine Roadmap entwickelt, die eine mögliche Realisierungsfolge der Opportunities sowie die nötigen technischen und organisatorischen Fähigkeiten der Unternehmung skizziert. Die FZAG verfügt bereits über einen AI Opportunity Radar, welches mögliche AI-Einsatzbereiche aus Business- und Technologiesicht abbildet. Dieses Mandat baut auf dem Radar auf, erweitert und aktualisiert ihn.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 8058\n      name: Flughafen Zürich AG - Zentraler Einkauf\n      contactPerson: Jürg Wolfsteiner\n      street: Postfach\n      city: Zürich-Flughafen\n    procurementRecipientAddress:\n      postalCode: 8058\n      name: Flughafen Zürich AG - Zentraler Einkauf\n      contactPerson: Jürg Wolfsteiner\n      street: Postfach\n      city: Zürich-Flughafen\n    title: AI Opportunity Assessment\n  decision:\n    vendors:\n      - vendorName: Artifact SA\n        vendorAddress:\n          street: Rue Saint-Martin 7\n          city: Lausanne\n          postalCode: 1003\n        price:\n          currency: chf\n          price: 174162.6\n          vatType: full\n    numberOfSubmissions: 3\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-10-16\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung. Gestützt auf Art. 52 Abs. 2 BöB kann mit der Beschwerde einzig die Feststellung, dass die vorliegende Verfügung Bundesrecht verletzt, nicht jedoch deren Aufhebung beantragt werden. Ausländische Anbieterinnen sind zur Beschwerde nur zugelassen, soweit der Staat, in dem sie ihren Sitz haben, Gegenrecht gewährt.\n  base:\n    title: AI Opportunity Assessment\n    projectType: tender\n    processType: invitation\n    lotsType: without\n    type: award\n    publicationNumber: 42886-02\n    publicationDate: 2026-10-23\n    creationLanguage: de\n    projectNumber: 42886"
   },
   {
+   "id": "83bd9126-4d46-47dc-aada-097ab3869ecb",
+   "nr": "32893",
+   "title": "System Integration inkl. Programm- und Projektmanagement einer Enterprise Content Management-Lösung (ECM) ",
+   "office": "IGS Informatikgesellschaft für Sozialversicherungen GmbH",
+   "date": "2026-11-18",
+   "type": "award",
+   "process": "open",
+   "deadline": null,
+   "cpv": [
+    "72000000",
+    "72224000"
+   ],
+   "score": 6,
+   "hits": [
+    "Fallbearbeitung",
+    "Testmanagement"
+   ],
+   "fields": {
+    "gegenstand": "Mit der Durchführung einer Ausschreibung im offenen Verfahren im Staatsvertragsbereich beabsichtigt die IGS Informatikgesellschaft für Sozialversicherungen GmbH (IGS) als Auftraggeberin, externe Unterstützung für die Steuerung und Weiterentwicklung des Programms ECM zu beschaffen. Das Programm ECM verantwortet die Integration, Einführung und Weiterentwicklung des neu entwickelten Informationssystems OPUS, welches die bisher genutzte Lösung schrittweise ablöst. OPUS bildet als integrierte Informations- und Arbeitsplattform die Grundlage für die digitale und workflowbasierte Fallbearbeitung der angeschlossenen 16 Sozial­versicherungs­unternehmen. Die Einführung erfolgt gestaffelt im Rahmen eines mehrjährigen Transformationsprogramms bis Ende 2030. Gegenstand der vorliegenden Ausschreibung ist die Erbringung von Dienstleistungen in den Bereichen Programmmanagement, Projektleitung und Project Management Office (PMO). Die Leistungen umfassen insbesondere die Leitung, Konzeption, Planung, Steuerung, Koordination, Überwachung und den Abschluss von Programm- und Projektvorhaben sowie die Unterstützung bei der Weiterentwicklung, Migration, Einführung, Transformation und Überführung der Lös…",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/83bd9126-4d46-47dc-aada-097ab3869ecb",
+   "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Mit der Durchführung einer Ausschreibung im offenen Verfahren im Staatsvertragsbereich beabsichtigt die IGS Informatikgesellschaft für Sozialversicherungen GmbH (IGS) als Auftraggeberin, externe Unterstützung für die Steuerung und Weiterentwicklung des Programms ECM zu beschaffen. Das Programm ECM verantwortet die Integration, Einführung und Weiterentwicklung des neu entwickelten Informationssystems OPUS, welches die bisher genutzte Lösung schrittweise ablöst.\n      OPUS bildet als integrierte Informations- und Arbeitsplattform die Grundlage für die digitale und workflowbasierte Fallbearbeitung der angeschlossenen 16 Sozial­versicherungs­unternehmen. Die Einführung erfolgt gestaffelt im Rahmen eines mehrjährigen Transformationsprogramms bis Ende 2030.\n      \n      Gegenstand der vorliegenden Ausschreibung ist die Erbringung von Dienstleistungen in den Bereichen Programmmanagement, Projektleitung und Project Management Office (PMO). Die Leistungen umfassen insbesondere die Leitung, Konzeption, Planung, Steuerung, Koordination, Überwachung und den Abschluss von Programm- und Projektvorhaben sowie die Unterstützung bei der Weiterentwicklung, Migration, Einführung, Transformation und Überführung der Lösung in den operativen Betrieb.\n      \n      Die Leistungen werden in einem komplexen technischen und organisatorischen Umfeld erbracht. Dieses ist geprägt durch die parallele Steuerung von System Integration, Produktentwicklung, Rollout und organisatorischer Transformation sowie durch die Zusammenarbeit zahlreicher Stakeholder aus den beteiligten Durchführungsstellen, externen Lieferanten und der IGS. Je nach Bedarf können die Leistungen ergänzend Aufgaben in den Bereichen Business Analyse, Testmanagement und Qualitätssicherung umfassen.\n      \n      Mit der Ausschreibung wird eine Anbieterin gesucht, die die erforderlichen Leistungen eigenständig oder, soweit zulässig, unter Einbezug von Subunternehmen erbringen kann. Mit der Zuschlagsempfängerin wird ein Rahmenvertrag mit einer Laufzeit von vier Jahren abgeschlossen. Eine Abnahmeverpflichtung seitens der Auftraggeberin besteht nicht; der Leistungsabruf erfolgt bedarfsgerecht gemäss Rahmenvertrag.\n    additionalCpvCodes:\n      - code: 72224000\n        label: Beratung im Bereich Projektleitung\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 9000\n      name: IGS Informatikgesellschaft für Sozialversicherungen GmbH\n      url: https://www.igs-gmbh.ch\n      street: Geltenwilenstrasse 16\n      city: St. Gallen\n    procurementRecipientAddress:\n      postalCode: 9000\n      name: IGS Informatikgesellschaft für Sozialversicherungen GmbH\n      url: https://www.igs-gmbh.ch\n      street: Geltenwilenstrasse 16\n      city: St. Gallen\n    title: System Integration inkl. Programm- und Projektmanagement einer Enterprise Content Management-Lösung (ECM)\n    stateContractArea: ja\n    publicationTed: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: ON-POINT Connect AG\n        vendorAddress:\n          street: Industriestrasse 22\n          city: Zug\n          postalCode: 6300\n        price:\n          currency: chf\n          price: 38312023.68\n          vatType: full\n    numberOfSubmissions: 3\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-11-17\n    awardDecisionJustification: Gemäss der Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen (IVöB) ist der Zuschlag dem vorteilhaftesten Angebot zu erteilen. \n      \n      Innert Frist gingen drei Angebote ein. Die eingegangenen Angebote wurden gemäss den in den Ausschreibungsunterlagen festgelegten Zuschlagskriterien geprüft und bewertet.\n      \n      Das Angebot der ON-POINT Connect AG erfüllt sämtliche Teilnahmebedingungen und Eignungskriterien (Muss-Kriterien) und entspricht den Vorgaben der Ausschreibungsunterlagen. Die Bewertung der Zuschlagskriterien ergab eine sehr gute Anforderungsabdeckung. Mit einer Gesamtpunktzahl von 19'658 von maximal 22'000 Punkten wurde die höchste Gesamtpunktzahl erzielt. Damit stellt das Angebot der ON-POINT Connect AG das vorteilhafteste Angebot im Sinne von Art. 41 IVöB dar und erhält den Zuschlag.\n    awardDecisionNote: Mit der Zuschlagsempfängerin wird ein Rahmenvertrag mit einer Laufzeit von vier Jahren abgeschlossen. Die Beauftragung von Leistungen erfolgt bedarfsgerecht über Einzelabrufe gemäss den im Rahmenvertrag definierten Verfahren. Die Auftraggeberin übernimmt keine Verpflichtung zum Bezug bestimmter Leistungen oder Leistungsmengen. Ein Anspruch der Zuschlagsempfängerin auf den Abruf eines bestimmten Leistungsvolumens besteht nicht.\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen seit Publikation auf www.simap.ch beim Verwaltungsgericht des Kantons St.Gallen, Webergasse 8, 9001 St.Gallen, schriftlich Beschwerde erhoben werden (Art. 52 Abs. 1 i.V.m. Art. 56 der Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen [sGS 841.51]). Die Frist ist eingehalten, wenn die Beschwerde spätestens am letzten Tag der Frist beim Gericht eingereicht oder zu dessen Handen der Schweizerischen Post oder einer schweizerischen diplomatischen oder konsularischen Vertretung übergeben wird (Art. 143 Abs. 1 der Schweizerischen Zivilprozessordnung [SR 272] i.V.m. Art. 30 Abs. 1 des Gesetzes über die Verwaltungsrechtspflege [sGS 951.1]). Die Beschwerde muss einen Antrag sowie eine Darstellung des Sachverhaltes und eine Begründung enthalten. Sie ist zu unterzeichnen und im Doppel einzureichen. Diese Verfügung ist beizulegen. Es gelten keine Gerichtsferien.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 32893-01\n    publicationDate: 2026-07-28\n  base\n  [… gekürzt]"
+  },
+  {
    "id": "28c65ede-87ca-46ca-a7b6-f4b20d00a8a7",
    "nr": "45909",
    "title": "Dienstleistung für Microsoft Power Apps und Power Automate",
@@ -1232,6 +1289,54 @@
    },
    "url": "https://www.simap.ch/de/project-detail/84219411-8eee-4fbb-b015-1dd2cb6116bd",
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 4509\n      name: Amt für Informatik und Organisation\n      street: Ritterquai 23\n      city: Solothurn\n    procurementRecipientAddress:\n      postalCode: 4502\n      name: Amt für Wirtschaft und Arbeit\n      street: Untere Sternengasse 2\n      city: Solothurn\n    title: Fachapplikation Arbeitsmarktvollzug\n    documentsSourceType: documents_source_url\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_external_platform\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    documentsSourceUrl: https://da7.decisionadvisor.ch/login?code=58BeAYY5xovNuHKaFBRew4rH1nBtQf2WyHU8T4WdIH4%3D\n    offerSpecificNote: Die Ausschreibung erfolgt digital mittels der Software Decision Advisor.\n    offerDigitalExternalPlatformUrl: https://da7.decisionadvisor.ch/login?code=58BeAYY5xovNuHKaFBRew4rH1nBtQf2WyHU8T4WdIH4%3D\n  procurement:\n    orderDescription: Gegenstand der Ausschreibung ist die Beschaffung einer Fachapplikation für den Arbeitsmarktvollzug sowie die Erbringung der damit verbundenen Leistungen im Zusammenhang mit Konzeption, Bereitstellung, Inbetriebnahme, Datenmigration und Einführung der Lösung. Gesucht wird eine Standardsoftware, die im Rahmen der Konfiguration an die fachlichen Bedürfnisse der Auftraggeberin angepasst werden kann. Die Anbieterin stellt die Fachapplikation als Software-as-a-Service (SaaS) über eine fixe Laufzeit von 5 Jahren zur Verfügung und erbringt in dieser Zeit die Betriebs- und Supportleistungen.\n      Die Fachapplikation deckt aus funktionaler Sicht die fachliche Fallbearbeitung im Arbeitsmarktvollzug ab. Sie unterstützt insbesondere die Bearbeitung von Aufgaben in den Vollzugsbereichen FlaM und BGSA sowie weitere Aufgaben nach AIG und bildet den gesamten Lebenszyklus eines Falls von der Eröffnung über die Bearbeitung bis hin zum Abschluss ab.\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 48000000\n        label: Softwarepaket und Informationssysteme\n    cpcCode:\n      code: b7f1e45b-1fe5-4e19-8cbb-98006291267d\n      label: Datenverarbeitung und verbundene Dienstleistungen\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 4500\n      city: Solothurn\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-04-01\n        - 2032-11-30\n    canContractBeExtended: yes\n    options: no\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    termsNote: Die Teilnahmebedingungen sind in der Ausschreibungssoftware Decision Advisor ersichtlich.\n    remediesNotice: Gegen den Zuschlag kann innert 20 Tagen, von der Publikation in simap an gerechnet, beim Verwaltungsgericht, Amthaus 1, 4502 Solothurn, Beschwerde erhoben werden. Eine allfällige Beschwerde ist schriftlich einzureichen; sie muss einen Antrag und eine Begründung enthalten; die Beweismittel sind anzugeben.\n  dates:\n    qnaRoundSourceType: external_system\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - note: Fragerunde wird ausserhalb von simap.ch durchgeführt\n          \n          Die Fragerunde erfolgt direkt in der Ausschreibungssoftware Decision Advsisor.\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-27\n    initialPublicationDate: 2026-09-26\n    offerDeadline: 2026-11-25T17:00:00+01:00\n    offerValidityDeadlineDays: 360\n  type: tender\n  projectType: tender\n  correction:\n    initialPublicationDate: 2026-09-26\n    remarks: Die Frist für das Einreichen von Fragen war im Lastenheft mit 23. Oktober 2026, 12:00 Uhr, angegeben, im Decision Advisor hingegen mit 30. Oktober 2026. Um diese Abweichung zu beheben und die Gleichbehandlung aller Anbietenden sicherzustellen, legt die Auftraggeberin die Termine einheitlich wie folgt fest:\n      \n      Frist zur Einreichung von Fragen: Fragen können bis spätestens Freitag, 30. Oktober 2026, 17:00 Uhr ausschliesslich über das Portal Decision Advisor eingereicht werden.\n      \n      Beantwortung der Fragen: Die anonymisierten Antworten werden bis spätestens Donnerstag, 5. November 2026, 17:00 Uhr, im Decision Advisor zur Verfügung gestellt.\n      \n      Frist zur Einreichung der Angebote: Die Frist für die Einreichung der Angebote bleibt unverändert bestehen bis am Mittwoch, 25. November 2026, 17:00 Uhr.\n      \n      Der Terminplan im Lastenheft gilt in diesen Punkten als entsprechend geändert. Diese Mitteilung ist Bestandteil der Ausschreibungsunterlagen. Alle übrigen Bestimmungen bleiben unverändert.\n      \n      Wir danken Ihnen für Ihre Kenntnisnahme.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    corrected: ja\n    publicationNumber: 43951-02\n    publicationDate: 2026-10-23\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n    qualificationCriteriaNote: Die Eignungskriterien sind in der Ausschreibungssoftware Decision Advisor ersichtlich.\n    awardCriteriaNote: Die Zuschlagskriterien sind in der Ausschreibungssoftware Decision Advisor ersichtlich.\n  base:\n    corrected: ja\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    publicationTed: ja\n    title: Fachapplikation Arbeitsmarktvollzug\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 43951-03\n    publicationDate: 2\n  [… gekürzt]"
+  },
+  {
+   "id": "22994e47-e203-43a7-8792-8f94b4e29b25",
+   "nr": "47772",
+   "title": "MP PRm2-m3 TV 2026 705 - Digital Workplace : fourniture, infogérance et support",
+   "office": "Transports publics de la région lausannoise sa",
+   "date": "2026-11-18",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2027-01-27T12:00:00+01:00",
+   "cpv": [
+    "72000000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Pour répondre aux futurs besoins de mobilité du Canton, le réseau de métros lausannois va être modernisé et développé. Le présent marché de services a pour objet de confier à un partenaire unique la conception, la fourniture, la mise en œuvre, l'exploitation, la maintenance et l'évolution de l'environnement bureautique collaboratif de la SDM.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen (Selon les indications de la pièce 1 « Conditions administratives »)",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/22994e47-e203-43a7-8792-8f94b4e29b25",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 1020\n      name: Transports publics de la région lausannoise sa\n      contactPerson: FA-Achats\n      street: Chemin du Closel 15\n      city: Renens\n    procurementRecipientAddress:\n      postalCode: 1020\n      name: Transports publics de la région lausannoise sa\n      street: Chemin du Closel 15\n      city: Renens\n    title: MP PRm2-m3 TV 2026 705 - Digital Workplace : fourniture, infogérance et support\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_external\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: service\n    documentsLanguagesNote: Selon les indications de la pièce 1 « Conditions administratives »\n    documentsSourceNote: Selon les indications de la pièce 1 « Conditions administratives »\n    offerSpecificNote: Selon les indications de la pièce 1 « Conditions administratives »\n    offerAddress:\n      postalCode: 1020\n      name: Transports publics de la région lausannoise sa\n      contactPerson: FA-Achats\n      reference: MP Prm2-m3 TV 2026 705 - Digital Workplace : fourniture, infogérance t support\n      street: Chemin du Closel 15\n      city: Renens\n  procurement:\n    orderDescription: Pour répondre aux futurs besoins de mobilité du Canton, le réseau de métros lausannois va être modernisé et développé. \n      Le présent marché de services a pour objet de confier à un partenaire unique la conception, la fourniture, la mise en œuvre, l'exploitation, la maintenance et l'évolution de l'environnement bureautique collaboratif de la SDM.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Lausanne\n    executionDeadlineType: not_specified\n    variants: yes\n    variantsNote: Selon les indications de la pièce 1 « Conditions administratives »\n    partialOffers: no\n    partialOffersNote: Selon les indications de la pièce 1 « Conditions administratives »\n    contractDeadlineType: not_specified\n    canContractBeExtended: no\n    options: no\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    termsNote: Selon les indications de la pièce 1 « Conditions administratives »\n    consortiumNote: Selon les indications de la pièce 1 « Conditions administratives »\n    subContractorNote: Selon les indications de la pièce 1 « Conditions administratives »\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours à la Cour de droit administratif et public du Tribunal cantonal, Route du Signal 8 (Palais de Justice de l’Hermitage), 1014 Lausanne, dans les vingt jours dès sa notification par publication ; le recours doit être signé et indiquer les conclusions et ses motifs. La décision attaquée est jointe au recours.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    offerValidityNotes: Selon les indications de la pièce 1 « Conditions administratives »\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-12-02\n        note: Selon les indications de la pièce 1 « Conditions administratives »\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-18\n    offerDeadline: 2027-01-27T12:00:00+01:00\n    specificDeadlinesAndFormalRequirements: Selon les indications de la pièce 1 « Conditions administratives »\n    offerValidityDeadlineDays: 360\n    offerOpening:\n      dateTime: 2027-01-28T00:00:00+01:00\n      ignoreTime: ja\n    offerOpeningNotes: Selon les indications de la pièce 1 « Conditions administratives »\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n    qualificationCriteriaNote: Selon les indications de la pièce 1 « Conditions administratives »\n    awardCriteriaNote: Selon les indications de la pièce 1 « Conditions administratives »\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    publicationTed: ja\n    title: MP PRm2-m3 TV 2026 705 - Digital Workplace : fourniture, infogérance et support\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 47772-01\n    publicationDate: 2026-11-18\n    creationLanguage: fr\n    projectNumber: 47772\n  hasProjectDocuments: ja"
+  },
+  {
+   "id": "fec82c65-1a54-4c27-966b-7590570f7c3d",
+   "nr": "47781",
+   "title": "Renouvellement de licenses Atlassian",
+   "office": "Romande Energie SA",
+   "date": "2026-11-18",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2026-12-07T12:00:00+01:00",
+   "cpv": [
+    "72212218"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Cet appel d’offres concerne le renouvellement des licences Atlassian, sur la base des produits, volumes et niveaux listés dans le dossier d'appel d'offres.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen (Voir les documents d'appel d'offres sur la plateforme SuisseOffer : https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=b90a2337-9122-483b-9baa-0f7d4df6bb24)",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/fec82c65-1a54-4c27-966b-7590570f7c3d",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 1110\n      name: Romande Energie SA\n      contactPerson: Jorge Felisberto\n      url: https://www.romande-energie.ch/\n      street: Rue de Lausanne 53\n      city: Morges\n    procurementRecipientAddress:\n      postalCode: 1110\n      name: Romande Energie SA\n      contactPerson: Jorge Felisberto\n      url: https://www.romande-energie.ch/\n      street: Rue de Lausanne 53\n      city: Morges\n    title: Renouvellement de licenses Atlassian\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_url\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_digital_external_platform\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: service\n    documentsSourceUrl: https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=b90a2337-9122-483b-9baa-0f7d4df6bb24\n    documentsSourceNote: Le processus d'achat est géré sur la plateforme SuisseOffer.\n    offerSpecificNote: Le processus d'achat est géré sur la plateforme SuisseOffer.\n    offerDigitalExternalPlatformUrl: https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=b90a2337-9122-483b-9baa-0f7d4df6bb24&lang=fr\n  procurement:\n    orderDescription: Cet appel d’offres concerne le renouvellement des licences Atlassian, sur la base des produits, volumes et niveaux listés dans le dossier d'appel d'offres.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 1110\n      city: Morges\n    contractDeadlineType: not_specified\n    canContractBeExtended: no\n    options: no\n    cpvCode:\n      code: 72212218\n      label: Entwicklung von Lizenzmanagementsoftware\n  terms:\n    termsType: in_documents\n    consortiumAllowed: not_specified\n    consortiumMultiApplicationAllowed: not_specified\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    termsNote: Le processus d'achat est géré sur la plateforme SuisseOffer.\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours à la Cour de droit administratif et public du Tribunal cantonal, Route du Signal 8 (Palais de Justice de l’Hermitage), 1014 Lausanne, dans les vingt jours dès sa notification par publication ; le recours doit être signé et indiquer les conclusions et ses motifs. La décision attaquée est jointe au recours.\n  dates:\n    qnaRoundSourceType: external_system\n    offerValidityDeadlineType: days_after\n    reductionMinimumOfferDeadline: ja\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-30\n        note: Le processus d'achat est géré sur la plateforme SuisseOffer.\n        externalLink: https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=b90a2337-9122-483b-9baa-0f7d4df6bb24\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-18\n    offerDeadline: 2026-12-07T12:00:00+01:00\n    offerValidityDeadlineDays: 90\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n    qualificationCriteriaNote: Voir les documents d'appel d'offres sur la plateforme SuisseOffer :\n      https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=b90a2337-9122-483b-9baa-0f7d4df6bb24\n    awardCriteriaNote: Voir les documents d'appel d'offres sur la plateforme SuisseOffer :\n      https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=b90a2337-9122-483b-9baa-0f7d4df6bb24\n  base:\n    cpvCode:\n      code: 72212218\n      label: Entwicklung von Lizenzmanagementsoftware\n    orderType: service\n    title: Renouvellement de licenses Atlassian\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 47781-01\n    publicationDate: 2026-11-18\n    creationLanguage: fr\n    projectNumber: 47781"
   },
   {
    "id": "326ea869-eb41-44c9-842c-52035393af27",
