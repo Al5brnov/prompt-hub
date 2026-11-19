@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-19T14:31:23+00:00",
+ "generatedAt": "2026-11-19T22:54:44+00:00",
  "since": "2026-10-20",
  "keywords": [
   "SAP",
@@ -128,9 +128,9 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 123,
- "detailsCached": 172,
- "detailsLoaded": 8,
+ "durationSec": 789,
+ "detailsCached": 180,
+ "detailsLoaded": 0,
  "dropped": {
   "vorab": 115,
   "cpv": 33,
@@ -142,7 +142,13 @@
  },
  "count": 70,
  "diagnostics": [
-  "Cookies nach Seed: SCDID_S"
+  "Cookies nach Seed: SCDID_S",
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Order-to-Cash»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «SuccessFactors»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error _ssl.c:994: The handshake operation timed out>",
+  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: ERP-System"
  ],
  "rejected": [
   {
