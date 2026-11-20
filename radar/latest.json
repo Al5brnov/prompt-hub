@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20T14:26:19+00:00",
+ "generatedAt": "2026-11-20T22:04:58+00:00",
  "since": "2026-10-21",
  "keywords": [
   "SAP",
@@ -128,9 +128,9 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 1209,
- "detailsCached": 173,
- "detailsLoaded": 5,
+ "durationSec": 810,
+ "detailsCached": 178,
+ "detailsLoaded": 0,
  "dropped": {
   "vorab": 130,
   "cpv": 32,
@@ -143,15 +143,11 @@
  "count": 68,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «SAP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error _ssl.c:994: The handshake operation timed out>",
-  "Suche «Vertriebslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Softwareevaluation»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «SuccessFactors»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Rechnungswesen»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «SAP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 7 Suchen, weiterhin fehlgeschlagen: SAP"
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «CRM»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «E-Government»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error _ssl.c:994: The handshake operation timed out>",
+  "Wiederholt: 3 Suchen, weiterhin fehlgeschlagen: ERP-System"
  ],
  "rejected": [
   {
