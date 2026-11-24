@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-24T03:08:51+00:00",
+ "generatedAt": "2026-11-24T16:13:19+00:00",
  "since": "2026-10-25",
  "keywords": [
   "SAP",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 319,
+ "candidates": 303,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,11 +128,11 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 791,
- "detailsCached": 167,
- "detailsLoaded": 9,
+ "durationSec": 979,
+ "detailsCached": 176,
+ "detailsLoaded": 0,
  "dropped": {
-  "vorab": 108,
+  "vorab": 95,
   "cpv": 28,
   "score": 48,
   "frist": 4,
@@ -143,13 +143,12 @@
  "count": 70,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «E-Shop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Onlineshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «E-Commerce»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «gestionale»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 5 Suchen, weiterhin fehlgeschlagen: ERP-System"
+  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Onlineshop»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Auftragsabwicklung»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «Rechnungswesen»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
+  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: S/4HANA"
  ],
  "rejected": [
   {
