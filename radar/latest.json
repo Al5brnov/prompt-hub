@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-24T16:13:19+00:00",
- "since": "2026-10-25",
+ "generatedAt": "2026-11-25T01:11:30+00:00",
+ "since": "2026-10-26",
  "keywords": [
   "SAP",
   "S/4HANA",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 303,
+ "candidates": 287,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,27 +128,32 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 979,
- "detailsCached": 176,
- "detailsLoaded": 0,
+ "durationSec": 1295,
+ "detailsCached": 173,
+ "detailsLoaded": 8,
  "dropped": {
-  "vorab": 95,
+  "vorab": 92,
   "cpv": 28,
-  "score": 48,
-  "frist": 4,
+  "score": 50,
+  "frist": 3,
   "ausschluss": 10,
   "zeit": 0,
   "limit": 0
  },
- "count": 70,
+ "count": 73,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Onlineshop»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Auftragsabwicklung»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «Rechnungswesen»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error timed out>",
-  "Wiederholt: 4 Suchen, weiterhin fehlgeschlagen: S/4HANA"
+  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «ERP-System»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Warenwirtschaft»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Self-Service-Portal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Portallösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «EWM»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Vertrieb»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Personaladministration»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Lohnverarbeitung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 9 Suchen, weiterhin fehlgeschlagen: ERP"
  ],
  "rejected": [
   {
@@ -172,9 +177,9 @@
    "why": " | CPV 72000000,72315200"
   },
   {
-   "title": "Projekt \"Informationssystem Strassenentwässerung (IS-STRE)\"",
+   "title": "Ausschreibung Digitales Netz - GIS, Netzberechnung, Niederspannungsleitsystem",
    "score": 2,
-   "why": " | CPV 38221000,48000000,72260000"
+   "why": " | CPV 38221000,48000000,72000000"
   },
   {
    "title": "Kernapplikation Prävention NG",
@@ -187,24 +192,24 @@
    "why": " | CPV 48000000,72000000"
   },
   {
-   "title": "Erbringung von Informatikdienstleistungen «Betrieb Datacenter Services»",
-   "score": 2,
-   "why": " | CPV 72000000"
-  },
-  {
-   "title": "(26057) 704 Prozessaufwandanalyse",
+   "title": "Mandat Marktbearbeitung OSTWIND 2027-2029",
    "score": 2,
    "why": " | CPV 79400000"
   },
   {
-   "title": "(26112) 609 Dienstleistungen zu Red Hat Produkten",
+   "title": "Projekt \"Informationssystem Strassenentwässerung (IS-STRE)\"",
    "score": 2,
-   "why": " | CPV 72000000"
+   "why": " | CPV 38221000,48000000,72260000"
   },
   {
    "title": "ggst.sz Neue Applikation Grundstückgewinnsteuer",
    "score": 2,
    "why": " | CPV 48100000,72211000,72212100"
+  },
+  {
+   "title": "Erbringung von Informatikdienstleistungen «Betrieb Datacenter Services»",
+   "score": 2,
+   "why": " | CPV 72000000"
   },
   {
    "title": "Weiterentwicklung und Weiterbetrieb Kunden Online Service (KOS) Framework und MicroService",
@@ -242,6 +247,11 @@
    "why": " | CPV 38221000,48000000,72000000"
   },
   {
+   "title": "(26057) 704 Prozessaufwandanalyse",
+   "score": 2,
+   "why": " | CPV 79400000"
+  },
+  {
    "title": "DDI-Lösung (DNS, DHCP, IPAM)",
    "score": 2,
    "why": " | CPV 48000000"
@@ -255,6 +265,11 @@
    "title": "Renouvellement du contrat EA (Enterprise Agreement) de Microsoft",
    "score": 2,
    "why": " | CPV 48000000"
+  },
+  {
+   "title": "(26112) 609 Dienstleistungen zu Red Hat Produkten",
+   "score": 2,
+   "why": " | CPV 72000000"
   },
   {
    "title": "Leitsystem für TGB",
@@ -392,11 +407,6 @@
    "why": " | CPV 72000000"
   },
   {
-   "title": "Rahmenverträge Dienstleister ICT-Consulting",
-   "score": 0,
-   "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
-  },
-  {
    "title": "Bauherrenvertretung & Projektsteuerung neuer Hauptsitz SZU / neue Instandhaltungsanlage",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
@@ -408,6 +418,11 @@
   },
   {
    "title": "IT Engineering Leistungen (DevSecOps) für Cyber-Defence Campus \"armasuisse W+T\"",
+   "score": 0,
+   "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
+  },
+  {
+   "title": "Rahmenverträge Dienstleister ICT-Consulting",
    "score": 0,
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
@@ -462,19 +477,14 @@
    "why": "Haupt-CPV 48921000 (Hardware)"
   },
   {
-   "title": "IWB, Migration AC450 nach AC800M Node 22, 32, 41, 42 und 51",
-   "score": 0,
-   "why": "Ausschlusswort im Titel: Hardware"
-  },
-  {
    "title": "Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
   },
   {
-   "title": "Ablösung Bewohnerrufsystem",
+   "title": "IWB, Migration AC450 nach AC800M Node 22, 32, 41, 42 und 51",
    "score": 0,
-   "why": "Haupt-CPV 32570000 ausserhalb Software/Beratung"
+   "why": "Ausschlusswort im Titel: Hardware"
   },
   {
    "title": "IT-Dienstleistungen und -Infrastruktur Gemeinde Zumikon",
@@ -490,11 +500,6 @@
    "title": "Primarschule Greifensee: Präsentationsperipherie",
    "score": 0,
    "why": "Haupt-CPV 30232000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "Zentrale Archivierung für Konkursakten",
-   "score": 0,
-   "why": "Haupt-CPV 79995100 ausserhalb Software/Beratung"
   },
   {
    "title": "Life-cycling Oracle-Exadata-Infrastruktur ",
@@ -527,6 +532,11 @@
    "why": "Haupt-CPV 65000000 ausserhalb Software/Beratung"
   },
   {
+   "title": "Ablösung Bewohnerrufsystem",
+   "score": 0,
+   "why": "Haupt-CPV 32570000 ausserhalb Software/Beratung"
+  },
+  {
    "title": "AO Storage S3 DISTIC 2026",
    "score": 0,
    "why": "Haupt-CPV 30233100 ausserhalb Software/Beratung"
@@ -545,11 +555,6 @@
    "title": "ICT an der Schule Interlaken",
    "score": 0,
    "why": "Haupt-CPV 30213000 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "PRINTING@VSG AHS",
-   "score": 0,
-   "why": "Haupt-CPV 51500000 ausserhalb Software/Beratung"
   }
  ],
  "items": [
@@ -593,7 +598,7 @@
    "nr": "46267",
    "title": "Neubeschaffung ERP - ZENTRUM FÜR LABORMEDIZIN",
    "office": "Zentrum für Labormedizin",
-   "date": "2026-11-06",
+   "date": "2026-11-25",
    "type": "tender",
    "process": "open",
    "deadline": "2026-12-18T23:59:00+01:00",
@@ -681,6 +686,35 @@
    },
    "url": "https://www.simap.ch/de/project-detail/2812268e-17d6-49a0-bcfa-0186fecc2ab0",
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 6002\n      name: Dienststelle Personal\n      url: https://personal.lu.ch\n      street: Hirschengraben 36\n      city: Luzern\n    procurementRecipientAddress:\n      postalCode: 6002\n      name: Dienststelle Personal\n      url: https://personal.lu.ch\n      street: Hirschengraben 36\n      city: Luzern\n    title: Rahmenvertragspartner  HR-IT-Weiterentwicklung: Dienstleistungen für SAP SuccessFactors und Fiori, aconso-Cloud und HR-IT-Projektmanagement\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Mit der vorliegenden Ausschreibung werden Rahmenvertragspartnerinnen gesucht, welche die Dienststelle Personal des Kantons Luzern bei der Umsetzung der HR-IT-Roadmap mit spezialisierten Dienstleistungen unterstützen.\n      Gegenstand der Ausschreibung sind Beratungs-, Konzeptions-, Implementierungs-, Migrations-, Projektleitungs- und Unterstützungsleistungen im Umfeld der HR-IT-Weiterentwicklung. Dabei erfolgt eine Unterteilung des Beratungsbedarfs in folgende Themenbereiche / Lose:\n      - Los 1: Dienstleistungen im Umfeld SAP SuccessFactors, SAP Fiori, Workflow-, Prozess- und BPM-Funktionalitäten\n      - Los 2: Dienstleistungen im Umfeld Migration und Implementierung aconso-Cloud\n      - Los 3: Dienstleistungen für HR-IT-Projektmanagement und HR-IT-Projektleitung\n    processType: open\n    orderType: service\n    cpcCode:\n      code: b7f1e45b-1fe5-4e19-8cbb-98006291267d\n      label: Datenverarbeitung und verbundene Dienstleistungen\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    termsNote: Zur Wahrung einer unabhängigen Projektleitungs- oder Projektmanagementfunktion auf Seiten der Auftraggeberin für das Los 3 gelten folgende Bedingungen resp. folgende Ausschlussregelungen:\n      \n      •\tEin Zuschlag sowohl für Los 3 als auch für Los 1 und/oder 2 ist ausgeschlossen. Falls die Anbieterin im Los 3 und auch in einem oder in beiden anderen Losen 1 oder 2 auf einem zuschlagsberechtigen Rang steht, erfolgt der Zuschlag prioritär nur für das Los 1 und/oder Los 2.\n      •\tAnbieterinnen im Los 3, die wirtschaftlich oder organisatorisch eng mit einem Unternehmen verbunden sind, die in einem oder in beiden anderen Losen 1 und 2 auf einem zuschlagsberechtigen Rang stehen, werden vom Zuschlag für das Los 3 ausgeschlossen, soweit dadurch die unabhängige Wahrnehmung der Projektleitungs- oder Projektmanagementfunktion auf Seiten der Auftraggeberin beeinträchtigt werden könnte.\n      •\tDie Anbieterin handelt ausschliesslich im Interesse der Auftraggeberin und sichert im HR-IT-Umfeld produkt- und herstellerunabhängige Beratungsleistungen (Projektmanagement, Projektleitungen) sicher. Es dürfen im HR-IT-Umfeld keine Bindungen (vertraglich, finanziell, organisatorisch, strategisch etc.) an einen Hersteller oder an ein Produkt bestehen, die im Rahmen der vorliegenden Ausschreibung für die beiden Lose 1 und 2 von Relevanz sind. Implementierungs-, Business- oder Vertriebspartner o.ä. sowie Lieferanten/Hersteller der HR-IT-Lösungen SAP HCM, SAP SuccessFactors HCM-Suite oder aconso sind für das Los 3 daher nicht zugelassen.\n    subContractorNote: Für die Leistungserbringung sind nur für Los 2 Subunternehmen zugelassen. Mehrfachbewerbungen für Los 2 sind zugelassen.\n      \n      Für die Lose 1 und 3 sind keine Subunternehmen zugelassen.\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen seit Publikation beim Kantonsgericht Luzern, 4.Abteilung, Obergrundstrasse 46, Postfach 3569, 6002 Luzern, Beschwerde eingereicht werden. Die Beschwerde hat einen Antrag und dessen Begründung zu enthalten und ist im Doppel einzureichen. Die angefochtene Ausschreibung und die vorhandenen Beweismittel sind beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    offerValidityNotes: Das eingereichte Angebot muss eine Gültigkeit von mindestens sechs Monaten ab Eingabedatum aufweisen. Sie verlängert sich um die Dauer eines allfälligen Beschwerdeverfahrens.\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-25\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-13\n    offerDeadline: 2027-01-06T12:00:00+01:00\n    specificDeadlinesAndFormalRequirements: Das Angebot muss vollständig ausgefüllt und mit allen verlangten Anhängen ausschliesslich digital über www.simap.ch eingereicht werden.\n    offerValidityDeadlineDays: 180\n    offerOpening:\n      dateTime: 2027-01-06T14:00:00+01:00\n  type: tender\n  projectType: tender\n  lots:\n    - additionalCpvCodes:\n        - code: 72000000\n          label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n      lotNumber: 1\n      title: SAP SuccessFactors, SAP Fiori, Workflow-, Prozess- und BPM-Funktionalitäten\n      projectSubType: service\n      orderDescription: Im Los 1 werden maximal drei Anbieterinnen gesucht, welche die genannten Dienstleistungen im Bereich \"SAP SuccessFactors, SAP Fiori, Workflow-, Prozess- und BPM-Funktionalität\" auf zuverlässige und wirtschaftlich günstige Weise erbringen.\n      qualificationCriteriaInDocuments: yes\n      awardCriteriaSelection: criteria_in_documents\n      weightedQualificationCriteriaInDocuments: no\n      processType: open\n      orderType: service\n      orderAddressOnlyDescription: no\n      executionDeadlineType: date_time\n      executionPeriod:\n        dateRange:\n          - 2027-04-01\n          - 2032\n  [… gekürzt]"
+  },
+  {
+   "id": "90b09a41-675d-454c-aee5-fc39b751cfa0",
+   "nr": "47789",
+   "title": "Projet GVA Core - Intégration solution ERP - SAP S4/HANA",
+   "office": "Genève Aéroport",
+   "date": "2026-11-25",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2027-01-05T11:00:00+01:00",
+   "cpv": [
+    "72000000",
+    "72227000"
+   ],
+   "score": 16,
+   "hits": [
+    "SAP (Titel)",
+    "S/4HANA",
+    "ERP (Titel)"
+   ],
+   "fields": {
+    "gegenstand": "Dans le cadre de son programme GVA Core, Genève Aéroport recherche un intégrateur chargé de la mise en œuvre de la solution SAP S/4HANA Cloud Private Edition ainsi que les solutions satellites associées. Le présent marché couvre l'ensemble des prestations d'intégration nécessaires à la mise en œuvre de l’ensemble de solutions proposées par SAP dans sa réponse, de la conception au déploiement, hypercare inclus.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/90b09a41-675d-454c-aee5-fc39b751cfa0",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 1218\n      name: Genève Aéroport\n      street: Route de l'aéroport 21\n      city: Le Grand Saconnex\n    procurementRecipientAddress:\n      postalCode: 1218\n      name: Genève Aéroport\n      street: Route de l'aéroport 21\n      city: Le Grand Saconnex\n    title: Projet GVA Core - Intégration solution ERP - SAP S4/HANA\n    documentsLanguages:\n      - fr\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - fr\n    offerTypes:\n      - offer_external\n    publicationLanguages:\n      - fr\n    processType: open\n    orderType: service\n    offerSpecificNote: Les offres peuvent être déposées directement à la réception de GA située au 5ème étage, sise au 21 route de l’Aéroport, 1218 Le Grand-Saconnex, Suisse ou envoyées à l’adresse postale indiquée ci-après.\n      Seul le moment de la réception de l’offre fait foi.\n    offerAddress:\n      postalCode: 1215\n      name: Genève Aéroport\n      contactPerson: Charles Parmentier\n      street: case postale 100\n      city: GENEVE 15\n  procurement:\n    orderDescription: Dans le cadre de son programme GVA Core, Genève Aéroport recherche un intégrateur chargé de la mise en œuvre de la solution SAP S/4HANA Cloud Private Edition ainsi que les solutions satellites associées.\n      Le présent marché couvre l'ensemble des prestations d'intégration nécessaires à la mise en œuvre de l’ensemble de solutions proposées par SAP dans sa réponse, de la conception au déploiement, hypercare inclus.\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 72227000\n        label: Beratung im Bereich Software-Integration\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 1215\n      city: GENEVE 15\n    contractDeadlineType: not_specified\n    canContractBeExtended: no\n    options: no\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    subContractorNote: La sous-traitance est autorisée selon les modalités décrites dans le document \"2.1.2.1_Conditions_administratives_appel_offres_Intégrateur_GVA_Core\".\n    remediesNotice: Le présent appel d’offres peut faire l’objet d’un recours auprès de la Chambre administrative de la Cour de justice, 10 rue Saint-Léger, case postale 1956, 1211 Genève 1, dans les dix jours dès sa publication. Le recours doit être signé, se référer au présent appel d'offres, contenir les conclusions dûment motivées avec indication des moyens de preuve.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-12-09\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-25\n    offerDeadline: 2027-01-05T11:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-11-25\n        - 2027-01-05\n    expressionOfInterestUntil: 2027-01-05\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    publicationTed: ja\n    title: Projet GVA Core - Intégration solution ERP - SAP S4/HANA\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 47789-01\n    publicationDate: 2026-11-25\n    creationLanguage: fr\n    projectNumber: 47789\n  hasProjectDocuments: ja"
   },
   {
    "id": "d9f5b9de-09ee-455c-ac97-a9d37ef7055d",
@@ -1419,6 +1453,80 @@
    },
    "url": "https://www.simap.ch/de/project-detail/1a5b45a5-6db2-4f6f-a6d2-3fabff61a22c",
    "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Die Matterhorn Gotthard Bahn (MGBahn) – die öffentliche Verkehrsleistungen im Auftrag des Bundes sowie der Kantone Wallis, Uri und Graubünden erbringt – sowie die Gornergrat Bahn AG (GGB) – die touristische Fahrten auf den Gornergrat anbietet – sind Tochtergesellschaften der BVZ Holding AG.\n      Für beide Unternehmen stellt der digitale Vertrieb einen zentralen Verkaufskanal dar. Im Rahmen dieses Projekts wird eine öffentliche Ausschreibung durchgeführt, um einen geeigneten Anbieter für die Bereitstellung einer neuen Backend- und Middleware-Lösung zu evaluieren.\n    additionalCpvCodes:\n      - code: 48480000\n        label: Softwarepaket für Vertrieb, Marketing und Business-Intelligence\n    cpvCode:\n      code: 72232000\n      label: Entwicklung von Transaktionsverarbeitungssoftware und kundenspezifischer Software\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 3900\n      name: Beschaffungsstelle Matterhorn Gotthard Bahn\n      street: Dammweg 80\n      city: Glis\n    procurementRecipientAddress:\n      postalCode: 3900\n      name: BVZ Holding und deren Tochtergesellschaften\n      contactPerson: Kilian Bumann\n      street: Dammweg 80\n      city: Glis\n    title: Digitale Vertriebsplattform MGB/GGB\n    stateContractArea: ja\n    publicationTed: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: Scheidt & Bachmann (Schweiz) GmbH\n        vendorAddress:\n          street: Güterstrasse 5\n          city: Ostermundigen\n          postalCode: 3072\n        price:\n          currency: chf\n          price: 3799715.0\n          vatType: full\n    numberOfSubmissions: 8\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-11-19\n    awardDecisionJustification: Das Angebot erreicht bei der Bewertung anhand der publizierten Zuschlagskriterien die höchste Gesamtpunktzahl und überzeugt insbesondere hinsichtlich Preis, Erfüllung der technischen Anforderungen sowie Vorgehens- und Betriebskonzept. In der Gesamtbewertung stellt es das vorteilhafteste Angebot dar.\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 41398-01\n    publicationDate: 2026-08-01\n  base:\n    publicationTed: ja\n    title: Digitale Vertriebsplattform MGB/GGB\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: award\n    publicationNumber: 41398-02\n    publicationDate: 2026-11-20\n    creationLanguage: de\n    projectNumber: 41398"
+  },
+  {
+   "id": "0323fa2b-1ff7-44cd-bbbc-6dc2bc68d779",
+   "nr": "47828",
+   "title": "Kantonale Lösung für die Zeitwirtschaft",
+   "office": "Kanton St.Gallen, Finanzdepartement, Personalamt",
+   "date": "2026-11-25",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2027-02-02T18:00:00+01:00",
+   "cpv": [
+    "48450000",
+    "72200000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Bereitstellung, Einführung und Inbetriebnahme sowie Pflege und Support einer neuen Zeitwirtschaftslösung (mit den Funktionsbereichen Zeiterfassung, Leistungserfassung und optional Dienstplanung), welche im SaaS-Betriebsmodell (Software as a Service) anzubieten ist.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/0323fa2b-1ff7-44cd-bbbc-6dc2bc68d779",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 9001\n      name: Kanton St.Gallen, Finanzdepartement, Personalamt\n      street: Davidstrasse 35\n      city: St.Gallen\n    procurementRecipientAddress:\n      postalCode: 9001\n      name: Kanton St.Gallen, Finanzdepartement, Personalamt\n      street: Davidstrasse 35\n      city: St.Gallen\n    title: Kantonale Lösung für die Zeitwirtschaft\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Bereitstellung, Einführung und Inbetriebnahme sowie Pflege und Support einer neuen Zeitwirtschaftslösung (mit den Funktionsbereichen Zeiterfassung, Leistungserfassung und optional Dienstplanung), welche im SaaS-Betriebsmodell (Software as a Service) anzubieten ist.\n    processType: open\n    orderType: service\n    additionalCpvCodes:\n      - code: 48450000\n        label: Softwarepaket für Zeiterfassung und Personalverwaltung\n    orderAddressOnlyDescription: no\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-07-01\n        - 2028-12-31\n    executionNote: Die Bereitstellung und Einführung der Zeitwirtschaftslösung (Projekt) erfolgt bis Ende 2028. \n      Der Rechenzentrumvertrag (Betriebsvertrag) wird ab Go-Live für die Dauer von 10 Jahren eingegangen.\n    variants: no\n    variantsNote: Die Einreichung von Varianten innerhalb des gleichen Angebotes ist nicht zulässig. Der Anbieterin ist es aber freigestellt, eine Variante als zweites Angebot einzureichen.\n    partialOffers: no\n    orderAddress:\n      postalCode: 9001\n      city: St.Gallen\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2029-01-01\n        - 2038-12-31\n    canContractBeExtended: no\n    options: yes\n    optionsNote: Gemäss Ausschreibungsunterlagen\n    cpvCode:\n      code: 72200000\n      label: Softwareprogrammierung und -beratung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen seit Publikation auf www.simap.ch beim Verwaltungsgericht des Kantons St.Gallen, Webergasse 8, 9001 St.Gallen, schriftlich Beschwerde erhoben werden (Art. 52 Abs. 1 i.V.m. Art. 56 der Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen [sGS 841.51]). Die Frist ist eingehalten, wenn die Beschwerde spätestens am letzten Tag der Frist beim Gericht eingereicht oder zu dessen Handen der Schweizerischen Post oder einer schweizerischen diplomatischen oder konsularischen Vertretung übergeben wird (Art. 143 Abs. 1 der Schweizerischen Zivilprozessordnung [SR 272] i.V.m. Art. 30 Abs. 1 des Gesetzes über die Verwaltungsrechtspflege [sGS 951.1]). Die Beschwerde muss einen Antrag sowie eine Darstellung des Sachverhaltes und eine Begründung enthalten. Sie ist zu unterzeichnen und im Doppel einzureichen. Diese Verfügung ist beizulegen. Es gelten keine Gerichtsferien.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    offerValidityNotes: Das Angebot ist mindestens zwölf Monate ab Ablauf der Angebotseingabefrist gültig. Sie verlängert sich um die Dauer eines allfälligen Beschwerdeverfahrens.\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-12-13\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-25\n    offerDeadline: 2027-02-02T18:00:00+01:00\n    offerValidityDeadlineDays: 360\n    offerOpening:\n      dateTime: 2027-02-03T10:00:00+01:00\n    offerOpeningPostalCode: 9001\n    offerOpeningCity: St.Gallen\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72200000\n      label: Softwareprogrammierung und -beratung\n    orderType: service\n    publicationTed: ja\n    title: Kantonale Lösung für die Zeitwirtschaft\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 47828-01\n    publicationDate: 2026-11-25\n    creationLanguage: de\n    translationLanguages:\n      - language: fr\n        type: summary\n    projectNumber: 47828\n  hasProjectDocuments: ja"
+  },
+  {
+   "id": "73082dca-a699-488a-8f6e-a7b3ffd2ddb1",
+   "nr": "45260",
+   "title": "Lösung Smart Prison Justizvollzug Luzern",
+   "office": "Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug",
+   "date": "2026-11-25",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2026-12-11T12:00:00+01:00",
+   "cpv": [
+    "72000000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Beschaffung einer modularen Smart-Prison-Gesamtlösung für die Justizvollzugsanstalten Grosshof und Wauwilermoos. Der Auftrag umfasst die Bereitstellung und Integration der Lösung einschliesslich Endgeräten, Applikationen, CMS, MDM, Backend und Schnittstellen sowie Tests, Schulung und Dokumentation. Hinzu kommen Betrieb, Hosting, Lizenzen, Wartung und Support über fünf Jahre sowie die optionale Verlängerung um maximal drei weitere Betriebsjahre.",
+    "eignung": "gemäss Ausschreibungsunterlagen",
+    "zuschlag": "gemäss Ausschreibungsunterlagen",
+    "lose": "",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/73082dca-a699-488a-8f6e-a7b3ffd2ddb1",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 6000\n      name: Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug\n      contactPerson: Christoph Braun\n      street: Murmattweg 8\n      city: Luzern\n    procurementRecipientAddress:\n      name: Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug\n    title: Lösung Smart Prison Justizvollzug Luzern\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Beschaffung einer modularen Smart-Prison-Gesamtlösung für die Justizvollzugsanstalten Grosshof und Wauwilermoos. Der Auftrag umfasst die Bereitstellung und Integration der Lösung einschliesslich Endgeräten, Applikationen, CMS, MDM, Backend und Schnittstellen sowie Tests, Schulung und Dokumentation. Hinzu kommen Betrieb, Hosting, Lizenzen, Wartung und Support über fünf Jahre sowie die optionale Verlängerung um maximal drei weitere Betriebsjahre.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: JVA Grosshof, Eichwilstrasse 4, 6010 Kriens;\n      JVA Wauwilermoos, Wauwilermoos 1, 6243 Egolzwil\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2027-12-31\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2032-12-31\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Optionale Verlängerung von Wartung und Support um weitere drei Jahre.\n    options: yes\n    optionsNote: OP01: Optionale Verlängerung von Betrieb und Support um maximal drei weitere Betriebsjahre. \n      OP02: Optionale Beschaffung von Endgeräten und Zubehör während der Vertragslaufzeit auf Abruf.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    subContractorNote: Subunternehmen sind nur für die in den Ausschreibungsunterlagen ausdrücklich bezeichneten Grundleistungen und Optionen zugelassen. Sämtliche Subunternehmen sind offenzulegen und dürfen nicht ohne vorgängige schriftliche Genehmigung der Auftraggeberin gewechselt werden.\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen seit Publikation beim Kantonsgericht Luzern, 4.Abteilung, Obergrundstrasse 46, Postfach 3569, 6002 Luzern, Beschwerde eingereicht werden. Die Beschwerde hat einen Antrag und dessen Begründung zu enthalten und ist im Doppel einzureichen. Die angefochtene Ausschreibung und die vorhandenen Beweismittel sind beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-20\n      - date: 2026-11-26\n        note: Auf Grund einer Unstimmigkeit in den Ausschreibungsunterlagen ermöglichen wir allen Interessenten, Fragen bis zum 26.11.2026 einzureichen.\n    otherAppointments:\n      - name: Versand der Demogeräte\n        date: 2026-12-21\n      - name: Anbieterpräsentation\n        date: 2027-01-08\n        note: Präsentation der Lösung des Anbieters, vor Ort in Luzern\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-25\n    initialPublicationDate: 2026-10-30\n    offerDeadline: 2026-12-11T12:00:00+01:00\n    offerValidityDeadlineDate: 2027-12-11\n    offerOpening:\n      dateTime: 2026-12-11T00:00:00+01:00\n      ignoreTime: ja\n  type: tender\n  projectType: tender\n  correction:\n    initialPublicationDate: 2026-10-30\n    correctionDiffKeys:\n      - dates.qnas\n    remarks: Auf Grund einer Unstimmigkeit in den Ausschreibungsunterlagen ermöglichen wir allen Interessenten, Fragen bis zum 26.11.2026 einzureichen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 45260-01\n    publicationDate: 2026-10-30\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    corrected: ja\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    publicationTed: ja\n    title: Lösung Smart Prison Justizvollzug Luzern\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45260-02\n    publicationDate: 2026-11-25\n    creationLanguage: de\n    translationLanguages:\n      - language: en\n        type: summary\n    initialPublicationDate: 2026-10-30\n    projectNumber: 45260"
+  },
+  {
+   "id": "3b4217d0-e4ca-4538-b6a6-5a9bdb55fe4b",
+   "nr": "48088",
+   "title": "ICT Dienstleistungen Innosuisse",
+   "office": "Innosuisse - Schweizerische Agentur für Innovationsförderung",
+   "date": "2026-11-25",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2027-01-21T17:00:00+01:00",
+   "cpv": [
+    "72000000",
+    "72230000"
+   ],
+   "score": 3,
+   "hits": [],
+   "fields": {
+    "gegenstand": "Innosuisse, die Schweizerische Agentur für Innovationsförderung, beschafft ICT-Dienstleistungen für den Betrieb ihrer digitalen Infrastruktur und Fachapplikationen. Die Leistungen sind in vier Lose aufgeteilt. Los 1, DevSecOps: Betrieb, Support und Lifecycle der Fachapplikation einschliesslich Übernahme des Betriebs von der bisherigen Leistungserbringerin. Los 2, SIEM/SOC: Betrieb von SIEM und SOC (7×24) einschliesslich Security Incident Response. Los 3, Azure/M365: Beratung, Engineering und Betriebsunterstützung auf Abruf. Los 4, Expertise: Data Architecture und Data Governance, Enterprise Architecture, Technologie-Innovation und Exit Management auf Abruf. Angebote sind für ein, mehrere oder alle Lose möglich.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "Los 1: DevSecOps; Los 2: Siem/SOC; Los 3: Azure / M365; Los 4: Expertise",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/3b4217d0-e4ca-4538-b6a6-5a9bdb55fe4b",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 3003\n      name: Innosuisse - Schweizerische Agentur für Innovationsförderung\n      street: Einsteinstrasse 2\n      city: Bern\n    procurementRecipientAddress:\n      postalCode: 3003\n      name: Innosuisse - Schweizerische Agentur für Innovationsförderung\n      street: Einsteinstrasse 2\n      city: Bern\n    title: ICT Dienstleistungen Innosuisse\n    documentsSourceType: documents_source_url\n    offerLanguages:\n      - de\n      - fr\n    offerTypes:\n      - offer_digital_external_platform\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    documentsSourceUrl: https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=04ee1504-2793-47ed-8544-2de63fcc2c17\n    documentsSourceNote: Der Beschaffungsprozess wird mit dem Online-Tool SuisseOffer abgewickelt.\n    offerSpecificNote: Der Beschaffungsprozess wird mit dem Online-Tool SuisseOffer abgewickelt.\n    offerDigitalExternalPlatformUrl: https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=04ee1504-2793-47ed-8544-2de63fcc2c17\n  procurement:\n    orderDescription: Innosuisse, die Schweizerische Agentur für Innovationsförderung, beschafft ICT-Dienstleistungen für den Betrieb ihrer digitalen Infrastruktur und Fachapplikationen. Die Leistungen sind in vier Lose aufgeteilt.\n       \n      Los 1, DevSecOps: Betrieb, Support und Lifecycle der Fachapplikation einschliesslich Übernahme des Betriebs von der bisherigen Leistungserbringerin.\n       \n      Los 2, SIEM/SOC: Betrieb von SIEM und SOC (7×24) einschliesslich Security Incident Response. \n       \n      Los 3, Azure/M365: Beratung, Engineering und Betriebsunterstützung auf Abruf.\n       \n      Los 4, Expertise: Data Architecture und Data Governance, Enterprise Architecture, Technologie-Innovation und Exit Management auf Abruf.\n       \n      Angebote sind für ein, mehrere oder alle Lose möglich.\n    processType: open\n    orderType: service\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    termsNote: Der Beschaffungsprozess wird mit dem Online-Tool SuisseOffer abgewickelt.\n      \n      Siehe Ausschreibungsunterlagen auf SuisseOffer:\n      https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=04ee1504-2793-47ed-8544-2de63fcc2c17\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung.\n  dates:\n    qnaRoundSourceType: external_system\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-12-09\n        note: Der Beschaffungsprozess wird mit dem Online-Tool SuisseOffer abgewickelt.\n        externalLink: https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=04ee1504-2793-47ed-8544-2de63fcc2c17\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-25\n    offerDeadline: 2027-01-21T17:00:00+01:00\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  lots:\n    - additionalCpvCodes:\n        - code: 72230000\n          label: Entwicklung von kundenspezifischer Software\n      lotNumber: 1\n      title: DevSecOps\n      projectSubType: service\n      orderDescription: DevSecOps: Betrieb, Support und Lifecycle der Fachapplikation einschliesslich Übernahme des Betriebs von der bisherigen Leistungserbringerin.\n      qualificationCriteriaInDocuments: yes\n      awardCriteriaSelection: criteria_in_documents\n      weightedQualificationCriteriaInDocuments: no\n      processType: open\n      orderType: service\n      orderAddressOnlyDescription: no\n      executionDeadlineType: date_time\n      executionPeriod:\n        dateRange:\n          - 2027-07-01\n          - 2030-06-30\n      variants: no\n      partialOffers: no\n      orderAddress:\n        postalCode: 3003\n        city: Bern\n      qualificationCriteriaNote: Siehe Ausschreibungsunterlagen auf SuisseOffer:\n        https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=04ee1504-2793-47ed-8544-2de63fcc2c17\n      awardCriteriaNote: Siehe Ausschreibungsunterlagen auf SuisseOffer:\n        https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=04ee1504-2793-47ed-8544-2de63fcc2c17\n      contractDeadlineType: date_time\n      contractPeriod:\n        dateRange:\n          - 2027-05-01\n          - 2030-06-30\n      canContractBeExtended: yes\n      options: yes\n      optionsNote: Siehe Ausschreibungsunterlagen auf SuisseOffer:\n        https://suite.suisseoffer.ch/suite/pages/public/wto.jsf?id=04ee1504-2793-47ed-8544-2de63fcc2c17\n    - lotNumber: 2\n      title: Siem/SOC\n      projectSubType: service\n      orderDescription: SIEM/SOC: Betrieb von SIEM und SOC (7×24) einschliesslich Security Incident Response.\n      qualificationCriteriaInDocuments: yes\n      awardCriteriaSelection: criteria_in_documents\n      weightedQualificationCriteriaInDocuments: no\n      processType: open\n      orderType: service\n      orderAddressOnlyDescription: no\n      executionDeadlineType: date_time\n      executionPeriod:\n        dateRange:\n          - 2028-05-01\n          - 2031-04-30\n      variants: no\n      partialOffers: no\n \n  [… gekürzt]"
   },
   {
    "id": "382f7770-4e8d-4857-88a8-f5459c2d11e7",
@@ -2217,30 +2325,6 @@
    },
    "url": "https://www.simap.ch/de/project-detail/e0be9e83-4483-4bc4-9876-977cd5c5dcc5",
    "text": "\n  project-info:\n    dialog: no\n    documentsWithCosts: no\n    procOfficeAddress:\n      postalCode: 8750\n      name: Kantonsspital Glarus AG\n      street: Burgstrasse 99\n      city: Glarus\n    title: MUA Medizinisches Universalarchiv\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: supply\n  procurement:\n    orderDescription: Das KSGL beabsichtigt die Beschaffung eines Medizinischen Universalarchivs (MUA). Ziel ist die Einführung einer zentralen Plattform zur revisionssicheren Speicherung, Verwaltung und Bereitstellung medizinischer Bild- und Dokumentdaten. Das neue System soll bestehende Datensilos auflösen, klinische Workflows unterstützen und eine langfristige Archivierung gemäss regulatorischen Anforderungen sicherstellen.\n    processType: open\n    orderType: supply\n    additionalCpvCodes:\n      - code: 48311100\n        label: Dokumentenverwaltungssystem\n      - code: 48329000\n        label: Darstellungs- und Archivierungssystem\n      - code: 48810000\n        label: Informationssysteme\n    supplyType: buy\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    executionNote: Bestandteil der Ausschreibungsunterlagen\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 8750\n      city: Glarus\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Die Informationen finden Sie in den Ausschreibungsunterlagen.\n    options: no\n    cpvCode:\n      code: 72252000\n      label: Datenarchivierung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: supply\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen seit der Publikation beim Verwaltungsgericht des Kantons Glarus, Gerichtshaus, Spielhof 6, 8750 Glarus, schriftlich Beschwerde erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat Begehren, deren Begründung mit Angabe der Beweismittel sowie die rechtsgültige Unterschrift zu enthalten.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-12-04\n    otherAppointments:\n      - name: Präsentation der Lösungen\n        date: 2027-01-11\n        note: Die Präsentationen finden am 11. und 12. Januar 2027 statt.\n    processType: open\n    orderType: supply\n    publicationDate: 2026-10-30\n    offerDeadline: 2026-12-16T17:00:00+01:00\n    offerValidityDeadlineDays: 182\n    offerOpening:\n      dateTime: 2026-12-17T00:00:00+01:00\n      ignoreTime: ja\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: supply\n  base:\n    cpvCode:\n      code: 72252000\n      label: Datenarchivierung\n    orderType: supply\n    title: MUA Medizinisches Universalarchiv\n    projectType: tender\n    processType: open\n    lotsType: without\n    type: tender\n    publicationNumber: 46209-01\n    publicationDate: 2026-10-30\n    creationLanguage: de\n    projectNumber: 46209\n  hasProjectDocuments: ja"
-  },
-  {
-   "id": "73082dca-a699-488a-8f6e-a7b3ffd2ddb1",
-   "nr": "45260",
-   "title": "Lösung Smart Prison Justizvollzug Luzern",
-   "office": "Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug",
-   "date": "2026-10-30",
-   "type": "tender",
-   "process": "open",
-   "deadline": "2026-12-11T12:00:00+01:00",
-   "cpv": [
-    "72000000"
-   ],
-   "score": 3,
-   "hits": [],
-   "fields": {
-    "gegenstand": "Beschaffung einer modularen Smart-Prison-Gesamtlösung für die Justizvollzugsanstalten Grosshof und Wauwilermoos. Der Auftrag umfasst die Bereitstellung und Integration der Lösung einschliesslich Endgeräten, Applikationen, CMS, MDM, Backend und Schnittstellen sowie Tests, Schulung und Dokumentation. Hinzu kommen Betrieb, Hosting, Lizenzen, Wartung und Support über fünf Jahre sowie die optionale Verlängerung um maximal drei weitere Betriebsjahre.",
-    "eignung": "gemäss Ausschreibungsunterlagen",
-    "zuschlag": "gemäss Ausschreibungsunterlagen",
-    "lose": "",
-    "verfahren": "offen"
-   },
-   "url": "https://www.simap.ch/de/project-detail/73082dca-a699-488a-8f6e-a7b3ffd2ddb1",
-   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 6000\n      name: Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug\n      contactPerson: Christoph Braun\n      street: Murmattweg 8\n      city: Luzern\n    procurementRecipientAddress:\n      name: Kanton Luzern, Dienststelle Militär, Zivilschutz und Justizvollzug\n    title: Lösung Smart Prison Justizvollzug Luzern\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Beschaffung einer modularen Smart-Prison-Gesamtlösung für die Justizvollzugsanstalten Grosshof und Wauwilermoos. Der Auftrag umfasst die Bereitstellung und Integration der Lösung einschliesslich Endgeräten, Applikationen, CMS, MDM, Backend und Schnittstellen sowie Tests, Schulung und Dokumentation. Hinzu kommen Betrieb, Hosting, Lizenzen, Wartung und Support über fünf Jahre sowie die optionale Verlängerung um maximal drei weitere Betriebsjahre.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: JVA Grosshof, Eichwilstrasse 4, 6010 Kriens;\n      JVA Wauwilermoos, Wauwilermoos 1, 6243 Egolzwil\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2027-12-31\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-03-01\n        - 2032-12-31\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Optionale Verlängerung von Wartung und Support um weitere drei Jahre.\n    options: yes\n    optionsNote: OP01: Optionale Verlängerung von Betrieb und Support um maximal drei weitere Betriebsjahre. \n      OP02: Optionale Beschaffung von Endgeräten und Zubehör während der Vertragslaufzeit auf Abruf.\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    subContractorNote: Subunternehmen sind nur für die in den Ausschreibungsunterlagen ausdrücklich bezeichneten Grundleistungen und Optionen zugelassen. Sämtliche Subunternehmen sind offenzulegen und dürfen nicht ohne vorgängige schriftliche Genehmigung der Auftraggeberin gewechselt werden.\n    remediesNotice: Gegen diese Ausschreibung kann innert 20 Tagen seit Publikation beim Kantonsgericht Luzern, 4.Abteilung, Obergrundstrasse 46, Postfach 3569, 6002 Luzern, Beschwerde eingereicht werden. Die Beschwerde hat einen Antrag und dessen Begründung zu enthalten und ist im Doppel einzureichen. Die angefochtene Ausschreibung und die vorhandenen Beweismittel sind beizulegen.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: date_time\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-11-20\n    otherAppointments:\n      - name: Versand der Demogeräte\n        date: 2026-12-21\n      - name: Anbieterpräsentation\n        date: 2027-01-08\n        note: Präsentation der Lösung des Anbieters, vor Ort in Luzern\n    processType: open\n    orderType: service\n    publicationDate: 2026-10-30\n    offerDeadline: 2026-12-11T12:00:00+01:00\n    offerValidityDeadlineDate: 2027-12-11\n    offerOpening:\n      dateTime: 2026-12-11T00:00:00+01:00\n      ignoreTime: ja\n  type: tender\n  projectType: tender\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n    orderType: service\n    publicationTed: ja\n    title: Lösung Smart Prison Justizvollzug Luzern\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45260-01\n    publicationDate: 2026-10-30\n    creationLanguage: de\n    translationLanguages:\n      - language: en\n        type: summary\n    projectNumber: 45260\n  hasProjectDocuments: ja\n  ted:\n    status: published\n    url: https://ted.europa.eu/udl?uri=TED:NOTICE:759808-2026:HTML:DE:HTML"
   },
   {
    "id": "1a82d7d6-d800-43a0-9ead-d17dfd1acf43",
