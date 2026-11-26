@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T00:31:29+00:00",
+ "generatedAt": "2026-11-26T15:39:16+00:00",
  "since": "2026-10-27",
  "keywords": [
   "SAP",
@@ -128,9 +128,9 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 127,
- "detailsCached": 177,
- "detailsLoaded": 11,
+ "durationSec": 896,
+ "detailsCached": 188,
+ "detailsLoaded": 0,
  "dropped": {
   "vorab": 122,
   "cpv": 31,
@@ -142,7 +142,13 @@
  },
  "count": 69,
  "diagnostics": [
-  "Cookies nach Seed: SCDID_S"
+  "Cookies nach Seed: SCDID_S",
+  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «E-Shop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Portallösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Webshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Workshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 5 Suchen, weiterhin fehlgeschlagen: keine"
  ],
  "rejected": [
   {
