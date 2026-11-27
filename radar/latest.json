@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-27T15:29:05+00:00",
+ "generatedAt": "2026-11-27T23:47:34+00:00",
  "since": "2026-10-28",
  "keywords": [
   "SAP",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 323,
+ "candidates": 321,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,30 +128,32 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 1037,
- "detailsCached": 183,
+ "durationSec": 1050,
+ "detailsCached": 185,
  "detailsLoaded": 2,
  "dropped": {
-  "vorab": 116,
-  "cpv": 30,
+  "vorab": 109,
+  "cpv": 31,
   "score": 49,
   "frist": 4,
-  "ausschluss": 9,
+  "ausschluss": 10,
   "zeit": 0,
   "limit": 0
  },
  "count": 75,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Source-to-Pay»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Order-to-Cash»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «BTP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Kundenportal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
   "Suche «Self-Service-Portal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Digitalisierung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «E-Government»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Workshop»: URLError bei /publications/v2/project/project-search: <urlopen error _ssl.c:994: The handshake operation timed out>",
-  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 7 Suchen, weiterhin fehlgeschlagen: ERP"
+  "Suche «Fakturierung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Abrechnungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Instandhaltung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Lagerverwaltung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «BTP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 8 Suchen, weiterhin fehlgeschlagen: S/4HANA, BTP"
  ],
  "rejected": [
   {
@@ -198,6 +200,11 @@
    "title": "(25169) 506 Alertswiss Web 3.0",
    "score": 2,
    "why": " | CPV 48000000,72000000,72200000"
+  },
+  {
+   "title": "(26112) 609 Dienstleistungen zu Red Hat Produkten",
+   "score": 2,
+   "why": " | CPV 72000000"
   },
   {
    "title": "ggst.sz Neue Applikation Grundstückgewinnsteuer",
@@ -273,11 +280,6 @@
    "title": "Renouvellement du contrat EA (Enterprise Agreement) de Microsoft",
    "score": 2,
    "why": " | CPV 48000000"
-  },
-  {
-   "title": "(26112) 609 Dienstleistungen zu Red Hat Produkten",
-   "score": 2,
-   "why": " | CPV 72000000"
   },
   {
    "title": "Leitsystem für TGB",
@@ -400,12 +402,17 @@
    "why": " | CPV 48000000"
   },
   {
-   "title": "Rahmenverträge Dienstleister ICT-Consulting",
+   "title": "Serviceunterstützung Messaging und SQL",
    "score": 0,
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
   {
-   "title": "Serviceunterstützung Messaging und SQL",
+   "title": "DHCP, DNS, IP-Adressmanagement (DDI)",
+   "score": 0,
+   "why": "Ausschlusswort im Titel: Hardware"
+  },
+  {
+   "title": "Rahmenverträge Dienstleister ICT-Consulting",
    "score": 0,
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
@@ -475,11 +482,6 @@
    "why": "Haupt-CPV 48921000 (Hardware)"
   },
   {
-   "title": "Nachführung IVS-Bundesinventar: IVS-Umsetzungsvorbereitung",
-   "score": 0,
-   "why": "Haupt-CPV 92522000 ausserhalb Software/Beratung"
-  },
-  {
    "title": "IWB, Migration AC450 nach AC800M Node 22, 32, 41, 42 und 51",
    "score": 0,
    "why": "Ausschlusswort im Titel: Hardware"
@@ -488,6 +490,16 @@
    "title": "Bereinigung Schemata und Stammdatenaufbau für ein KKS-Verwaltungssystem",
    "score": 0,
    "why": "Haupt-CPV 71000000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "ISBE RV NW-Geräte",
+   "score": 0,
+   "why": "Haupt-CPV 32400000 ausserhalb Software/Beratung"
+  },
+  {
+   "title": "Nachführung IVS-Bundesinventar: IVS-Umsetzungsvorbereitung",
+   "score": 0,
+   "why": "Haupt-CPV 92522000 ausserhalb Software/Beratung"
   },
   {
    "title": "Projekt Kulturprozess SOD",
@@ -543,16 +555,6 @@
    "title": "AO Storage S3 DISTIC 2026",
    "score": 0,
    "why": "Haupt-CPV 30233100 ausserhalb Software/Beratung"
-  },
-  {
-   "title": "Services informatiques liés à la cloudification et à l’infogérance de l’environnement IT",
-   "score": 0,
-   "why": "Haupt-CPV 72514300 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
-  },
-  {
-   "title": "Client Lifecycle Management (LCM)",
-   "score": 0,
-   "why": "Haupt-CPV 50300000 ausserhalb Software/Beratung"
   }
  ],
  "items": [
