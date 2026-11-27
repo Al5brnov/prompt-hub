@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-27T01:01:36+00:00",
+ "generatedAt": "2026-11-27T15:29:05+00:00",
  "since": "2026-10-28",
  "keywords": [
   "SAP",
@@ -70,7 +70,7 @@
   "participant_selection",
   "advance_notice"
  ],
- "candidates": 321,
+ "candidates": 323,
  "searchWords": [
   "SAP",
   "S/4HANA",
@@ -128,33 +128,30 @@
   "Schuladministration",
   "Testmanagement"
  ],
- "durationSec": 1362,
- "detailsCached": 176,
- "detailsLoaded": 7,
+ "durationSec": 1037,
+ "detailsCached": 183,
+ "detailsLoaded": 2,
  "dropped": {
-  "vorab": 115,
+  "vorab": 116,
   "cpv": 30,
-  "score": 50,
+  "score": 49,
   "frist": 4,
   "ausschluss": 9,
   "zeit": 0,
   "limit": 0
  },
- "count": 74,
+ "count": 75,
  "diagnostics": [
   "Cookies nach Seed: SCDID_S",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «E-Procurement»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Beschaffungslösung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Softwareevaluation»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Source-to-Pay»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Order-to-Cash»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Suche «Self-Service-Portal»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
   "Suche «Digitalisierung»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «SuccessFactors»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
   "Suche «E-Government»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «Workshop»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Suche «S/4HANA»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
-  "Wiederholt: 8 Suchen, weiterhin fehlgeschlagen: S/4HANA",
-  "Details 27617: URLError bei /publications/v1/project/b7556152-868c-45fa-ae96-25a026f62e19/publication-details/ae9c3ed5-1a71-41b0-b33c-e2f7fab88836: <urlopen error [Errno 111] Connection refused>",
-  "Details 47553: URLError bei /publications/v1/project/e387a1f2-4213-46c8-abcb-cbf08813c60a/publication-details/c1066b28-ace9-43a7-b2bb-f02a538e63b9: <urlopen error [Errno 111] Connection refused>"
+  "Suche «Workshop»: URLError bei /publications/v2/project/project-search: <urlopen error _ssl.c:994: The handshake operation timed out>",
+  "Suche «ERP»: URLError bei /publications/v2/project/project-search: <urlopen error [Errno 111] Connection refused>",
+  "Wiederholt: 7 Suchen, weiterhin fehlgeschlagen: ERP"
  ],
  "rejected": [
   {
@@ -201,11 +198,6 @@
    "title": "(25169) 506 Alertswiss Web 3.0",
    "score": 2,
    "why": " | CPV 48000000,72000000,72200000"
-  },
-  {
-   "title": "(26112) 609 Dienstleistungen zu Red Hat Produkten",
-   "score": 2,
-   "why": " | CPV 72000000"
   },
   {
    "title": "ggst.sz Neue Applikation Grundstückgewinnsteuer",
@@ -281,6 +273,11 @@
    "title": "Renouvellement du contrat EA (Enterprise Agreement) de Microsoft",
    "score": 2,
    "why": " | CPV 48000000"
+  },
+  {
+   "title": "(26112) 609 Dienstleistungen zu Red Hat Produkten",
+   "score": 2,
+   "why": " | CPV 72000000"
   },
   {
    "title": "Leitsystem für TGB",
@@ -403,17 +400,12 @@
    "why": " | CPV 48000000"
   },
   {
-   "title": "Rahmenvertrag, Beratungsdienstleistungen für Digital Stadt Bern, 6 Lose ",
-   "score": 1,
-   "why": ""
-  },
-  {
-   "title": "Serviceunterstützung Messaging und SQL",
+   "title": "Rahmenverträge Dienstleister ICT-Consulting",
    "score": 0,
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
   {
-   "title": "Rahmenverträge Dienstleister ICT-Consulting",
+   "title": "Serviceunterstützung Messaging und SQL",
    "score": 0,
    "why": "«Infrastruktur» im Titel ohne SAP-/ERP-Bezug"
   },
@@ -556,6 +548,11 @@
    "title": "Services informatiques liés à la cloudification et à l’infogérance de l’environnement IT",
    "score": 0,
    "why": "Haupt-CPV 72514300 (Betrieb/Infrastruktur) ohne SAP-/ERP-Bezug"
+  },
+  {
+   "title": "Client Lifecycle Management (LCM)",
+   "score": 0,
+   "why": "Haupt-CPV 50300000 ausserhalb Software/Beratung"
   }
  ],
  "items": [
@@ -894,6 +891,34 @@
    "text": "\n  procurement:\n    projectType: tender\n    processType: open\n    pubType: award\n    orderType: service\n    orderDescription: Beschafft wird ein ein Enterprise Ressource System für den Alters- und Pflegeheimbereich. Der Go-Live des neuen Enterprise Ressource Planning Systems mit zugehörigem elektronischen Archiv (ECM) ist auf den 01.01.2028 vorgesehen. Ziel ist das Einführungsprojekt ab Anfang Dezember 2026 zu starten.\n      \n      Das Projekt sieht vor, dass die Anforderungen der Geschäftsbücherordnung zur revisionssicheren Archivierung (GeBüV) und des OR 957 ff. zur Aufbewahrungspflicht mit dem Projekt abgedeckt werden. Aus diesem Grund wird je nach Produktentscheid nebst dem klassischen ERP-System zusätzlich ein ECM-System beschafft und zeitgleich im Betrieb eingeführt.\n      \n      Der Anbieterin steht es offen in einer Bietergemeinschaft eine entsprechende Lösung mit zwei separaten Softwaresystemen zu offerieren, die diesen Anforderungen entsprechen. Sind die Anforderungen bereits im ERP-System abgedeckt, reicht es dieses System in dieser Form anzubieten.\n    cpvCode:\n      code: 48000000\n      label: Softwarepaket und Informationssysteme\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 8630\n      name: Zentrum Breitenhof AG (360 Kompetenzzentrum GmbH)\n      street: Breitenhofstrasse 12\n      city: Rüti ZH\n    procurementRecipientAddress:\n      postalCode: 8630\n      name: Zentrum Breitenhof AG\n      street: Breitenhofstrasse 12\n      city: Rüti ZH\n    title: Beschaffung ERP und ECM System - Zentrum Breitenhof (Rüti ZH)\n    stateContractArea: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: NEXUS Schweiz AG\n        vendorAddress:\n          street: Grenzstrasse 5a\n          city: Schenkon\n          postalCode: 6214\n        price:\n          currency: chf\n          price: 224045.5\n          vatType: full\n    numberOfSubmissions: 5\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-11-13\n    awardDecisionJustification: Das Angebot der Nexus Schweiz AG erweist sich als das vorteilhafteste Angebot. Es hat mit einer gewichteten Gesamtpunktzahl von 4.37 die höchste Punktzahl erreicht. Das Angebot hat beim ZK1 Preis 5 Punkte erzielt und bei den ZK3 Funktionalität, ZK4 Kundendienst und ZK6 Referenzen ebenfalls sehr gute Punktzahlen von 4.38 bis 4.79.\n    remediesNotice: Gegen diesen Zuschlag kann innert 20 Tagen, von der Publikation an gerechnet, beim Verwaltungsgericht des Kantons Zürich, Freischützgasse 1, Postfach, 8090 Zürich, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen. Sie muss einen Antrag und dessen Begründung enthalten. Die angefochtene Zuschlagsverfügung ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und, soweit möglich, beizulegen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 36347-01\n    publicationDate: 2026-05-05\n  base:\n    title: Beschaffung ERP und ECM System - Zentrum Breitenhof (Rüti ZH)\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: award\n    publicationNumber: 36347-02\n    publicationDate: 2026-11-24\n    creationLanguage: de\n    projectNumber: 36347"
   },
   {
+   "id": "e387a1f2-4213-46c8-abcb-cbf08813c60a",
+   "nr": "47553",
+   "title": "Rahmenvertrag, Beratungsdienstleistungen für Digital Stadt Bern, 6 Lose ",
+   "office": "Fachstelle Beschaffungswesen Stadt Bern",
+   "date": "2026-11-27",
+   "type": "tender",
+   "process": "open",
+   "deadline": "2027-01-12T16:00:00+01:00",
+   "cpv": [
+    "72224000",
+    "79400000"
+   ],
+   "score": 9,
+   "hits": [
+    "Künstliche Intelligenz",
+    "Digitalisierung"
+   ],
+   "fields": {
+    "gegenstand": "Der Auftrag umfasst die Bereitstellung von Fachwissen und Dienstleistungen zur Unterstützung der digitalen Entwicklung der Stadt Bern. Ziel ist die Umsetzung der Vorhaben aus dem Digitalportfolio, unter Einbezug externer Expertise in Bereichen wie Beschaffung, Studien, Analysen, Projektleitung und Kommunikation. Die Kompetenz-Bereiche werden in sechs Lose unterteilt. Dabei sucht die Beschaffungsstelle ausschliesslich Unterstützung in den Maturitätsstufen Professional, Senior und Expert.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "Los 1: Los 1 – Projektmanagement; Los 2: Los 2 – Strategieberatung; Los 3: Los 3 – Change & Befähigung, Organisationsberatung; Los 4: Los 4 – Digitale Unternehmensentwicklung; Los 5: Los 5 – Fachberatung Digital Governance; Los 6: Los 6 – Kommunikation, Grafik, Design, Webberatung, Video",
+    "verfahren": "offen"
+   },
+   "url": "https://www.simap.ch/de/project-detail/e387a1f2-4213-46c8-abcb-cbf08813c60a",
+   "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 3011\n      name: Fachstelle Beschaffungswesen Stadt Bern\n      url: https://www.bern.ch/wirtschaft/beschaffung\n      street: Bundesgasse 33\n      city: Bern\n    procurementRecipientAddress:\n      postalCode: 3011\n      name: Präsidialdirektion, Personal, Finanzen & Digitale Entwicklung\n      url: https://www.bern.ch/wirtschaft/beschaffung\n      street: Bundesgasse 33\n      city: Bern\n    title: Rahmenvertrag, Beratungsdienstleistungen für Digital Stadt Bern, 6 Lose\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_external\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    offerSpecificNote: Die Angebote sind innerhalb der Frist bei der Fachstelle Beschaffungswesen einzureichen (A-Post, Stempel einer offiziellen Poststelle, firmeneigene Frankiermaschinen werden nicht anerkannt).\n      Bei einer Abgabe vor Ort werden keine Bestätigungen ausgestellt. Beachten Sie die aktuellen Öffnungszeiten vom Empfang Immobilien Stadt Bern an der Bundesgasse 33. Die Offerten inkl. digitalem Angebot auf USB-Stick, sind im verschlossenen Kuvert mit der Aufschrift \"Beratungsdienstleistungen für Digital Stadt Bern / Los XY\" und dem Vermerk «Bitte nicht öffnen» einzureichen.\n    offerAddress:\n      postalCode: 3011\n      name: Fachstelle Beschaffungswesen Stadt Bern\n      street: Bundesgasse 33\n      city: Bern\n  procurement:\n    orderDescription: Der Auftrag umfasst die Bereitstellung von Fachwissen und Dienstleistungen zur Unterstützung der digitalen Entwicklung der Stadt Bern. Ziel ist die Umsetzung der Vorhaben aus dem Digitalportfolio, unter Einbezug externer Expertise in Bereichen wie Beschaffung, Studien, Analysen, Projektleitung und Kommunikation.\n      \n      Die Kompetenz-Bereiche werden in sechs Lose unterteilt.\n      \n      Dabei sucht die Beschaffungsstelle ausschliesslich Unterstützung in den Maturitätsstufen Professional, Senior und Expert.\n    processType: open\n    orderType: service\n    cpvCode:\n      code: 79400000\n      label: Unternehmens- und Managementberatung und zugehörige Dienste\n  terms:\n    termsType: defined\n    termsCriteria:\n      - description: Anbieterinnen und Anbieter gelten als teilnahmeberechtigt, sofern keine Ausschlussgründe nach Art. 44 IVöB 2019 vorliegen und sämtliche Nachweise gemäss Art. 7 IVöBV erbracht worden sind, u. a. sind folgende Voraussetzungen zu erfüllen:\n          \n          −Einhaltung der Gesamtarbeitsverträge oder bei deren Fehlen Gewährung von orts- und branchenüblichen Arbeitsbedingungen (Leistungsortsprinzip).\n          −Erfüllung der Pflichten gegenüber der öffentlichen Hand, der Sozialversicherungen sowie den Arbeitnehmenden.\n          −Einhaltung der Lohngleichheit von Frau und Mann.\n          \n          Zwischen dem Auftraggeber und dem Anbieter bestehen keine Forderungen aus vertraglichen oder ausservertraglichen Verpflichtungen, über deren Erledigung noch keine Einigung erzielt worden ist.\n        verification: Die erforderlichen Nachweise sind in den Dokumenten hinterlegt.\n    consortiumAllowed: yes\n    consortiumMultiApplicationAllowed: yes\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    termsOfBusiness: Es sind Netto-Offerten einzureichen. Skontoabzüge sind nicht zulässig, diese sind direkt in die Rabatte zu inkludieren. Nicht fristgerecht oder unvollständig eingereichte Angebote werden vom Wettbewerb ausgeschlossen. Offerten mit Preisabsprachen werden nicht berücksichtigt. Der Zuschlag erfolgt auf Grund des Angebots.\n    walkThroughNotes: Es findet keine obligatorische Begehung statt. Den Unternehmungen wird jedoch empfohlen, sich über die örtlichen Verhältnisse ins Bild zu setzen.\n    termsNote: Grundsätzliche Anforderungen\n      \n      Die Auftraggeberin vergibt öffentliche Aufträge für in der Schweiz zu erbringenden Leistungen nur an Anbieterinnen und Anbieter, welche die Einhaltung der Arbeitsschutzbestimmungen und der Arbeitsbedingungen für Arbeitnehmer und Arbeitnehmerinnen sowie die Lohngleichheit von Frau und Mann gewährleisten (Art. 12 Abs. 1 IVöB 2019).\n      \n      Die Einhaltung der Arbeitsschutzbestimmungen, Arbeitsbedingungen und Lohngleichheit ist durch alle Teilnehmenden im Rahmen der Selbstdeklaration zu bestätigen. Ab dem städtischen Schwellenwert für das Einladungsverfahren hat das zuschlagnehmende Unternehmen die Einhaltung der Lohngleichheit für Frau und Mann zusätzlich gestützt auf eine betriebsinterne Lohngleichheitsanalyse mittels einer Methode gemäss Artikel 13c des Bundesgesetzes vom 24. März 1995 über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz; GlG; SR 151.1) nachzuweisen. Der Bund stellt dazu ein kostenloses Analyse-Tool zur Verfügung (www.logib.ch). Der Nachweis muss spätestens 60 Tage nach der Zuschlagserteilung erfolgen. Der Referenzmonat der Analyse darf nicht mehr als vier Jahre zurückliegen (Art. 3a der Verordnung vom 4. Dezember 2002 über das öffentliche Beschaffungswesen der Stadt Bern [Beschaffungsverordnung; VBW; SSSB 731.21]). Ausgenommen von der Nachweispflicht sind Unternehmen mit Mitarbeitenden nur einen Geschlechts oder mit weniger als zehn Mitarbeitenden. Auftragnehmende Unternehmen mit Sitz im Ausland fallen nur dann unter die Nachweispflicht, wenn sie die Leistung in der Schweiz erbringen. Weitergehende Nachweispflichten gestützt auf das übergeordnete Recht bleiben vorbehalten.\n      \n      Unabhängig von der Nachweispflicht ist die Auftraggeberin berechtigt, die Einhaltung der Vergabebestimmungen und namentlich auch der Lohngleichheit von Frau und Mann zu kontrollieren oder durch Dritte kontrollieren zu lassen. Anbietende sind verpflichtet, an einer angeordneten Kontrolle mitzuwirken und die erforderlichen Daten, Informationen und \n  [… gekürzt]"
+  },
+  {
    "id": "d56316fb-dd76-4bb4-8d0f-396b10aad330",
    "nr": "47794",
    "title": "Dienstleistungen für IT- und Digitalisierungsprojekte",
@@ -1079,6 +1104,37 @@
    },
    "url": "https://www.simap.ch/de/project-detail/2ca4b7c0-eeb4-4d14-91ca-500e8e5f6a25",
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 3014\n      name: Identitas AG\n      url: https://www.identitas.ch\n      street: Adamstrasse 6\n      city: Bern\n    procurementRecipientAddress:\n      postalCode: 3014\n      name: Identitas AG\n      url: https://www.identitas.ch\n      street: Adamstrasse 6\n      city: Bern\n    title: ERP-Lösung Identitas AG\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n      - fr\n      - it\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n    documentsLanguagesNote: Gem. Art. 21 Abs. 3 lit. b VöB können «Die Ausschreibungsunterlagen überdies nur in einer Amtssprache des Bundes oder in den Fällen nach Artikel 20 in einer anderen Sprache verfasst werden, wenn:\n      …\n      b. die Leistung nicht in verschiedenen Sprachregionen der Schweiz und nicht mit Auswirkungen auf verschiedene Sprachregionen der Schweiz zu erbringen ist.»\n  procurement:\n    orderDescription: Mit der vorliegenden Ausschreibung wird eine leistungsfähige Anbieterin evaluiert, die die neue ERP-Lösung (Open Source oder Closed Source) im SaaS-Modell bereitstellt und nach der erfolgreichen Produktivsetzung über die gesamte Vertragslaufzeit die Wartung, den Support, den Betrieb sowie allfällige Weiterentwicklungen sicherstellen kann.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: yes\n    orderAddressDescription: Die Leistungen sind grundsätzlich bei der Identitas AG in Bern sowie an den Standorten der Anbieterin zu erbringen.\n    executionDeadlineType: date_time\n    executionPeriod:\n      dateRange:\n        - 2027-06-01\n        - 2038-12-31\n    variants: no\n    partialOffers: no\n    contractDeadlineType: date_time\n    contractPeriod:\n      dateRange:\n        - 2027-06-01\n        - 2038-12-31\n    canContractBeExtended: no\n    options: yes\n    optionsNote: OP01: Nutzung der ERP-Lösung (SaaS) für weitere 5 Jahre im Leistungszeitraum 01.01.2034 – 31.12.2038\n      \n      OP02: Life Cycle Unterstützung ERP-Lösung im Leistungszeitraum 01.06.2027 – 31.12.2038\n      \n      OP03: Nutzung oder Bezug von zusätzlichen Funktionserweiterungen oder Zusatzprodukten zur ERP-Lösung im Leistungszeitraum 01.01.2029 – 31.12.2038\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: yes\n    subContractorMultiApplicationAllowed: yes\n    processType: open\n    orderType: service\n    termsOfBusiness: Allgemeine Geschäftsbedingungen Digitale Verwaltung Schweiz für IKT-Leistungen, Ausgabe 2025\n    includedCosts: Der Gesamtpreis ist in CHF (exkl. MWST) anzugeben. Sämtliche Spesen und Nebenkosten sind in den Preisen enthalten. Reisezeiten werden nicht separat vergütet und sind ebenfalls in den Preisen einzurechnen.\n    securityDeposits: Keine\n    otherRequirements: Geheimhaltung\n      Die Parteien behandeln alle Tatsachen und Informationen vertraulich, die weder offenkundig noch allgemein zugänglich sind. Im Zweifelsfall sind Tatsachen und Informationen vertraulich zu behandeln. Die Parteien verpflichten sich, alle wirtschaftlich zumutbaren sowie technisch und organisatorisch möglichen Vorkehrungen zu treffen, damit vertrauliche Tatsachen und Informationen gegen den Zugang und die Kenntnisnahme durch Unbefugte wirksam geschützt sind.\n      Ohne schriftliche Einwilligung der Auftraggeberin darf die Anbieterin mit der Tatsache, dass eine Zusammenarbeit mit der Auftraggeberin besteht oder bestand, nicht werben und die Auftraggeberin auch nicht als Referenz angeben.\n      Die Parteien überbinden die Geheimhaltungspflicht auf ihre Mitarbeitenden, Subunternehmer, Unterlieferanten sowie weitere beigezogene Dritte.\n      \n      Integritätsklausel\n      Die Anbieterin und die Auftraggeberin verpflichten sich, alle erforderlichen Massnahmen zur Vermeidung von Korruption zu ergreifen, so dass insbesondere keine Zuwendungen oder andere Vorteile angeboten oder angenommen werden. \n      Bei Missachtung der Integritätsklausel hat die Anbieterin der Auftraggeberin eine Konventionalstrafe zu bezahlen. Diese beträgt 10 % der Vertragssumme, mindestens CHF 3 000 pro Verstoss. \n      Die Anbieterin nimmt zur Kenntnis, dass ein Verstoss gegen die Integritätsklausel in der Regel zur Aufhebung des Zuschlags sowie zu einer vorzeitigen Vertragsauflösung aus wichtigen Gründen durch die Auftraggeberin führt.\n      \n      Rückgabe Unterlagen\n      Sämtliche im Zusammenhang mit dieser Ausschreibung der Identitas AG fristgerecht zugestellten Unterlagen verbleiben nach dem Abgabetermin im Eigentum der Identitas AG und werden nicht zurückgegeben. Die Unterlagen werden seitens Identitas AG vertraulich behandelt.\n      \n      Entschädigungen\n      Für die Erstellung und Einreichung der Angebote werden keine Entschädigungen geleistet.\n      Durch die Teilnahme an der Ausschreibung entstehen den Anbieterinnen keinerlei Rechte auf Ausführung von Leistungen und/oder Vergütungen jedweder Art.\n    remediesNotice: Gegen diese Verfügung kann gemäss Art. 56 Abs. 1 des Bundesgesetzes über das öffentliche Beschaffungswesen (BöB) innert 20 Tagen seit Eröffnung schriftlich Beschwerde beim Bundesverwaltungsgericht, Postfach, 9023 St. Gallen, erhoben werden. Die Beschwerde ist im Doppel einzureichen und hat die Begehren, deren Begründung mit Angabe der Beweismittel sowie die Unterschrift der beschwerdeführenden Person oder ihrer Vertretung zu enthalten. Eine Kopie der vorliegenden Verfügung und vorhandene Beweismittel sind beizulegen.\n      Die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG) über den Fristenstillstand finden gemäss Art. 56 Abs. 2 BöB keine Anwendung.\n  dates:\n    qnaRoundSourceType: simap\n \n  [… gekürzt]"
+  },
+  {
+   "id": "b7556152-868c-45fa-ae96-25a026f62e19",
+   "nr": "27617",
+   "title": "KI Assistent KVTG",
+   "office": "Amt für Informatik Thurgau",
+   "date": "2026-11-27",
+   "type": "award",
+   "process": "selective",
+   "deadline": null,
+   "cpv": [
+    "72000000",
+    "72211000",
+    "72262000",
+    "72263000",
+    "72266000",
+    "72268000"
+   ],
+   "score": 7,
+   "hits": [
+    "KI (Titel)"
+   ],
+   "fields": {
+    "gegenstand": "Mit der vorliegenden Ausschreibung wird ein KI Assistent und die notwendige Infrastruktur zum Betrieb der Lösung beschafft. Der KI Assistent soll die digitale Transformation der Kantonalen Verwaltung Thurgau (KVTG) unterstützen, indem er Anfragen von Mitarbeitenden und Einwohnenden automatisiert, effizient und in natürlicher Sprache beantwortet.",
+    "eignung": "",
+    "zuschlag": "",
+    "lose": "",
+    "verfahren": "selektiv"
+   },
+   "url": "https://www.simap.ch/de/project-detail/b7556152-868c-45fa-ae96-25a026f62e19",
+   "text": "\n  procurement:\n    projectType: tender\n    processType: selective\n    pubType: award\n    orderType: service\n    orderDescription: Mit der vorliegenden Ausschreibung wird ein KI Assistent und die notwendige Infrastruktur zum Betrieb der Lösung beschafft. Der KI Assistent soll die digitale Transformation der Kantonalen Verwaltung Thurgau (KVTG) unterstützen, indem er Anfragen von Mitarbeitenden und Einwohnenden automatisiert, effizient und in natürlicher Sprache beantwortet.\n    additionalCpvCodes:\n      - code: 72211000\n        label: Programmierung von System- und Anwendersoftware\n      - code: 72262000\n        label: Software-Entwicklung\n      - code: 72263000\n        label: Software-Implementierung\n      - code: 72266000\n        label: Software-Beratung\n      - code: 72268000\n        label: Bereitstellung von Software\n    cpvCode:\n      code: 72000000\n      label: IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung\n  type: award\n  projectType: tender\n  project-info:\n    procOfficeAddress:\n      postalCode: 8510\n      name: Amt für Informatik Thurgau\n      url: https://www.informatik.tg.ch\n      street: Staubeggstrasse 3\n      city: Frauenfeld\n    procurementRecipientAddress:\n      postalCode: 8510\n      name: Amt für Informatik Thurgau\n      url: https://www.informatik.tg.ch\n      street: Staubeggstrasse 3\n      city: Frauenfeld\n    title: KI Assistent KVTG\n    stateContractArea: ja\n    publicationTed: ja\n  decision:\n    awardDecisionWithJustification: ja\n    vendors:\n      - vendorName: ti&m AG\n        vendorAddress:\n          street: Flüelastrasse 30\n          city: Zürich\n          postalCode: 8047\n        price:\n          currency: chf\n          price: 2565321.1\n          vatType: full\n    numberOfSubmissions: 5\n    totalPriceSelection: price_of_selected_offers\n    awardDecisionDate: 2026-11-26\n    awardDecisionJustification: Gemäss Art. 41 IVöB erhält das vorteilhafteste Angebot den Zuschlag. Als solches gilt dasjenige, welches die Zuschlagskriterien am besten erfüllt. Gemäss der oben dargestellten Bewertung trifft dies auf das Angebot der ti&m AG zu, welche am besten bewertet wurde (vgl. PDF).\n    remediesNotice: Gegen diesen Entscheid kann innert 20 Tagen seit Eröffnung beim Verwaltungsgericht des Kantons Thurgau, Frauenfelderstrasse 16, 8570 Weinfelden, schriftlich Beschwerde eingereicht werden. Die Beschwerdeschrift ist im Doppel einzureichen, sie muss einen Antrag und dessen Begründung enthalten. Der angefochtene Entscheid ist beizulegen. Die angerufenen Beweismittel sind genau zu bezeichnen und soweit möglich beizulegen. Es gelten keine Gerichtsferien.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: selective\n    publicationNumber: 27617-01\n    publicationDate: 2025-12-05\n  base:\n    publicationTed: ja\n    title: KI Assistent KVTG\n    projectType: tender\n    processType: selective\n    lotsType: without\n    stateContractArea: ja\n    type: award\n    publicationNumber: 27617-05\n    publicationDate: 2026-11-27\n    creationLanguage: de\n    projectNumber: 27617\n  hasProjectDocuments: ja"
   },
   {
    "id": "df1828ee-09b6-4d04-9b30-b0b4686aa011",
@@ -1347,30 +1403,6 @@
    },
    "url": "https://www.simap.ch/de/project-detail/28c65ede-87ca-46ca-a7b6-f4b20d00a8a7",
    "text": "\n  project-info:\n    stateContractArea: ja\n    dialog: no\n    documentsWithCosts: no\n    publicationTed: ja\n    procOfficeAddress:\n      postalCode: 9001\n      name: Dienst für Informatikplanung\n      street: Davidstrasse 35\n      city: St. Gallen\n    title: Dienstleistung für Microsoft Power Apps und Power Automate\n    documentsLanguages:\n      - de\n    documentsSourceType: documents_source_simap\n    offerLanguages:\n      - de\n    offerTypes:\n      - offer_digital_simap\n    publicationLanguages:\n      - de\n    processType: open\n    orderType: service\n  procurement:\n    orderDescription: Der Kanton St.Gallen führt im Rahmen des Programms DRIVE die Microsoft Power Platform als Bestandteil seines digitalen Arbeitsplatzes ein. Die technische Plattform, die Betriebsorganisation sowie die grundlegenden Governance-, Architektur- und Sicherheitsvorgaben werden durch den Kanton St.Gallen und seine bestehenden Leistungserbringer bereitgestellt. Die Microsoft Power Platform steht den Organisationseinheiten des Kantons als standardisierte Plattform für die Digitalisierung und Automatisierung von Geschäftsprozessen zur Verfügung. \n      Mit Microsoft Power Apps und Microsoft Power Automate sollen insbesondere Applikationen, digitale Formulare, Genehmigungs- und Workflow-Lösungen sowie weitere Prozessautomatisierungen realisiert und weiterentwickelt werden. Je nach Anwendungsfall können die in der kantonalen Microsoft-365-Umgebung freigegebenen Standard-Konnektoren eingesetzt werden. \n      Für die professionelle Umsetzung benötigt der Kanton ergänzende externe Kompetenzen und Kapazitäten. Die Lösungen müssen den jeweils geltenden Vorgaben zu Architektur, Governance, Informationssicherheit, Datenschutz, Qualitätssicherung, Dokumentation und Betrieb entsprechen. Sie müssen nachvollziehbar, wartbar und so dokumentiert sein, dass eine geordnete Übernahme, Nutzung, Unterstützung und Weiterentwicklung sichergestellt ist. \n      Zur flexiblen Deckung des künftig anfallenden und im Voraus nicht abschliessend bestimmbaren Bedarfs sollen mit drei qualifizierten Anbieterinnen separate, inhaltlich gleichlautende Rahmenverträge abgeschlossen werden. Die Vergabe der Einzelaufträge erfolgt nach den in diesen Ausschreibungsunterlagen und den Rahmenverträgen festgelegten Abrufregeln.\n    processType: open\n    orderType: service\n    orderAddressOnlyDescription: no\n    executionDeadlineType: not_specified\n    variants: no\n    partialOffers: no\n    orderAddress:\n      postalCode: 9001\n      city: St. Gallen\n    contractDeadlineType: not_specified\n    canContractBeExtended: yes\n    canContractBeExtendedNote: Kann um ein Jahr verlängert werden (siehe Ausschreibungsunterlagen).\n    options: no\n    cpvCode:\n      code: 72260000\n      label: Dienstleistungen in Verbindung mit Software\n  terms:\n    termsType: in_documents\n    consortiumAllowed: no\n    consortiumMultiApplicationAllowed: no\n    subContractorAllowed: no\n    subContractorMultiApplicationAllowed: no\n    processType: open\n    orderType: service\n    remediesNotice: Gegen diese Verfügung kann innert 20 Tagen seit Publikation auf www.simap.ch beim Verwaltungsgericht des Kantons St.Gallen, Webergasse 8, 9001 St.Gallen, schriftlich Beschwerde erhoben werden (Art. 52 Abs. 1 i.V.m. Art. 56 der Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen [sGS 841.51]). Die Frist ist eingehalten, wenn die Beschwerde spätestens am letzten Tag der Frist beim Gericht eingereicht oder zu dessen Handen der Schweizerischen Post oder einer schweizerischen diplomatischen oder konsularischen Vertretung übergeben wird (Art. 143 Abs. 1 der Schweizerischen Zivilprozessordnung [SR 272] i.V.m. Art. 30 Abs. 1 des Gesetzes über die Verwaltungsrechtspflege [sGS 951.1]). Die Beschwerde muss einen Antrag sowie eine Darstellung des Sachverhaltes und eine Begründung enthalten. Sie ist zu unterzeichnen und im Doppel einzureichen. Diese Verfügung ist beizulegen. Es gelten keine Gerichtsferien.\n  dates:\n    qnaRoundSourceType: simap\n    offerValidityDeadlineType: days_after\n    publicOfferOpening: no\n    qnas:\n      - date: 2026-10-30\n    processType: open\n    orderType: service\n    publicationDate: 2026-11-07\n    initialPublicationDate: 2026-10-16\n    offerDeadline: 2026-11-27T16:00:00+01:00\n    documentsAvailable:\n      dateRange:\n        - 2026-10-16\n        - 2026-11-27\n    offerValidityDeadlineDays: 180\n  type: tender\n  projectType: tender\n  correction:\n    initialPublicationDate: 2026-10-16\n    remarks: Folgende Änderungen wurden vorgenommen:\n      \n      A00_Dienstleistungen für Applikationen auf Microsoft Power Platform Ausschreibungsunterlagen offenes Verfahren_v2.pdf\n      Unter Ziff. 2.2 in der Tabelle 2 B05 als .docx angegeben.\n      \n      B02_Rahmenvertragsentwurf_Dienstleistungen für Microsoft Power Apps und Power Automate_v2.pdf\n      Ziff. 17 Ausschreibungsgegenstand abgegrenzt.\n      \n      B05_Vertraulichkeitserklaerung_2026.docx\n      Dokument hochgeladen.\n  referencingPub:\n    pubType: tender\n    projectType: tender\n    processType: open\n    publicationNumber: 45909-01\n    publicationDate: 2026-10-16\n  criteria:\n    qualificationCriteriaInDocuments: yes\n    awardCriteriaSelection: criteria_in_documents\n    processType: open\n    orderType: service\n  base:\n    corrected: ja\n    cpvCode:\n      code: 72260000\n      label: Dienstleistungen in Verbindung mit Software\n    orderType: service\n    publicationTed: ja\n    title: Dienstleistung für Microsoft Power Apps und Power Automate\n    projectType: tender\n    processType: open\n    lotsType: without\n    stateContractArea: ja\n    type: tender\n    publicationNumber: 45909-02\n    publicationDate: 2026-11-07\n    creationLanguage: de\n    translationLanguages:\n      - language: en\n        type: summary\n    initialPublicationDate: 2026-10-16\n    projectNumber: 45909\n  hasProjectDocuments: ja"
-  },
-  {
-   "id": "b7556152-868c-45fa-ae96-25a026f62e19",
-   "nr": "27617",
-   "title": "KI Assistent KVTG",
-   "office": "Amt für Informatik Thurgau",
-   "date": "2026-11-27",
-   "type": "award",
-   "process": "selective",
-   "deadline": null,
-   "cpv": [],
-   "score": 5,
-   "hits": [
-    "KI (Titel)"
-   ],
-   "fields": {
-    "gegenstand": "",
-    "eignung": "",
-    "zuschlag": "",
-    "lose": "",
-    "verfahren": ""
-   },
-   "url": "https://www.simap.ch/de/project-detail/b7556152-868c-45fa-ae96-25a026f62e19",
-   "text": ""
   },
   {
    "id": "c485b27d-9b83-474d-942a-4714e8662713",
